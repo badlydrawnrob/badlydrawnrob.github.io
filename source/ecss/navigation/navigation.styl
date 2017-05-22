@@ -1,0 +1,50 @@
+// Notes =======================================================================
+// - Try to stick to single-line only
+//   - two-line is 12dp font-size
+
+.nav-List,
+.nav-ListItem
+  // component-debug()
+
+.nav
+  height: $spacing.three
+  max-height: $spacing.three
+  overflow: hidden
+  font-size: $font.size.m
+  font-weight: 700
+  text-transform: uppercase
+
+.nav-List
+  display: flex
+  height: $spacing.three
+  margin: 0
+  list-style: none
+
+  @media (min-width: $screen.md)
+    width: 50%
+    margin: 0 auto
+
+.nav-ListItem
+  flex: 1 1 auto
+  text-align: center
+  margin: 0
+
+.nav-ListLink
+  display: block
+  height: $spacing.three
+  padding: ($spacing.quarter + $spacing.half)
+  color: $color.bb
+  text-decoration: none
+
+  @media (min-width: $screen.lg)
+    padding-left: $spacing.base
+    padding-right: $spacing.base
+
+  .nav-ListItem-current &
+    color: $color.bbb
+    border-bottom: 2px solid $color.bbb
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $color.bbb

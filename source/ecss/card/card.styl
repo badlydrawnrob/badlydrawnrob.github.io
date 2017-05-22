@@ -1,0 +1,67 @@
+// 16:9 ratio: http://bit.ly/2rKQS4r
+
+.card *
+  // component-debug()
+
+.card
+  margin: $spacing.half
+  // background: $color.l
+  box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
+
+  @media (min-width: $screen.md)
+    width: 600px
+
+.card-Figure
+  width: 100%
+  height: 56.25%
+  background: $color.llll
+
+.card-Image
+  width: 100%
+  height: 56.25%
+  object-fit: cover
+
+.card-Header
+  margin-bottom: $spacing.half
+  font-size: $font.size.pp
+  line-height: $line.height.pp
+
+.card-SubHeader
+  margin-bottom: $spacing.one
+  color: $color.bbb
+  font-size: $font.size.m
+  line-height: $line.height.mm
+
+.card-Section
+  padding: 0 $spacing.base
+
+  &-actions
+    display: flex
+    justify-content: flex-end
+    padding: 0 $spacing.quarter
+
+  &-more
+    display: none
+
+.card-Text
+  color: $color.bbb
+  font-size: $font.size.m
+  line-height: $line.height.mm
+
+.card-Button-more
+  display: inline-block
+  min-width: 0
+  color: $color.bbbb
+  vertical-align: middle
+  white-space: nowrap
+  cursor: pointer
+  background-color: $color.l
+  border: none
+  border-radius: 50%
+  box-shadow: none
+
+  &:hover
+    background-color: $color.lll
+  &:active
+    background-color: $color.llll
+    box-shadow: none
