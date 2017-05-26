@@ -1,19 +1,20 @@
-// 16:9 ratio: http://bit.ly/2rKQS4r
+// Notes =======================================================================
+// #1: 16:9 ratio: http://bit.ly/2rKQS4r
+// #2: Compensate for 24px icon
 
 .card *
-  // component-debug()
+  component-debug()
 
 .card
   margin: $spacing.half
-  // background: $color.l
   box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
 
   @media (min-width: $screen.md)
-    width: 600px
+    margin: $spacing.one
 
 .card-Figure
-  width: 100%
-  height: 56.25%
+  width: 100%  // #1
+  height: 56.25%  // #1
   background: $color.llll
 
 .card-Image
@@ -22,7 +23,7 @@
   object-fit: cover
 
 .card-Header
-  margin-bottom: $spacing.half
+  margin-bottom: 0
   font-size: $font.size.pp
   line-height: $line.height.pp
 
@@ -30,10 +31,14 @@
   margin-bottom: $spacing.one
   color: $color.bbb
   font-size: $font.size.m
-  line-height: $line.height.mm
+  font-weight: 700
+  line-height: $line.height.m
 
 .card-Section
-  padding: 0 $spacing.base
+  padding: 0 $spacing.one
+
+  @media (min-width: $screen.md)
+    padding: 0 $spacing.base
 
   &-actions
     display: flex
@@ -48,9 +53,10 @@
   font-size: $font.size.m
   line-height: $line.height.mm
 
-.card-Button-more
+.card-Button
   display: inline-block
   min-width: 0
+  padding: ($spacing.quarter + $spacing.micro)
   color: $color.bbbb
   vertical-align: middle
   white-space: nowrap
@@ -65,3 +71,7 @@
   &:active
     background-color: $color.llll
     box-shadow: none
+
+.card-ButtonIcon
+  width: $spacing.base  // #2
+  height: $spacing.base  // #2

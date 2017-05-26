@@ -169,7 +169,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  margin: 0.25rem;
+  margin: 0.375rem 0.5rem;
   padding: 0.5rem;
   min-width: 4rem;
   color: rgba(0,0,0,0.87);
@@ -180,7 +180,7 @@ input[type="submit"] {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: normal;
-  line-height: 1.714285714285714;
+  line-height: 1.428571428571429;
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
@@ -621,13 +621,17 @@ cite,
 dfn {
   line-height: 1.25;
 }
+.card * {
+  background: rgba(0,0,255,0.2);
+  box-shadow: inset 1px 0 5px rgba(0,0,0,0.2);
+}
 .card {
   margin: 0.5rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-@media (min-width: 768px) {
+@media (min-width: 840px) {
   .card {
-    width: 600px;
+    margin: 1rem;
   }
 }
 .card-Figure {
@@ -641,7 +645,7 @@ dfn {
   object-fit: cover;
 }
 .card-Header {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-size: 1.5rem;
   line-height: 1.333333333333333;
 }
@@ -649,10 +653,16 @@ dfn {
   margin-bottom: 1rem;
   color: rgba(0,0,0,0.54);
   font-size: 0.875rem;
-  line-height: 1.428571428571429;
+  font-weight: 700;
+  line-height: 1.714285714285714;
 }
 .card-Section {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+@media (min-width: 840px) {
+  .card-Section {
+    padding: 0 1.5rem;
+  }
 }
 .card-Section-actions {
   display: flex;
@@ -667,9 +677,10 @@ dfn {
   font-size: 0.875rem;
   line-height: 1.428571428571429;
 }
-.card-Button-more {
+.card-Button {
   display: inline-block;
   min-width: 0;
+  padding: 0.375rem;
   color: rgba(0,0,0,0.87);
   vertical-align: middle;
   white-space: nowrap;
@@ -679,12 +690,16 @@ dfn {
   border-radius: 50%;
   box-shadow: none;
 }
-.card-Button-more:hover {
+.card-Button:hover {
   background-color: #f5f5f5;
 }
-.card-Button-more:active {
+.card-Button:active {
   background-color: #e0e0e0;
   box-shadow: none;
+}
+.card-ButtonIcon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .nav {
   height: 3rem;
@@ -699,12 +714,6 @@ dfn {
   height: 3rem;
   margin: 0;
   list-style: none;
-}
-@media (min-width: 768px) {
-  .nav-List {
-    width: 50%;
-    margin: 0 auto;
-  }
 }
 .nav-ListItem {
   flex: 1 1 auto;
@@ -751,13 +760,57 @@ dfn {
 .home-Components {
   position: relative;
 }
-.home-Components::before {
+.home-Components::before,
+.home-Components::after {
   content: '';
   position: absolute;
   z-index: -1;
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #f00 1px, transparent 1px, transparent), linear-gradient(0deg, rgba(0,0,0,0.2) 1px, transparent 1px, transparent);
-  background-size: auto 1.5rem, auto 0.25rem;
+}
+.home-Components::before {
+  background: linear-gradient(0deg, rgba(0,0,255,0.2), rgba(0,0,255,0.2) 1px, transparent 1px, transparent), linear-gradient(90deg, rgba(0,0,255,0.2), rgba(0,0,255,0.2) 1px, transparent 1px, transparent);
+  background-size: auto 0.5rem, 0.5rem auto;
+}
+.home-Components::after {
+  top: 0;
+  right: -0.0625rem;
+  border-right: 0.0625rem solid rgba(0,0,255,0.2);
+}
+@media (min-width: 840px) {
+  .home-Profile {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .home-Profile::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .home-Profile:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 840px) {
+  .home-Skills {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .home-Skills::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .home-Skills:last-child {
+    margin-right: 0%;
+  }
 }
