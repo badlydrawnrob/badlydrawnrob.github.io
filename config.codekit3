@@ -53,13 +53,13 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/ecss\/card\/card.kit": {
+	"\/source\/ecss\/global\/card.kit": {
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/card\/card.html",
+		"oAP": "\/build\/ecss\/global\/card.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/card\/card.styl": {
+	"\/source\/ecss\/global\/card.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -67,7 +67,45 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/card\/card.css",
+		"oAP": "\/build\/ecss\/global\/card.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/global\/header.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/global\/header.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/global\/header.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/global\/header.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/global\/navigation.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/global\/navigation.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/global\/navigation.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/global\/navigation.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0

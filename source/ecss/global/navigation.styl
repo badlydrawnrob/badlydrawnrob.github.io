@@ -2,39 +2,39 @@
 // - Try to stick to single-line only
 //   - two-line is 12dp font-size
 
-.nav
+.gl-Nav
   height: $spacing.three
   max-height: $spacing.three
   overflow: hidden
   font-size: $font.size.m
-  font-weight: 700
   text-transform: uppercase
+  background: $color.theme.pp
 
-.nav-List
+.gl-Nav_List
   display: flex
   height: $spacing.three
   margin: 0
   list-style: none
 
-.nav-ListItem
-  flex: 1 1 auto
+.gl-Nav_ListItem
+  flex: 1 $spacing.ppp auto
   text-align: center
   margin: 0
 
-.nav-ListLink
+.gl-Nav_ListLink
   display: block
   height: $spacing.three
   padding: ($spacing.quarter + $spacing.half)
-  color: $color.bbb
+  color: $color.www
   text-decoration: none
 
   @media (min-width: $screen.lg)
     padding-left: $spacing.base
     padding-right: $spacing.base
 
-  .nav-ListItem-current &
-    color: $color.theme.ppp
-    border-bottom: 2px solid $color.theme.pp
+  .gl-Nav_ListItem-current &
+    color: $color.wwww
+    border-bottom: 2px solid $color.theme.ppp
 
   &:hover,
   &:active,
