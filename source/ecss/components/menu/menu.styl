@@ -1,16 +1,11 @@
 // Notes =======================================================================
 // See Material Design "Lists": http://bit.ly/2pg6pNf
 
-.menu-List,
-.menu-ListRow,
-.menu-ListColumn
-  component-debug()
-
 .menu-HeaderRow
-
+  padding: $spacing.one
 
 .menu-Header
-  margin: $spacing.one 0
+  margin: 0
   color: $color.bb
   font-size: $font.size.mm
   line-height: $line.height.pp
@@ -18,7 +13,8 @@
   text-transform: uppercase
 
 .menu-List
-  padding: $spacing.half 0
+  margin: 0
+  padding: 0 0 $spacing.half
   list-style: none
 
 .menu-ListRow
@@ -36,8 +32,6 @@
 
 .menu-ListColumn
   &-icon
-    margin-right: $spacing.two
-  &-price
     margin-left: auto
 
 .menu-ListIcon

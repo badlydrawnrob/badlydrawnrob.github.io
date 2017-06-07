@@ -21,6 +21,18 @@
 		"oAP": "\/build\/CNAME",
 		"oF": 1
 		},
+	"\/design.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/design.html",
+		"oF": 0
+		},
+	"\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/index.html",
+		"oF": 0
+		},
 	"\/node_modules": {
 		"ft": 65536,
 		"oA": 2,
@@ -53,13 +65,13 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/ecss\/global\/card.kit": {
+	"\/source\/ecss\/components\/card\/card.kit": {
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/card.html",
+		"oAP": "\/build\/ecss\/components\/card\/card.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/global\/card.styl": {
+	"\/source\/ecss\/components\/card\/card.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -67,18 +79,18 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/card.css",
+		"oAP": "\/build\/ecss\/components\/card\/card.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/global\/header.kit": {
+	"\/source\/ecss\/components\/global\/footer.kit": {
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/header.html",
+		"oAP": "\/build\/ecss\/components\/global\/footer.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/global\/header.styl": {
+	"\/source\/ecss\/components\/global\/footer.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -86,18 +98,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/header.css",
+		"oAP": "\/build\/ecss\/components\/global\/footer.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/global\/navigation.kit": {
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/navigation.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/global\/navigation.styl": {
+	"\/source\/ecss\/components\/global\/header.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -105,18 +111,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/global\/navigation.css",
+		"oAP": "\/build\/ecss\/components\/global\/header.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/menu\/menu.kit": {
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/menu\/menu.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/menu\/menu.styl": {
+	"\/source\/ecss\/components\/global\/navigation.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -124,18 +124,30 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/menu\/menu.css",
+		"oAP": "\/build\/ecss\/components\/global\/navigation.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/navigation\/navigation.kit": {
+	"\/source\/ecss\/components\/menu\/menu-code.kit": {
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/navigation\/navigation.html",
+		"oAP": "\/build\/ecss\/components\/menu\/menu-code.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/navigation\/navigation.styl": {
+	"\/source\/ecss\/components\/menu\/menu-design.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/menu\/menu-design.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/menu\/menu-navigation.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/menu\/menu-navigation.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/menu\/menu-navigation.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -143,16 +155,61 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/navigation\/navigation.css",
+		"oAP": "\/build\/ecss\/components\/menu\/menu-navigation.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/index.kit": {
+	"\/source\/ecss\/components\/menu\/menu.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/menu\/menu.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/pages\/design\/design.kit": {
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/build\/index.html",
-		"oF": 0
+		"oAP": "\/design.html",
+		"oF": 2
+		},
+	"\/source\/ecss\/pages\/design\/design.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/ecss\/pages\/design\/design.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/pages\/home\/home.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/index.html",
+		"oF": 2
+		},
+	"\/source\/ecss\/pages\/home\/home.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/home\/home.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
 		},
 	"\/source\/stylus\/config.styl": {
 		"aP": 0,
@@ -2309,7 +2366,7 @@
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "\/build"
+	"websiteRelativeRoot": ""
 	},
 "settingsFileVersion": "3"
 }

@@ -1,27 +1,23 @@
 @import './config'
-@import '../ecss/global/*'
-// @import '../ecss/home/*'
-@import '../ecss/menu/*'
-@import '../ecss/navigation/*'
 
-// Helper classes ==============================================================
+@import '../ecss/pages/home/*'
 
-.help-Components
-  component-grid()
+@import '../ecss/components/global/*'
+@import '../ecss/components/card/*'
+@import '../ecss/components/menu/*'
 
-// Main section ================================================================
+// Helper classes
 
-.home-Wrapper
-  center()
-
-.home-Profile
-  component-grid()
-
-  @media (min-width: $screen.md)
-    column(1/2)
-
+.help-Components,
+.home-Profile,
 .home-Skills
-  component-grid()
+  // component-grid()
 
-  @media (min-width: $screen.md)
-    column(1/2)
+.gl-Card *,
+.gl-Footer,
+.menu-HeaderRow,
+.menu-Header,
+.menu-List,
+.menu-ListRow,
+.menu-ListColumn
+  // component-debug()
