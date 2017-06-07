@@ -672,6 +672,57 @@ dfn {
     margin-right: 0%;
   }
 }
+.design-Wrapper {
+  width: auto;
+  max-width: 1024px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.design-Wrapper::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (min-width: 840px) {
+  .design-Profile {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .design-Profile::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .design-Profile:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 840px) {
+  .design-Skills {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .design-Skills::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .design-Skills:last-child {
+    margin-right: 0%;
+  }
+}
 .gl-Footer {
   margin-top: 0.5rem;
   padding: 2rem;
