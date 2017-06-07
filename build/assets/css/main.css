@@ -687,6 +687,9 @@ dfn {
 .gl-FooterText {
   margin: 0;
 }
+.gl-FooterLinks {
+  color: #fff;
+}
 .gl-Header {
   margin: 0;
   padding: 1rem 1.5rem;
@@ -934,4 +937,12 @@ dfn {
 .menu-ListDescription {
   color: rgba(0,0,0,0.54);
   font-size: 0.875rem;
+}
+.menu-ListDescription_Link {
+  color: rgba(0,0,0,0.54);
+}
+.menu-ListDescription_Link:hover,
+.menu-ListDescription_Link:focus,
+.menu-ListDescription_Link:active {
+  color: #003d00;
 }
