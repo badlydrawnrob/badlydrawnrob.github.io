@@ -1,0 +1,42 @@
+// Notes =======================================================================
+// - Try to stick to single-line only
+//   - two-line is 12dp font-size
+
+.menu-Nav
+  height: $spacing.three
+  max-height: $spacing.three
+  overflow: hidden
+  font-size: $font.size.m
+  font-weight: 700
+  text-transform: uppercase
+
+.menu-Nav_List
+  display: flex
+  height: $spacing.three
+  margin: 0
+  list-style: none
+
+.menu-Nav_ListItem
+  flex: 1 1 auto
+  text-align: center
+  margin: 0
+
+.menu-Nav_ListLink
+  display: block
+  height: $spacing.three
+  padding: ($spacing.quarter + $spacing.half)
+  color: $color.bbb
+  text-decoration: none
+
+  @media (min-width: $screen.lg)
+    padding-left: $spacing.base
+    padding-right: $spacing.base
+
+  .menu-Nav_ListItem-current &
+    color: $color.theme.ppp
+    border-bottom: 2px solid $color.theme.pp
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $color.bbb
