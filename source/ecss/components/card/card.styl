@@ -5,12 +5,10 @@
 // #3: Compensate for 24px icon
 
 .gl-Card
-  margin: $spacing.half
   border-radius: $border.radius
   box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
 
   @media (min-width: $screen.md)
-    margin: $spacing.one 0 0
     border-radius: 0
 
 .gl-Card_Figure
@@ -53,12 +51,18 @@
   font-size: $font.size.pp
   line-height: $line.height.pp
 
+  .code &
+    color: $color.wwww
+
 .gl-Card_SubHeader
   margin-bottom: $spacing.one
   color: $color.bbb
   font-size: $font.size.m
   font-weight: 700
   line-height: $line.height.m
+
+  .code &
+    color: $color.www
 
 .gl-Card_Section
   padding: 0 $spacing.one
@@ -79,6 +83,9 @@
   font-size: $font.size.m
   line-height: $line.height.m
 
+  .code &
+    color: $color.wwww
+
 .gl-Card_Button
   display: inline-block
   min-width: 0
@@ -87,15 +94,15 @@
   vertical-align: middle
   white-space: nowrap
   cursor: pointer
-  background-color: $color.l
+  background-color: transparent
   border: none
   border-radius: 50%
   box-shadow: none
 
   &:hover
-    background-color: $color.lll
+    background-color: $color.theme.p
   &:active
-    background-color: $color.llll
+    background-color: $color.theme.p
     box-shadow: none
 
 .gl-Card_ButtonIcon

@@ -28,15 +28,26 @@
   color: $color.bbb
   text-decoration: none
 
-  @media (min-width: $screen.lg)
-    padding-left: $spacing.base
-    padding-right: $spacing.base
-
-  .menu-Nav_ListItem-current &
-    color: $color.theme.ppp
-    border-bottom: 2px solid $color.theme.pp
-
   &:hover,
   &:active,
   &:focus
-    color: $color.bbb
+    color: $color.theme.pp
+
+  .code &
+    color: $color.www
+
+    &:hover,
+    &:active,
+    &:focus
+      color: $color.wwww
+
+  .menu-Nav_ListItem-current &
+    color: $color.theme.pp
+    border-bottom: 2px solid $color.theme.p
+
+    .code &
+      color: $color.wwww
+
+  @media (min-width: $screen.lg)
+    padding-left: $spacing.base
+    padding-right: $spacing.base

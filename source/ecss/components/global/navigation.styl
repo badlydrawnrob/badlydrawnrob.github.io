@@ -9,7 +9,7 @@
   padding: 0 $spacing.base
   font-size: $font.size.m
   text-transform: uppercase
-  background: $color.theme.pp
+  background: $color.theme.p
 
 .gl-Nav_List
   display: flex
@@ -27,7 +27,13 @@
   height: $spacing.three
   padding: ($spacing.quarter + $spacing.half)
   color: $color.www
+  font-weight: 700
   text-decoration: none
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $color.theme.ppp
 
   @media (min-width: $screen.lg)
     padding-left: $spacing.base
@@ -35,9 +41,4 @@
 
   .gl-Nav_ListItem-current &
     color: $color.wwww
-    border-bottom: 2px solid $color.theme.ppp
-
-  &:hover,
-  &:active,
-  &:focus
-    color: $color.bbb
+    border-bottom: 2px solid $color.theme.pp

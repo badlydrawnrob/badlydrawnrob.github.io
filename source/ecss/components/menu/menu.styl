@@ -1,6 +1,9 @@
 // Notes =======================================================================
 // See Material Design "Lists": http://bit.ly/2pg6pNf
 
+.menu
+  //
+
 .menu-HeaderRow
   padding: $spacing.one
 
@@ -11,6 +14,9 @@
   line-height: $line.height.pp
   font-weight: 700
   text-transform: uppercase
+
+  .code &
+    color: $color.www
 
 .menu-List
   margin: 0
@@ -40,14 +46,23 @@
 .menu-ListTitle
   display: block
 
+  .code &
+    color: $color.wwww
+
 .menu-ListDescription
   color: $color.bbb
   font-size: $font.size.m
 
+  .code &
+    color: $color.www
+
 .menu-ListDescription_Link
   color: $color.bbb
+
+  .code &
+    color: $color.www
 
   &:hover,
   &:focus,
   &:active
-    color: $color.theme.ppp
+    color: $color.theme.p
