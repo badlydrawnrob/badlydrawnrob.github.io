@@ -173,6 +173,25 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/ecss\/pages\/code\/code.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/index.html",
+		"oF": 2
+		},
+	"\/source\/ecss\/pages\/code\/code.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/code\/code.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/ecss\/pages\/design\/design.kit": {
 		"ft": 2048,
 		"oA": 0,
@@ -188,25 +207,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/ecss\/pages\/design\/design.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/ecss\/pages\/home\/home.kit": {
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/index.html",
-		"oF": 2
-		},
-	"\/source\/ecss\/pages\/home\/home.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/home\/home.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
