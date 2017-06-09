@@ -780,6 +780,11 @@ dfn {
   font-weight: 700;
   text-decoration: none;
 }
+.gl-Nav_ListLink:hover,
+.gl-Nav_ListLink:active,
+.gl-Nav_ListLink:focus {
+  color: #003d00;
+}
 @media (min-width: 960px) {
   .gl-Nav_ListLink {
     padding-left: 1.5rem;
@@ -789,11 +794,6 @@ dfn {
 .gl-Nav_ListItem-current .gl-Nav_ListLink {
   color: #fff;
   border-bottom: 2px solid #33691e;
-}
-.gl-Nav_ListLink:hover,
-.gl-Nav_ListLink:active,
-.gl-Nav_ListLink:focus {
-  color: #003d00;
 }
 .gl-Card {
   border-radius: 0.25rem;
@@ -935,11 +935,18 @@ dfn {
   color: rgba(0,0,0,0.54);
   text-decoration: none;
 }
-@media (min-width: 960px) {
-  .menu-Nav_ListLink {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.menu-Nav_ListLink:hover,
+.menu-Nav_ListLink:active,
+.menu-Nav_ListLink:focus {
+  color: #33691e;
+}
+.code .menu-Nav_ListLink {
+  color: rgba(255,255,255,0.7);
+}
+.code .menu-Nav_ListLink:hover,
+.code .menu-Nav_ListLink:active,
+.code .menu-Nav_ListLink:focus {
+  color: #fff;
 }
 .menu-Nav_ListItem-current .menu-Nav_ListLink {
   color: #33691e;
@@ -948,10 +955,11 @@ dfn {
 .code .menu-Nav_ListItem-current .menu-Nav_ListLink {
   color: #fff;
 }
-.menu-Nav_ListLink:hover,
-.menu-Nav_ListLink:active,
-.menu-Nav_ListLink:focus {
-  color: rgba(0,0,0,0.54);
+@media (min-width: 960px) {
+  .menu-Nav_ListLink {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 .menu-HeaderRow {
   padding: 1rem;

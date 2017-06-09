@@ -28,9 +28,18 @@
   color: $color.bbb
   text-decoration: none
 
-  @media (min-width: $screen.lg)
-    padding-left: $spacing.base
-    padding-right: $spacing.base
+  &:hover,
+  &:active,
+  &:focus
+    color: $color.theme.pp
+
+  .code &
+    color: $color.www
+
+    &:hover,
+    &:active,
+    &:focus
+      color: $color.wwww
 
   .menu-Nav_ListItem-current &
     color: $color.theme.pp
@@ -39,7 +48,6 @@
     .code &
       color: $color.wwww
 
-  &:hover,
-  &:active,
-  &:focus
-    color: $color.bbb
+  @media (min-width: $screen.lg)
+    padding-left: $spacing.base
+    padding-right: $spacing.base
