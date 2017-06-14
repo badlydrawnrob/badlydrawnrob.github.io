@@ -39,6 +39,14 @@
 		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
+	"\/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/build\/package-lock.json",
+		"oF": 1,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -102,6 +110,12 @@
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
+		},
+	"\/source\/ecss\/components\/global\/header.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/global\/header.html",
+		"oF": 0
 		},
 	"\/source\/ecss\/components\/global\/header.styl": {
 		"aP": 0,
