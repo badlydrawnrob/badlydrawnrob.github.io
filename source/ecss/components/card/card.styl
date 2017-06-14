@@ -4,14 +4,14 @@
 // #2: Vertical absolute positioning: http://bit.ly/2rR0NJs
 // #3: Compensate for 24px icon
 
-.gl-Card
+.card
   border-radius: $border.radius
   box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
 
   @media (min-width: $screen.md)
     border-radius: 0
 
-.gl-Card_Figure
+.card-Figure
   position: relative
   width: 100%  // #1
   height: 56.25%  // #1
@@ -22,31 +22,25 @@
   @media (min-width: $screen.md)
     border-radius: 0
 
-.gl-Card_Image
+.card-Image
   width: 100%
   height: 56.25%
   object-fit: cover
 
-.gl-Card_ProfileImage
+.card-ProfileImage
   position: absolute // #2
-  top: $spacing.one
-  left: $spacing.one
-  width: ($spacing.half * 13)
-  height: ($spacing.half * 13)
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  margin: auto $spacing.one
+  width: auto
+  height: 80%
   background-color: $color.theme.s
   border-radius: 50%
   object-fit: cover
 
-  @media (min-width: $screen.sm)
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    margin: auto $spacing.one
-    width: ($spacing.half * 25)
-    height: ($spacing.half * 25)
-
-.gl-Card_Header
+.card-Header
   margin-bottom: 0
   font-size: $font.size.pp
   line-height: $line.height.pp
@@ -54,7 +48,7 @@
   .code &
     color: $color.wwww
 
-.gl-Card_SubHeader
+.card-SubHeader
   margin-bottom: $spacing.one
   color: $color.bbb
   font-size: $font.size.m
@@ -64,7 +58,7 @@
   .code &
     color: $color.www
 
-.gl-Card_Section
+.card-Section
   padding: 0 $spacing.one
 
   @media (min-width: $screen.md)
@@ -78,7 +72,7 @@
   &-more
     display: none
 
-.gl-Card_Text
+.card-Text
   color: $color.bbb
   font-size: $font.size.m
   line-height: $line.height.m
@@ -86,7 +80,7 @@
   .code &
     color: $color.wwww
 
-.gl-Card_Button
+.card-Button
   display: inline-block
   min-width: 0
   padding: ($spacing.quarter + $spacing.micro)
@@ -105,6 +99,6 @@
     background-color: $color.theme.p
     box-shadow: none
 
-.gl-Card_ButtonIcon
+.card-ButtonIcon
   width: $spacing.base  // #3
   height: $spacing.base  // #3
