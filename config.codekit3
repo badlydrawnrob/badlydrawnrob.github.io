@@ -29,9 +29,9 @@
 		},
 	"\/index.html": {
 		"ft": 8192,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/build\/index.html",
-		"oF": 0
+		"oF": 1
 		},
 	"\/node_modules": {
 		"ft": 65536,
