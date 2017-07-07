@@ -7,7 +7,7 @@
 		"uuidString": "1051A359-B837-45ED-BC24-5A6CEED374B7"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/build": {
 		"ft": 65536,
@@ -29,9 +29,9 @@
 		},
 	"\/index.html": {
 		"ft": 8192,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/build\/index.html",
-		"oF": 0
+		"oF": 1
 		},
 	"\/node_modules": {
 		"ft": 65536,
@@ -2209,6 +2209,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
