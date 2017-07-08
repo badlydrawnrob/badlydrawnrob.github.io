@@ -225,6 +225,15 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/js\/tabby.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/assets\/js\/tabby.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/source\/stylus\/config.styl": {
 		"aP": 0,
 		"bl": 0,
@@ -260,6 +269,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/stylus\/modules\/variables\/colors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/vendor\/tabby.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/vendor\/tabby.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
