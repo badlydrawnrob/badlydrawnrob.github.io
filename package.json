@@ -18,5 +18,6 @@
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
   "dependencies": {
     "cardinal-material": "git+https://github.com/badlydrawnrob/cardinal-material.git#master"
-  }
+  },
+  "false": {}
 }

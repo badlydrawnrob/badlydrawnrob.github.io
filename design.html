@@ -57,40 +57,68 @@
         
         <section class="menu">
           <nav class="menu-Nav">
-            <ul class="menu-Nav_List">
-              <li class="menu-Nav_ListItem menu-Nav_ListItem-current">
-                <a href="#" class="menu-Nav_ListLink">Skills</a></li>
+            <ul data-tabs class="menu-Nav_List tabs">
+              <li class="menu-Nav_ListItem active">
+                <a data-tab class="menu-Nav_ListLink" href="#skills" >Skills</a></li>
               <li class="menu-Nav_ListItem">
-                <a href="#" class="menu-Nav_ListLink">Software</a></li>
+                <a data-tab class="menu-Nav_ListLink" href="#software">Software</a></li>
               <li class="menu-Nav_ListItem">
-                <a href="#" class="menu-Nav_ListLink">Books</a></li>
+                <a data-tab class="menu-Nav_ListLink" href="#books">Books</a></li>
             </ul>
           </nav>
           
         
-          <ul class="menu-List">
-            <li class="menu-ListRow menu-ListRow-one-line">
-              <span class="menu-ListColumn">
-                <span class="menu-ListTitle">
-                  Print
-                </span>
-              </span>
-            </li>
-            <li class="menu-ListRow menu-ListRow-one-line">
-              <span class="menu-ListColumn">
-                <span class="menu-ListTitle">
-                  Branding
-                </span>
-              </span>
-            </li>
-            <li class="menu-ListRow menu-ListRow-one-line">
-              <span class="menu-ListColumn">
-                <span class="menu-ListTitle">
-                  UX / UI / Digital
-                </span>
-              </span>
-            </li>
-          </ul>
+          <div data-tabs-content>
+            <section data-tabs-pane class="menu-Skills tabs-pane active" id="skills">
+              <ul class="menu-List">
+                <li class="menu-ListRow menu-ListRow-one-line">
+                  <span class="menu-ListColumn">
+                    <span class="menu-ListTitle">
+                      Print
+                    </span>
+                  </span>
+                </li>
+                <li class="menu-ListRow menu-ListRow-one-line">
+                  <span class="menu-ListColumn">
+                    <span class="menu-ListTitle">
+                      Branding
+                    </span>
+                  </span>
+                </li>
+                <li class="menu-ListRow menu-ListRow-one-line">
+                  <span class="menu-ListColumn">
+                    <span class="menu-ListTitle">
+                      UX / UI / Digital
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </section>
+        
+            <section data-tabs-pane class="menu-Software tabs-pane" id="software">
+              <ul class="menu-List">
+                <li class="menu-ListRow menu-ListRow-two-line">
+                  <span class="menu-ListColumn">
+                    <span class="menu-ListTitle">
+                      Visual design
+                    </span>
+                    <span class="menu-ListDescription"><a class="menu-ListDescription_Link" href="https://www.sketchapp.com">Sketch</a>, Illustrator, InDesign, <a class="menu-ListDescription_Link" href="http://www.pixelmator.com/">Pixelmator</a>, Photoshop</span>
+                  </span>
+                </li>
+              </ul>
+            </section>
+        
+            <section data-tabs-pane class="menu-Books tabs-pane" id="books">
+              <ul class="menu-List">
+                <li class="menu-ListRow menu-ListRow-one-line">
+                  <span class="menu-ListColumn">
+                    <span class="menu-ListTitle">
+                      Coming soon ...
+                    </span>
+                </li>
+              </ul>
+            </section>
+          </div>
         </section>
         
         <!-- SOFTWARE -->
@@ -102,6 +130,11 @@
     <footer class="gl-Footer">
       <p class="gl-FooterText">A work in progress ... more coming soon!</p>
       <p class="gl-FooterText">-- Built with <a class="gl-FooterLinks" href="https://github.com/badlydrawnrob/ecss">ECSS</a>, <a class="gl-FooterLinks"  href="https://github.com/badlydrawnrob/cardinal-stylus">Cardinal-Stylus</a>, <a class="gl-FooterLinks"  href="https://github.com/badlydrawnrob/cardinal-material">Cardinal-Material</a> --</p>
+    
+      <script src="/build/assets/js/tabby.js"></script>
+      <script type="text/javascript">
+      tabby.init();
+      </script>
     </footer>
     
   </body>
