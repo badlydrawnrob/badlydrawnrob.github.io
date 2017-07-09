@@ -22,19 +22,18 @@
 
 .card-Figure
   position: relative
-  width: 100%  // #1
-  height: 56.25%  // #1
-  background: $color.llll
+  background: $color.ddd
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
+
+  .design &
+    background-color: $color.wwww
 
   @media (min-width: $screen.md)
     border-radius: 0
 
 .card-Image
   width: 100%
-  height: 56.25%
-  object-fit: cover
 
 .card-ProfileImage
   position: absolute // #2
@@ -45,7 +44,7 @@
   margin: auto $spacing.one
   width: auto
   height: 80%
-  background-color: $color.theme.s
+  background-color: $color.theme.ss
   border-radius: 50%
   object-fit: cover
 

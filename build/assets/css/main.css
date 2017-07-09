@@ -322,15 +322,6 @@ th {
   word-wrap: break-word;
   hyphens: auto;
 }
-a {
-  text-decoration: underline;
-  color: #00f;
-}
-a:hover,
-a:active,
-a:focus {
-  text-decoration: none;
-}
 blockquote {
   color: rgba(0,0,0,0.54);
   font-family: 'Noto Sans', 'Arial', sans-serif;
@@ -813,6 +804,11 @@ cite,
 dfn {
   line-height: 1.25;
 }
+a {
+  color: #33691e;
+  font-weight: 700;
+  text-decoration: none;
+}
 .code {
   background: #303030;
 }
@@ -839,6 +835,8 @@ dfn {
 .code-Profile {
   margin: 0.5rem;
   background: #424242;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 @media (min-width: 840px) {
   .code-Profile {
@@ -846,6 +844,7 @@ dfn {
     display: flex;
     flex: 1 50%;
     margin: 1rem 0 0;
+    border-radius: 0;
   }
 }
 .code-Skills {
@@ -1004,11 +1003,12 @@ dfn {
 }
 .card-Figure {
   position: relative;
-  width: 100%;
-  height: 56.25%;
-  background: #e0e0e0;
+  background: #212121;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+.design .card-Figure {
+  background-color: #fff;
 }
 @media (min-width: 840px) {
   .card-Figure {
@@ -1017,8 +1017,6 @@ dfn {
 }
 .card-Image {
   width: 100%;
-  height: 56.25%;
-  object-fit: cover;
 }
 .card-ProfileImage {
   position: absolute;
@@ -1029,7 +1027,7 @@ dfn {
   margin: auto 1rem;
   width: auto;
   height: 80%;
-  background-color: #62717b;
+  background-color: #37464f;
   border-radius: 50%;
   object-fit: cover;
 }
