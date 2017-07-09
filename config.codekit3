@@ -73,10 +73,16 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/ecss\/components\/card\/card.kit": {
+	"\/source\/ecss\/components\/card\/card-code.kit": {
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/card\/card.html",
+		"oAP": "\/build\/ecss\/components\/card\/card-code.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/card\/card-design.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/card\/card-design.html",
 		"oF": 0
 		},
 	"\/source\/ecss\/components\/card\/card.styl": {
@@ -269,6 +275,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/stylus\/modules\/variables\/colors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/partials\/anchors.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/partials\/anchors.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0

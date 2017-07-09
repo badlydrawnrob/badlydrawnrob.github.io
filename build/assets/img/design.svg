@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="180px" viewBox="0 0 320 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>design</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design">
+            <rect id="Rectangle-3" fill="#D8D8D8" x="220" y="0" width="20" height="90"></rect>
+            <polygon id="Rectangle-2" fill="#F8E81C" points="160 90 240 90 240 180"></polygon>
+            <rect id="Rectangle-2" fill="#A5E12E" x="240" y="0" width="85.8017578" height="180"></rect>
+            <polygon id="Triangle" fill="#D8D8D8" points="0 0 160 180.316406 0 180.316406"></polygon>
+            <path d="M77.0991211,0 L160,0 L160,90 L80,90 L80,180 L0,180 L0,0 L77.0991211,0 Z" id="Combined-Shape" fill="#66D9EF"></path>
+        </g>
+    </g>
+</svg>
