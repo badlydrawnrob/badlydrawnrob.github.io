@@ -1199,6 +1199,8 @@ a {
 }
 .menu-ListDescription_Link {
   color: rgba(0,0,0,0.54);
+  font-weight: normal;
+  text-decoration: underline;
 }
 .code .menu-ListDescription_Link {
   color: rgba(255,255,255,0.7);
