@@ -86,7 +86,7 @@
 		"ft": 8,
 		"iC": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/ecss\/components\/_global\/footer.css",
 		"oF": 0,
 		"oS": 0,
@@ -105,7 +105,7 @@
 		"ft": 8,
 		"iC": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/ecss\/components\/_global\/header.css",
 		"oF": 0,
 		"oS": 0,
@@ -118,7 +118,7 @@
 		"ft": 8,
 		"iC": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/ecss\/components\/_global\/navigation.css",
 		"oF": 0,
 		"oS": 0,
@@ -193,6 +193,12 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/ecss\/components\/modal\/modal.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/modal\/modal.html",
+		"oF": 0
+		},
 	"\/source\/ecss\/components\/modal\/modal.styl": {
 		"aP": 0,
 		"bl": 0,
@@ -200,17 +206,11 @@
 		"ft": 8,
 		"iC": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/ecss\/components\/modal\/modal.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
-		},
-	"\/source\/ecss\/components\/modal\/model.kit": {
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/modal\/model.html",
-		"oF": 0
 		},
 	"\/source\/ecss\/pages\/code\/code.kit": {
 		"ft": 2048,
@@ -257,6 +257,15 @@
 		"oAP": "\/build\/assets\/js\/tabby.js",
 		"oF": 2,
 		"sC": 1,
+		"tS": 0
+		},
+	"\/source\/js\/uglipop.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/build\/assets\/js\/uglipop.js",
+		"oF": 2,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/source\/stylus\/config.styl": {

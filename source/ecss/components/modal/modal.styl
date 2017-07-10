@@ -1,0 +1,95 @@
+// Notes =======================================================================
+// #1: 16:9 ratio: http://bit.ly/2rKQS4r
+//     != Doesn't align properly with component-grid()
+// #2: Vertical absolute positioning: http://bit.ly/2rR0NJs
+// #3: Compensate for 24px icon
+
+.modal
+  width: ($spacing.increment * 8)
+  background: $color.wwww
+  border-radius: $border.radius
+  box-shadow: 0 10px 20px alpha(#000, 19%), 0 6px 6px alpha(#000, 23%)
+  overflow: hidden
+
+.modal-HeaderWrapper
+  padding: $spacing.base
+  background: $color.theme.p
+
+.modal-Header
+  margin-bottom: 0
+  color: $color.wwww
+  font-size: $font.size.pp
+  line-height: $line.height.pp
+
+  .code &
+    color: $color.wwww
+
+.modal-Figure
+  position: relative
+  background: $color.ddd
+  border-top-left-radius: $border.radius
+  border-top-right-radius: $border.radius
+
+  .design &
+    background-color: $color.wwww
+
+  @media (min-width: $screen.md)
+    border-radius: 0
+
+.modal-Image
+  width: 100%
+
+.modal-Section
+  padding: 0 $spacing.one
+
+  @media (min-width: $screen.md)
+    padding: 0 $spacing.base
+
+  &-actions
+    display: flex
+    justify-content: flex-end
+    padding: 0 $spacing.quarter
+
+.modal-Text
+  color: $color.bbb
+  font-size: $font.size.m
+  line-height: $line.height.m
+
+  .code &
+    color: $color.wwww
+
+.modal-Button
+  display: inline-block
+  margin: ($spacing.quarter + $spacing.micro) $spacing.half
+  padding: $spacing.half
+  min-width: $spacing.four
+  color: $color.theme.pp
+  font-family: $font.family.base
+  font-weight: 700
+  font-size: $font.size.m
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: normal
+  line-height: $line.height.base
+  vertical-align: middle
+  white-space: nowrap
+  cursor: pointer
+  background-color: $color.l
+  border: 0 none
+  border-radius: $border.radius
+  box-shadow: none
+
+  &:hover
+    color: $color.theme.pp
+    background-color: $color.lll
+  &:active
+    background-color: $color.llll
+  &:active:focus
+    outline: 0 none
+  &:disabled
+    color: $color.bb
+    cursor: not-allowed
+    pointer-events: none
+    box-shadow: none
+    text-shadow: none
