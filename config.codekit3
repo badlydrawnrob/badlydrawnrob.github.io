@@ -193,10 +193,10 @@
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/components\/modal\/modal.kit": {
+	"\/source\/ecss\/components\/modal\/modal-inflights.kit": {
 		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/modal\/modal.html",
+		"oA": 0,
+		"oAP": "\/build\/ecss\/components\/modal\/modal-inflights.html",
 		"oF": 0
 		},
 	"\/source\/ecss\/components\/modal\/modal.styl": {
@@ -250,6 +250,15 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/js\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/assets\/js\/main.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/source\/js\/tabby.js": {
 		"ft": 64,
 		"mi": 1,
@@ -257,15 +266,6 @@
 		"oAP": "\/build\/assets\/js\/tabby.js",
 		"oF": 2,
 		"sC": 1,
-		"tS": 0
-		},
-	"\/source\/js\/uglipop.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "\/build\/assets\/js\/uglipop.js",
-		"oF": 2,
-		"sC": 0,
 		"tS": 0
 		},
 	"\/source\/stylus\/config.styl": {
