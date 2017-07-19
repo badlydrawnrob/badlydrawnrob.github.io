@@ -863,7 +863,7 @@ a:active {
 .design {
   background: #fafafa;
 }
-.design-Wrapper {
+.design-BlockWrapper {
   width: auto;
   max-width: 1024px;
   float: none;
@@ -873,13 +873,13 @@ a:active {
   padding-left: 0;
   padding-right: 0;
 }
-.design-Wrapper::after {
+.design-BlockWrapper::after {
   content: '';
   display: table;
   clear: both;
 }
 @media (min-width: 840px) {
-  .design-Wrapper {
+  .design-BlockWrapper {
     display: flex;
   }
 }
@@ -906,8 +906,27 @@ a:active {
     border-bottom-right-radius: 0.25rem;
   }
 }
+.design-Portfolio {
+  margin-top: 1rem;
+  background: #e0e0e0;
+}
+.design-PortfolioWrapper {
+  width: auto;
+  max-width: 1024px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.design-PortfolioWrapper::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 .gl-Footer {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   padding: 2rem;
   color: #fff;
   text-align: center;
@@ -1240,4 +1259,50 @@ a:active {
 }
 .js-tabby .tabs-pane:focus {
   outline: none;
+}
+.help-Components,
+.code-Profile,
+.code-Skills,
+.design-Profile,
+.design-Skills,
+.design-Portfolio {
+  position: relative;
+}
+.help-Components::before,
+.code-Profile::before,
+.code-Skills::before,
+.design-Profile::before,
+.design-Skills::before,
+.design-Portfolio::before,
+.help-Components::after,
+.code-Profile::after,
+.code-Skills::after,
+.design-Profile::after,
+.design-Skills::after,
+.design-Portfolio::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.help-Components::before,
+.code-Profile::before,
+.code-Skills::before,
+.design-Profile::before,
+.design-Skills::before,
+.design-Portfolio::before {
+  background: linear-gradient(0deg, rgba(0,0,255,0.2), rgba(0,0,255,0.2) 1px, transparent 1px, transparent), linear-gradient(90deg, rgba(0,0,255,0.2), rgba(0,0,255,0.2) 1px, transparent 1px, transparent);
+  background-size: auto 0.5rem, 0.5rem auto;
+}
+.help-Components::after,
+.code-Profile::after,
+.code-Skills::after,
+.design-Profile::after,
+.design-Skills::after,
+.design-Portfolio::after {
+  top: 0;
+  right: -0.0625rem;
+  border-right: 0.0625rem solid rgba(0,0,255,0.2);
 }

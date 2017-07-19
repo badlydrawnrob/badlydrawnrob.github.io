@@ -193,6 +193,25 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/ecss\/components\/portfolio\/portfolio.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/portfolio\/portfolio.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/portfolio\/portfolio.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/ecss\/components\/portfolio\/portfolio.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/ecss\/pages\/code\/code.kit": {
 		"ft": 2048,
 		"oA": 0,
