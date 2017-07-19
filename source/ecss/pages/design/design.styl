@@ -3,12 +3,14 @@
 .design
   background: $color.ll
 
-.design-Wrapper
+.design-Block
+  // pass
+
+.design-BlockWrapper
   center()
 
   @media (min-width: $screen.md)
     display: flex
-
 
 .design-Profile
   margin: $spacing.half
@@ -28,3 +30,17 @@
     flex: 1 50%
     border-top-right-radius: $border.radius
     border-bottom-right-radius: $border.radius
+
+.design-Portfolio
+  margin-top: $spacing.one
+  background: $color.llll
+
+.design-PortfolioWrapper
+  center()
+  padding: $spacing.half
+
+  @media (min-width: $screen.sm)
+    padding: $spacing.one
+
+  @media (min-width: $screen.md)
+    padding: $spacing.two $spacing.one

@@ -73,6 +73,57 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/source\/ecss\/components\/_global\/footer.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/_global\/footer.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/_global\/footer.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/_global\/footer.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/components\/_global\/header.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/_global\/header.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/_global\/header.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/_global\/header.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/components\/_global\/navigation.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/_global\/navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/ecss\/components\/card\/card-code.kit": {
 		"ft": 2048,
 		"oA": 1,
@@ -94,57 +145,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/ecss\/components\/card\/card.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/ecss\/components\/global\/footer.kit": {
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/global\/footer.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/global\/footer.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/global\/footer.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/ecss\/components\/global\/header.kit": {
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/global\/header.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/global\/header.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/global\/header.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/ecss\/components\/global\/navigation.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/global\/navigation.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
@@ -193,6 +193,25 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/ecss\/components\/portfolio\/portfolio.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/portfolio\/portfolio.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/components\/portfolio\/portfolio.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/portfolio\/portfolio.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/ecss\/pages\/code\/code.kit": {
 		"ft": 2048,
 		"oA": 0,
@@ -230,6 +249,15 @@
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
+		},
+	"\/source\/js\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/assets\/js\/main.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/source\/js\/tabby.js": {
 		"ft": 64,
@@ -288,6 +316,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/stylus\/partials\/anchors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/partials\/blockquotes.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/partials\/blockquotes.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
