@@ -1,0 +1,68 @@
+.portfolio
+  overflow: hidden
+  margin-bottom: $spacing.two
+
+.portfolio-Figure
+  background: $color.l
+  border-radius: $border.radius
+
+  @media (min-width: $screen.md)
+    column(1/2)
+
+.portfolio-Image
+  width: 100%
+
+.portfolio-Description
+  margin-top: $spacing.half
+
+  @media (min-width: $screen.md)
+    column(1/2)
+
+.portfolio-Tags
+  margin: 0 0 $spacing.half
+  list-style: none
+
+.portfolio-TagItem
+  margin: 0 $spacing.micro
+  padding: 0 $spacing.half
+  color: $color.theme.ss
+  display: inline
+  background: $color.l
+  border-radius: $border.radius
+
+.portfolio-Button
+  display: inline-block
+  margin: ($spacing.quarter + $spacing.micro) $spacing.half
+  padding: $spacing.half
+  min-width: $spacing.four
+  color: $color.theme.pp
+  font-family: $font.family.base
+  font-weight: 700
+  font-size: $font.size.m
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: normal
+  line-height: $line.height.mm  // #1
+  vertical-align: middle
+  white-space: nowrap
+  cursor: pointer
+  background-color: $color.lll
+  border: 0 none
+  border-radius: $border.radius
+  box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
+
+  &:hover
+    color: $color.theme.ppp
+    background-color: $color.lll
+  &:active
+    background-color: $color.llll
+    box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%)
+  &:active:focus
+    outline: 0 none
+  &:disabled
+    color: $color.bb
+    cursor: not-allowed
+    pointer-events: none
+    box-shadow: none
+    text-shadow: none
