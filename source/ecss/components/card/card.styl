@@ -74,11 +74,8 @@
 
   &-actions
     display: flex
-    justify-content: flex-end
+    // justify-content: flex-end
     padding: 0 $spacing.quarter
-
-  &-more
-    display: none
 
 .card-Text
   color: $color.bbb
@@ -90,26 +87,45 @@
 
 .card-Button
   display: inline-block
-  min-width: 0
-  padding: ($spacing.quarter + $spacing.micro)
-  color: $color.bbbb
+  margin: ($spacing.quarter + $spacing.micro) $spacing.half
+  padding: $spacing.half
+  min-width: $spacing.four
+  color: $color.www
+  font-family: $font.family.base
+  font-weight: 700
+  font-size: $font.size.m
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: normal
+  line-height: $line.height.base
   vertical-align: middle
   white-space: nowrap
   cursor: pointer
   background-color: transparent
-  border: none
-  border-radius: 50%
+  border: 0 none
+  border-radius: $border.radius
   box-shadow: none
 
-  &:hover
-    background-color: $color.theme.p
-  &:active
-    background-color: $color.theme.p
-    box-shadow: none
+  .design &
+    color: $color.bbb
 
-.card-ButtonIcon
-  width: $spacing.base  // #3
-  height: $spacing.base  // #3
+  &:hover,
+  &:active
+    color: $color.theme.p
+  &:active:focus
+    outline: 0 none
+  &:disabled
+    color: $color.bb
+    cursor: not-allowed
+    pointer-events: none
+    box-shadow: none
+    text-shadow: none
+
+  .design &
+    &:hover,
+    &:active
+      color: $color.theme.pp
 
 .card-ButtonFloating
   position: absolute
