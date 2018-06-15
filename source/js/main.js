@@ -1,2 +1,0 @@
-// Tabs
-tabby.init();
