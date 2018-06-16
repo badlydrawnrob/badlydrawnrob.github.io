@@ -1,0 +1,4 @@
+- [x] A complete task
+    - [ ] An incomplete task
+- [ ] Another incomplete task
+    - e.g: some other text

@@ -331,7 +331,7 @@
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
-		"pHT": 0,
+		"pHT": 1,
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
@@ -389,68 +389,63 @@
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/components\/callout\/callout-left.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/callout\/callout-left.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/callout\/callout-right.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/callout\/callout-right.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/callout\/callout-split.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/callout\/callout-split.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/callout\/callout-triple.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/callout\/callout-triple.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/callout\/callout.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/components\/callout\/callout.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/markdown\/blockquote.kit": {
-		"cB": 0,
-		"ft": 2048,
+	"\/source\/ecss\/components\/_global\/page.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/blockquote.html",
+		"oAP": "\/build\/ecss\/components\/_global\/page.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/components\/markdown": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/components\/markdown",
 		"oF": 0
 		},
-	"\/source\/ecss\/components\/markdown\/figure.kit": {
-		"cB": 0,
-		"ft": 2048,
+	"\/source\/ecss\/components\/markdown\/callout\/callout.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/figure.html",
-		"oF": 0
+		"oAP": "\/build\/ecss\/components\/markdown\/callout\/callout.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
 		},
-	"\/source\/ecss\/components\/markdown\/tasks.kit": {
-		"cB": 0,
-		"ft": 2048,
+	"\/source\/ecss\/components\/markdown\/github\/tasks.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/tasks.html",
-		"oF": 0
+		"oAP": "\/build\/ecss\/components\/markdown\/github\/tasks.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
 		},
-	"\/source\/ecss\/components\/markdown\/text.kit": {
-		"cB": 0,
-		"ft": 2048,
+	"\/source\/ecss\/components\/markdown\/highlights\/highlights-custom.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/text.html",
-		"oF": 0
+		"oAP": "\/build\/ecss\/components\/markdown\/highlights\/highlights.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
 		},
 	"\/source\/ecss\/pages\/home\/home.kit": {
 		"cB": 0,
@@ -472,25 +467,30 @@
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/ecss\/pages\/style\/style.kit": {
+	"\/source\/ecss\/pages\/home\/markdown.kit": {
 		"cB": 0,
 		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/pages\/style\/style.html",
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/home\/markdown.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/pages\/style\/style.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
+	"\/source\/ecss\/pages\/style\/style.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/build\/ecss\/pages\/style\/style.css",
+		"oAP": "\/build\/ecss\/pages\/style\/style.html",
 		"oF": 0,
+		"oFM": 0,
 		"oS": 0,
-		"rrU": 0
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/source\/stylus\/config.styl": {
 		"aP": 0,
@@ -531,6 +531,19 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/stylus\/modules\/variables\/typography.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/modules\/variables\/typography.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/stylus\/partials\/anchors.styl": {
 		"aP": 0,
 		"bl": 0,
@@ -540,6 +553,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/stylus\/partials\/anchors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/partials\/blockquotes.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/partials\/blockquotes.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/partials\/text-elements.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/partials\/text-elements.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
@@ -2425,7 +2464,7 @@
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
-		"processHTML": 0,
+		"processHTML": 1,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
@@ -2536,7 +2575,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
