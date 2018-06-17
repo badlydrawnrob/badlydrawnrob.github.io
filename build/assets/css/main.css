@@ -673,19 +673,22 @@ mark {
   background: #ff9;
 }
 a {
+  padding-bottom: 0.0625rem;
   color: #1976d2;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid rgba(0,0,0,0.12);
 }
 a:hover,
 a:active {
   color: #212121;
+  border-color: #212121;
 }
 blockquote {
-  color: rgba(0,0,0,0.54);
+  color: #212121;
   font-style: normal;
   margin-left: -1rem;
   padding-left: 1rem;
-  border-left: 0.125rem solid rgba(0,0,0,0.12);
+  border-left: 0.0625rem solid rgba(0,0,0,0.38);
 }
 blockquote p {
   margin: 0;
@@ -696,7 +699,7 @@ blockquote p + p {
 blockquote cite {
   font-style: italic;
   font-size: 1rem;
-  color: rgba(0,0,0,0.38);
+  color: rgba(0,0,0,0.54);
 }
 blockquote cite a {
   color: rgba(0,0,0,0.38);
@@ -706,6 +709,11 @@ s {
   text-decoration: line-through;
   text-decoration-style: wavy;
   opacity: 0.75;
+}
+ins,
+mark {
+  padding: 0.25rem;
+  background: rgba(187,222,251,0.3);
 }
 .gl-Footer {
   padding: 2rem;
@@ -824,7 +832,7 @@ s {
 }
 .callout-primary {
   border: 1px solid #bbdefb;
-  background: ;
+  background: #fafafa;
 }
 .callout-secondary {
   background: #bbdefb;
@@ -853,7 +861,9 @@ s {
 }
 .task-list {
   margin-left: 0;
-  font-family: 'Consolas', 'Monaco', 'Andale Mono', monospace;
+  font-family: 'Source Code Pro', mono;
+  font-size: 0.875rem;
+  line-height: 1.714285714285714;
 }
 .task-list-item.gh-complete {
   color: #1976d2;
@@ -861,6 +871,34 @@ s {
 .task-list-item.gh-incomplete {
   color: #d32f2f;
 }
-.task-list-item-checkbox {
-  border: none;
+.keywords {
+  font-weight: bold;
+}
+.keywords-highlight {
+  text-decoration: underline;
+}
+.keywords-box {
+  padding: 0.25rem 0.5rem;
+  background: #fff;
+  border: 0.0625rem outset #212121;
+  border-radius: 0.125rem;
+}
+.callout .keywords-box {
+  padding: 1rem;
+}
+.keywords-circle {
+  border: 0.0625rem solid #212121;
+  border-radius: 50%;
+}
+.keywords-primary {
+  color: #1976d2;
+}
+.keywords-box.keywords-primary {
+  border-color: #1976d2;
+}
+.keywords-secondary {
+  color: #d32f2f;
+}
+.keywords-box.keywords-secondary {
+  border: 0.0625rem outset #d32f2f;
 }

@@ -27,7 +27,8 @@
     - Changes the meaning of the sentence (Cats _are_ cute)
     - A _comparison_ can also be called _compare_
 - `q`: Inline quotations ([some examples](https://academiccoachingandwriting.org/academic-writing/resources/citations))
-- `blockquote`: Long-form quotations ([some examples](https://academiccoachingandwriting.org/academic-writing/resources/citations))
+- `blockquote`: Long-form quotations (some examples [here](https://academiccoachingandwriting.org/academic-writing/resources/citations) and [here](https://library.leeds.ac.uk/info/1402/referencing/50/leeds_harvard_style/4))
+    - Should probably be [_limited_ to lines of text `> 3`](https://writingcommons.org/format/apa/675-block-quotations-apa) — and <i>do they have to be indented</i>?
     - `blockquote` > `mark`:
       - Highlight interesting parts of original text
     - `blockquote` > `i`:

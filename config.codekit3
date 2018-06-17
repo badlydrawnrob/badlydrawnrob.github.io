@@ -474,23 +474,11 @@
 		"oAP": "\/build\/ecss\/pages\/home\/markdown.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/pages\/style\/style.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/build\/ecss\/pages\/style\/style.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 1,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
+	"\/source\/ecss\/pages\/style": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/style",
+		"oF": 0
 		},
 	"\/source\/stylus\/config.styl": {
 		"aP": 0,
@@ -527,6 +515,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/stylus\/modules\/variables\/colors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/modules\/variables\/grid.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/modules\/variables\/grid.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
@@ -2575,7 +2576,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown, \/source\/ecss\/pages\/style",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
