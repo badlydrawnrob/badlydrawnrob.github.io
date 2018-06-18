@@ -865,11 +865,19 @@ mark {
   font-size: 0.875rem;
   line-height: 1.714285714285714;
 }
+.task-list-item:before {
+  content: "⤷";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 .task-list-item.gh-complete {
   color: #1976d2;
 }
 .task-list-item.gh-incomplete {
   color: #d32f2f;
+}
+.task-list-item-checkbox {
+  display: none !important;
 }
 .keywords {
   font-weight: bold;
