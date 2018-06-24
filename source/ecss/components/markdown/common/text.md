@@ -1,1 +1,0 @@
-Donec auctor, _justo sed sodales_ consectetur, turpis purus imperdiet enim, eu tristique **tortor felis** id sem. Mauris eros mauris, <s>[placerat id congue](http://html5doctor.com/ins-del-s/)</s> id, placerat sit amet lacus.

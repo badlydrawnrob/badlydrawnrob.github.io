@@ -103,38 +103,6 @@
 		"oAP": "\/build\/ecss\/components\/_global\/header.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/components\/markdown": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown",
-		"oF": 0
-		},
-	"\/source\/ecss\/components\/markdown\/callout\/callout.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/callout\/callout.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/ecss\/components\/markdown\/github\/tasks.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/components\/markdown\/github\/tasks.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
 	"\/source\/ecss\/markdown\/partials.md": {
 		"cB": 0,
 		"cS": 0,
