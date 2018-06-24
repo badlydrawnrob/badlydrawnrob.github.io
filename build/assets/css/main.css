@@ -1,7 +1,7 @@
 /*
- * == Cardinal Stylus ==========================================================
+ * == Print First ==========================================================
  * MIT License | https://github.com/badlydrawnrob/cardinal-stylus
- * == Ported from Cardinal CSS: http://bit.ly/2iDzOZi ==========================
+ * == Original credit @cbracco / Cardinal CSS: http://bit.ly/2iDzOZi ==========================
  */
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -234,20 +234,12 @@ var {
   padding: 0;
   border: 0;
 }
-iframe {
-  border: 0;
-}
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
 html {
-  height: 100%;
   color: rgba(0,0,0,0.87);
-  font-family: 'Arial', sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   background-color: #fff;
-  overflow-y: scroll;
 }
 body {
   min-height: 100%;
@@ -283,9 +275,8 @@ th {
 blockquote {
   color: rgba(0,0,0,0.54);
   font-style: normal;
-  margin-left: 1.5rem;
   padding-left: 1.5rem;
-  border-left: 0.75rem solid rgba(0,0,0,0.12);
+  border-left: 0.0625rem solid rgba(0,0,0,0.12);
 }
 blockquote p {
   margin: 0;
@@ -301,60 +292,11 @@ blockquote cite {
 blockquote cite a {
   color: rgba(0,0,0,0.38);
 }
-button,
-input[type="button"],
-input[type="submit"] {
-  display: inline-block;
-  margin: 0.375rem 0.5rem;
-  padding: 0.5rem;
-  min-width: 4rem;
-  color: inherit;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: normal;
-  line-height: 1.428571428571429;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  background-color: #f5f5f5;
-  border: 0 none;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover {
-  background-color: #f5f5f5;
-}
-button:active,
-input[type="button"]:active,
-input[type="submit"]:active {
-  background-color: #e0e0e0;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-button:active:focus,
-input[type="button"]:active:focus,
-input[type="submit"]:active:focus {
-  outline: 0 none;
-}
-button:disabled,
-input[type="button"]:disabled,
-input[type="submit"]:disabled {
-  color: rgba(0,0,0,0.38);
-  cursor: not-allowed;
-  pointer-events: none;
-  box-shadow: none;
-  text-shadow: none;
-}
 code,
 kbd,
 pre,
 samp {
-  font-family: 'Consolas', 'Monaco', 'Andale Mono', monospace;
+  font-family: monospace;
   font-size: 0.875rem;
   font-style: normal;
 }
@@ -362,7 +304,7 @@ code {
   margin: 0;
   padding: 0.25rem;
   white-space: nowrap;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   background-color: rgba(0,0,0,0.12);
 }
 kbd {
@@ -371,7 +313,7 @@ kbd {
   margin-bottom: 1px;
   padding: 0.25rem;
   white-space: nowrap;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   background-color: rgba(0,0,0,0.12);
   box-shadow: 0 1px 0 rgba(0,0,0,0.38), inset 0 0 0 1px #fff;
 }
@@ -398,48 +340,7 @@ pre code {
   border-radius: 0;
   background: transparent;
 }
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-audio,
-canvas,
-video {
-  width: 100%;
-}
-embed,
-img,
-object,
-video {
-  max-width: 100%;
-  height: auto;
-}
-embed,
-object {
-  height: 100%;
-}
-figure {
-  margin-right: auto;
-  margin-left: auto;
-}
-figure > img {
-  display: block;
-}
-figcaption {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  font-style: normal;
-}
-img {
-  font-style: italic;
-  -ms-interpolation-mode: bicubic;
-}
 button,
-html input[type="button"],
 input[type="checkbox"],
 input[type="file"],
 input[type="image"],
@@ -485,7 +386,6 @@ legend {
   font-weight: 700;
   width: 100%;
   padding: 0;
-  color: #000;
   border: 0;
 }
 textarea {
@@ -494,47 +394,48 @@ textarea {
   resize: vertical;
 }
 h1 {
-  margin-bottom: 2.25rem;
+  margin-bottom: 3.75rem;
   font-weight: normal;
-  font-size: 3.5rem;
-  line-height: 1.5;
+  font-size: 3.75rem;
+  line-height: 1;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: -0.03125rem;
 }
 h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-weight: normal;
-  font-size: 2.8125rem;
-  line-height: 1.066666666666667;
+  font-size: 3rem;
+  line-height: 1.5;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0rem;
 }
 h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   font-weight: normal;
   font-size: 2.125rem;
-  line-height: 1.176470588235294;
+  line-height: 1;
   text-transform: none;
   letter-spacing: normal;
 }
 h4 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-weight: normal;
   font-size: 1.5rem;
-  line-height: 1.333333333333333;
+  line-height: 1.25;
   text-transform: none;
   letter-spacing: normal;
 }
 h5 {
-  margin-bottom: 1.125rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0.009375rem;
 }
 h6 {
-  font-weight: normal;
+  margin-bottom: 0;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.5;
   text-transform: none;
@@ -545,6 +446,18 @@ hr {
   padding: 0;
   border: 0;
   border-top: 0.25rem solid rgba(0,0,0,0.12);
+}
+img {
+  font-style: italic;
+  vertical-align: middle;
+}
+figcaption {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  font-style: normal;
+}
+figcaption > img {
+  display: block;
 }
 dl dt {
   font-weight: 700;
@@ -574,15 +487,27 @@ ol ul,
 ul ul {
   margin-bottom: 0;
 }
+audio,
+canvas,
+iframe,
+svg,
+video {
+  vertical-align: middle;
+}
+audio,
+canvas,
+video {
+  width: 100%;
+  height: auto;
+}
 @media print {
-  * {
-    color: #000 !important;
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
-  }
-  @page {
-    margin: 0.5cm;
   }
   a,
   a:visited {
@@ -591,37 +516,37 @@ ul ul {
   a[href]:after {
     content: " (" attr(href) ")";
   }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  blockquote,
   pre {
-    border: 1px solid rgba(0,0,0,0.12);
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
   h2,
-  h3,
-  p {
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
   h3 {
     page-break-after: avoid;
-  }
-  img,
-  tr {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  thead {
-    display: table-header-group;
   }
 }
 table {
@@ -644,9 +569,6 @@ dfn[title] {
 abbr a {
   text-decoration: none;
 }
-acronym {
-  text-transform: uppercase;
-}
 del {
   font-style: normal;
   text-decoration: line-through;
@@ -655,22 +577,10 @@ del {
 details {
   cursor: pointer;
 }
-dl dt {
-  font-weight: 700;
-}
-dl dd {
-  margin: 0;
-}
 em,
 i,
 cite {
   font-style: italic;
-}
-ins,
-mark {
-  color: inherit;
-  text-decoration: none;
-  background: #ff9;
 }
 a {
   padding-bottom: 0.0625rem;
@@ -714,199 +624,4 @@ ins,
 mark {
   padding: 0.25rem;
   background: rgba(187,222,251,0.3);
-}
-.gl-Footer {
-  padding: 2rem;
-  color: #fff;
-  text-align: center;
-  background: #f44336;
-}
-.gl-Footer_Social {
-  margin: 0;
-}
-.gl-Footer_SocialItem {
-  list-style: none;
-}
-.gl-Footer_SocialLink {
-  color: #fff;
-}
-.gl-Footer_CreditItem {
-  list-style: none;
-}
-.gl-Footer_CreditItemLink {
-  color: #fff;
-}
-.gl-Header {
-  margin: 0;
-  padding: 1rem 1.5rem;
-  font-family: 'Arial', sans-serif;
-  font-weight: normal;
-  font-size: 2.125rem;
-  color: #fff;
-  line-height: 1.176470588235294;
-  text-transform: none;
-  letter-spacing: normal;
-  background: #bbdefb;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-@media (min-width: 840px) {
-  .gl-Header {
-    font-size: 3.5rem;
-    line-height: 1;
-    padding: 4rem 1.5rem 1.5rem;
-  }
-}
-.gl-Nav {
-  height: 3rem;
-  max-height: 3rem;
-  overflow: hidden;
-  padding: 0 1.5rem;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  background: #bbdefb;
-}
-.gl-Nav_List {
-  display: flex;
-  height: 3rem;
-  margin: 0;
-  list-style: none;
-}
-.gl-Nav_ListItem {
-  flex: 1 4rem auto;
-  text-align: center;
-  margin: 0;
-}
-.gl-Nav_ListLink {
-  display: block;
-  height: 3rem;
-  padding: 0.75rem;
-  color: rgba(255,255,255,0.7);
-  font-weight: 700;
-  text-decoration: none;
-}
-.gl-Nav_ListLink:hover,
-.gl-Nav_ListLink:active,
-.gl-Nav_ListLink:focus {
-  color: #1976d2;
-}
-@media (min-width: 960px) {
-  .gl-Nav_ListLink {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-.gl-Nav_ListItem-current .gl-Nav_ListLink {
-  color: #fff;
-  border-bottom: 2px solid #2196f3;
-}
-.page-Main {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-.callout {
-  margin: 3rem 0;
-  padding: 1.5rem;
-}
-@supports (object-fit: contain) {
-  .callout figure {
-    margin-top: -1.5rem;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-  .callout figure img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .callout figure figcaption {
-    text-align: center;
-  }
-}
-.callout blockquote {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-.callout-grey {
-  background: #fafafa;
-}
-.callout-primary {
-  border: 1px solid #bbdefb;
-  background: #fafafa;
-}
-.callout-secondary {
-  background: #bbdefb;
-}
-.callout-split,
-.callout-triple {
-  display: flex;
-}
-.callout-split figure,
-.callout-triple figure {
-  margin: 0;
-}
-.callout-split > * {
-  flex-basis: 50%;
-}
-.callout-triple > * {
-  flex-basis: 33%;
-}
-.callout-Footer {
-  position: relative;
-  margin-left: -1.5625rem;
-  margin-bottom: -1.5625rem;
-  margin-right: -1.5625rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-.task-list {
-  margin-left: 0;
-  font-family: 'Source Code Pro', mono;
-  font-size: 0.875rem;
-  line-height: 1.714285714285714;
-}
-.task-list-item:before {
-  content: "⤷";
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-.task-list-item.gh-complete {
-  color: #1976d2;
-}
-.task-list-item.gh-incomplete {
-  color: #d32f2f;
-}
-.task-list-item-checkbox {
-  display: none !important;
-}
-.keywords {
-  font-weight: bold;
-}
-.keywords-highlight {
-  text-decoration: underline;
-}
-.keywords-box {
-  padding: 0.25rem 0.5rem;
-  background: #fff;
-  border: 0.0625rem outset #212121;
-  border-radius: 0.125rem;
-}
-.callout .keywords-box {
-  padding: 1rem;
-}
-.keywords-circle {
-  border: 0.0625rem solid #212121;
-  border-radius: 50%;
-}
-.keywords-primary {
-  color: #1976d2;
-}
-.keywords-box.keywords-primary {
-  border-color: #1976d2;
-}
-.keywords-secondary {
-  color: #d32f2f;
-}
-.keywords-box.keywords-secondary {
-  border: 0.0625rem outset #d32f2f;
 }

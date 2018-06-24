@@ -90,7 +90,7 @@
 		"ft": 8,
 		"iC": 0,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/build\/ecss\/components\/_global\/footer.css",
 		"oF": 0,
 		"oS": 0,
@@ -139,6 +139,26 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/source\/ecss\/pages\/home.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/build\/ecss\/pages\/home.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/pages\/home.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/ecss\/pages\/home.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/stylus\/config.styl": {
 		"aP": 0,
 		"bl": 0,
@@ -162,6 +182,19 @@
 		"oA": 0,
 		"oAP": "\/build\/assets\/css\/main.css",
 		"oF": 2,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/markdown.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/stylus\/markdown.css",
+		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
