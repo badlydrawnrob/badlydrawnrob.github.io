@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
   "dependencies": {
-    "cardinal-stylus": "github:badlydrawnrob/cardinal-stylus"
+    "print-first-css": "github:badlydrawnrob/print-first-css"
   },
   "false": {}
 }
