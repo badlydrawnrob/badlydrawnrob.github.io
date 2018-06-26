@@ -3,7 +3,7 @@ Title:    robmcdonald.me: Specimen
 Author:   Rob McDonald  
 Comment:  An overview of Markdown syntax supported
           along with look and feel
-CSS:      ../../assets/css/main.css
+CSS:      ../../assets/css/markdown.css
 ---
 
 

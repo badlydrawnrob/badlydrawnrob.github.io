@@ -3,7 +3,7 @@ Title:    robmcdonald.me: All partial files
 Author:   Rob McDonald  
 Comment:  Helper file to view all elements
           without any context
-CSS:      ../../assets/css/main.css
+CSS:      ../../assets/css/markdown.css
 ---
 
 {{../../../node_modules/print-first-css/source/ecss/markdown/partials/headings.md}}

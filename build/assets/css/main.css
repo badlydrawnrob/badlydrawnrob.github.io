@@ -235,11 +235,11 @@ var {
   border: 0;
 }
 html {
-  color: rgba(0,0,0,0.87);
+  color: #000;
   font-family: system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  background-color: #fff;
+  background: transparent;
 }
 body {
   min-height: 100%;
@@ -273,10 +273,9 @@ th {
   hyphens: auto;
 }
 blockquote {
-  color: rgba(0,0,0,0.54);
   font-style: normal;
   padding-left: 1.5rem;
-  border-left: 0.0625rem solid rgba(0,0,0,0.12);
+  border-left: #000;
 }
 blockquote p {
   margin: 0;
@@ -287,46 +286,43 @@ blockquote p + p {
 blockquote cite {
   font-style: normal;
   font-size: 1rem;
-  color: rgba(0,0,0,0.38);
-}
-blockquote cite a {
-  color: rgba(0,0,0,0.38);
 }
 code,
 kbd,
 pre,
 samp {
-  font-family: monospace;
-  font-size: 0.875rem;
+  font-family: monospace, monospace;
+  font-size: 1rem;
   font-style: normal;
+  line-height: 1.5;
 }
-code {
+code,
+kbd {
   margin: 0;
   padding: 0.25rem;
   white-space: nowrap;
-  border-radius: 0.125rem;
-  background-color: rgba(0,0,0,0.12);
 }
-kbd {
-  position: relative;
-  top: -1px;
-  margin-bottom: 1px;
-  padding: 0.25rem;
-  white-space: nowrap;
-  border-radius: 0.125rem;
-  background-color: rgba(0,0,0,0.12);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.38), inset 0 0 0 1px #fff;
+@media screen {
+  code,
+  kbd {
+    border-radius: 0.125rem;
+    background-color: #f1f1f1;
+  }
 }
 pre {
   position: relative;
   overflow: auto;
-  padding: 1.125rem;
+  padding: 1.5rem;
   white-space: pre;
   word-wrap: normal;
   word-break: normal;
   tab-size: 4;
   hyphens: none;
-  background: rgba(0,0,0,0.12);
+}
+@media screen {
+  pre {
+    background: #f1f1f1;
+  }
 }
 pre code {
   display: block;
@@ -445,7 +441,7 @@ hr {
   display: block;
   padding: 0;
   border: 0;
-  border-top: 0.25rem solid rgba(0,0,0,0.12);
+  border-top: 0.25rem solid #000;
 }
 img {
   font-style: italic;
@@ -501,16 +497,9 @@ video {
   height: auto;
 }
 @media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
   a,
   a:visited {
+    color: #000;
     text-decoration: underline;
   }
   a[href]:after {
@@ -524,11 +513,11 @@ video {
     content: "";
   }
   pre {
+    border: 1px solid #000;
     white-space: pre-wrap !important;
   }
   pre,
   blockquote {
-    border: 1px solid #999;
     page-break-inside: avoid;
   }
   thead {
@@ -572,7 +561,6 @@ abbr a {
 del {
   font-style: normal;
   text-decoration: line-through;
-  color: rgba(0,0,0,0.38);
 }
 details {
   cursor: pointer;
@@ -586,7 +574,6 @@ a {
   padding-bottom: 0.0625rem;
   color: #1976d2;
   text-decoration: none;
-  border-bottom: 0.0625rem solid rgba(0,0,0,0.12);
 }
 a:hover,
 a:active {
@@ -598,7 +585,7 @@ blockquote {
   font-style: normal;
   margin-left: -1rem;
   padding-left: 1rem;
-  border-left: 0.0625rem solid rgba(0,0,0,0.38);
+  border-left: 0.0625rem solid rgba(33,33,33,0.5);
 }
 blockquote p {
   margin: 0;
@@ -609,10 +596,10 @@ blockquote p + p {
 blockquote cite {
   font-style: italic;
   font-size: 1rem;
-  color: rgba(0,0,0,0.54);
+  color: #212121;
 }
 blockquote cite a {
-  color: rgba(0,0,0,0.38);
+  color: rgba(33,33,33,0.5);
 }
 s {
   color: #212121;
@@ -622,6 +609,5 @@ s {
 }
 ins,
 mark {
-  padding: 0.25rem;
-  background: rgba(187,222,251,0.3);
+  background: #bbdefb;
 }
