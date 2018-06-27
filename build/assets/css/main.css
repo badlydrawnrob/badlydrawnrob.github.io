@@ -611,3 +611,31 @@ ins,
 mark {
   background: #bbdefb;
 }
+@media screen {
+  body {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  body::before {
+    position: absolute;
+    right: 1.5rem;
+    content: 'version: 2.0.0-beta';
+    color: #bbdefb;
+  }
+  h1 {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 1.5rem;
+    color: #fff;
+    background-color: #1976d2;
+  }
+  .gl-Nav ul {
+    list-style: none;
+  }
+  .gl-Nav ul li {
+    margin-left: 0;
+    margin-right: 1rem;
+    display: inline-block;
+  }
+}
