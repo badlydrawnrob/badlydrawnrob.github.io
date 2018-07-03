@@ -611,6 +611,12 @@ ins,
 mark {
   background: #bbdefb;
 }
+.highlight {
+  font-weight: normal;
+}
+.highlight-underline {
+  text-decoration: underline;
+}
 @media screen {
   body {
     max-width: 1024px;
@@ -620,7 +626,7 @@ mark {
   body::before {
     position: absolute;
     right: 1.5rem;
-    content: 'version: 2.0.0-beta';
+    content: 'Visual data, fit for human consumption since 2001 | version: 2.0.0-beta';
     color: #bbdefb;
   }
   h1 {
@@ -629,6 +635,9 @@ mark {
     padding: 1.5rem;
     color: #fff;
     background-color: #1976d2;
+  }
+  .gl-Nav {
+    margin-top: 2rem;
   }
   .gl-Nav ul {
     list-style: none;

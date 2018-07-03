@@ -19,9 +19,9 @@ CSS:      /build/assets/css/main.css
 
 Creativity without constraints is a little like a satellite without an orbit. It can be flung off in any direction, which isn't much help to anyone.
 
-Not to get too ahead of myself, it has been said that I'm a fairly principled chap. Your values and goals are often a matter of perspective, but I find a manifesto, of sorts, a useful tool.
+Without getting too ahead of myself, it's been said I'm a fairly principled chap. Our values and goals are often a matter of perspective, but I find a <i>manifesto</i>, of sorts, a useful tool.
 
-Your orbit might twist and turn, but it's good to constrain your decisions and plot a path.
+While our orbits might twist and turn, isn't it a good idea to plot a path?
 
 
 
@@ -29,7 +29,7 @@ Your orbit might twist and turn, but it's good to constrain your decisions and p
     - Reduce complex ideas to achievable goals, one thing at a time, learn as you go, be like [Feynman](http://www.feynman.com).
 2. No bullshit
     - Aim to be a source of <abbr title="What is reality? In this case let's call Truth™ the knowledge of the facts at hand">Truth™</abbr>, earn the trust of the people I collaborate with, or the [six degrees of seperation](https://en.wikipedia.org/wiki/Six_degrees_of_separation).
-3. Keep it secret, keep it safe
+3. [Keep it secret, keep it safe](#kiskis)
     - In a connected, digital, data-obsessed world, _privacy matters_. As a society it's our job protect the people we serve, even when mind-numbingly difficult (oh how I love you, [GDPR](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/))
 4. Make it easy, make it seamless
     - In a world full of distractions, time is precious. It may be Jane, the new mum, trying to organise life; Mike the cafe owner, too busy to think; or Jaylah, the <abbr title="this is a highly contentious statement, but you get the point">apathetic</abbr> millenial who wants it right now. Be respectful of people's time.

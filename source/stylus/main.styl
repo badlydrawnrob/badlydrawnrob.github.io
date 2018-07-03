@@ -1,4 +1,5 @@
 @import './config'
+@import '../ecss/components/highlight/*'
 
 @media screen
   body
@@ -9,7 +10,7 @@
     &::before
       position: absolute
       right: $spacing.base
-      content: 'version: 2.0.0-beta'
+      content: 'Visual data, fit for human consumption since 2001 | version: 2.0.0-beta'
       color: $color.p
 
   h1
@@ -21,6 +22,8 @@
 
 
   .gl-Nav
+    margin-top: $spacing.two
+
     ul
       list-style: none
 
