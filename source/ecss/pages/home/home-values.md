@@ -15,11 +15,6 @@ Most analysis falls into two categories: a _problem/people_ fit, or a _people/pr
 | 2. Build a story around _your_ target | 2. Build a story around _their_ target |
 | 3. Communicate this  to people | 1. Solve _their_ problem |
 
-<!-- story = an experiment, focus, data plan, marketing plan, etc
-target = values, goals, tasks
-communicate = the interactions you have -->
 
-<!-- 1. Test hunches
-2. Track success -->
 
-[Your target -- my process -- boring data]
+<!-- [Your target -- my process -- boring data] -->

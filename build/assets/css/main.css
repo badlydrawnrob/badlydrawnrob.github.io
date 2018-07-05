@@ -765,6 +765,19 @@ mark {
     margin-top: -7rem;
   }
 }
+.gl-Warning {
+  margin-bottom: 2rem;
+  color: rgba(33,33,33,0.5);
+}
+.gl-Warning a {
+  color: rgba(33,33,33,0.5);
+  text-decoration: underline;
+}
+@media print {
+  .gl-Warning {
+    display: none;
+  }
+}
 .highlight {
   font-weight: normal;
 }
@@ -772,7 +785,7 @@ mark {
   text-decoration: underline;
 }
 .home-Values {
-  margin-bottom: 1.5rem;
+  margin: 3rem 0;
   padding: 1.5rem;
   border: 0.0625rem solid #212121;
 }
@@ -787,7 +800,7 @@ mark {
   font-size: 1.25rem;
 }
 .home-Bullets {
-  margin-bottom: 1.5rem;
+  margin: 3rem 0;
   padding: 1.5rem;
   border: 0.0625rem solid #212121;
 }

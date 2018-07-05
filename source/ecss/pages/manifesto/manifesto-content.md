@@ -9,11 +9,11 @@ While our orbits might twist and turn, isn't it a good idea to plot a path?
 1. Make it as simple as possible, but never simpler
     - Reduce complex ideas to achievable goals, one thing at a time, learn as you go, be like [Feynman](http://www.feynman.com).
 2. No bullshit
-    - Aim to be a source of <abbr title="What is reality? In this case let's call Truth™ the knowledge of the facts at hand">Truth™</abbr>, earn the trust of the people I collaborate with, or the [six degrees of seperation](https://en.wikipedia.org/wiki/Six_degrees_of_separation).
+    - Aim to be a source of <abbr title="What is reality? In this case let's call Truth™ the knowledge of the facts at hand">Truth™</abbr>, earn the trust of the people I collaborate with, or the [six degrees of separation](https://en.wikipedia.org/wiki/Six_degrees_of_separation).
 3. <span id="kiskis">Keep it secret, keep it safe</span>
     - In a connected, digital, data-obsessed world, _privacy matters_. As a society it's our job protect the people we serve, even when mind-numbingly difficult (oh how I love you, [GDPR](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/))
 4. Make it easy, make it seamless
-    - In a world full of distractions, time is precious. It may be Jane, the new mum, trying to organise life; Mike the cafe owner, too busy to think; or Jaylah, the <abbr title="this is a highly contentious statement, but you get the point">apathetic</abbr> millenial who wants it right now. Be respectful of people's time.
+    - In a world full of distractions, time is precious. It may be Jane, the new mum, trying to organise life; Mike the cafe owner, too busy to think; or Jaylah, the <abbr title="this is a highly contentious statement, but you get the point">apathetic</abbr> millennial who wants it right now. Be respectful of people's time.
 5. <b class="highlight highlight-underline">Why</b> is more important than <b class="highlight highlight-underline">how</b>
     - I'll forgo the rant about <i>too many [useless, wasteful, ...] `X`</i> in the world. What's the _focus_? what's the _goal_? What is it _for_? Why _bother_?
 6. Humans are more important than robots
