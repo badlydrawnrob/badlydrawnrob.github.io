@@ -13,7 +13,7 @@ people = [
 
 > **People are not just a <abbr title="number">#</abbr>, or a statistic;** they're individuals, complex, emotionally driven.
 
-I help you solve people problems. I take a people-first look at the world with data, answering questions like:
+I help you solve people problems. I take a people-first look at the world with data, helping you answer questions like:
 
 1. "How do we build a community around our people?"
 2. "A customer told me he loved my product, but sales are down this month ... what gives?"

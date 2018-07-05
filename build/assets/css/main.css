@@ -629,12 +629,13 @@ mark {
 .gl-Footer_Section-1 {
   display: flex;
   align-items: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
   background: #f1f1f1;
 }
 .gl-Footer_Section-2 {
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   background: #bbdefb;
+  background: linear-gradient(#f1f1f1, #bbdefb);
 }
 .gl-Footer_Section-3 {
   background: #212121;
@@ -660,6 +661,14 @@ mark {
 .gl-Footer_Security {
   margin: 0 0 0 auto;
 }
+.gl-Footer_SecurityLink {
+  color: #212121;
+  text-decoration: underline;
+}
+.gl-Footer_SecurityLink:hover,
+.gl-Footer_SecurityLink:focus {
+  color: #d32f2f;
+}
 .gl-Footer_SocialNote {
   max-width: 400px;
   color: #212121;
@@ -671,7 +680,12 @@ mark {
   color: #212121;
   text-decoration: underline;
 }
+.gl-Footer_SocialLink:hover,
+.gl-Footer_SocialLink:focus {
+  color: #d32f2f;
+}
 .gl-Footer_CreditNote {
+  margin-bottom: 0;
   color: rgba(33,33,33,0.5);
   font-size: 0.75rem;
   letter-spacing: 0.03125rem;
@@ -689,6 +703,10 @@ mark {
   color: #fff;
   text-decoration: underline;
 }
+.gl-Footer_StraplineLink:hover,
+.gl-Footer_StraplineLink:focus {
+  color: #d32f2f;
+}
 @media screen {
   .gl-Header {
     padding: 1.5rem;
@@ -696,7 +714,9 @@ mark {
 }
 @media screen {
   .gl-Header_Title {
-    margin: -1.5rem;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
     padding: 1.5rem;
     color: #fff;
     background: #212121;
