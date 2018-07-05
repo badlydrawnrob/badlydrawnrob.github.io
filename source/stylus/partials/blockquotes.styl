@@ -1,19 +1,14 @@
 blockquote
   color: $color.ddd
-  font-style: normal
-  margin-left: -($spacing.one)
-  padding-left: $spacing.one
   border-left: $spacing.px solid $color.dd
 
-  p
-    margin: 0
-    + p
-      margin-top: $spacing.base
+  @media screen and (min-width: $screen.medium)
+    margin-left: -($spacing.one)
+    padding-left: $spacing.one
 
   cite
-    font-style: italic
-    font-size: $font.size.base
     color: $color.ddd
+    font-style: italic
 
     a
       color: $color.dd

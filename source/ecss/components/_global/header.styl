@@ -1,0 +1,53 @@
+// Notes =======================================================================
+// #1: Counters https://bit.ly/2tW2QvT and https://bit.ly/2KKKSpL
+
+.gl-Header
+  @media screen
+    padding: $spacing.base
+
+.gl-Header_Title
+  @media screen
+    margin: -($spacing.base)
+    padding: $spacing.base
+    color: $color.lll
+    background: $color.ddd
+
+  @media screen and (min-width: $screen.large)
+    margin-bottom: $spacing.six
+
+.gl-Nav
+
+
+  @media print
+    display: none
+
+.gl-Nav_List
+  list-style: none
+  counter-reset: li  // #1
+  font-size: $font.size.p
+
+.gl-Nav_Item
+  margin: 0
+
+  &::before
+    counter-increment: li
+    content: counters(li, ".", decimal-leading-zero) ": "  // #1
+
+    @media screen
+      color: $color.sss
+
+.gl-Nav_Link
+  // pass
+
+.gl-Main
+  > p:first-of-type
+    font-size: $font.size.pp
+    margin-bottom: $spacing.four
+
+  @media screen
+    max-width: $width.main
+    margin: 0 auto
+    padding: 0 $spacing.base
+
+  @media screen and (min-width: $screen.large)
+    margin-top: -($spacing.seven)

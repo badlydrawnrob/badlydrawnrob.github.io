@@ -274,8 +274,14 @@ th {
 }
 blockquote {
   font-style: normal;
-  padding-left: 1.5rem;
-  border-left: #000;
+  padding: 1.5rem;
+  border: 0.0625rem solid #000;
+}
+@media screen {
+  blockquote {
+    padding: 0 0 0 1.5rem;
+    border-width: 0 0 0 0.0625rem;
+  }
 }
 blockquote p {
   margin: 0;
@@ -313,15 +319,18 @@ pre {
   position: relative;
   overflow: auto;
   padding: 1.5rem;
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: normal;
   word-break: normal;
   tab-size: 4;
   hyphens: none;
+  border: 0.0625rem solid #000;
 }
 @media screen {
   pre {
+    white-space: pre;
     background: #f1f1f1;
+    border-color: transparent;
   }
 }
 pre code {
@@ -390,22 +399,14 @@ textarea {
   resize: vertical;
 }
 h1 {
-  margin-bottom: 3.75rem;
-  font-weight: normal;
-  font-size: 3.75rem;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: -0.03125rem;
-}
-h2 {
   margin-bottom: 3rem;
   font-weight: normal;
   font-size: 3rem;
-  line-height: 1.5;
+  line-height: 1;
   text-transform: none;
   letter-spacing: 0rem;
 }
-h3 {
+h2 {
   margin-bottom: 1.75rem;
   font-weight: normal;
   font-size: 2.125rem;
@@ -413,7 +414,7 @@ h3 {
   text-transform: none;
   letter-spacing: normal;
 }
-h4 {
+h3 {
   margin-bottom: 1.25rem;
   font-weight: normal;
   font-size: 1.5rem;
@@ -421,13 +422,21 @@ h4 {
   text-transform: none;
   letter-spacing: normal;
 }
-h5 {
+h4 {
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1;
   text-transform: none;
   letter-spacing: 0.009375rem;
+}
+h5 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: normal;
 }
 h6 {
   margin-bottom: 0;
@@ -512,10 +521,6 @@ video {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre {
-    border: 1px solid #000;
-    white-space: pre-wrap !important;
-  }
   pre,
   blockquote {
     page-break-inside: avoid;
@@ -582,24 +587,26 @@ a:active {
 }
 blockquote {
   color: #212121;
-  font-style: normal;
-  margin-left: -1rem;
-  padding-left: 1rem;
   border-left: 0.0625rem solid rgba(33,33,33,0.5);
 }
-blockquote p {
-  margin: 0;
-}
-blockquote p + p {
-  margin-top: 1.5rem;
+@media screen and (min-width: 800px) {
+  blockquote {
+    margin-left: -1rem;
+    padding-left: 1rem;
+  }
 }
 blockquote cite {
-  font-style: italic;
-  font-size: 1rem;
   color: #212121;
+  font-style: italic;
 }
 blockquote cite a {
   color: rgba(33,33,33,0.5);
+}
+@media screen and (min-width: 800px) {
+  ol li,
+  ul li {
+    margin-left: 0;
+  }
 }
 s {
   color: #212121;
@@ -611,40 +618,175 @@ ins,
 mark {
   background: #bbdefb;
 }
+.gl-Footer {
+  margin-top: 3rem;
+}
+@media print {
+  .gl-Footer {
+    display: none;
+  }
+}
+.gl-Footer_Section-1 {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: #f1f1f1;
+}
+.gl-Footer_Section-2 {
+  padding: 1rem 1.5rem;
+  background: #bbdefb;
+}
+.gl-Footer_Section-3 {
+  background: #212121;
+  padding: 1rem 1.5rem;
+}
+.gl-Footer_CTA {
+  margin: 0;
+}
+.gl-Footer_Button {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  background: #d32f2f;
+}
+.gl-Footer_Button:hover,
+.gl-Footer_Button:focus {
+  color: #fff;
+  background: #212121;
+}
+.gl-Footer_Button abbr {
+  text-decoration: none;
+}
+.gl-Footer_Security {
+  margin: 0 0 0 auto;
+}
+.gl-Footer_SocialNote {
+  max-width: 400px;
+  color: #212121;
+}
+.gl-Footer_SocialItem {
+  list-style: none;
+}
+.gl-Footer_SocialLink {
+  color: #212121;
+  text-decoration: underline;
+}
+.gl-Footer_CreditNote {
+  color: rgba(33,33,33,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.03125rem;
+}
+.gl-Footer_CreditLink {
+  color: rgba(33,33,33,0.5);
+  text-decoration: underline;
+}
+.gl-Footer_Strapline {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+.gl-Footer_StraplineLink {
+  color: #fff;
+  text-decoration: underline;
+}
+@media screen {
+  .gl-Header {
+    padding: 1.5rem;
+  }
+}
+@media screen {
+  .gl-Header_Title {
+    margin: -1.5rem;
+    padding: 1.5rem;
+    color: #fff;
+    background: #212121;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gl-Header_Title {
+    margin-bottom: 6rem;
+  }
+}
+@media print {
+  .gl-Nav {
+    display: none;
+  }
+}
+.gl-Nav_List {
+  list-style: none;
+  counter-reset: li;
+  font-size: 1.25rem;
+}
+.gl-Nav_Item {
+  margin: 0;
+}
+.gl-Nav_Item::before {
+  counter-increment: li;
+  content: counters(li, ".", decimal-leading-zero) ": ";
+}
+@media screen {
+  .gl-Nav_Item::before {
+    color: #d32f2f;
+  }
+}
+.gl-Main > p:first-of-type {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+@media screen {
+  .gl-Main {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gl-Main {
+    margin-top: -7rem;
+  }
+}
 .highlight {
   font-weight: normal;
 }
 .highlight-underline {
   text-decoration: underline;
 }
+.home-Values {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid #212121;
+}
 @media screen {
-  body {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 1.5rem;
+  .home-Values {
+    border: none;
+    background: #bbdefb;
   }
-  body::before {
-    position: absolute;
-    right: 1.5rem;
-    content: 'Visual data, fit for human consumption since 2001 | version: 2.0.0-beta';
-    color: #bbdefb;
+}
+.home-Values_Content {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.home-Bullets {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid #212121;
+}
+@media screen {
+  .home-Bullets {
+    border: none;
+    background: #ffcdd2;
   }
-  h1 {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    padding: 1.5rem;
-    color: #fff;
-    background-color: #1976d2;
-  }
-  .gl-Nav {
-    margin-top: 2rem;
-  }
-  .gl-Nav ul {
-    list-style: none;
-  }
-  .gl-Nav ul li {
-    margin-left: 0;
-    margin-right: 1rem;
-    display: inline-block;
-  }
+}
+.home-Bullets_Content {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.manifesto p + ol li {
+  font-weight: 700;
+}
+.manifesto p + ol li .highlight {
+  font-weight: 700;
+}
+.manifesto p + ol li > ul li {
+  font-weight: normal;
 }

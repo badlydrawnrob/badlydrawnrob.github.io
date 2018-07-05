@@ -1,33 +1,12 @@
 @import './config'
+
+@import '../ecss/components/_global/*'
 @import '../ecss/components/highlight/*'
 
+@import '../ecss/pages/home/*'
+@import '../ecss/pages/manifesto/*'
+
 @media screen
-  body
-    max-width: 1024px
-    margin: 0 auto
-    padding: $spacing.base
 
-    &::before
-      position: absolute
-      right: $spacing.base
-      content: 'Visual data, fit for human consumption since 2001 | version: 2.0.0-beta'
-      color: $color.p
-
-  h1
-    margin-left: -($spacing.base)
-    margin-right: -($spacing.base)
-    padding: $spacing.base
-    color: $color.lll
-    background-color: $color.ppp
-
-
-  .gl-Nav
-    margin-top: $spacing.two
-
-    ul
-      list-style: none
-
-      li
-        margin-left: 0
-        margin-right: $spacing.one
-        display: inline-block
+  html
+    // baseline-grid($depth: 1)

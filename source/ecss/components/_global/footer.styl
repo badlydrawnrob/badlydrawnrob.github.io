@@ -1,20 +1,88 @@
+// Notes =======================================================================
+// #1: Hidden for print
+
 .gl-Footer
-  padding: $spacing.two
+  margin-top: $spacing.increment
+
+  @media print
+    display: none  // #1
+
+  @media screen and (min-width: $screen.medium)
+    // pass
+
+
+.gl-Footer_Section
+  // pass
+
+  &-1
+    display: flex
+    align-items: center
+    padding: $spacing.base $spacing.one
+    background: $color.l
+
+  &-2
+    padding: $spacing.one $spacing.base
+    background: $color.p
+
+  &-3
+    background: $color.ddd
+    padding: $spacing.one $spacing.base
+
+.gl-Footer_CTA
+  margin: 0
+
+.gl-Footer_Button
+  display: block
+  padding: $spacing.one
   color: $color.lll
-  text-align: center
-  background: $color.ss
+  background: $color.sss
+
+  &:hover,
+  &:focus
+    color: $color.lll
+    background: $color.ddd
+
+  abbr
+    text-decoration: none
+
+.gl-Footer_Security
+  margin: 0 0 0 auto
 
 .gl-Footer_Social
-  margin: 0
+  // pass
+
+.gl-Footer_SocialNote
+  max-width: $width.aside
+  color: $color.ddd
+
+.gl-Footer_SocialList
+  // margin-: 0
 
 .gl-Footer_SocialItem
   list-style: none
 
 .gl-Footer_SocialLink
-  color: $color.lll
+  color: $color.ddd
+  text-decoration: underline
 
-.gl-Footer_CreditItem
-  list-style: none
 
-.gl-Footer_CreditItemLink
+.gl-Footer_Credit
+  // pass
+
+.gl-Footer_CreditNote
+  color: $color.dd
+  font-size: $font.size.mm
+  letter-spacing: $font.tracking.pppp
+
+.gl-Footer_CreditLink
+  color: $color.dd
+  text-decoration: underline
+
+.gl-Footer_Strapline
+  margin: 0
   color: $color.lll
+  text-align: center
+
+.gl-Footer_StraplineLink
+  color: $color.lll
+  text-decoration: underline
