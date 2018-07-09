@@ -608,6 +608,11 @@ blockquote cite a {
     margin-left: 0;
   }
 }
+abbr {
+  text-decoration: none;
+  border-bottom: 0.0625rem dotted #212121;
+}
+del,
 s {
   color: #212121;
   text-decoration: line-through;
