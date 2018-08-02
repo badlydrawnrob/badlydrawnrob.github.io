@@ -18,8 +18,6 @@
     margin-bottom: $spacing.six
 
 .gl-Nav
-
-
   @media print
     display: none
 
@@ -30,16 +28,17 @@
 
 .gl-Nav_Item
   margin: 0
+  font-family: $font.family.mono
 
   &::before
+    margin-right: $spacing.half
+    color: $color.sss
     counter-increment: li
-    content: counters(li, ".", decimal-leading-zero) ": "  // #1
-
-    @media screen
-      color: $color.sss
+    content: counters(li, ".", decimal-leading-zero) // #1
 
 .gl-Nav_Link
-  // pass
+  color: $color.ppp
+  text-decoration: none
 
 .gl-Main
   > p:first-of-type

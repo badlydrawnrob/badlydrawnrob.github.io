@@ -9,7 +9,7 @@ While our orbits might twist and turn, isn't it a good idea to plot a path?
 1. Make it as simple as possible, but never simpler
     - Reduce complex ideas to achievable goals, split into tasks, completing one task at a time. Learn as you go, be like [Feynman](http://www.feynman.com).
 2. No bullshit
-    - Aim to be a source of <abbr title="What is reality? In this case let's call Truth™ the knowledge of the facts at hand">Truth™</abbr>, earn the trust of the people I collaborate with, or the [six degrees of separation](https://en.wikipedia.org/wiki/Six_degrees_of_separation).
+    - Aim to be a source of <abbr title="What is reality? Form me, Truth™ is 'current knowledge with the facts at hand'">Truth™</abbr>, earn the trust of the people I collaborate with, or the [six degrees of separation](https://en.wikipedia.org/wiki/Six_degrees_of_separation).
 3. <span id="kiskis">Keep it secret, keep it safe</span>
     - In a connected, digital, data-obsessed world, _privacy matters_. As a society it's our job protect the people we serve, even when mind-numbingly difficult (oh how I love you, [GDPR](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/))
 4. Make it easy, make it seamless

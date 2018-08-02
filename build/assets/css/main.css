@@ -1,7 +1,7 @@
 /*
- * == Print First ==========================================================
- * MIT License | https://github.com/badlydrawnrob/cardinal-stylus
- * == Original credit @cbracco / Cardinal CSS: http://bit.ly/2iDzOZi ==========================
+ * == Print First CSS ==========================================================
+ * MIT License | https://github.com/badlydrawnrob/print-first-css
+ * == Heavily based on Cardinal CSS by @cbracco: http://bit.ly/2iDzOZi =========
  */
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -16,7 +16,8 @@ h1 {
   margin: 0.67em 0;
 }
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -30,7 +31,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 b,
 strong {
@@ -104,7 +106,8 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -119,7 +122,8 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 [type="number"]::-webkit-inner-spin-button,
@@ -150,12 +154,14 @@ template {
   display: none;
 }
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 a,
 abbr,
@@ -270,7 +276,9 @@ td,
 textarea,
 th {
   word-wrap: break-word;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 blockquote {
   font-style: normal;
@@ -322,8 +330,12 @@ pre {
   white-space: pre-wrap;
   word-wrap: normal;
   word-break: normal;
-  tab-size: 4;
-  hyphens: none;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
   border: 0.0625rem solid #000;
 }
 @media screen {
@@ -377,8 +389,11 @@ input[type="file"] {
   cursor: pointer;
 }
 input[type="search"] {
-  box-sizing: border-box;
-  appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 input[type="submit"],
 input[type="button"],
@@ -576,14 +591,14 @@ cite {
   font-style: italic;
 }
 a {
-  padding-bottom: 0.0625rem;
   color: #1976d2;
-  text-decoration: none;
+}
+a:visited {
+  color: #115393;
 }
 a:hover,
 a:active {
   color: #212121;
-  border-color: #212121;
 }
 blockquote {
   color: #212121;
@@ -608,15 +623,12 @@ blockquote cite a {
     margin-left: 0;
   }
 }
-abbr {
-  text-decoration: none;
-  border-bottom: 0.0625rem dotted #212121;
-}
 del,
 s {
   color: #212121;
   text-decoration: line-through;
-  text-decoration-style: wavy;
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
   opacity: 0.75;
 }
 ins,
@@ -632,28 +644,32 @@ mark {
   }
 }
 .gl-Footer_Section-1 {
-  display: flex;
-  align-items: center;
   padding: 1.5rem 1.5rem;
-  background: #f1f1f1;
+  text-align: center;
+  border: 0.0625rem solid #f1f1f1;
+  border-width: 0.0625rem 0 0.0625rem 0;
 }
 .gl-Footer_Section-2 {
   padding: 2rem 1.5rem;
-  background: #bbdefb;
-  background: linear-gradient(#f1f1f1, #bbdefb);
+  background: rgba(187,222,251,0.2);
 }
 .gl-Footer_Section-3 {
-  background: #212121;
   padding: 1rem 1.5rem;
+  background: #212121;
 }
 .gl-Footer_CTA {
   margin: 0;
 }
 .gl-Footer_Button {
-  display: block;
+  display: inline-block;
   padding: 1rem;
-  color: #fff;
-  background: #d32f2f;
+  color: #212121;
+  font-family: 'Source Code Pro', monospace, monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #fff;
+  border: 0.125rem solid #212121;
+  border-radius: 0.125rem;
 }
 .gl-Footer_Button:hover,
 .gl-Footer_Button:focus {
@@ -663,19 +679,14 @@ mark {
 .gl-Footer_Button abbr {
   text-decoration: none;
 }
-.gl-Footer_Security {
-  margin: 0 0 0 auto;
-}
-.gl-Footer_SecurityLink {
-  color: #212121;
-  text-decoration: underline;
-}
-.gl-Footer_SecurityLink:hover,
-.gl-Footer_SecurityLink:focus {
+.gl-Footer_Button:hover .gl-Footer_ButtonIcon {
   color: #d32f2f;
 }
+.gl-Footer_Social {
+  max-width: 740px;
+  margin: 0 auto;
+}
 .gl-Footer_SocialNote {
-  max-width: 400px;
   color: #212121;
 }
 .gl-Footer_SocialItem {
@@ -689,6 +700,10 @@ mark {
 .gl-Footer_SocialLink:focus {
   color: #d32f2f;
 }
+.gl-Footer_Credit {
+  max-width: 740px;
+  margin: 0 auto;
+}
 .gl-Footer_CreditNote {
   margin-bottom: 0;
   color: rgba(33,33,33,0.5);
@@ -699,9 +714,13 @@ mark {
   color: rgba(33,33,33,0.5);
   text-decoration: underline;
 }
+.gl-Footer_CreditLink:visited {
+  color: rgba(33,33,33,0.5);
+}
 .gl-Footer_Strapline {
   margin: 0;
   color: #fff;
+  font-family: 'Source Code Pro', monospace, monospace;
   text-align: center;
 }
 .gl-Footer_StraplineLink {
@@ -710,6 +729,21 @@ mark {
 }
 .gl-Footer_StraplineLink:hover,
 .gl-Footer_StraplineLink:focus {
+  color: #d32f2f;
+}
+.gl-Footer_Security {
+  margin-bottom: 0;
+  color: #ccc;
+  font-family: 'Source Code Pro', monospace, monospace;
+  text-align: center;
+}
+.gl-Footer_SecurityLink {
+  color: #ccc;
+  font-family: 'Source Code Pro', monospace, monospace;
+  text-decoration: underline;
+}
+.gl-Footer_SecurityLink:hover,
+.gl-Footer_SecurityLink:focus {
   color: #d32f2f;
 }
 @media screen {
@@ -744,15 +778,17 @@ mark {
 }
 .gl-Nav_Item {
   margin: 0;
+  font-family: 'Source Code Pro', monospace, monospace;
 }
 .gl-Nav_Item::before {
+  margin-right: 0.5rem;
+  color: #d32f2f;
   counter-increment: li;
-  content: counters(li, ".", decimal-leading-zero) ": ";
+  content: counters(li, ".", decimal-leading-zero);
 }
-@media screen {
-  .gl-Nav_Item::before {
-    color: #d32f2f;
-  }
+.gl-Nav_Link {
+  color: #1976d2;
+  text-decoration: none;
 }
 .gl-Main > p:first-of-type {
   font-size: 1.5rem;

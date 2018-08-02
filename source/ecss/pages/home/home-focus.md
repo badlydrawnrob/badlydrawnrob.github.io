@@ -2,7 +2,7 @@
 
 > Customer insights, à la carte
 
-My latest research project is the booming indy food scene in Newcastle. Helping "The Journey" to find the drivers of growth and customer experience by asking:
+My latest research project is the booming indy food scene in Newcastle. Communicating with the local café scene, surveys and customer interviews to understand the drivers of growth and "good" customer experience by asking:
 
 1. Who are our customers?
 2. Why are they visiting?

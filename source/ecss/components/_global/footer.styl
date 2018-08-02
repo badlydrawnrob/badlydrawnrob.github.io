@@ -1,5 +1,5 @@
 // Notes =======================================================================
-// #1: Hidden for print
+// #1: Hide footer when printing
 
 .gl-Footer
   margin-top: $spacing.increment
@@ -7,36 +7,37 @@
   @media print
     display: none  // #1
 
-  @media screen and (min-width: $screen.medium)
-    // pass
-
 
 .gl-Footer_Section
   // pass
 
   &-1
-    display: flex
-    align-items: center
     padding: $spacing.base $spacing.base
-    background: $color.l
+    text-align: center
+    border: $spacing.px solid $color.l
+    border-width: $spacing.px 0 $spacing.px 0
 
   &-2
     padding: $spacing.two $spacing.base
-    background: $color.p
-    background: linear-gradient($color.l, $color.p)
+    background: alpha($color.p, 20%)
 
   &-3
-    background: $color.ddd
     padding: $spacing.one $spacing.base
+    background: $color.ddd
 
 .gl-Footer_CTA
   margin: 0
 
 .gl-Footer_Button
-  display: block
+  display: inline-block
   padding: $spacing.one
-  color: $color.lll
-  background: $color.sss
+  color: $color.ddd
+  font-family: $font.family.mono
+  text-decoration: none
+  text-transform: uppercase
+  background: $color.lll
+  border: $spacing.micro solid $color.ddd
+  border-radius: $border.radius
 
   &:hover,
   &:focus
@@ -46,22 +47,15 @@
   abbr
     text-decoration: none
 
-.gl-Footer_Security
-  margin: 0 0 0 auto
-
-.gl-Footer_SecurityLink
-  color: $color.ddd
-  text-decoration: underline
-
-  &:hover,
-  &:focus
+.gl-Footer_ButtonIcon
+  .gl-Footer_Button:hover &
     color: $color.sss
 
 .gl-Footer_Social
-  // pass
+  max-width: $width.main
+  margin: 0 auto
 
 .gl-Footer_SocialNote
-  max-width: $width.aside
   color: $color.ddd
 
 .gl-Footer_SocialList
@@ -78,9 +72,9 @@
   &:focus
     color: $color.sss
 
-
 .gl-Footer_Credit
-  // pass
+  max-width: $width.main
+  margin: 0 auto
 
 .gl-Footer_CreditNote
   margin-bottom: 0
@@ -92,13 +86,32 @@
   color: $color.dd
   text-decoration: underline
 
+  &:visited
+    color: $color.dd
+
 .gl-Footer_Strapline
   margin: 0
   color: $color.lll
+  font-family: $font.family.mono
   text-align: center
 
 .gl-Footer_StraplineLink
   color: $color.lll
+  text-decoration: underline
+
+  &:hover,
+  &:focus
+    color: $color.sss
+
+.gl-Footer_Security
+  margin-bottom: 0
+  color: $color.ll
+  font-family: $font.family.mono
+  text-align: center
+
+.gl-Footer_SecurityLink
+  color: $color.ll
+  font-family: $font.family.mono
   text-decoration: underline
 
   &:hover,
