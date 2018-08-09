@@ -1,43 +1,41 @@
-// Notes =======================================================================
-// #1: Hide footer when printing
+// Call to action section ======================================================
 
-.gl-Footer
-  margin-top: $spacing.increment
+.gl-CTA
+  padding: $spacing.base 0
+  border-top: $spacing.px solid $color.l
 
   @media print
-    display: none  // #1
+    display: none
 
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 1 / span 5
+      grid-row: 5
 
-.gl-Footer_Section
-  // pass
-
-  &-1
-    padding: $spacing.base $spacing.base
-    text-align: center
-    border: $spacing.px solid $color.l
-    border-width: $spacing.px 0 $spacing.px 0
-
-  &-2
-    padding: $spacing.two $spacing.base
-    background: alpha($color.p, 20%)
-
-  &-3
-    padding: $spacing.one $spacing.base
-    background: $color.ddd
-
-.gl-Footer_CTA
+.gl-CTA_Note
   margin: 0
+  font-family: $font.family.mono
 
-.gl-Footer_Button
-  display: inline-block
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      max-width: $col.main
+      margin: 0 auto
+
+.gl-CTA_Button
+  display: block
   padding: $spacing.one
   color: $color.ddd
   font-family: $font.family.mono
+  text-align: center
   text-decoration: none
   text-transform: uppercase
   background: $color.lll
   border: $spacing.micro solid $color.ddd
   border-radius: $border.radius
+
+  @media screen and (min-width: $screen.medium)
+    display: inline-block
+    text-align: left
 
   &:hover,
   &:focus
@@ -47,24 +45,62 @@
   abbr
     text-decoration: none
 
-.gl-Footer_ButtonIcon
-  .gl-Footer_Button:hover &
+.gl-CTA_Icon
+  .gl-CTA_Button:hover &
     color: $color.sss
 
-.gl-Footer_Social
-  max-width: $width.main
-  margin: 0 auto
+.gl-CTA_NoteExtra
+  display: none
 
-.gl-Footer_SocialNote
-  color: $color.ddd
+  @media screen and (min-width: $screen.medium)
+    display: inline
 
-.gl-Footer_SocialList
-  // margin-: 0
 
-.gl-Footer_SocialItem
+
+// Footer section ==============================================================
+// #1: Hide footer when printing
+
+.gl-Footer
+  @media print
+    display: none  // #1
+
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 1 / span 5
+      grid-row: 6
+
+.gl-Footer_Wrapper
+  padding: $spacing.base $spacing.one
+  margin-left: -($spacing.one)
+  margin-right: -($spacing.one)
+  background: alpha($color.p, 20%)
+  border-top: $spacing.px solid $color.l
+
+  & + &
+    background: $color.ddd
+
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      margin: 0
+      padding: $spacing.base 0
+
+
+.gl-Social
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      max-width: $col.main
+      margin: 0 auto
+
+.gl-Social_Note
+  // pass
+
+.gl-Social_List
+  margin: 0
+
+.gl-Social_Item
   list-style: none
 
-.gl-Footer_SocialLink
+.gl-Social_Link
   color: $color.ddd
   text-decoration: underline
 
@@ -72,47 +108,22 @@
   &:focus
     color: $color.sss
 
-.gl-Footer_Credit
-  max-width: $width.main
-  margin: 0 auto
 
-.gl-Footer_CreditNote
+.gl-Strapline
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      max-width: $col.main
+      margin: 0 auto
+
+.gl-Strapline_Note
   margin-bottom: 0
-  color: $color.dd
+  color: $color.lll
+  font-family: $font.family.mono
   font-size: $font.size.mm
   letter-spacing: $font.tracking.pppp
 
-.gl-Footer_CreditLink
-  color: $color.dd
-  text-decoration: underline
-
-  &:visited
-    color: $color.dd
-
-.gl-Footer_Strapline
-  margin: 0
+.gl-Strapline_Link
   color: $color.lll
-  font-family: $font.family.mono
-  font-size: $font.size.m
-  text-align: center
-
-.gl-Footer_StraplineLink
-  color: $color.lll
-  text-decoration: underline
-
-  &:hover,
-  &:focus
-    color: $color.sss
-
-.gl-Footer_Security
-  margin-bottom: 0
-  color: $color.ll
-  font-family: $font.family.mono
-  font-size: $font.size.m
-  text-align: center
-
-.gl-Footer_SecurityLink
-  color: $color.ll
   text-decoration: underline
 
   &:hover,

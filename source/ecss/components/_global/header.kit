@@ -8,15 +8,33 @@
   </head>
   <body class="<!-- $bodyClass -->">
 
-    <header class="gl-Header">
-      <div class="gl-Warning"> ⚠️ "But Rob, this isn't finished yet!" — "Yup, I'm <a href="https://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway/">shipping it anyway</a>"</div>
-      <h1 class="gl-Header_Title"><!-- $header --></h1>
+    <div class="gl-Container">
+      <div class="gl-Document">
+        <ul class="gl-Document_List">
+          <li class="gl-Document_Item gl-Document_Item-me">Rob McDonald</li>
+          <li class="gl-Document_Item"><abbr title"Current version"><a class="gl-Document_Link" href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">2.0.0-beta.3</a></abbr> carefully crafted with:
+            <ul class="gl-Document_List gl-Document_List-credit">
+              <li class="gl-Document_Item">
+                <a class="gl-Document_Link" href="https://github.com/badlydrawnrob/ecss">ecss</a>
+              </li>
+              <li class="gl-Document_Item">
+                <a class="gl-Document_Link" href="https://github.com/badlydrawnrob/print-first-css">print-first-css</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
       <nav class="gl-Nav">
         <ol class="gl-Nav_List">
           <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/">Home</a></li>
           <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/manifesto">Manifesto</a></li>
         </ol>
       </nav>
-    </header>
+      
+      <header class="gl-Header">
+        <div class="gl-Warning"> ⚠️ "But Rob, this isn't finished yet!" — "Yup, I'm <a class="gl-Warning_Link" href="https://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway/">shipping it anyway</a>"</div>
+        <h1 class="gl-Header_Title"><!-- $header --></h1>
+      </header>
 
-    <main class="gl-Main">
+      <main class="gl-Main">

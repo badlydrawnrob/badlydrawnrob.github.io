@@ -1,35 +1,127 @@
-// Notes =======================================================================
-// #1: Counters https://bit.ly/2tW2QvT and https://bit.ly/2KKKSpL
+// Grid ========================================================================
+// != `.grid-col-gap` changes the track lines (increases them)
+
+.gl-Container
+  padding: 0 $spacing.one
+
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      display: grid
+      grid-template-columns: 1fr minmax(auto, $col.main) 1fr
+      grid-template-rows: auto auto auto auto auto 1fr
+      padding: 0
+
+
+// Name and credits ============================================================
+
+.gl-Document
+  padding: $spacing.half 0
+  color: $color.dd
+  font-family: $font.family.mono
+  font-size: $font.size.mm
+  letter-spacing: $font.tracking.pppp
+  border-bottom: $spacing.px solid $color.l
+
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 1 / span 3
+      grid-row: 1
+
+.gl-Document_List
+  list-style: none
+  margin: 0
+
+  @media screen and (min-width: $screen.medium)
+    display: inline
+
+.gl-Document_Item
+  display: inline
+  margin: 0
+
+  &-me
+    font-weight: 700
+
+    &::after
+      content: ' | '
+
+  .gl-Document_List-credit &
+    &::after
+      content: '·'
+    &:last-child::after
+      content: ''
+
+.gl-Document_Link
+  color: $color.dd
+  text-decoration: underline
+
+  &:visited
+    color: $color.dd
+
+
+// Header ======================================================================
+
 
 .gl-Header
-  @media screen
-    // display: flex
-    padding: $spacing.base
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 2
+      grid-row: 3
+
+    @media screen and (min-width: $screen.large)
+      grid-column: 2
+      grid-row: 2
 
 .gl-Header_Title
   @media screen and (min-width: $screen.medium)
     font-size: $font.size.pppppp
 
-// .gl-Header_Title
-//   @media screen
-//     margin-top: -($spacing.base)
-//     margin-left: -($spacing.base)
-//     margin-right: -($spacing.base)
-//     padding: $spacing.base
-//     color: $color.lll
-//     background: $color.ddd
-//
-//   @media screen and (min-width: $screen.large)
-//     margin-bottom: $spacing.six
 
-.gl-Nav
+// != Temporary maintenance message ============================================
+
+.gl-Warning
+  margin: $spacing.base 0
+  padding-left: $spacing.half
+  color: $color.dd
+  font-size: $font.size.m
+
   @media print
     display: none
 
+.gl-Warning_Link
+  color: $color.dd
+  text-decoration: underline
+
+
+// Navigation ==================================================================
+// #1: Counters https://bit.ly/2tW2QvT and https://bit.ly/2KKKSpL
+
+.gl-Nav
+  padding: $spacing.base 0
+  border-bottom: $spacing.px solid $color.l
+
+  @media print
+    display: none
+
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 2 / span 2
+      grid-row: 2
+
+    @media screen and (min-width: $screen.large)
+      grid-column: 1
+      grid-row: 3
+      align-self: start
+      justify-self: center
+      padding: ($spacing.micro * 4) 0 0
+      border-bottom: none
+
 .gl-Nav_List
+  margin: 0
   list-style: none
   counter-reset: li  // #1
-  font-size: $font.size.p
+
+  @media screen and (min-width: $screen.medium)
+    font-size: $font.size.p
 
 .gl-Nav_Item
   margin: 0
@@ -50,28 +142,11 @@
     font-size: $font.size.pp
     margin-bottom: $spacing.four
 
-  @media screen
-    max-width: $width.main
-    margin: 0 auto
-    padding: 0 $spacing.base
+  @supports (display: grid)
+    @media screen and (min-width: $screen.medium)
+      grid-column: 2
+      grid-row: 4
 
-  @media screen and (min-width: $screen.large)
-    margin-top: -($spacing.seven)
-
-
-// != Working on it
-.gl-Warning
-  margin-bottom: $spacing.base
-  color: $color.dd
-  font-size: $font.size.m
-
-  @media screen and (min-width: $screen.medium)
-    padding-left: $spacing.half
-    margin-bottom: 0
-
-  a
-    color: $color.dd
-    text-decoration: underline
-
-  @media print
-    display: none
+    @media screen and (min-width: $screen.large)
+      grid-column: 2
+      grid-row: 3 / span 2
