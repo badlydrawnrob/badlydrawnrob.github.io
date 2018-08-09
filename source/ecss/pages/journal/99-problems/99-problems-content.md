@@ -1,3 +1,8 @@
+<aside class="home-Values">
+  <p class="home-Values_Content"><del>Everything is a priority.</del> <strong class="highlight highlight-underline">This</strong> is our priority right now. Here's how we're going to try and solve it, here's how we know if it's been a success.</p>
+</aside>
+
+
 ## 🎯 Values and goals
 
 
@@ -14,7 +19,3 @@ Most analysis falls into two categories: a _problem/people_ fit, or a _people/pr
 | 1. Explore _your_ problem | 3. Communicate with people
 | 2. Build a story around _your_ target | 2. Build a story around _their_ target |
 | 3. Communicate this  to people | 1. Solve _their_ problem |
-
-
-
-<!-- [Your target -- my process -- boring data] -->

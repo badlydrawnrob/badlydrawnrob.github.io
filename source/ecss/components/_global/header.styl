@@ -3,19 +3,24 @@
 
 .gl-Header
   @media screen
+    // display: flex
     padding: $spacing.base
 
 .gl-Header_Title
-  @media screen
-    margin-top: -($spacing.base)
-    margin-left: -($spacing.base)
-    margin-right: -($spacing.base)
-    padding: $spacing.base
-    color: $color.lll
-    background: $color.ddd
+  @media screen and (min-width: $screen.medium)
+    font-size: $font.size.pppppp
 
-  @media screen and (min-width: $screen.large)
-    margin-bottom: $spacing.six
+// .gl-Header_Title
+//   @media screen
+//     margin-top: -($spacing.base)
+//     margin-left: -($spacing.base)
+//     margin-right: -($spacing.base)
+//     padding: $spacing.base
+//     color: $color.lll
+//     background: $color.ddd
+//
+//   @media screen and (min-width: $screen.large)
+//     margin-bottom: $spacing.six
 
 .gl-Nav
   @media print
@@ -56,8 +61,13 @@
 
 // != Working on it
 .gl-Warning
-  margin-bottom: $spacing.two
+  margin-bottom: $spacing.base
   color: $color.dd
+  font-size: $font.size.m
+
+  @media screen and (min-width: $screen.medium)
+    padding-left: $spacing.half
+    margin-bottom: 0
 
   a
     color: $color.dd

@@ -438,14 +438,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/ecss\/pages\/home\/home-focus.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/home\/home-focus.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/pages\/home\/home-focus.md": {
+	"\/source\/ecss\/pages\/about\/linkedin.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -454,23 +447,23 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/source\/ecss\/pages\/home\/home-focus.kit",
-		"oF": 2,
+		"oAP": "\/build\/ecss\/pages\/about\/linkedin.html",
+		"oF": 0,
 		"oFM": 0,
-		"oS": 1,
+		"oS": 0,
 		"pHT": 1,
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/ecss\/pages\/home\/home-header.kit": {
+	"\/source\/ecss\/pages\/home\/home-content.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/home\/home-header.html",
+		"oAP": "\/build\/ecss\/pages\/home\/home-content.html",
 		"oF": 0
 		},
-	"\/source\/ecss\/pages\/home\/home-header.md": {
+	"\/source\/ecss\/pages\/home\/home-content.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -479,57 +472,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/source\/ecss\/pages\/home\/home-header.kit",
-		"oF": 2,
-		"oFM": 0,
-		"oS": 1,
-		"pHT": 1,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/ecss\/pages\/home\/home-people.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/home\/home-people.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/pages\/home\/home-people.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/source\/ecss\/pages\/home\/home-people.kit",
-		"oF": 2,
-		"oFM": 0,
-		"oS": 1,
-		"pHT": 1,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/ecss\/pages\/home\/home-values.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/home\/home-values.html",
-		"oF": 0
-		},
-	"\/source\/ecss\/pages\/home\/home-values.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/source\/ecss\/pages\/home\/home-values.kit",
+		"oAP": "\/source\/ecss\/pages\/home\/home-content.kit",
 		"oF": 2,
 		"oFM": 0,
 		"oS": 1,
@@ -557,6 +500,12 @@
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
+		},
+	"\/source\/ecss\/pages\/journal": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/journal",
+		"oF": 0
 		},
 	"\/source\/ecss\/pages\/manifesto\/manifesto-content.kit": {
 		"cB": 0,
@@ -2738,7 +2687,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown, \/source\/ecss\/pages\/style, \/source\/ecss\/components",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown, \/source\/ecss\/pages\/style, \/source\/ecss\/components, \/source\/ecss\/pages\/journal",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",

@@ -1,4 +1,4 @@
-**Creativity without constraints** is a little like a satellite without an orbit. It can be flung off in any direction, which isn't much help to anyone.
+**Creativity without constraints** is a little like a satellite without an orbit. It can drift off in any direction, which isn't much help to anyone.
 
 Without getting too ahead of myself, it's been said I'm a fairly principled chap. Our values and goals are often a matter of perspective, but I find a <i>manifesto</i> of sorts, a useful tool.
 
