@@ -1,5 +1,6 @@
 // Grid ========================================================================
-// != `.grid-col-gap` changes the track lines (increases them)
+// != Does `.grid-col-gap` change track lines? (increases them)
+//         - seems to break layout when added
 
 .gl-Container
   padding: 0 $spacing.one
@@ -26,6 +27,7 @@
     @media screen and (min-width: $screen.medium)
       grid-column: 1 / span 3
       grid-row: 1
+      padding: $spacing.half
 
 .gl-Document_List
   list-style: none
@@ -43,6 +45,13 @@
 
     &::after
       content: ' | '
+
+  &-browser
+    &::before
+      content: ' | '
+
+    @supports (display: grid)
+      display: none
 
   .gl-Document_List-credit &
     &::after
@@ -62,34 +71,25 @@
 
 
 .gl-Header
+  margin: $spacing.one 0 $spacing.two
+
   @supports (display: grid)
     @media screen and (min-width: $screen.medium)
       grid-column: 2
       grid-row: 3
+      margin: $spacing.one 0 $spacing.two
 
     @media screen and (min-width: $screen.large)
-      grid-column: 2
+      grid-column: 1 / span 2
       grid-row: 2
+      padding-left: $spacing.six
+      margin: $spacing.two 0 $spacing.increment
 
 .gl-Header_Title
+  margin: 0
+
   @media screen and (min-width: $screen.medium)
     font-size: $font.size.pppppp
-
-
-// != Temporary maintenance message ============================================
-
-.gl-Warning
-  margin: $spacing.base 0
-  padding-left: $spacing.half
-  color: $color.dd
-  font-size: $font.size.m
-
-  @media print
-    display: none
-
-.gl-Warning_Link
-  color: $color.dd
-  text-decoration: underline
 
 
 // Navigation ==================================================================
@@ -116,6 +116,11 @@
       border-bottom: none
 
 .gl-Nav_List
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-content: flex-start
+  height: $spacing.increment
   margin: 0
   list-style: none
   counter-reset: li  // #1
@@ -123,8 +128,13 @@
   @media screen and (min-width: $screen.medium)
     font-size: $font.size.p
 
+  @media screen and (min-width: $screen.large)
+    display: block
+    height: auto
+
 .gl-Nav_Item
   margin: 0
+  padding-right: $spacing.one
   font-family: $font.family.mono
 
   &::before
@@ -133,14 +143,34 @@
     counter-increment: li
     content: counters(li, ".", decimal-leading-zero) // #1
 
+  @media screen and (min-width: $screen.medium)
+    &::after
+      content: '·'
+      padding-left: $spacing.one
+    &:last-child::after
+      content: ''
+
+  @media screen and (min-width: $screen.large)
+    padding: 0
+
+    &::after
+      content:none
+
+
+
 .gl-Nav_Link
   color: $color.ppp
   text-decoration: none
 
+
+// Main content ================================================================
+
 .gl-Main
-  > p:first-of-type
-    font-size: $font.size.pp
-    margin-bottom: $spacing.four
+  @media screen and (min-width: $screen.large)
+    font-size: $font.size.ppp
+
+  @media screen and (min-width: $screen.large)
+    font-size: $font.size.p
 
   @supports (display: grid)
     @media screen and (min-width: $screen.medium)

@@ -1,28 +1,16 @@
-.home-Values
+.home-Callout
   margin: $spacing.increment 0
-  padding: $spacing.base
-  border: $spacing.px solid $color.ddd
+  padding-top: $spacing.increment
+  border-top: $spacing.px solid $color.ll
 
-  @media screen
-    border: none
-    background: $color.p
+  @media screen and (min-width: $screen.medium)
+    display: flex
 
-.home-Values_Content
-  margin: 0
-  font-size: $font.size.p
+.home-Callout_Left
+  @media screen and (min-width: $screen.medium)
+    flex-basis: "calc(50% - %s)" % $spacing.half
 
-.home-Bullets
-  margin: $spacing.increment 0
-  padding: $spacing.base
-  border: $spacing.px solid $color.ddd
-
-  @media screen
-    border: none
-    background: $color.s
-
-.home-Bullets_Title
-  // pass
-
-.home-Bullets_Content
-  margin: 0
-  font-size: $font.size.p
+.home-Callout_Right
+  @media screen and (min-width: $screen.medium)
+    flex-basis: "calc(50% - %s)" % $spacing.half
+    margin-left: auto

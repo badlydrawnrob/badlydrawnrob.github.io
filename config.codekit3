@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/about\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/about\/index.html",
+		"oF": 0
+		},
 	"\/build": {
 		"ft": 65536,
 		"oA": 1,
@@ -402,6 +409,12 @@
 		"oS": 0,
 		"rrU": 0
 		},
+	"\/source\/ecss\/journal": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/journal",
+		"oF": 0
+		},
 	"\/source\/ecss\/markdown\/partials.md": {
 		"cB": 0,
 		"cS": 0,
@@ -438,6 +451,51 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/source\/ecss\/pages\/about\/about-content.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/about\/about-content.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/pages\/about\/about-content.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/source\/ecss\/pages\/about\/about-content.kit",
+		"oF": 2,
+		"oFM": 0,
+		"oS": 1,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/source\/ecss\/pages\/about\/about.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/about\/index.html",
+		"oF": 2
+		},
+	"\/source\/ecss\/pages\/about\/about.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/ecss\/pages\/about\/about.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
 	"\/source\/ecss\/pages\/about\/linkedin.md": {
 		"cB": 0,
 		"cS": 0,
@@ -449,6 +507,31 @@
 		"oA": 0,
 		"oAP": "\/build\/ecss\/pages\/about\/linkedin.html",
 		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/source\/ecss\/pages\/home\/home-callout.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/home\/home-callout.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/pages\/home\/home-callout.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/source\/ecss\/pages\/home\/home-callout.kit",
+		"oF": 2,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 1,
@@ -481,6 +564,31 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/source\/ecss\/pages\/home\/home-focus.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/home\/home-focus.html",
+		"oF": 0
+		},
+	"\/source\/ecss\/pages\/home\/home-focus.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/source\/ecss\/pages\/home\/home-focus.kit",
+		"oF": 2,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/source\/ecss\/pages\/home\/home.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -500,12 +608,6 @@
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
-		},
-	"\/source\/ecss\/pages\/journal": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/ecss\/pages\/journal",
-		"oF": 0
 		},
 	"\/source\/ecss\/pages\/manifesto\/manifesto-content.kit": {
 		"cB": 0,
@@ -548,6 +650,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/ecss\/pages\/manifesto\/manifesto.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/ecss\/pages\/pages.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/ecss\/pages\/pages.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
@@ -2687,7 +2802,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown, \/source\/ecss\/pages\/style, \/source\/ecss\/components, \/source\/ecss\/pages\/journal",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/source\/ecss\/components\/markdown, \/source\/ecss\/pages\/style, \/source\/ecss\/components, \/source\/ecss\/pages\/journal, \/source\/ecss\/journal",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
