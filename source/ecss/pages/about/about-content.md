@@ -8,7 +8,7 @@ I help people like you get things done, designing experiments and frameworks to 
 
 Sometimes performing solo; or collaborating with a team of independent coders, designers and thinkers. Recent projects include:
 
-- **Coffee shop survey** `[design, research, strategy]` · Collaboration with MBA candidate to prepare a survey for a Chinese coffee shop in Shanghai.
+- **Coffee shop survey** `[design, research, strategy]` · Collaboration with MBA candidate at Newcastle University to prepare a survey for a coffee shop in Shanghai, China.
     + **Success:** Demographic profiling, field survey submitted (awaiting results)
     + **Challenges:** Survey structure, removing bias, limiting hypothetical questions
 - **Hubspot modules** ([Evaluagent](https://www.evaluagent.com)) `[design, html, css, hubl language]` · Collaboration with Evaluagent's marketing department · flexible, fast, efficient, custom Hubspot modules · used for data entry, event tracking and promotion.
