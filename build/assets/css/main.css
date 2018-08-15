@@ -639,6 +639,11 @@ ins,
 mark {
   background: #bbdefb;
 }
+p {
+  -webkit-hyphens: manual;
+      -ms-hyphens: manual;
+          hyphens: manual;
+}
 .gl-CTA {
   padding: 1.5rem 0;
   border-top: 0.0625rem solid #f1f1f1;
