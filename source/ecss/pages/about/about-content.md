@@ -8,7 +8,7 @@ I help people like you get things done, designing experiments and frameworks to 
 
 Sometimes performing solo; or collaborating with a team of independent coders, designers and thinkers. Recent projects include:
 
-- **Mobile refresh** ([iSki](https://www.i-ski.co.uk): awaiting sign-off) `[design, html, jinja, js]` · Collaboration with Django developer and SEO specialist to help holiday makers find their perfect ski holiday on mobile.
+- **Mobile refresh** ([iSki](https://www.i-ski.co.uk): awaiting sign-off) `[css, design, html, jinja, js]` · Collaboration with Django developer and SEO specialist · help holiday makers find their perfect ski holiday on mobile
     + **Success:** Optimised for Google, isolated components, flexible design
     + **Challenges:** Poor architecture, slow API, remote communication
 - **Coffee shop survey** `[design, research, strategy]` · Collaboration with MBA candidate at Newcastle University to prepare a survey for a coffee shop in Shanghai, China.
