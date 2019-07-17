@@ -1,16 +1,16 @@
 .home-Callout
-  margin: $spacing.increment 0
-  padding-top: $spacing.increment
+  margin: var(--spacing-increment) 0
+  padding-top: var(--spacing-increment)
   border-top: $spacing.px solid $color.ll
 
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     display: flex
 
 .home-Callout_Left
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     flex-basis: "calc(50% - %s)" % $spacing.half
 
 .home-Callout_Right
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     flex-basis: "calc(50% - %s)" % $spacing.half
     margin-left: auto

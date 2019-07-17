@@ -2,6 +2,7 @@
 Portfolio
 
 ## Notes
+- **A lot of repetition with `@media screen` size**
 - Possibly fix the line-height of first paragraph
 - Look over `ol` and `ol` (especially children)
 - [Remove `html` extensions](https://rsp.github.io/gh-pages-no-extension/)

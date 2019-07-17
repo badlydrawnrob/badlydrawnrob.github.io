@@ -6,7 +6,7 @@
   padding: 0 $spacing.one
 
   @supports (display: grid)
-    @media screen and (min-width: $screen.medium)
+    @media screen and (min-width: var(--screen-medium))
       display: grid
       grid-template-columns: 1fr minmax(auto, $col.main) 1fr
       grid-template-rows: auto auto auto auto auto 1fr
@@ -24,7 +24,7 @@
   border-bottom: $spacing.px solid $color.l
 
   @supports (display: grid)
-    @media screen and (min-width: $screen.medium)
+    @media screen and (min-width: var(--screen-medium))
       grid-column: 1 / span 3
       grid-row: 1
       padding: $spacing.half
@@ -33,7 +33,7 @@
   list-style: none
   margin: 0
 
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     display: inline
 
 .gl-Document_Item
@@ -74,21 +74,21 @@
   margin: $spacing.one 0 $spacing.two
 
   @supports (display: grid)
-    @media screen and (min-width: $screen.medium)
+    @media screen and (min-width: var(--screen-medium))
       grid-column: 2
       grid-row: 3
       margin: $spacing.one 0 $spacing.two
 
-    @media screen and (min-width: $screen.large)
+    @media screen and (min-width: var(--screen-large))
       grid-column: 1 / span 2
       grid-row: 2
       padding-left: $spacing.six
-      margin: $spacing.two 0 $spacing.increment
+      margin: $spacing.two 0 var(--spacing-increment)
 
 .gl-Header_Title
   margin: 0
 
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     font-size: $font.size.pppppp
 
 
@@ -103,11 +103,11 @@
     display: none
 
   @supports (display: grid)
-    @media screen and (min-width: $screen.medium)
+    @media screen and (min-width: var(--screen-medium))
       grid-column: 2 / span 2
       grid-row: 2
 
-    @media screen and (min-width: $screen.large)
+    @media screen and (min-width: var(--screen-large))
       grid-column: 1
       grid-row: 3
       align-self: start
@@ -120,15 +120,15 @@
   flex-direction: column
   flex-wrap: wrap
   align-content: flex-start
-  height: $spacing.increment
+  height: var(--spacing-increment)
   margin: 0
   list-style: none
   counter-reset: li  // #1
 
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     font-size: $font.size.p
 
-  @media screen and (min-width: $screen.large)
+  @media screen and (min-width: var(--screen-large))
     display: block
     height: auto
 
@@ -143,14 +143,14 @@
     counter-increment: li
     content: counters(li, ".", decimal-leading-zero) // #1
 
-  @media screen and (min-width: $screen.medium)
+  @media screen and (min-width: var(--screen-medium))
     &::after
       content: '·'
       padding-left: $spacing.one
     &:last-child::after
       content: ''
 
-  @media screen and (min-width: $screen.large)
+  @media screen and (min-width: var(--screen-large))
     padding: 0
 
     &::after
@@ -166,17 +166,17 @@
 // Main content ================================================================
 
 .gl-Main
-  @media screen and (min-width: $screen.large)
+  @media screen and (min-width: var(--screen-large))
     font-size: $font.size.ppp
 
-  @media screen and (min-width: $screen.large)
+  @media screen and (min-width: var(--screen-large))
     font-size: $font.size.p
 
   @supports (display: grid)
-    @media screen and (min-width: $screen.medium)
+    @media screen and (min-width: var(--screen-medium))
       grid-column: 2
       grid-row: 4
 
-    @media screen and (min-width: $screen.large)
+    @media screen and (min-width: var(--screen-large))
       grid-column: 2
       grid-row: 3 / span 2
