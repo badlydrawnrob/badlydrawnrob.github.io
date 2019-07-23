@@ -1,1 +1,0 @@
-I help people like you get things done, designing experiments and frameworks to challenge your assumptions and facilitate thought. I'm good at simplifying the complex and solving problems with data. Current research and focus: customer insight, design-thinking, digital strategy, data analysis. Utilise online/offline tools and code to get the job done.

@@ -4,7 +4,11 @@
   "description": "Personal portfolio",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "which pandoc",
+    "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
+    "prebuild": "mkdir -p build/ build/style",
+    "build": "...",
+    "postbuild": "echo Portfolio: successfully compiled!"
   },
   "repository": {
     "type": "git",

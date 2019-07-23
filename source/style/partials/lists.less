@@ -1,0 +1,12 @@
+ol,
+ul {
+  li {
+    @media screen and (min-width: var(--screen-medium)) {
+      margin-left: 0;
+
+      ul > li {
+        margin-left: var(--spacing-one);
+      }
+    }
+  }
+}

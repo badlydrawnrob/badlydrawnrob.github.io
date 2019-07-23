@@ -1,0 +1,17 @@
+// Anchors =========================
+// #!: replace with filter?
+//     @link: https://bit.ly/1G0g61j
+//     - darken(..., 30%) function won't work with var(..)
+
+a {
+  color: var(--color-ppp);
+
+  &:visited {
+    color: var(--color-ppp);  // #!
+  }
+
+  &:hover,
+  &:active {
+    color: var(--color-ddd);
+  }
+}

@@ -12,7 +12,7 @@ While our orbits might twist and turn, isn't it a good idea to plot a path?
     - In a connected, digital, data-obsessed world, _privacy matters_. As a society it's our job protect the people we serve, even when mind-numbingly difficult (oh how I love you, [GDPR](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/))
 4. Make it easy, make it seamless
     - In a world full of distractions, time is precious. It may be Jane, the new mum, trying to organise life; Mike the cafe owner, too busy to think; or Jaylah, the <abbr title="this is a highly contentious statement, but you get the point">apathetic</abbr> millennial who wants it right now. Be respectful of people's time.
-5. <b class="highlight highlight-underline">Why</b> is more important than <b class="highlight highlight-underline">how</b>
+5. **Why** is more important than **how**
     - I'll forgo the rant about <i>too many [useless, wasteful, ...] `X`</i> in the world. What's the _focus_? what's the _goal_? What is it _for_? Why _bother_?
 6. Humans are more important than robots
     - As a recovering tech fatigue victim myself, I'd love to — in some small way — contribute to a humanist vision. Although the [science still isn't clear](https://www.theguardian.com/science/2015/jan/18/modern-world-bad-for-brain-daniel-j-levitin-organized-mind-information-overload) on an always-connected world, I believe without constraints tech can have a negative impact on mental health. Online communication is _not the same_ as offline interaction; for me, online should _only_ be a means of improving _offline_ conversations, relationships and life.

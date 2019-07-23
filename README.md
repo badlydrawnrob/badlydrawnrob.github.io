@@ -8,6 +8,8 @@ Portfolio
 - [Remove `html` extensions](https://rsp.github.io/gh-pages-no-extension/)
 - [ssl](https://hackernoon.com/set-up-ssl-on-github-pages-with-custom-domains-for-free-a576bdf51bc)
 - [ecss eg](https://benfrain.com)
+- Tidy up structure
+- More rigorous writing style
 
 
 ## Markdown
