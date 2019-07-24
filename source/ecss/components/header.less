@@ -17,6 +17,7 @@
 
 
 // Document header ==============================================================
+// #1: Hide browser alert if css grid is supported
 
 .gl-Document {
   padding: var(--spacing-half) 0;
@@ -38,7 +39,7 @@
 
   &-alert {
     @supports (display: grid) {
-      display: none;
+      display: none;  // #1
     }
   }
 }
