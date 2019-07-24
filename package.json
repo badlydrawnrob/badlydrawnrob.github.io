@@ -6,8 +6,10 @@
   "scripts": {
     "test": "which pandoc",
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
+    "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/home/home.yaml -s -o ./index.html",
+    "home-test": "pandoc --template=./source/pandoc/template.html -c ../style/portfolio.css ./source/ecss/pages/home/*md ./source/ecss/pages/home/home.yaml -s -o ./build/test/home.html",
     "prebuild": "mkdir -p build/ build/style",
-    "build": "...",
+    "build": "npm run css && npm run home",
     "postbuild": "echo Portfolio: successfully compiled!"
   },
   "repository": {

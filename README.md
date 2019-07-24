@@ -14,4 +14,5 @@ Portfolio
 
 ## Markdown
 
+- See [Pandoc template](./source/pandoc/template.html) and [original](https://github.com/jgm/pandoc-templates)
 - Use [Marked App](http://marked2app.com/) to process the `.md` files and generate the styleguide

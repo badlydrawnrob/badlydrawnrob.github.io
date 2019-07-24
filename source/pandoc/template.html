@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-$for(author-meta)$
-  <meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$" />
-$endif$
-$if(keywords)$
-  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
-$endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-$for(css)$
-  <link rel="stylesheet" href="$css$" />
-$endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
-  $header-includes$
-$endfor$
-</head>
-<body>
-$for(include-before)$
-  $include-before$
-$endfor$
-$if(title)$
-  <header id="title-block-header">
-    <h1 class="title">$title$</h1>
-  $if(subtitle)$
-    <p class="subtitle">$subtitle$</p>
-  $endif$
-  $for(author)$
-    <p class="author">$author$</p>
-  $endfor$
-  $if(date)$
-    <p class="date">$date$</p>
-  $endif$
-  </header>
-$endif$
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>$title$ | robmcdonald.me</title>
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    $for(author-meta)$
+      <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+      <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $for(css)$
+      <link rel="stylesheet" href="$css$" />
+    $endfor$
+  </head>
+  <body class="$bodyclass$">
 
-$if(toc)$
-  <nav id="$idprefix$TOC" role="doc-toc">
-    $table-of-contents$
-  </nav>
-$endif$
+    <div class="gl-Container">
+      <aside class="gl-Document">
+        <p class="gl-Document-Item">Rob McDonald, a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a> • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
+        <p class="gl-Document_Item gl-Document_Item-alert">⚠️ Looks weird? Time for a shiny [new browser](https://www.mozilla.org/en-US/firefox/new/) update!</p>
+      </aside>
 
-  <main>
-    $body$
-  </main>
+      <nav class="gl-Nav">
+        <ol class="gl-Nav_List">
+          <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/">Home</a></li>
+          <!-- <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/about">About</a></li> -->
+          <!-- <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/manifesto">Manifesto</a></li> -->
+        </ol>
+      </nav>
+      
+    $if(title)$
+      <header class="gl-Header">
+        <h1 class="gl-Header_Title">$title$</h1>
+      </header>
+    $endif$
 
-$for(include-after)$
-  $include-after$
-$endfor$
-</body>
+      <main class="gl-Main">
+        <div class="pg-Intro">
+        $if(subtitle)$
+          <h2 class="pg-Intro_Heading">$subtitle$</h2>
+        $endif$
+        $if(intro)$
+          <p class="pg-Intro_Note">$intro$</p>
+        $endif$
+        </div>
+
+        $body$
+      </main>
+
+      <aside class="gl-CTA">
+        <p class="gl-CTA_Note"><a class="gl-CTA_Button" href="#">Let's <abbr class="gl-CTA_Icon" title="love">♥</abbr> learning together</a><span class="gl-CTA_NoteExtra"> and get things done!</span></p>
+      </aside>
+
+      <footer class="gl-Footer">
+        <div class="gl-Footer_Wrapper">
+          <div class="gl-Social">
+            <p class="gl-Social_Note">I help people decide what to do next. I collaborate with people just like you, designing experiments and frameworks to challenge your assumptions and facilitate thought. I'm good at simplifying the complex and solving problems with data.</p>
+            <p class="gl-Social_Note">You'll rarely find me digging around social media;  I prefer switching off and escaping into nature's <em>own</em> rabbit holes (or perhaps a good coffee and a book).</p>
+            <p class="gl-Social_Note">If you'd like a chat you can find me:</p>
+
+            <ul class="gl-Social_List">
+              <li class="gl-Social_Item">
+                👋 <a class="gl-Social_Link" href="https://www.linkedin.com/in/badlydrawnrob/">Schmoosing on LinkedIn</a>
+              </li>
+              <li class="gl-Social_Item">
+                🕹 <a class="gl-Social_Link" href="https://github.com/badlydrawnrob/">Pushing to Github</a>
+              </li>
+              <li class="gl-Social_Item">
+                ✉️ <a class="gl-Social_Link" href="mailto:hello@robmcdonald.me">Sending a good ol' email</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="gl-Footer_Wrapper">
+          <div class="gl-Strapline">
+            <p class="gl-Strapline_Note">Making data fit for human consumption <a class="gl-Strapline_Link" href="#">since 2001</a></p>
+            <p class="gl-Strapline_Note">Taking security <a class="gl-Strapline_Link" href="/manifesto/#kiskis">seriously</a> 🔒</p>
+          </div>
+        </div>
+      </footer>
+    </div><!-- .gl-container -->
+  </body>
 </html>
