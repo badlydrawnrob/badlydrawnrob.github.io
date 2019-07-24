@@ -2,12 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Data for humans | robmcdonald.me</title>
+    <title>$title$ | robmcdonald.me</title>
     <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <link rel="stylesheet" href="./build/style/portfolio.css" />
-      </head>
-  <body class="home">
+    $for(author-meta)$
+      <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+      <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $for(css)$
+      <link rel="stylesheet" href="$css$" />
+    $endfor$
+  </head>
+  <body class="$bodyclass$">
 
     <div class="gl-Container">
       <aside class="gl-Document">
@@ -23,17 +31,23 @@
         </ol>
       </nav>
       
-          <header class="gl-Header">
-        <h1 class="gl-Header_Title">Data for humans</h1>
+    $if(title)$
+      <header class="gl-Header">
+        <h1 class="gl-Header_Title">$title$</h1>
       </header>
-    
+    $endif$
+
       <main class="gl-Main">
         <div class="pg-Intro">
-                  <h2 class="pg-Intro_Heading">Life is a learning process</h2>
-                          <p class="pg-Intro_Note">it’s full of big hairy problems (and little ones too!) — I solve problems for people with data.</p>
-                </div>
+        $if(subtitle)$
+          <h2 class="pg-Intro_Heading">$subtitle$</h2>
+        $endif$
+        $if(intro)$
+          <p class="pg-Intro_Note">$intro$</p>
+        $endif$
+        </div>
 
-        
+        $body$
       </main>
 
       <aside class="gl-CTA">

@@ -1,0 +1,158 @@
+// Call to action section ======================================================
+
+.gl-CTA {
+  padding: var(--spacing) 0;
+  border-top: var(--spacing-px) solid var(--color-l);
+
+  @media print {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-column: 1 / span 5;
+    grid-row: 5;
+  }
+}
+
+.gl-CTA_Note {
+  margin: 0;
+  font-family: var(--font-family-mono);
+
+  @media screen and (min-width: 800px) {
+    max-width: var(--col-main);
+    margin: 0 auto;
+  }
+}
+
+.gl-CTA_Button {
+  display: block;
+  padding: var(--spacing-one);
+  color: var(--color-ddd);
+  font-family: var(--font-family-mono);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--color-lll);
+  border: var(--spacing-micro) solid var(--color-ddd);
+  border-radius: var(--border-radius);
+
+  @media screen and (min-width: 800px) {
+    display: inline-block;
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-lll);
+    background: var(--color-ddd);
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+}
+
+.gl-CTA_Icon {
+  .gl-CTA_Button:hover & {
+    color: var(--color-s);
+  }
+}
+
+.gl-CTA_NoteExtra {
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: inline;
+  }
+}
+
+
+
+
+// Footer section ==============================================================
+// #1: Hide footer when printing
+// #!: This was fade(..., 20%) but won't work with var(..)
+//     - workaround: https://stackoverflow.com/a/41265350
+
+.gl-Footer {
+  @media print {
+    display: none;  // #1
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-column: 1 / span 5;
+    grid-row: 6;
+  }
+}
+
+.gl-Footer_Wrapper {
+  padding: var(--spacing) var(--spacing-one);
+  margin-left: calc(var(--spacing-one) * -1);
+  margin-right: calc(var(--spacing-one) * -1);
+  background: var(--color-p);  // #!
+  border-top: var(--spacing-px) solid var(--color-l);
+
+  & + & {
+    background: var(--color-ddd);
+  }
+
+  @media screen and (min-width: 800px) {
+    margin: 0;
+    padding: var(--spacing) 0;
+  }
+}
+
+
+.gl-Social {
+  @media screen and (min-width: 800px) {
+    max-width: var(--col-main);
+    margin: 0 auto;
+  }
+}
+
+.gl-Social_Note {
+  // pass
+}
+
+.gl-Social_List {
+  margin: 0;
+}
+
+.gl-Social_Item {
+  list-style: none;
+}
+
+.gl-Social_Link {
+  color: var(--color-ddd);
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: var(--color-s);
+  }
+}
+
+
+.gl-Strapline {
+  @media screen and (min-width: 800px) {
+    max-width: var(--col-main);
+    margin: 0 auto;
+  }
+}
+
+.gl-Strapline_Note {
+  margin-bottom: 0;
+  color: var(--color-lll);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-mm);
+}
+
+.gl-Strapline_Link {
+  color: var(--color-lll);
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: var(--color-s);
+  }
+}
