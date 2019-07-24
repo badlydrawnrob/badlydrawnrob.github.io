@@ -5,7 +5,7 @@
 .gl-Container {
   padding: 0 var(--spacing-one);
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     display: grid;
     grid-template-columns: 1fr minmax(auto, var(--col-main)) 1fr;
     grid-template-rows: auto auto auto auto auto 1fr;
@@ -25,7 +25,7 @@
   font-size: var(--font-size-mm);
   border-bottom: var(--spacing-px) solid var(--color-l);
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     grid-column: 1 / span 3;
     grid-row: 1;
     padding: var(--spacing-half);
@@ -61,13 +61,13 @@
 .gl-Header {
   margin: var(--spacing-one) 0 var(--spacing-two);
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     grid-column: 2;
     grid-row: 3;
     margin: var(--spacing-one) 0 var(--spacing-two);
   }
 
-  @media screen and (min-width: var(--screen-large)) {
+  @media screen and (min-width: 1200px) {
     grid-column: 1 / span 2;
     grid-row: 2;
     padding-left: var(--spacing-six);
@@ -78,7 +78,7 @@
 .gl-Header_Title {
   margin: 0;
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     font-size: var(--font-size-pppppp);
   }
 }
@@ -97,12 +97,12 @@
     display: none;
   }
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     grid-column: 2 / span 2;
     grid-row: 2;
   }
 
-  @media screen and (min-width: var(--screen-large)) {
+  @media screen and (min-width: 1200px) {
     grid-column: 1;
     grid-row: 3;
     align-self: start;
@@ -122,11 +122,11 @@
   list-style: none;
   counter-reset: li;  // #1
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     font-size: var(--font-size-p);
   }
 
-  @media screen and (min-width: var(--screen-large)) {
+  @media screen and (min-width: 1200px) {
     display: block;
     height: auto;
   }
@@ -144,7 +144,7 @@
     content: counters(li, ".", decimal-leading-zero); // #1
   }
 
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     &::after {
       content: '·';
       padding-left: var(--spacing-one);
@@ -155,7 +155,7 @@
     }
   }
 
-  @media screen and (min-width: var(--screen-large)) {
+  @media screen and (min-width: 1200px) {
     padding: 0;
 
     &::after {
@@ -175,12 +175,12 @@
 // Main content ================================================================
 
 .gl-Main {
-  @media screen and (min-width: var(--screen-medium)) {
+  @media screen and (min-width: 800px) {
     grid-column: 2;
     grid-row: 4;
   }
   
-  @media screen and (min-width: var(--screen-large)) {
+  @media screen and (min-width: 1200px) {
     grid-column: 2;
     grid-row: 3 / span 2;
     font-size: var(--font-size-p);
