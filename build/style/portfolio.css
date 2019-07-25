@@ -873,6 +873,15 @@ mark {
 p {
   hyphens: manual;
 }
+@media screen {
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+}
 .gl-Container {
   padding: 0 var(--spacing-one);
 }
@@ -1093,11 +1102,6 @@ p {
     display: inline;
   }
 }
-@media print {
-  .gl-Footer {
-    display: none;
-  }
-}
 @media screen and (min-width: 800px) {
   .gl-Footer {
     grid-column: 1 / span 5;
@@ -1108,11 +1112,15 @@ p {
   padding: var(--spacing) var(--spacing-one);
   margin-left: calc(var(--spacing-one) * -1);
   margin-right: calc(var(--spacing-one) * -1);
-  background: var(--color-p);
-  border-top: var(--spacing-px) solid var(--color-l);
 }
-.gl-Footer_Wrapper + .gl-Footer_Wrapper {
-  background: var(--color-ddd);
+@media screen {
+  .gl-Footer_Wrapper {
+    background: var(--color-p);
+    border-top: var(--spacing-px) solid var(--color-l);
+  }
+  .gl-Footer_Wrapper + .gl-Footer_Wrapper {
+    background: var(--color-ddd);
+  }
 }
 @media screen and (min-width: 800px) {
   .gl-Footer_Wrapper {
@@ -1126,11 +1134,16 @@ p {
     margin: 0 auto;
   }
 }
-.gl-Social_List {
-  margin: 0;
+@media screen {
+  .gl-Social_List {
+    margin: 0;
+  }
 }
-.gl-Social_Item {
-  list-style: none;
+@media screen {
+  .gl-Social_Item {
+    list-style: none;
+    margin-left: 0;
+  }
 }
 .gl-Social_Link {
   color: var(--color-ddd);
@@ -1139,6 +1152,11 @@ p {
 .gl-Social_Link:hover,
 .gl-Social_Link:focus {
   color: var(--color-s);
+}
+@media print {
+  .gl-Strapline {
+    display: none;
+  }
 }
 @media screen and (min-width: 800px) {
   .gl-Strapline {

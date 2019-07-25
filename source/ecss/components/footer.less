@@ -70,15 +70,11 @@
 
 
 // Footer section ==============================================================
-// #1: Hide footer when printing
+// #1: Hide when printing
 // #!: This was fade(..., 20%) but won't work with var(..)
 //     - workaround: https://stackoverflow.com/a/41265350
 
 .gl-Footer {
-  @media print {
-    display: none;  // #1
-  }
-
   @media screen and (min-width: 800px) {
     grid-column: 1 / span 5;
     grid-row: 6;
@@ -89,11 +85,15 @@
   padding: var(--spacing) var(--spacing-one);
   margin-left: calc(var(--spacing-one) * -1);
   margin-right: calc(var(--spacing-one) * -1);
-  background: var(--color-p);  // #!
-  border-top: var(--spacing-px) solid var(--color-l);
+  
 
-  & + & {
-    background: var(--color-ddd);
+  @media screen {
+    background: var(--color-p);  // #!
+    border-top: var(--spacing-px) solid var(--color-l);
+
+    & + & {
+      background: var(--color-ddd);
+    }
   }
 
   @media screen and (min-width: 800px) {
@@ -115,11 +115,16 @@
 }
 
 .gl-Social_List {
-  margin: 0;
+  @media screen {
+    margin: 0;
+  }
 }
 
 .gl-Social_Item {
-  list-style: none;
+  @media screen {
+    list-style: none;
+    margin-left: 0;
+  }
 }
 
 .gl-Social_Link {
@@ -134,6 +139,10 @@
 
 
 .gl-Strapline {
+  @media print {
+    display: none;  // #1
+  }
+
   @media screen and (min-width: 800px) {
     max-width: var(--col-main);
     margin: 0 auto;

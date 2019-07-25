@@ -1,0 +1,3 @@
+- I help turn fuzzy ideas into simple solutions
+- Help 1000s of visitors learn what works for them
+- Make information simple, fun and useful
