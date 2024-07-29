@@ -22,10 +22,9 @@
     "url": "https://github.com/badlydrawnrob/badlydrawnrob.github.io/issues"
   },
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
-  "dependencies": {},
   "false": {},
   "devDependencies": {
-    "less": "^3.9.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css"
+    "less": "^4.2.0",
+    "print-first-css": "github:badlydrawnrob/print-first-css#156a1f7"
   }
 }

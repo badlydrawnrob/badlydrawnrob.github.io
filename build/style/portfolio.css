@@ -4,9 +4,50 @@
  * == Based on Cardinal CSS by @cbracco: http://bit.ly/2iDzOZi ==
  */
 :root {
-  --color-d: #000;
-  --color-l: #fff;
-  --color-ll: #f1f1f1;
+  --color-bbbb: #000;
+  --color-bbb: #333;
+  --color-bb: #ccc;
+  --color-b: #f9f9f9;
+  --color-l: #ccc;
+  --color-ll: #ddd;
+  --color-lll: #f1f1f1;
+  --color-llll: #fff;
+  --color-code-light-palette-01: var(--color-bbbb);
+  --color-code-light-palette-02: var(--color-bbbb);
+  --color-code-light-palette-03: var(--color-bbbb);
+  --color-code-light-palette-04: var(--color-bbbb);
+  --color-code-light-palette-05: var(--color-bbbb);
+  --color-code-light-palette-06: var(--color-bbbb);
+  --color-code-light-palette-07: var(--color-bbbb);
+  --color-code-light-background: var(--color-code-light-palette-03);
+  --color-code-light-alert: var(--color-code-light-palette-01);
+  --color-code-light-annotation: var(--color-code-light-palette-01);
+  --color-code-light-attribute: var(--color-code-light-palette-07);
+  --color-code-light-base-n: var(--color-code-light-palette-05);
+  --color-code-light-built-in: var(--color-code-light-palette-04);
+  --color-code-light-control-flow: var(--color-code-light-palette-04);
+  --color-code-light-char: var(--color-code-light-palette-05);
+  --color-code-light-constant: var(--color-code-light-palette-04);
+  --color-code-light-comment: var(--color-code-light-palette-01);
+  --color-code-light-comment-var: var(--color-code-light-palette-01);
+  --color-code-light-documentation: var(--color-code-light-palette-04);
+  --color-code-light-data-type: var(--color-code-light-palette-04);
+  --color-code-light-dec-val: var(--color-code-light-palette-05);
+  --color-code-light-error: var(--color-code-light-palette-01) --color-code-light-extension: var(--color-code-light-palette-01);
+  --color-code-light-float: var(--color-code-light-palette-05);
+  --color-code-light-function: var(--color-code-light-palette-07);
+  --color-code-light-import: var(--color-code-light-palette-01);
+  --color-code-light-information: var(--color-code-light-palette-01);
+  --color-code-light-keyword: var(--color-code-light-palette-04);
+  --color-code-light-operator: var(--color-code-light-palette-04);
+  --color-code-light-other: var(--color-code-light-palette-07);
+  --color-code-light-preprocessor: var(--color-code-light-palette-07);
+  --color-code-light-special-char: var(--color-code-light-palette-05);
+  --color-code-light-special-string: var(--color-code-light-palette-05);
+  --color-code-light-string: var(--color-code-light-palette-05);
+  --color-code-light-variable: var(--color-code-light-palette-07);
+  --color-code-light-verbatim-string: var(--color-code-light-palette-05);
+  --color-code-light-warning: var(--color-code-light-palette-01);
   --spacing-increment: calc(var(--spacing-pp) * 1rem);
   --spacing-pppppppp: 128 / 16;
   --spacing-ppppppp: 112 / 16;
@@ -34,13 +75,12 @@
   --spacing-quarter: calc(var(--spacing-mm) * 1rem);
   --spacing-micro: calc(var(--spacing-mmm) * 1rem);
   --spacing-px: calc(var(--spacing-mmmm) * 1rem);
-  --ios: 'San Francisco';
-  --android: 'Noto', 'Roboto';
-  --ios-mono: 'San Francisco Mono';
-  --android-mono: 'Noto Mono', 'Roboto Mono';
-  --font-color: var(--color-d);
-  --font-family: var(--ios), var(--android), sans-serif;
-  --font-family-mono: var(--ios-mono), var(--android-mono), monospace;
+  --system-ui: system-ui, sans-serif;
+  --system-mono: ui-monospace;
+  --fallback-mono: 'Roboto Mono', monospace, monospace;
+  --font-color: var(--color-bbbb);
+  --font-family: var(--system-ui);
+  --font-family-mono: var(--system-mono), var(--fallback-mono);
   --font-size-pppppp: calc((96 / 16) * 1rem);
   --font-size-ppppp: calc((60 / 16) * 1rem);
   --font-size-pppp: calc((48 / 16) * 1rem);
@@ -522,6 +562,14 @@ samp {
   font-style: normal;
   line-height: var(--line-height);
 }
+@media screen {
+  code,
+  kbd,
+  pre,
+  samp {
+    background: var(--color-code-light-background);
+  }
+}
 code,
 kbd {
   margin: 0;
@@ -532,7 +580,7 @@ kbd {
   code,
   kbd {
     border-radius: var(--border-radius);
-    background-color: var(--color-ll);
+    background-color: var(--color-lll);
   }
 }
 pre {
@@ -544,16 +592,12 @@ pre {
   word-break: normal;
   tab-size: 4;
   hyphens: none;
-  border: var(--spacing-px) solid var(--font-color);
-}
-pre + pre {
-  border-top: transparent;
-  margin-top: calc(var(--spacing) * -1);
+  border: var(--spacing-px) solid var(--color-bbb);
 }
 @media screen {
   pre {
     white-space: pre;
-    background: var(--color-ll);
+    background: var(--color-lll);
     border-color: transparent;
   }
 }
@@ -800,6 +844,76 @@ details {
 em,
 i,
 cite {
+  font-style: italic;
+}
+pre.sourceCode .numberSource {
+  margin-left: 3em;
+  padding-left: 4px;
+  border-left: 1px solid var(--color-bbb);
+}
+pre.sourceCode .numberSource code {
+  counter-reset: source-line 0;
+}
+pre.sourceCode .numberSource code > span {
+  position: relative;
+  left: -4em;
+  counter-increment: source-line;
+}
+pre.sourceCode .numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+  position: relative;
+  left: -1em;
+  display: inline-block;
+  width: 4em;
+  padding: 0 4px;
+  color: var(--color-bbb);
+  text-align: right;
+  vertical-align: baseline;
+  border: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+code.sourceCode > span > a:first-child::before {
+  text-decoration: underline;
+}
+.sourceCode .al {
+  font-weight: 700;
+}
+.sourceCode .an {
+  font-style: italic;
+}
+.sourceCode .cf {
+  font-weight: 700;
+}
+.sourceCode .co {
+  font-style: italic;
+}
+.sourceCode .cv {
+  font-style: italic;
+}
+.sourceCode .do {
+  font-style: italic;
+}
+.sourceCode .dt {
+  text-decoration: underline;
+}
+.sourceCode .er {
+  font-weight: 700;
+}
+.sourceCode .in {
+  font-style: italic;
+}
+.sourceCode .kw {
+  font-weight: 700;
+}
+.sourceCode .pp {
+  font-weight: 700;
+}
+.sourceCode .wa {
   font-style: italic;
 }
 :root {
