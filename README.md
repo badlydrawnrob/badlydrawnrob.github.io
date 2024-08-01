@@ -1,5 +1,4 @@
 # badlydrawnrob.github.io
-Portfolio
 
 ## To Do
 
@@ -11,6 +10,8 @@ Portfolio
 - Can our print styles cope with having things in a `grid` layout?
     - See BBC and other websites.
 - Begin a more rigourous writing style for very basic things.
+- Having all sorts of pages within the `ecss` folder needs changing?
+    - This should be for components, if at all.
 
 ## Notes
 - **A lot of repetition with `@media screen` size**

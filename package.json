@@ -7,9 +7,12 @@
     "test": "which pandoc",
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/home/home.yaml ./source/ecss/pages/home/*md -s -o ./index.html",
-    "pandoc-test": "pandoc --template=./source/pandoc/template.html -c ../style/portfolio.css ./source/ecss/pages/home/home.yaml ./source/ecss/pages/home/*md -s -o ./build/test/home.html",
+    "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/contact/contact.yaml ./source/ecss/pages/contact/*md -s -o ./contact.html",
+    "test-pandoc": "npm run test-home && npm run test-orbit",
+    "test-home": "pandoc --template=./source/pandoc/template.html -c ../style/portfolio.css ./source/ecss/pages/home/home.yaml ./source/ecss/pages/home/*md -s -o ./build/test/home.html",
+    "test-orbit": "pandoc --template=./source/pandoc/template.html -c ../style/portfolio.css ./source/ecss/pages/orbit/orbit.yaml ./source/ecss/pages/orbit/*md -s -o ./build/test/orbit.html",
     "prebuild": "mkdir -p build/ build/style",
-    "build": "npm run css && npm run home",
+    "build": "npm run css && npm run home && npm run contact",
     "postbuild": "echo Portfolio: successfully compiled!"
   },
   "repository": {
@@ -25,6 +28,6 @@
   "false": {},
   "devDependencies": {
     "less": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#156a1f7"
+    "print-first-css": "github:badlydrawnrob/print-first-css#7ca8893"
   }
 }
