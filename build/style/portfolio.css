@@ -1306,9 +1306,7 @@ p {
   font-size: var(--font-size-pp);
   font-weight: 700;
   margin: 0;
-}
-.pg-Intro_Heading::after {
-  content: '; ';
+  padding-right: var(--spacing-half);
 }
 @media screen and (min-width: 1200px) {
   .pg-Intro_Heading {
