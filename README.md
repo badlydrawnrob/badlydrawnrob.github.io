@@ -1,5 +1,17 @@
 # badlydrawnrob.github.io
-Portfolio
+
+## To Do
+
+> For now I don't care about anything other than quick info, and a sales pitch for the kids code club. Nothing else matters for this sprint.
+
+- I'm not sure it's so great having `@media` all over the page
+    - i.e: inside multiple `.classes`.
+    - I understand the usefulness of having everything for a specific `.class` in one place however.
+- Can our print styles cope with having things in a `grid` layout?
+    - See BBC and other websites.
+- Begin a more rigourous writing style for very basic things.
+- Having all sorts of pages within the `ecss` folder needs changing?
+    - This should be for components, if at all.
 
 ## Notes
 - **A lot of repetition with `@media screen` size**

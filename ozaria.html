@@ -2,20 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>$title$ | robmcdonald.me</title>
+    <title>Code for kids! | robmcdonald.me</title>
     <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    $for(author-meta)$
-      <meta name="author" content="$author-meta$" />
-    $endfor$
-    $if(date-meta)$
-      <meta name="dcterms.date" content="$date-meta$" />
-    $endif$
-    $for(css)$
-      <link rel="stylesheet" href="$css$" />
-    $endfor$
-  </head>
-  <body class="$bodyclass$">
+                  <link rel="stylesheet" href="./build/style/portfolio.css" />
+      </head>
+  <body class="home">
 
     <div class="gl-Container">
       <aside class="gl-Document">
@@ -32,23 +24,36 @@
         </ol>
       </nav>
 
-    $if(title)$
-      <header class="gl-Header">
-        <h1 class="gl-Header_Title">$title$</h1>
+          <header class="gl-Header">
+        <h1 class="gl-Header_Title">Code for kids!</h1>
       </header>
-    $endif$
-
+    
       <main class="gl-Main">
         <div class="pg-Intro">
-        $if(subtitle)$
-          <h2 class="pg-Intro_Heading">$subtitle$</h2>
-        $endif$
-        $if(intro)$
-          <p class="pg-Intro_Note">$intro$</p>
-        $endif$
-        </div>
+                  <h2 class="pg-Intro_Heading">Join us on a coding
+adventure …</h2>
+                          <p class="pg-Intro_Note">A fun adventure game
+where students build real skills through the power of play. Help our
+hero <strong>solve puzzles</strong>, <strong>learn spells</strong>, and
+much more!</p>
+                </div>
 
-        $body$
+        <!-- See cv-draft-02 -->
+        <p><strong>Play a free chapter of Ozaria</strong> by filling out
+        the form below. Our <strong>summer code camp</strong> is for
+        ages 8—12 (or over).</p>
+        <ul>
+        <li>🗓️ <strong>12th—16th August</strong> at the <a
+        href="https://maps.app.goo.gl/FGf6zMStgTmnVKXc6">White Swan
+        Centre in Killingworth</a></li>
+        <li>🗓️ <strong>19th—23rd August</strong> in Newcastle/Gateshead
+        (location to be announced).</li>
+        <li>⏰ <strong>2 hours per day</strong>, Monday—Friday.
+        <u><strong>12 places</strong></u> per class are available.</li>
+        </ul>
+        <iframe data-tally-src="https://tally.so/embed/woo60N?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="835" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria signup form">
+        </iframe>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </main>
 
       <aside class="gl-CTA">

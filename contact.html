@@ -2,20 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>$title$ | robmcdonald.me</title>
+    <title>Contact me | robmcdonald.me</title>
     <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    $for(author-meta)$
-      <meta name="author" content="$author-meta$" />
-    $endfor$
-    $if(date-meta)$
-      <meta name="dcterms.date" content="$date-meta$" />
-    $endif$
-    $for(css)$
-      <link rel="stylesheet" href="$css$" />
-    $endfor$
-  </head>
-  <body class="$bodyclass$">
+                  <link rel="stylesheet" href="./build/style/portfolio.css" />
+      </head>
+  <body class="contact">
 
     <div class="gl-Container">
       <aside class="gl-Document">
@@ -32,23 +24,22 @@
         </ol>
       </nav>
 
-    $if(title)$
-      <header class="gl-Header">
-        <h1 class="gl-Header_Title">$title$</h1>
+          <header class="gl-Header">
+        <h1 class="gl-Header_Title">Contact me</h1>
       </header>
-    $endif$
-
+    
       <main class="gl-Main">
         <div class="pg-Intro">
-        $if(subtitle)$
-          <h2 class="pg-Intro_Heading">$subtitle$</h2>
-        $endif$
-        $if(intro)$
-          <p class="pg-Intro_Note">$intro$</p>
-        $endif$
-        </div>
+                  <h2 class="pg-Intro_Heading">Need help on a project?
+Want to join a code club?</h2>
+                          <p class="pg-Intro_Note">Leave a note about
+your query, then let’s chat!</p>
+                </div>
 
-        $body$
+        <iframe data-tally-src="https://tally.so/embed/nrVydp?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form
+        ">
+        </iframe>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </main>
 
       <aside class="gl-CTA">
