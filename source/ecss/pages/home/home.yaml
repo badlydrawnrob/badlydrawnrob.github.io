@@ -1,5 +1,10 @@
 ---
-title: Data for humans
+title-animate: >-
+    <span class="hidden">Data</span><br/>
+    <span class="hidden">Code</span><br/>
+    <span class="hidden">Design</span><br/>
+    <span class="hidden">Learning</span>
+title: for humans
 subtitle: Life is a learning process;
 bodyclass: home
 intro: >-

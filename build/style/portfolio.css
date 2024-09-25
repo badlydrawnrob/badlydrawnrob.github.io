@@ -1052,7 +1052,7 @@ p {
   .gl-Header {
     grid-column: 1 / span 2;
     grid-row: 2;
-    padding-left: var(--spacing-six);
+    padding-left: var(--spacing-five);
     margin: var(--spacing-two) 0 var(--spacing-increment);
   }
 }
@@ -1062,6 +1062,74 @@ p {
 @media screen and (min-width: 800px) {
   .gl-Header_Title {
     font-size: var(--font-size-pppppp);
+  }
+}
+.changing-keywords {
+  vertical-align: top;
+  overflow: hidden;
+  height: 50px;
+  position: relative;
+  display: inline-block;
+  width: 365px;
+}
+@media screen and (min-width: 800px) {
+  .changing-keywords {
+    height: 110px;
+  }
+}
+.static {
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .static {
+    display: inline-block;
+  }
+}
+.hidden {
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  width: 365px;
+  opacity: 0;
+  animation: slideme 16s infinite;
+}
+@media screen and (min-width: 1200px) {
+  .hidden {
+    text-align: right;
+  }
+}
+.hidden:nth-child(3) {
+  animation-delay: 4s;
+}
+.hidden:nth-child(5) {
+  animation-delay: 8s;
+}
+.hidden:nth-child(7) {
+  animation-delay: 12s;
+}
+@keyframes slideme {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  5% {
+    top: 0px;
+    opacity: 1;
+  }
+  10% {
+    top: 0;
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.1;
+    top: 0;
+  }
+  30% {
+    opacity: 0;
+    top: 20px;
   }
 }
 .gl-Nav {

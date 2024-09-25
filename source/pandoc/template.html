@@ -35,7 +35,10 @@
 
     $if(title)$
       <header class="gl-Header">
-        <h1 class="gl-Header_Title">$title$</h1>
+        <h1 class="gl-Header_Title">
+          $if(title-animate)$<div class="changing-keywords">$title-animate$</div>$endif$
+          <span class="static">$title$</span>
+        </h1>
       </header>
     $endif$
 
