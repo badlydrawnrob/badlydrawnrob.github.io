@@ -3,7 +3,14 @@ module Main exposing (main)
 {-| ----------------------------------------------------------------------------
     Recipe super fast demo
     ============================================================================
+    ⚠️ Writing all this stuff out by hand, error checking, etc, etc is
+    very LABOURIOUS so find methods to speed up, create modules to simplify,
+    build sensible types, have Ai create the model from types, etc.
 
+      Silly errors like a misplaced `,` or `]` can be hard to spot.
+
+    Focus
+    -----
     Focus on the core message and story, with the core abstract features.
     The core features for most profiles are:
 
@@ -13,8 +20,8 @@ module Main exposing (main)
     - Location radius
     - Filters (one ingredient)
 
-    Questions
-    ---------
+    Questions and fixes
+    ------------------
     1. Can we only use `Advert a` in the update function?
         - I think so! I think you need to first narrow type for `alias record`
         - Then narrow type for the particular `alias record a` update type
@@ -24,9 +31,20 @@ module Main exposing (main)
     3. Should I use alphabetical for all the things?
         - `{ record deconstruct }`) etc
         - `model.record`, `model.order` etc
+    4. Does `List.map` ALWAYS need a parent wrapper?
+        - Just means a lot of redundant `div`s potentially
+
+    Ai helper
+    ---------
+    1. Populate examples and check for errors (missing comma, etc)
+    2. Manage nuance with ingredients for search parameters
 
     Wishlist
     --------
+    > Scanning back and forth between implementing a `Meal`, say, and remembering
+    > what a `Meal`s parameters are is a bit annoying. Perhaps splitting these
+    > out into their own modules would be wise?
+
     1. Currently filtering by a single ingredient ... which is a form
     2. `List Ingredient` is in TWO places: `model.meals` and `model.advert`
     3. What about errors? Currently does nothing if `"ingredient"` doesn't exist
@@ -35,20 +53,25 @@ module Main exposing (main)
         - `User` and adding/editing (plus wishlist etc)
         - Master list of `Ingredients`
         - User interactions (three ingredients picked, filters, etc)
+    5. What about nuance in ingredients and search?
+        - "bacon" is also "pork"
+        - "sweet potato fries" is also "sweet potato"
+        - Look at all the nuances and get Ai to help you out.
 -}
 
 import Debug
 
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (class, src, href)
+import Html.Attributes exposing (class, disabled, href, src, type_, value)
 import Html.Events exposing (onClick)
-import Json.Decode as JD exposing (..)
+-- import Json.Decode as JD exposing (value)
 
 type EatType
   = Meat
   | Vegetarian
   | Vegan
+  | Mixed
 
 eatTypeString : EatType -> String
 eatTypeString eat =
@@ -59,24 +82,30 @@ eatTypeString eat =
       "Vegetarian"
     Vegan ->
       "Vegan"
+    Mixed ->
+      "Mixed"
 
 type MealType
-  = Recipe
-  | Restaurant
-  | Cafe
+  = Cafe
+  | FastFood
   | MealDeal
+  | Recipe
+  | Restaurant
 
 mealTypeString : MealType -> String
 mealTypeString meal =
   case meal of
-      Recipe ->
-        "Recipe"
-      Restaurant ->
-        "Restaurant"
-      Cafe ->
-        "Cafe"
-      MealDeal ->
-        "Meal Deal"
+    Cafe ->
+      "Cafe"
+    FastFood ->
+      "Fast Food"
+    MealDeal ->
+      "Meal Deal"
+    Recipe ->
+      "Recipe"
+    Restaurant ->
+      "Restaurant"
+
 
 type Currency
   = Gold
@@ -99,7 +128,7 @@ type alias Filter =
 type alias Ingredient =
   String
 
-type Ingredients =
+type alias Ingredients =
   List Ingredient
 
 type alias Time =
@@ -108,9 +137,9 @@ type alias Time =
 timeString : Time -> String
 timeString time =
   "Time: "
-  ++ (String.fromInt Tuple.first time)
+  ++ (String.fromInt (Tuple.first time))
   ++ ":"
-  ++ (String.fromInt Tuple.second time)
+  ++ (String.fromInt (Tuple.second time))
 
 type alias Meal =
   { visible : Bool
@@ -118,8 +147,16 @@ type alias Meal =
   , mealType : MealType
   , title : String
   , ingredients : Ingredients
-  , time : Time -- This is going to get confusing: recipe? restaurant?
+  , time : Time -- #! This is going to get confusing: recipe? restaurant?
   }
+
+listMeal : List Meal
+listMeal =
+  [ Meal True Meat Restaurant "Braised beef noodles" ["beef", "noodle", "radish" ] (3, 10)
+  , Meal True Vegetarian Cafe "Cauliflower and sweet potato curry" ["cauliflower", "sweet potato", "spices" ] (5, 0)
+  , Meal True Vegan Restaurant "Chongqing noodles" ["tofu", "noodle", "sesame paste", "bean sprouts" ] (2, 20)
+  , Meal True Meat Recipe "Beef burritos" ["chilli", "beef", "cheese", "beans"] (40, 0)
+  ]
 
 type alias Advert =
   { visible : Bool -- Has it been filtered?
@@ -129,6 +166,22 @@ type alias Advert =
   , info : String -- rich text
   , ingredients : Ingredients -- Linked to `visible`
   }
+
+listAdvert : List Advert
+listAdvert =
+  [ Advert True "https://www.zapatistaburrito.com/" 1 "Taco Tuesdays"
+    "Experience the love-infused perfection of authentic burritos, nachos, tacos, and beyond – a symphony of freshness, deliciousness, and healthiness."
+    ["chicken", "tomato", "spices", "wheat", "lettuce"]
+  , Advert True "https://blackfriarsrestaurant.co.uk/" 2 "Beef bourguignon"
+    "When you really want to impress, but you don't want to work too hard. Come visit Blackfriars!"
+    ["beef", "steak", "onion", "tomato", "red wine", "butter", "black pepper"]
+  , Advert True "https://fiveguys.co.uk/" 3 "Beef burger and sweet potato fries"
+    "Prime beef grain-fed in Scotland. All our fries come with an extra scoop in the bag!"
+    ["beef", "sweet potato", "lettuce", "tomato", "pickle", "cheese"]
+  , Advert True "https://www.marksandspencer.com/food" 4 "Christmas sandwich"
+    "Unmissable offers this Christmas on sandwiches and snacks"
+    ["turkey", "cranberry sauce", "brown bread", "lettuce", "bacon"]
+  ]
 
 type alias Visible a =
   { a
@@ -144,7 +197,6 @@ type alias Model =
   , meals : List Meal
   , adverts : List Advert
   , form : String
-  , error : String
   }
 
 baseUrl : String
@@ -152,6 +204,18 @@ baseUrl = "./img/"
 
 userImage : String
 userImage = baseUrl ++ "user.jpg"
+
+init : Model
+init =
+  { realName = "Sarah"
+  , userName = "@sarah123"
+  , userPref = Mixed
+  , filter = Nothing -- #! Change
+  , location = "54.977998, -1.614041"
+  , meals = []
+  , adverts = listAdvert
+  , form = ""
+  }
 
 
 -- View ------------------------------------------------------------------------
@@ -165,9 +229,9 @@ viewForm string =
     [ input
         [ type_ "text"
         , value string
-        ]
+        ] []
     , button
-        [ disabled (String.empty string) ]
+        [ disabled (String.isEmpty string) ]
         [ text "Filter by ingredient" ]
     ]
 
@@ -178,13 +242,15 @@ viewUser model =
     [ img [ src userImage ] []
     , h2 [] [ text model.realName ]
     , h3 [] [ text model.userName ]
-    , p [] [ text model.userPref ]
+    , p [] [ text (eatTypeString model.userPref) ]
     ]
 
 
-viewMeals : Meals -> Html msg
+{- #! `List.map` MUST have a wrapper -}
+viewMeals : List Meal -> Html msg
 viewMeals meals =
-  List.map viewMeal meals
+  div []
+    (List.map viewMeal meals)
 
 viewMeal : Meal -> Html msg
 viewMeal { visible, eatType, mealType, title, ingredients, time } =
@@ -192,12 +258,14 @@ viewMeal { visible, eatType, mealType, title, ingredients, time } =
     -- This is probably poor use of HTML5 tags
     article []
       [ small [] [ text (viewMealType eatType mealType) ]
-      , H2 [] [ text ]
+      , h2 [] [ text title ]
       , viewIngredients ingredients
-      , time
+      , p [] [ text (timeString time) ]
       ]
+  else
+    text ""
 
-viewMealType : EatType -> MealType -> Html msg
+viewMealType : EatType -> MealType -> String
 viewMealType eat meal =
   String.concat
     [ "Type: "
@@ -208,19 +276,20 @@ viewMealType eat meal =
     ]
 
 
-viewAdvert : List Advert -> Html msg
-viewAdvert adverts =
-  List.map viewAdvert adverts
+viewAdverts : List Advert -> Html msg
+viewAdverts adverts =
+  div []
+    (List.map viewAdvert adverts)
 
 viewAdvert : Advert -> Html msg
 viewAdvert { visible, url, image, title, info, ingredients } =
   if visible then
     -- This is probably poor use of HTML5 tags
     article []
-      [ img [ href url, src (baseUrl ++ image) ] []
+      [ img [ href url, src (baseUrl ++ (String.fromInt image) ++ ".jpg") ] []
       , h3 [] [ text title ]
       , p [] [ text info ]
-      , small [] viewIngredients ingredients
+      , viewIngredients ingredients
     ]
   else
     text ""
@@ -228,9 +297,14 @@ viewAdvert { visible, url, image, title, info, ingredients } =
 
 viewIngredients : Ingredients -> Html msg
 viewIngredients ingredients =
-  List.map (\ingredient -> li [] [ text ingredient ]) ingredients
+  ul []
+    (List.map viewIngredient ingredients)
 
-selectedIngredient : Maybe Ingredient -> Html msg
+viewIngredient : Ingredient -> Html msg
+viewIngredient ingredient =
+  li [] [ text ingredient ]
+
+selectedIngredient : Maybe Ingredient -> Html Msg
 selectedIngredient ingredient =
   case ingredient of
     Nothing ->
@@ -252,7 +326,7 @@ view model =
           , viewMeals model.meals
           ]
       , div [] -- Sidebar
-          [ viewAdvert model.adverts ]
+          [ viewAdverts model.adverts ]
       ]
     ]
 
@@ -262,8 +336,7 @@ view model =
 -- 2. List Ingredients in the `List Meal` branch
 
 type Msg
-  = ClickedFilter String
-  | Save
+  = Save
   | Reset
 
 updateMeals : Filter -> List Meal -> List Meal
@@ -272,7 +345,7 @@ updateMeals filter meals =
 
 updateAdverts : Filter -> List Advert -> List Advert
 updateAdverts filter adverts =
-  List.map (pickAdvert filter) advert
+  List.map (pickAdvert filter) adverts
 
 pickMeal : Filter -> Meal -> Meal
 pickMeal filter meal =
@@ -314,4 +387,10 @@ update msg model =
 
 -- Main ------------------------------------------------------------------------
 
-
+main : Program () Model Msg
+main =
+  Browser.sandbox
+    { init = init
+    , view = view
+    , update = update
+    }
