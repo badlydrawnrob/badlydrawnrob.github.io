@@ -5454,6 +5454,7 @@ var $author$project$Main$selectedIngredient = function (ingredient) {
 				]));
 	}
 };
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$article = _VirtualDom_node('article');
 var $author$project$Main$baseUrl = './img/';
 var $elm$html$Html$h3 = _VirtualDom_node('h3');
@@ -5500,29 +5501,37 @@ var $author$project$Main$viewAdvert = function (_v0) {
 		_List_fromArray(
 			[
 				A2(
-				$elm$html$Html$img,
+				$elm$html$Html$a,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$href(url),
-						$elm$html$Html$Attributes$src(
-						$author$project$Main$baseUrl + ($elm$core$String$fromInt(image) + '.jpg'))
+						$elm$html$Html$Attributes$href(url)
 					]),
-				_List_Nil),
-				A2(
-				$elm$html$Html$h3,
-				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text(title)
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(info)
-					])),
-				$author$project$Main$viewIngredients(ingredients)
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$src(
+								$author$project$Main$baseUrl + ($elm$core$String$fromInt(image) + '.jpg'))
+							]),
+						_List_Nil),
+						A2(
+						$elm$html$Html$h3,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(title)
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(info)
+							])),
+						$author$project$Main$viewIngredients(ingredients)
+					]))
 			])) : $elm$html$Html$text('');
 };
 var $author$project$Main$viewAdverts = function (adverts) {

@@ -293,11 +293,13 @@ viewAdvert { visible, url, image, title, info, ingredients } =
   if visible then
     -- This is probably poor use of HTML5 tags
     article []
-      [ img [ href url, src (baseUrl ++ (String.fromInt image) ++ ".jpg") ] []
-      , h3 [] [ text title ]
-      , p [] [ text info ]
-      , viewIngredients ingredients
-    ]
+      [ a [ href url ] [
+          img [ src (baseUrl ++ (String.fromInt image) ++ ".jpg") ] []
+          , h3 [] [ text title ]
+          , p [] [ text info ]
+          , viewIngredients ingredients
+        ]
+      ]
   else
     text ""
 

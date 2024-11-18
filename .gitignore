@@ -1,4 +1,4 @@
 /node_modules
 build/test
 !build/
-*/elm-stuff/
+testing/profile/elm-stuff/*
