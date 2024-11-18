@@ -5739,6 +5739,7 @@ var $author$project$Main$viewMeals = function (meals) {
 		_List_Nil,
 		A2($elm$core$List$map, $author$project$Main$viewMeal, meals));
 };
+var $elm$html$Html$em = _VirtualDom_node('em');
 var $author$project$Main$userImage = $author$project$Main$baseUrl + 'user.jpg';
 var $author$project$Main$viewUser = function (model) {
 	return A2(
@@ -5774,6 +5775,19 @@ var $author$project$Main$viewUser = function (model) {
 					[
 						$elm$html$Html$text(
 						$author$project$Main$eatTypeString(model.userPref))
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$em,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(model.location)
+							]))
 					]))
 			]));
 };
