@@ -250,6 +250,7 @@ viewUser model =
     , h2 [] [ text model.realName ]
     , h3 [] [ text model.userName ]
     , p [] [ text (eatTypeString model.userPref) ]
+    , p [] [ em [] [ text model.location ] ]
     ]
 
 
