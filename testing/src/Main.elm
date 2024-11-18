@@ -70,14 +70,9 @@ type alias Meal =
   }
 
 {- #! I think this can only be used for `Update` -}
-type alias Advert a =
+type alias Visible a =
   { a
-    | visible : Bool -- Has it been filtered?
-    , url : String
-    , image : Int
-    , title : String
-    , info : String -- rich text
-    , ingredients : Ingredients -- Linked to `visible`
+    | visible : Bool -- Filtered?
   }
 
 type alias Model =
@@ -178,7 +173,7 @@ pickAdvert : Filter -> Advert -> Advert
 pickAdvert filter advert =
   makeVisible filter advert.ingredients advert
 
-makeVisible : Filter -> Ingredients -> { a | visible : Bool } -> { a | visible : Bool }
+makeVisible : Filter -> Ingredients -> Visible a -> Visible a
 makeVisible filter ingredients visibleRecord =
   if String.isEmpty filter then
     { visibleRecord | visible = True }
