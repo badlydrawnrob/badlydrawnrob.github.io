@@ -8,6 +8,7 @@ module Main exposing (..)
     build sensible types, have Ai create the model from types, etc.
 
       Silly errors like a misplaced `,` or `]` can be hard to spot.
+      Compiler doesn't spot BUG: `onClick` instead of `onSubmit` for a form. Idiot.
 
     Focus
     -----
@@ -67,7 +68,7 @@ import Debug
 import Browser
 import Html exposing (..)
 import Html.Attributes exposing (class, disabled, href, name, src, type_, value)
-import Html.Events exposing (onClick, onInput)
+import Html.Events exposing (onClick, onInput, onSubmit)
 -- import Json.Decode as JD exposing (value)
 
 type EatType
@@ -393,7 +394,7 @@ update msg model =
         { model
             | meals = updateMeals "" model.meals
             , adverts = updateAdverts "" model.adverts
-            , filter = ""
+            , filter = Nothing
             , form = ""
         }
 
