@@ -48,6 +48,11 @@ type MealType
   | Cafe
   | MealDeal
 
+type Currency
+  = Gold
+  | Silver
+  | Bronze
+
 type Filter =
   String
 
@@ -64,7 +69,7 @@ type alias Meal =
   , time : (Int, Int) -- This is going to get confusing: recipe? restaurant?
   }
 
-{- #! Think this can only be used in the update function? -}
+{- #! I think this can only be used for `Update` -}
 type alias Advert a =
   { a
     | visible : Bool -- Has it been filtered?
