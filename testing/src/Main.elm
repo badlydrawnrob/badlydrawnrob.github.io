@@ -1,4 +1,4 @@
-module Main exposing (main)
+module Main exposing (..)
 
 {-| ----------------------------------------------------------------------------
     Recipe super fast demo
@@ -45,7 +45,10 @@ module Main exposing (main)
     > what a `Meal`s parameters are is a bit annoying. Perhaps splitting these
     > out into their own modules would be wise?
 
-    1. Currently filtering by a single ingredient ... which is a form
+    1. ⚠️ Fix form: Posting the form refreshes the page.
+        - It's filtering correctly, but it refreshes the model every time
+        - You'll need to grab the `Url` part `"filter"` and ...
+        - Load the correct model with `Loading | Loaded String` or something
     2. `List Ingredient` is in TWO places: `model.meals` and `model.advert`
     3. What about errors? Currently does nothing if `"ingredient"` doesn't exist
     4. Start thinking about better structures for:
@@ -63,8 +66,8 @@ import Debug
 
 import Browser
 import Html exposing (..)
-import Html.Attributes exposing (class, disabled, href, src, type_, value)
-import Html.Events exposing (onClick)
+import Html.Attributes exposing (class, disabled, href, name, src, type_, value)
+import Html.Events exposing (onClick, onInput)
 -- import Json.Decode as JD exposing (value)
 
 type EatType
@@ -192,11 +195,11 @@ type alias Model =
   { realName : String
   , userName : String
   , userPref : EatType
-  , filter : Maybe Ingredient -- Search filter
+  , filter : Maybe Ingredient -- On `Save` set the search filter
   , location : String -- Radius
   , meals : List Meal
   , adverts : List Advert
-  , form : String
+  , form : Ingredient
   }
 
 baseUrl : String
@@ -212,23 +215,26 @@ init =
   , userPref = Mixed
   , filter = Nothing -- #! Change
   , location = "54.977998, -1.614041"
-  , meals = []
+  , meals = listMeal
   , adverts = listAdvert
   , form = ""
   }
 
 
 -- View ------------------------------------------------------------------------
--- 1. We're hardcoding our user for now
--- 2. We're filtering the advert and meal lists
--- 3. Click a button to filter
+-- 1. User is hardcoded
+-- 2. Click a button to filter
+-- 3. Form is broken (refreshes model on `Post`
 
+{- #! Requires fixing: refreshes every time it's posted -}
 viewForm : String -> Html Msg
 viewForm string =
-  form [ onClick Save ]
+  form [ onSubmit Save ]
     [ input
         [ type_ "text"
+        , name "filter"
         , value string
+        , onInput EnteredValue
         ] []
     , button
         [ disabled (String.isEmpty string) ]
@@ -336,7 +342,8 @@ view model =
 -- 2. List Ingredients in the `List Meal` branch
 
 type Msg
-  = Save
+  = EnteredValue String
+  | Save
   | Reset
 
 updateMeals : Filter -> List Meal -> List Meal
@@ -369,16 +376,24 @@ filterByIngredient filter ingredients =
 update : Msg -> Model -> Model
 update msg model =
   case msg of
+      EnteredValue str ->
+        { model | form = Debug.log "enteredValue" str }
+
+      {- #! This refreshes so you'd need to grab the URL part:
+      every time you post the form, it refreshes the fucking model -}
       Save ->
         { model
             | meals = updateMeals model.form model.meals
             , adverts = updateAdverts model.form model.adverts
+            , filter = (Just model.form)
+            -- , form = ""
         }
 
       Reset ->
         { model
             | meals = updateMeals "" model.meals
             , adverts = updateAdverts "" model.adverts
+            , filter = ""
             , form = ""
         }
 
