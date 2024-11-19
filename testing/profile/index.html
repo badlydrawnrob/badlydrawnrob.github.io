@@ -4511,48 +4511,58 @@ var $author$project$Main$listAdvert = _List_fromArray(
 		_List_fromArray(
 			['turkey', 'cranberry sauce', 'brown bread', 'lettuce', 'bacon']))
 	]);
+var $author$project$Main$Bronze = F2(
+	function (a, b) {
+		return {$: 'Bronze', a: a, b: b};
+	});
 var $author$project$Main$Cafe = {$: 'Cafe'};
-var $author$project$Main$Meal = F6(
-	function (visible, eatType, mealType, title, ingredients, time) {
-		return {eatType: eatType, ingredients: ingredients, mealType: mealType, time: time, title: title, visible: visible};
+var $author$project$Main$Gold = {$: 'Gold'};
+var $author$project$Main$Meal = F7(
+	function (visible, token, eatType, mealType, title, ingredients, time) {
+		return {eatType: eatType, ingredients: ingredients, mealType: mealType, time: time, title: title, token: token, visible: visible};
 	});
 var $author$project$Main$Meat = {$: 'Meat'};
 var $author$project$Main$Recipe = {$: 'Recipe'};
 var $author$project$Main$Restaurant = {$: 'Restaurant'};
+var $author$project$Main$Silver = {$: 'Silver'};
 var $author$project$Main$Vegan = {$: 'Vegan'};
 var $author$project$Main$Vegetarian = {$: 'Vegetarian'};
 var $author$project$Main$listMeal = _List_fromArray(
 	[
-		A6(
+		A7(
 		$author$project$Main$Meal,
 		true,
+		$author$project$Main$Gold,
 		$author$project$Main$Meat,
 		$author$project$Main$Restaurant,
 		'Braised beef noodles',
 		_List_fromArray(
 			['beef', 'noodle', 'radish']),
 		_Utils_Tuple2(3, 10)),
-		A6(
+		A7(
 		$author$project$Main$Meal,
 		true,
+		$author$project$Main$Silver,
 		$author$project$Main$Vegetarian,
 		$author$project$Main$Cafe,
 		'Cauliflower and sweet potato curry',
 		_List_fromArray(
 			['cauliflower', 'sweet potato', 'spices']),
 		_Utils_Tuple2(5, 0)),
-		A6(
+		A7(
 		$author$project$Main$Meal,
 		true,
+		A2($author$project$Main$Bronze, $author$project$Main$Silver, 'too spicy'),
 		$author$project$Main$Vegan,
 		$author$project$Main$Restaurant,
 		'Chongqing noodles',
 		_List_fromArray(
 			['tofu', 'noodle', 'sesame paste', 'bean sprouts']),
 		_Utils_Tuple2(2, 20)),
-		A6(
+		A7(
 		$author$project$Main$Meal,
 		true,
+		A2($author$project$Main$Bronze, $author$project$Main$Silver, 'too cold'),
 		$author$project$Main$Meat,
 		$author$project$Main$Recipe,
 		'Beef burritos',
@@ -5645,8 +5655,21 @@ var $author$project$Main$viewForm = function (string) {
 					]))
 			]));
 };
+var $author$project$Main$currencyString = function (currency) {
+	switch (currency.$) {
+		case 'Gold':
+			return 'Gold: loved it';
+		case 'Silver':
+			return 'Silver: liked it';
+		default:
+			var curr = currency.a;
+			var str = currency.b;
+			return $author$project$Main$currencyString(curr) + (': ' + str);
+	}
+};
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$small = _VirtualDom_node('small');
+var $elm$html$Html$strong = _VirtualDom_node('strong');
 var $elm$core$Tuple$second = function (_v0) {
 	var y = _v0.b;
 	return y;
@@ -5697,6 +5720,7 @@ var $author$project$Main$viewMealType = F2(
 	});
 var $author$project$Main$viewMeal = function (_v0) {
 	var visible = _v0.visible;
+	var token = _v0.token;
 	var eatType = _v0.eatType;
 	var mealType = _v0.mealType;
 	var title = _v0.title;
@@ -5723,6 +5747,20 @@ var $author$project$Main$viewMeal = function (_v0) {
 						$elm$html$Html$text(title)
 					])),
 				$author$project$Main$viewIngredients(ingredients),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$strong,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(
+								$author$project$Main$currencyString(token))
+							]))
+					])),
 				A2(
 				$elm$html$Html$p,
 				_List_Nil,

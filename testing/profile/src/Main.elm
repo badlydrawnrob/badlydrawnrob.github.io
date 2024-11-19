@@ -69,7 +69,7 @@ import Browser
 import Html exposing (..)
 import Html.Attributes exposing (class, disabled, href, name, src, type_, value)
 import Html.Events exposing (onClick, onInput, onSubmit)
--- import Json.Decode as JD exposing (value)
+
 
 type EatType
   = Meat
@@ -114,7 +114,7 @@ mealTypeString meal =
 type Currency
   = Gold
   | Silver
-  | Bronze String
+  | Bronze Currency String
 
 currencyString : Currency -> String
 currencyString currency =
@@ -123,8 +123,8 @@ currencyString currency =
         "Gold: loved it"
       Silver ->
         "Silver: liked it"
-      Bronze str ->
-        "Bronze: " ++ str
+      Bronze curr str ->
+        (currencyString curr) ++ ": " ++ str
 
 type alias Filter =
   String
@@ -147,6 +147,7 @@ timeString time =
 
 type alias Meal =
   { visible : Bool
+  , token : Currency
   , eatType : EatType
   , mealType : MealType
   , title : String
@@ -156,10 +157,10 @@ type alias Meal =
 
 listMeal : List Meal
 listMeal =
-  [ Meal True Meat Restaurant "Braised beef noodles" ["beef", "noodle", "radish" ] (3, 10)
-  , Meal True Vegetarian Cafe "Cauliflower and sweet potato curry" ["cauliflower", "sweet potato", "spices" ] (5, 0)
-  , Meal True Vegan Restaurant "Chongqing noodles" ["tofu", "noodle", "sesame paste", "bean sprouts" ] (2, 20)
-  , Meal True Meat Recipe "Beef burritos" ["chilli", "beef", "cheese", "beans"] (40, 0)
+  [ Meal True Gold Meat Restaurant "Braised beef noodles" ["beef", "noodle", "radish" ] (3, 10)
+  , Meal True Silver Vegetarian Cafe "Cauliflower and sweet potato curry" ["cauliflower", "sweet potato", "spices" ] (5, 0)
+  , Meal True (Bronze Silver "too spicy") Vegan Restaurant "Chongqing noodles" ["tofu", "noodle", "sesame paste", "bean sprouts" ] (2, 20)
+  , Meal True (Bronze Silver "too cold") Meat Recipe "Beef burritos" ["chilli", "beef", "cheese", "beans"] (40, 0)
   ]
 
 type alias Advert =
@@ -261,13 +262,14 @@ viewMeals meals =
     (List.map viewMeal meals)
 
 viewMeal : Meal -> Html msg
-viewMeal { visible, eatType, mealType, title, ingredients, time } =
+viewMeal { visible, token, eatType, mealType, title, ingredients, time } =
   if visible then
     -- This is probably poor use of HTML5 tags
     article []
       [ small [] [ text (viewMealType eatType mealType) ]
       , h2 [] [ text title ]
       , viewIngredients ingredients
+      , p [] [ strong [] [ text (currencyString token) ]]
       , p [] [ text (timeString time) ]
       ]
   else
