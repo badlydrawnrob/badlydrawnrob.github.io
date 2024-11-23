@@ -23,12 +23,18 @@ module Main exposing (..)
 
     Questions and fixes
     ------------------
+    > See `how-to-elm/notes-to-compile/HowToSearch` for a brief overview of a
+    > better way to filter search. TL;DR it's not necessary to _store_ filtered x
+    > in the model. Just compute it in the view (from `model.filters`)
+
     1. Can we only use `Advert a` in the update function?
         - I think so! I think you need to first narrow type for `alias record`
         - Then narrow type for the particular `alias record a` update type
-    2. We're using a `visible` boolean for our `Meals` to filter on
-        - Is there a better way to do this?
-        - We need the "full list" and the "filtered list" somehow
+    2. Using a `visible` boolean for filtering IS NOT ADVISABLE according to Slack
+        - Unless performance is an issue, just compute in view (from stored filters)
+        - Unless sharing is a detail, just filter without `Url` params
+        - If performance _is_ an issue, consider `Html.Lazy` or storing/caching
+          the filtered list of records
     3. Should I use alphabetical for all the things?
         - `{ record deconstruct }`) etc
         - `model.record`, `model.order` etc
