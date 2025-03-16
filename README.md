@@ -2,29 +2,34 @@
 
 ## To Do
 
-> For now I don't care about anything other than quick info, and a sales pitch for the kids code club. Nothing else matters for this sprint.
+1. Simplify articles (ONE idea per slide)
+2. Lead magnets (teaching, flashcards, etc)
+3. Thema CSS and GPS style (and simplify code where possible)
+4. Remove EVERYTHING that's ECSS style (model-first, not components first)
+4. Build it with Elm Lang (using `json` data and markdown)
 
-- I'm not sure it's so great having `@media` all over the page
-    - i.e: inside multiple `.classes`.
-    - I understand the usefulness of having everything for a specific `.class` in one place however.
-- Can our print styles cope with having things in a `grid` layout?
-    - See BBC and other websites.
-- Begin a more rigourous writing style for very basic things.
-- Having all sorts of pages within the `ecss` folder needs changing?
-    - This should be for components, if at all.
+## `@media`
 
-## Notes
-- **A lot of repetition with `@media screen` size**
-- Possibly fix the line-height of first paragraph
-- Look over `ol` and `ol` (especially children)
-- [Remove `html` extensions](https://rsp.github.io/gh-pages-no-extension/)
-- [ssl](https://hackernoon.com/set-up-ssl-on-github-pages-with-custom-domains-for-free-a576bdf51bc)
-- [ecss eg](https://benfrain.com)
-- Tidy up structure
-- More rigorous writing style
+- How am I handling light/dark theme, mobile-first, print-first, and so on?
+- Are lots of `@media` queries preferable?
+- A nice grid layout, with 2-column articles and interesting layout
+- Buttons should make more sense (no need for Tally form button AND other button)
 
+## Writing
 
-## Markdown
+> Is all my content "evergreen"?
+> Start simple for now (build later/never)
+> Is it fun to look at? (finger painting for adults and kids)
 
-- See [Pandoc template](./source/pandoc/template.html) and [original](https://github.com/jgm/pandoc-templates)
-- Use [Marked App](http://marked2app.com/) to process the `.md` files and generate the styleguide
+**Be more legible at all screen sizes (current font/size sucks for articles).** Make some concrete rules for yourself on writing. Add more colour to your writing, with fun examples. Perhaps add nice typographic touches like ligatures (or pull-quotes, pull-images, so on).
+
+## Money
+
+1. Store up a full years wages
+2. Then start to invest small amounts
+3. Build up income drips and get f* moving
+
+## Compiler
+
+Currently using a pandoc template, but processing some `.md` files with Marked2 App.
+Be consistent, simplify the build script (consider using static site generator?)
