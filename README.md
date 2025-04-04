@@ -2,7 +2,7 @@
 
 ## To Do
 
-1. Simplify articles (ONE idea per slide)
+1. **Simplify articles (ONE idea per slide)**[^1]
 2. Lead magnets (teaching, flashcards, etc)
 3. Thema CSS and GPS style (and simplify code where possible)
 4. Remove EVERYTHING that's ECSS style (model-first, not components first)
@@ -33,3 +33,6 @@
 
 Currently using a pandoc template, but processing some `.md` files with Marked2 App.
 Be consistent, simplify the build script (consider using static site generator?)
+
+
+[^1]: **Don't be an annoyingly verbose Ai article!** Literally craft your articles as if they were a slide. Reduce the amount of information they have, use imagery to get your point across succinct, and aim for one idea (or sub-idea) per article.
