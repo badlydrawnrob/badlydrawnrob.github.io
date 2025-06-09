@@ -15,7 +15,7 @@
 - A nice grid layout, with 2-column articles and interesting layout
 - Buttons should make more sense (no need for Tally form button AND other button)
 
-## Writing
+## Writing
 
 > Is all my content "evergreen"?
 > Start simple for now (build later/never)
