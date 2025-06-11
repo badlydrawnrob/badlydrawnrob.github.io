@@ -1070,10 +1070,11 @@ p {
   height: 52px;
   position: relative;
   display: inline-block;
-  width: 365px;
+  width: 230px;
 }
 @media screen and (min-width: 800px) {
   .changing-keywords {
+    width: 365px;
     height: 112px;
   }
 }
@@ -1135,6 +1136,7 @@ p {
 .gl-Nav {
   padding: var(--spacing) 0;
   border-bottom: var(--spacing-px) solid var(--color-l);
+  overflow: scroll;
 }
 @media print {
   .gl-Nav {
