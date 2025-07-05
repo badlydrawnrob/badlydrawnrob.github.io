@@ -1,5 +1,32 @@
 # badlydrawnrob.github.io
 
+## Thema styles
+
+> **Make concrete hard decisions and rules**
+> Inheriting a mish-mash from ECSS, [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), and [Thema](https://ns.editeur.org/thema/en) Styles
+
+Your specimen file (global `h1, ul, a, ...`) should set up the lion's share of the styles, before moving on to style with `.gl-` classes.
+
+- `.gl-`obal elements (changes to these should be monitored v. carefully)
+- `gl-nav` and `gl-nav-title` if name is short?
+- `gl-header` and `gl-h-title` if name is not short?
+- What about areas that are duplicated only on one page? (use `.pg-` styles?)
+- `#page` and `.repeatable` elements (non-global styles)
+- `#page #section` and `.section-styles` (non-global, limited to that page)
+- **SPLIT OUT THE GRID ELEMENTS?**
+
+I don't like two `#id#ids` together. Feels weird. `#id .id-scoped` better?
+I quite like using flat styles like we were in ECSS, not nesting too heavily.
+Thema book categories `CODE` is detatched from the title name, we try to attach it.
+
+```css
+/* examples */
+
+.animate .animate-words .animate-w-hidden
+.animate .animate-static
+```
+
+
 ## To Do
 
 1. **Simplify articles (ONE idea per slide)**[^1]

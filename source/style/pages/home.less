@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// Header
+// =============================================================================
+// > #! Replace `.animate-words` with a fancier Elm Lang version?
+//
+// 1. This is the looping animation state. Perhaps a typewriter effect or more
+//    interesting words would be nice here?
+//    - @ https://tinyurl.com/animate-text-fade-in-loop
+//    - @ https://tinyurl.com/css-nesting-rules (`&-append` is not valid)
+
+#home .animate {
+  // #! (1)
+}
+
+#home .animate-words {
+  vertical-align: top;
+  overflow: hidden;
+  height: 52px;
+  position: relative;
+  display: inline-block;
+  width: 230px;
+
+  @media screen and (min-width: 800px) {
+    width: 365px;
+    height: 112px;
+  }
+}
+
+#home .animate-w-hidden {
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  width: 365px;
+  opacity:0;
+  animation: animate-words 16s infinite;
+
+  @media screen and (min-width: 1200px) {
+    text-align: right;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 4s;
+  }
+  &:nth-child(5) {
+    animation-delay: 8s;
+  }
+  &:nth-child(7) {
+    animation-delay: 12s;
+  }
+}
+
+@keyframes animate-words {
+  0% {
+    top: 20px;
+    opacity:0;
+  }
+  5% {
+    top: 0px;
+    opacity:1;
+  }
+  10%{
+    top : 0;
+    opacity:1;
+  }
+  20%{
+    opacity:1;
+  }
+  25% {
+  opacity:0.1;
+    top : 0;
+  }
+  30% {
+    opacity:0;
+    top: 20px;
+  }
+}
+
+#home .animate-static {
+  display: block;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+  }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Call to action (book a call)
+// -----------------------------------------------------------------------------
+// #! Animate with Elm Lang for [learning, prototyping, job, ...]
+
+#home .call-to-action {
+  padding: var(--spacing) 0;
+  border-top: var(--spacing-px) solid var(--color-l);
+
+  @media print {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-column: 1 / span 5;
+    grid-row: 5;
+  }
+}
+
+#home .call-to-action p {
+  margin: 0;
+  font-family: var(--font-family-mono);
+
+  @media screen and (min-width: 800px) {
+    max-width: var(--col-main);
+    margin: 0 auto;
+  }
+
+  .cta-reason {
+    @media screen and (max-width: 800px) {
+      display: block;
+      text-align: center;
+      margin-top: var(--spacing-one);
+    }
+  }
+}
+
+#home .call-to-action a {
+  display: block;
+  padding: var(--spacing-one);
+  color: var(--color-ddd);
+  font-family: var(--font-family-mono);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--color-lll);
+  border: var(--spacing-micro) solid var(--color-ddd);
+  border-radius: var(--border-radius);
+
+  @media screen and (min-width: 800px) {
+    display: inline-block;
+    text-align: left;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-lll);
+    background: var(--color-ddd);
+
+    abbr {
+      color: var(--color-s);
+    }
+  }
+}

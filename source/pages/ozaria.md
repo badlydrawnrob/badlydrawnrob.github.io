@@ -1,7 +1,7 @@
 ---
 title: Code for kids!
 subtitle: Join us on a coding adventure ...
-bodyclass: home
+body-id: orbit
 intro: >-
     A fun adventure game where students build real skills
     through the power of play. Help our hero **solve puzzles**,

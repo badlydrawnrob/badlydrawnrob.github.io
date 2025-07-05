@@ -17,46 +17,48 @@
   </head>
   <body id="$body-id$">
 
-    <div class="gl-Container">
+    <div class="gl-container">
       <aside class="gl-document">
-        <p>Rob McDonald, a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a> • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
+        <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
       </aside>
 
-      <nav class="gl-Nav">
-        <ol class="gl-Nav_List">
-          <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/">Home</a></li>
-          <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/ozaria">Code for kids</a></li>
-          <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/contact">Contact</a></li>
-          <!-- <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/about">About</a></li> -->
-          <!-- <li class="gl-Nav_Item"><a class="gl-Nav_Link" href="/manifesto">Manifesto</a></li> -->
+      <nav class="gl-nav">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/ozaria">Code for kids</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ol>
       </nav>
 
     $if(title)$
       <header class="gl-header">
-        <h1 class="gl-Header_Title">
-          $if(title-animate)$<div class="changing-keywords">$title-animate$</div>$endif$
-          <span class="static">$title$</span>
+        <h1 class="gl-header-title">
+          <div class="animate">
+            $if(title-animate)$<div class="animate-words">$title-animate$</div>$endif$
+            <span class="animate-static">$title$</span>
+          </div>
         </h1>
       </header>
     $endif$
 
-      <main class="gl-Main">
-        <div class="pg-Intro">
+      <main class="gl-main">
+        <div class="gl-main-intro">
         $if(subtitle)$
-          <h2 class="pg-Intro_Heading">$subtitle$</h2>
+          <h2>$subtitle$</h2>
         $endif$
         $if(intro)$
-          <p class="pg-Intro_Note">$intro$</p>
+          <p>$intro$</p>
         $endif$
         </div>
 
         $body$
       </main>
 
-      <aside class="gl-CTA">
-        <p class="gl-CTA_Note"><a class="gl-CTA_Button" href="/contact">Let's <abbr class="gl-CTA_Icon" title="love">♥</abbr> learning together</a><span class="gl-CTA_NoteExtra"> and get things done!</span></p>
+      $if(call-to-action)$
+      <aside class="call-to-action">
+        <p><a href="/contact">Let's <abbr title="love">♥</abbr> learning together</a><span class="cta-reason"> and get things done!</span></p>
       </aside>
+      $endif$
 
       <footer class="gl-Footer">
         <div class="gl-Footer_Wrapper">
