@@ -1,3 +1,13 @@
+---
+title: Code for kids!
+subtitle: Join us on a coding adventure ...
+bodyclass: home
+intro: >-
+    A fun adventure game where students build real skills
+    through the power of play. Help our hero **solve puzzles**,
+    **learn spells**, and much more!
+---
+
 **Play a free chapter of Ozaria** by filling out the form below. Our **summer code camp** is for ages 8—12 (or over).
 
 Rob McDonald is a qualified teacher with many years experience of coding. DBS certified. He offers private tuition for different age groups.

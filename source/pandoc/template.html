@@ -15,12 +15,11 @@
       <link rel="stylesheet" href="$css$?v=2.4.1" />
     $endfor$
   </head>
-  <body class="$bodyclass$">
+  <body id="$body-id$">
 
     <div class="gl-Container">
-      <aside class="gl-Document">
-        <p class="gl-Document_Item">Rob McDonald, a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a> • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
-        <p class="gl-Document_Item gl-Document_Item-alert">⚠️ Looks weird? Time for a shiny [new browser](https://www.mozilla.org/en-US/firefox/new/) update!</p>
+      <aside class="gl-document">
+        <p>Rob McDonald, a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a> • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
       </aside>
 
       <nav class="gl-Nav">
@@ -34,7 +33,7 @@
       </nav>
 
     $if(title)$
-      <header class="gl-Header">
+      <header class="gl-header">
         <h1 class="gl-Header_Title">
           $if(title-animate)$<div class="changing-keywords">$title-animate$</div>$endif$
           <span class="static">$title$</span>

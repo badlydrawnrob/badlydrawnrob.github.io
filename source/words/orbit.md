@@ -1,3 +1,10 @@
+---
+title: Orbit
+subtitle: Manifesto
+body-id: manifesto
+intro: ...
+---
+
 # Orbit
 ## A manifesto (of sorts)
 

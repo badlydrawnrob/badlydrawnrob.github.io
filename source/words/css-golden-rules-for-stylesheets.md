@@ -1,7 +1,7 @@
 ---
 title: "Golden rules for css stylesheets"
 subtitle: 
-bodyclass: words
+body-id: words
 intro: >-
     **The following article is mainly geared around CSS and HTML,** but a lot of these “rules” could be written about a lot of things, be it design, programming, or writing a lesson plan. 
 ---
