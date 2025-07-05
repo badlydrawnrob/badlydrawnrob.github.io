@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// Text elements
+// =============================================================================
+// 1. Why not just cut code down and make things accessible?
+//    - #! I don't use this at all (will I need accessibility helpers?)
+
+.visually-hidden {
+  @media screen {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+}
