@@ -5,16 +5,17 @@
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
+    "test-page": "pandoc --template=./source/pandoc/test-page.html -c ../build/style/portfolio.css -s ./source/words/orbit.md -o ./__testing/test-page.html",
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
-    "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/home/home.yaml ./source/ecss/pages/home/*md -s -o ./index.html",
-    "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/contact/contact.yaml ./source/ecss/pages/contact/*md -s -o ./contact.html",
-    "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css ./source/ecss/pages/ozaria/ozaria.yaml ./source/ecss/pages/ozaria/*md -s -o ./ozaria.html",
+
+    "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
+    "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",
+    "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html",
 
     "words-orbit": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/orbit.md -s -o ./words/orbit.html",
     "words-css": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/css-golden-rules-for-stylesheets.md -s -o ./words/css-golden-rules-for-stylesheets.html",
     "words-wait": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/wait-stop-coding-check-your-data-first.md -s -o ./words/wait-stop-coding-check-your-data-first.html",
 
-    "test-orbit": "pandoc --template=./source/pandoc/template.html -c ../style/portfolio.css ./source/ecss/pages/orbit/orbit.yaml ./source/ecss/pages/orbit/*md -s -o ./build/test/orbit.html",
     "prebuild": "mkdir -p build/ build/style",
     "build": "npm run css && npm run home && npm run contact && npm run ozaria",
     "postbuild": "echo Portfolio: successfully compiled!"
@@ -31,7 +32,7 @@
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
   "false": {},
   "devDependencies": {
-    "less": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#7ca8893"
+    "less": "^4.3.0",
+    "print-first-css": "github:badlydrawnrob/print-first-css#bab8ee7"
   }
 }
