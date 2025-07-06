@@ -1,5 +1,5 @@
 ---
-title: "Golden rules for css stylesheets"
+title: Golden rules for css stylesheets
 subtitle: 
 body-id: words
 intro: >-

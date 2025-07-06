@@ -1113,22 +1113,22 @@ p {
   color: var(--color-s);
 }
 @media print {
-  .gl-Strapline {
+  .gl-strapline {
     display: none;
   }
 }
 @media screen and (min-width: 800px) {
-  .gl-Strapline {
+  .gl-strapline {
     max-width: var(--col-main);
     margin: 0 auto;
   }
 }
-.gl-Strapline a {
+.gl-strapline a {
   color: var(--color-lll);
   text-decoration: underline;
 }
-.gl-Strapline a:hover,
-.gl-Strapline a:focus {
+.gl-strapline a:hover,
+.gl-strapline a:focus {
   color: var(--color-s);
 }
 .gl-strapline p {

@@ -35,7 +35,7 @@ Process [multiple files](https://app.studyraid.com/en/read/15019/519413/processi
 
 Fairly soon I'd be better off using Elm-Land or elm-watch and perhaps a static site builder tool.
 
-- [ ] `npx live-server` to run server and watch for changes
+- [ ] `npx live-server` to run server and watch for changes on `http://127.0.0.1:8080`
 - [ ] [Ignore files](https://github.com/tapio/live-server/issues/151) with `live-server`
 
 ## To Do

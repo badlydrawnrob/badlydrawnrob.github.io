@@ -5,16 +5,16 @@
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
-    "testing-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
+    "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",
     "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html",
-    "words-orbit": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/orbit.md -s -o ./words/orbit.html",
-    "words-css": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/css-golden-rules-for-stylesheets.md -s -o ./words/css-golden-rules-for-stylesheets.html",
-    "words-wait": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/wait-stop-coding-check-your-data-first.md -s -o ./words/wait-stop-coding-check-your-data-first.html",
+
+    "words": "for file in ./source/words/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s \"$file\" -o \"./words/$(basename \"$file\" .md).html\"; done",
+
     "prebuild": "mkdir -p build/ build/style",
-    "build": "npm run css && npm run home && npm run contact && npm run ozaria",
+    "build": "npm run css && npm run home && npm run contact && npm run ozaria && npm run words",
     "postbuild": "echo Portfolio: successfully compiled!"
   },
   "repository": {
