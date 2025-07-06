@@ -5,19 +5,14 @@
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
-    "testing": "for file in ./source/testing/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s \"$file\" -o \"./__testing/live-testing/$(basename \"$file\" .md).html\"; done",
     "testing-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
-
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
-
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",
     "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html",
-
     "words-orbit": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/orbit.md -s -o ./words/orbit.html",
     "words-css": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/css-golden-rules-for-stylesheets.md -s -o ./words/css-golden-rules-for-stylesheets.html",
     "words-wait": "pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css ./source/words/wait-stop-coding-check-your-data-first.md -s -o ./words/wait-stop-coding-check-your-data-first.html",
-
     "prebuild": "mkdir -p build/ build/style",
     "build": "npm run css && npm run home && npm run contact && npm run ozaria",
     "postbuild": "echo Portfolio: successfully compiled!"
@@ -35,6 +30,8 @@
   "false": {},
   "devDependencies": {
     "less": "^4.3.0",
+    "live-server": "^1.2.2",
+    "npm-watch": "^0.13.0",
     "print-first-css": "github:badlydrawnrob/print-first-css#bab8ee7"
   }
 }

@@ -1139,7 +1139,6 @@ p {
 }
 .gl-container {
   padding: 0 var(--spacing-one);
-  background: yellow;
 }
 @media screen and (min-width: 800px) {
   .gl-container {

@@ -29,6 +29,15 @@ Thema book categories `CODE` is detatched from the title name, we try to attach 
 Process [multiple files](https://app.studyraid.com/en/read/15019/519413/processing-multiple-files-with-wildcards) with Pandoc (terminal command)
 
 
+## Tools
+
+> **Rule** If I can't get it working in a few minutes, or understand the documentation quickly, and if it's not simple, mostly single-purpose, and quick to get started ... maybe just don't use it. A lot of `js` tools are _way_ more complex than they need to be.
+
+Fairly soon I'd be better off using Elm-Land or elm-watch and perhaps a static site builder tool.
+
+- [ ] `npx live-server` to run server and watch for changes
+- [ ] [Ignore files](https://github.com/tapio/live-server/issues/151) with `live-server`
+
 ## To Do
 
 1. **Simplify articles (ONE idea per slide)**[^1]

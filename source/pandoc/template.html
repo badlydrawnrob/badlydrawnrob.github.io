@@ -14,9 +14,6 @@
     $for(css)$
       <link rel="stylesheet" href="$css$?v=2.4.1" />
     $endfor$
-    $if(testing)$
-      <link rel="stylesheet/less" type="text/css" href="../../source/style/main.less" />
-    $endif$
   </head>
   <body id="$body-id$">
 
@@ -88,16 +85,6 @@
         </div>
       </footer>
     </div><!-- .gl-container -->
-    $if(testing)$
-      <script>
-        less = {
-          env: "development"
-        };
-      </script>
-      <script src="../../source/js/less.js" data-env="development"></script>
-      <script>less.watch();</script>
-      <!-- <script src="../../source/js/less.js" type="text/javascript"></script> -->
-    $endif$
     $for(include-after)$
     $include-after$
     $endfor$
