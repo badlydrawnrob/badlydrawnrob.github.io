@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
-    "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen.md -o ./__testing/specimen.html",
-    "test-home": "pandoc --template=./source/pandoc/testing.html -c ../build/style/portfolio.css -s ./source/testing/*.md -o ./__testing/*.html",
+    "testing": "for file in ./source/testing/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s $file -o ./__testing/live-testing/$(basename $file .md).html; done",
+    "testing-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
 
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
 
