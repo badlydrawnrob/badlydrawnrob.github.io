@@ -1123,22 +1123,23 @@ p {
     margin: 0 auto;
   }
 }
-.gl-Strapline_Note {
+.gl-Strapline a {
+  color: var(--color-lll);
+  text-decoration: underline;
+}
+.gl-Strapline a:hover,
+.gl-Strapline a:focus {
+  color: var(--color-s);
+}
+.gl-strapline p {
   margin-bottom: 0;
   color: var(--color-lll);
   font-family: var(--font-family-mono);
   font-size: var(--font-size-mm);
 }
-.gl-Strapline_Link {
-  color: var(--color-lll);
-  text-decoration: underline;
-}
-.gl-Strapline_Link:hover,
-.gl-Strapline_Link:focus {
-  color: var(--color-s);
-}
 .gl-container {
   padding: 0 var(--spacing-one);
+  background: yellow;
 }
 @media screen and (min-width: 800px) {
   .gl-container {
