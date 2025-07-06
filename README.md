@@ -26,6 +26,8 @@ Thema book categories `CODE` is detatched from the title name, we try to attach 
 .animate .animate-static
 ```
 
+Process [multiple files](https://app.studyraid.com/en/read/15019/519413/processing-multiple-files-with-wildcards) with Pandoc (terminal command)
+
 
 ## To Do
 

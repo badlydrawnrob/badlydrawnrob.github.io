@@ -5,7 +5,9 @@
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
-    "test-page": "pandoc --template=./source/pandoc/test-page.html -c ../build/style/portfolio.css -s ./source/words/orbit.md -o ./__testing/test-page.html",
+    "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen.md -o ./__testing/specimen.html",
+    "test-home": "pandoc --template=./source/pandoc/testing.html -c ../build/style/portfolio.css -s ./source/testing/*.md -o ./__testing/*.html",
+
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
 
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
