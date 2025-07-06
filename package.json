@@ -10,9 +10,7 @@
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",
     "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html",
-
     "words": "for file in ./source/words/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s \"$file\" -o \"./words/$(basename \"$file\" .md).html\"; done",
-
     "prebuild": "mkdir -p build/ build/style",
     "build": "npm run css && npm run home && npm run contact && npm run ozaria && npm run words",
     "postbuild": "echo Portfolio: successfully compiled!"
@@ -31,7 +29,6 @@
   "devDependencies": {
     "less": "^4.3.0",
     "live-server": "^1.2.2",
-    "npm-watch": "^0.13.0",
     "print-first-css": "github:badlydrawnrob/print-first-css#bab8ee7"
   }
 }
