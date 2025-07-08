@@ -16,6 +16,7 @@ Your specimen file (global `h1, ul, a, ...`) should set up the lion's share of t
 - **SPLIT OUT THE GRID ELEMENTS?**
 
 I don't like two `#id#ids` together. Feels weird. `#id .id-scoped` better?
+Or even just `#name .regular` might be enough, so long as it's scoped to page
 I quite like using flat styles like we were in ECSS, not nesting too heavily.
 Thema book categories `CODE` is detatched from the title name, we try to attach it.
 
