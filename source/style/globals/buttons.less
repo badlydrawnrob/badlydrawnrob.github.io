@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// Buttons
+// =============================================================================
+
+.gl-button {
+  @media screen {
+    background-color: var(--color-pp);
+    border-radius: 4px;
+    color: var(--color-lll);
+    display: inline-block;
+    font-weight: bold;
+    padding: var(--spacing-one) var(--spacing-two);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: color-mix(in oklab, var(--color-ppp), black 30%);
+    }
+  }
+}

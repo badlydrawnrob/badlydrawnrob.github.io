@@ -1,0 +1,156 @@
+// -----------------------------------------------------------------------------
+// Ozaria
+// =============================================================================
+
+#ozaria {
+  // pass
+}
+
+// -----------------------------------------------------------------------------
+// Signup section
+// -----------------------------------------------------------------------------
+
+#ozaria .signup {
+  margin-bottom: var(--spacing);
+}
+
+#ozaria p.signup-heading {
+  @media screen {
+    background: var(--color-lll);
+    font-weight: 700;
+    margin: 0;
+    padding: var(--spacing-one);
+    border: 1px solid color-mix(in srgb, var(--color-pp), transparent 80%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 calc(var(--spacing-two) * -1) 0;
+    padding: var(--spacing-two);
+  }
+}
+
+#ozaria .signup-body {
+  @media screen {
+    padding: var(--spacing-one);
+    background: var(--color-p);
+
+    ul li {
+      margin-left: var(--spacing-one);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 calc(var(--spacing-two) * -1);
+    padding: var(--spacing-two);
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Breakout section
+// -----------------------------------------------------------------------------
+
+#ozaria .breakout {
+  position: relative;
+
+  @media screen and (min-width: 1200px) {
+    column-gap: var(--spacing-two);
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--spacing-two) calc(calc(var(--spacing-six) * 2) * -1);
+
+    & ul {
+      font-size: var(--font-size-pp);
+    }
+  }
+}
+
+#ozaria .breakout-header {
+  @media screen and (min-width: 1200px) {
+    flex: 1 0 100%;
+
+    & h2 {
+      font-size: var(--font-size-pppp);
+    }
+
+    &.right h2 {
+      text-align: right;
+    }
+
+    & p {
+      font-size: var(--font-size-ppp);
+    }
+  }
+}
+
+#ozaria .breakout.blobby .breakout-header h2 {
+  @media screen {
+    margin-left: var(--spacing-five);
+    padding-top: var(--spacing-one);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: var(--spacing-six);
+    padding-top: var(--spacing-five);
+  }
+}
+
+#ozaria .breakout figure,
+#ozaria .breakout ul {
+  @media screen and (min-width: 1200px) {
+    flex: 1 0 calc(50% - var(--spacing-two)); // not quite right (gap is `-one`)
+  }
+}
+
+#ozaria .breakout ul li {
+  @media screen and (min-width: 1200px) {
+    margin-left: var(--spacing-one);
+  }
+}
+
+// Blobs -----------------------------------------------------------------------
+
+#ozaria .blob {
+  display: none; // for print
+
+  @media screen {
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: -15px;
+
+    img {
+      z-index: -1;
+      height: 100px;
+      width: 100px;
+    }
+
+    .blob-number {
+      color: var(--color-lll);
+      font-size: var(--font-size-ppp);
+      font-weight: 700;
+      left: -65px;
+      top: 6px;
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+      left: -70px;
+      top: -100px;
+      z-index: -1; // risky!
+
+      img {
+        height: 250px;
+        width: 250px;
+      }
+
+      .blob-number {
+        color: var(--color-lll);
+        font-size: var(--font-size-ppppp);
+        font-weight: 700;
+        left: -130px;
+        position: relative;
+      }
+    }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wait: Stop Coding! Check your data
+first! | robmcdonald.me</title>
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet" href="../build/style/portfolio.css?v=2.4.1" />
+      </head>
+  <body id="words">
+
+    <div class="gl-container">
+      <aside class="gl-document">
+        <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
+      </aside>
+
+      <nav class="gl-nav">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/ozaria">Code for kids</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ol>
+      </nav>
+
+          <header class="gl-header">
+        <h1 class="gl-header-title">
+          <div class="animate">
+            
+            <span class="animate-static">Wait: Stop Coding! Check your
+data first!</span>
+          </div>
+        </h1>
+      </header>
+    
+      <main class="gl-main">
+        <div class="gl-main-intro">
+                          <p><strong>Often I’ll find myself coding
+before properly thinking through the problem;</strong> ending up with
+over-engineered, messy, or complex code. I have to look through that
+code. I’ll look back on that code. It’ll confuse me, or give me brain
+farts. It has to be maintained. Who wants that?</p>
+                </div>
+
+        <div class="gl-main-body">
+          <!-- # Wait: Stop coding! Check your data first! -->
+          <!-- > Often I’ll find myself coding before properly thinking through the problem; ending up with over-engineered, messy, or complex code. I have to look through that code. I’ll look back on that code. It’ll confuse me, or give me brain farts. It has to be maintained. Who wants that? -->
+          <!-- #! Requires a better intro, such as a BlockQuote style -->
+          <p>Now I’m not the best of coders; I’m good to an educational
+          level but I don’t have much experience (yet) building big
+          things. I don’t code often enough. This results in lots of
+          forgotten syntax, sifting through code becomes a chore, or I
+          simply can’t fit it all in my head and see the flow of the
+          code. This happens often.</p>
+          <p>I once was told “if you’re not coding 12 hours a day,
+          you’re going to struggle”. That sounds about right — unless
+          you’ve built up your muscle memory and trained your brain into
+          a finely-tuned code killing machine by doing it day in, day
+          out, you’re going to come unstuck. That’s a given. But it
+          doesn’t mean you can’t help yourself out by reducing
+          complexity and producing clean code that’s sense-making.</p>
+          <p>In a recent attempt at doing form validation, which can be
+          difficult, I stumbled upon a few good lessons. It’s mostly
+          focused on functional, but it serves for any code you might
+          write:</p>
+          <ol type="1">
+          <li>Start with the simplest thing possible …</li>
+          <li>Write it down! Sketch it out!</li>
+          <li>What data types do you need?</li>
+          <li>What are your function inputs? It’s outputs?</li>
+          <li>What, exactly, do the functions need to do?</li>
+          <li>Write them down too! Any gotchas?</li>
+          <li>Now follow the “5 steps to reduce your code”.</li>
+          <li>Rewrite your code to the simplest thing possible.</li>
+          <li>How does that code look now?</li>
+          </ol>
+          <p>Too many times I’ve started to attack a problem by writing
+          code first. You can follow the <a
+          href="https://htdp.org/2019-02-24/part_preface.html">design
+          recipe</a> on this page<a href="#fn1" class="footnote-ref"
+          id="fnref1" role="doc-noteref"><sup>1</sup></a> but
+          personally, I find it very helpful to write that thing down,
+          sketch it out like a flowchart, boxes, squiggles, comments,
+          whatever it takes to visually represent those inputs,
+          functions, and outputs for a solid representations of <em>what
+          it’ll take to code</em> the damn thing.</p>
+          <h2 id="the-two-routes-one-complex-one-simple.">The two
+          routes: one complex, one simple.</h2>
+          <blockquote>
+          <p>Can you guess which one is simple?</p>
+          </blockquote>
+          <!-- Image of the two routes -->
+          <p>There’s A LOT you can learn from doing that. A good example
+          is the form inputs above. To begin with, I only started typing
+          the first route and <em>didn’t even consider the second
+          route</em> until I found out I was unpacking a
+          <code>Maybe</code> and converting a <code>String</code> in a
+          lot of places. It made sense originally, as I couldn’t find a
+          function in <a href="https://elm-lang.org/">Elm Lang</a>
+          (based on Haskell) that would help me count the decimal points
+          of a <code>Float</code>. Turns out <em>you can</em> <a
+          href="https://package.elm-lang.org/packages/myrho/elm-round/latest/">truncate
+          decimal points</a> with a package or <a
+          href="https://stackoverflow.com/a/31952975">some maths</a>
+          (not my strong point) but I didn’t look for those up front and
+          decided to count the number of decimal points instead (with
+          string functions).</p>
+          <p>So, you have the original data type (a form field input of
+          <code>String</code>) and you know the output (a
+          <code>Float</code>) and you’ve got a rough idea of how to get
+          there. That’s great, but without considering different routes
+          upfront, you risk writing messy, over-engineered code.</p>
+          <p>I hate state. HATE it. Functional programming seems to call
+          for endless lines of wrestling, cajoling, smoothing, just to
+          make something move. Take a retro space invaders game, for
+          example.<a href="#fn2" class="footnote-ref" id="fnref2"
+          role="doc-noteref"><sup>2</sup></a> There’s a lot of state
+          there. Bounding boxes. Moving parts. I can’t begin to imagine
+          how difficult modern gaming is to create. I’m happy enough to
+          follow a tutorial, but I’m not the kind of person who enjoys
+          figuring out how to make games. The less state the better as
+          far as I’m concerned – that goes for user-interfaces and forms
+          too.</p>
+          <p>Perhaps it stems from my design background, where
+          old-school design was generally fixed visuals without much
+          motion. Everything seems to be motion nowadays. Whatever the
+          reasons, I aim for simplicity and fewer lines of code wherever
+          possible. To me, that’s simpler to deal with, simpler to read
+          in a few months time, and suits my brain which isn’t that
+          logic-oriented (in a computer science way). For my purposes,
+          I’m interested in pragmatic code that helps me build a
+          business or test an idea. I can always hire someone for the
+          tough stuff — I’m not out to save the world with code! That’s
+          just me.</p>
+          <p>I digress. Back to the problem. So we have:</p>
+          <ul>
+          <li>An input type of <code>String</code> which converts to a
+          <code>Float</code></li>
+          <li>This stands for <em>minutes</em> and <em>seconds</em> for
+          time</li>
+          <li>Multiple things that could go wrong with that output
+          …</li>
+          <li>Which we structure as a <code>Result</code> with
+          <code>Err</code>ors or an <code>Ok Float</code></li>
+          <li>This needs to prompt the user to fix those errors</li>
+          <li>And until then, the cycle continues.</li>
+          </ul>
+          <p>Route 1 sounds simple enough, but we need to check for:</p>
+          <ul>
+          <li><code>String</code> is empty</li>
+          <li><code>String</code> is a <code>Float</code></li>
+          <li><code>String</code> is a “proper” <code>Float</code> (two
+          decimal points)</li>
+          <li>Decimal points are within range (<code>&lt;= 10</code>
+          minutes and <code>&lt;= 60</code> seconds)</li>
+          <li>And a few other potential errors (such as negative
+          values)</li>
+          </ul>
+          <p>So you’ll see that our errors compound and our “simple”
+          idea of a text box expecting a <code>Float</code> is becoming
+          a bit harder. On top of <em>that</em> functional typed
+          programming adds an extra layer of “difficulty” that
+          Javascript or Python doesn’t. I won’t get into the differences
+          between static and dynamic languages; all you need to know is
+          that code gets compiled (converted from Elm Lang to
+          Javascript) and any errors are checked as it’s compiled. With
+          route 1 you’re going to get a lot of these types of
+          errors:</p>
+          <div class="sourceCode" id="cb1"><pre
+          class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Maybe</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">ms</span> <span class="op">=</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">ms</span> <span class="cf">of</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Nothing</span>     <span class="op">-&gt;</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Just</span> <span class="fu">string</span> <span class="op">-&gt;</span> <span class="fu">string</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- Run the function</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="st">&quot;a little string&quot;</span></span></code></pre></div>
+          <pre class="terminal"><code>The 1st argument to `update` is not what I expect:
+
+10|   update &quot;a little string&quot;
+             ^^^^^^^^^^^^^^^^^
+This argument is a string of type:
+
+    String
+
+But `update` needs the 1st argument to be:
+
+    Maybe String</code></pre>
+          <p>I won’t go into detail what a <code>Maybe</code> type is,
+          or what type-safety means, as that isn’t really the point of
+          this article. The point is that anything adding complexity to
+          the code should be met with suspicion. As Elon Musk points out
+          with his “5 steps to reduce code”, requirements can be dumb,
+          and you should always try to delete or simplify the process
+          and resulting code <em>before</em> you reach for anything
+          else. The same can be said for HTML, CSS, design, or just
+          about anything.</p>
+          <p>So our requirements are already creating A LOT of potential
+          errors, our code has to unpack a lot of <code>Maybe</code>s
+          and <code>Result</code>s, it falls down in it’s processing of
+          the <code>String</code>. My first route also stipulates
+          that:</p>
+          <ul>
+          <li>A <code>Float</code> needs to be tested in many ways</li>
+          <li>It needs to be converted from a <code>String</code> to a
+          <code>Float</code> (at least twice)</li>
+          <li>But also needs to be converted from a <code>String</code>
+          to two <code>Int</code>s in one function
+          <ul>
+          <li>To check minutes and seconds are within range</li>
+          </ul></li>
+          <li>As well as all that, there’s three <code>Result</code>
+          types to be chained together, and if the <code>String</code>
+          is <code>Ok</code> it needs to change on the very last
+          <code>Result</code> to a <code>Float</code>.</li>
+          </ul>
+          <p>You see the complexity building up? You don’t need to know
+          how to code to look at all these steps and see that a simple
+          problem is now becoming complex. There’s also the (annoying?)
+          fact that Elm Lang converts a <code>"2.00"</code> and a
+          <code>”2.10”</code> to <code>2</code> and <code>2.1</code>.
+          Its type is still a <code>Float</code>, but we now have the
+          extra complexity of handling that case if we’d really prefer
+          them to keep their decimal points.</p>
+          <p>All these extra problems add up, from the top of the stack
+          (front end form) to the bottom (a <code>json</code> file that
+          holds the data).</p>
+          <h2 id="counting-the-steps-in-the-process">Counting the steps
+          in the process</h2>
+          <p>You really only need to count the steps in the process, all
+          the handling of data you’d need to do, all the states the
+          end-user would see, as bullet points or sketches to figure out
+          how complex your route <em>really</em> is. You might be
+          surprised!</p>
+          <!-- Picture of route 2 -->
+          <ol type="1">
+          <li>Two <code>Int</code> inputs</li>
+          <li>One for minutes and one for seconds</li>
+          <li>Each must be within a certain number range</li>
+          <li>Minutes must be more than zero</li>
+          <li>That’s about it.</li>
+          </ol>
+          <p>Now contrast this with route 2. This is just an example:
+          your problem might have a few routes. Perhaps one route isn’t
+          the best way to do it — perhaps it’s not the fancy, shiny way
+          your user would prefer — but it’s SIMPLE. And simple adds up.
+          Simple reduces the code base down by 80% (in this case).
+          Simple reduces the error states. Simple makes my life a whole
+          lot easier. And <em>that’s</em> what I’m looking for. There’s
+          been a few occasions where I’ve aimed for something smarter,
+          and what’s popped out the other end takes so much more effort
+          to achieve. The data you use <em>matters</em>.</p>
+          <p>Take for example the days of the week. We could represent
+          these as an <code>Int</code> for each day, from <code>0</code>
+          to <code>6</code> (using index style formatting) as does
+          <em>Beginning Elm</em> in it’s <a
+          href="https://elmprogramming.com/case-expression.html">simple
+          method</a> to turn a bunch of
+          <code>if</code>/<code>else</code> statements into something
+          our view can use:</p>
+          <div class="sourceCode" id="cb3"><pre
+          class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">daysOfTheWeek</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">daysOfTheWeek</span> <span class="fu">i</span> <span class="op">=</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">i</span> <span class="cf">of</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="dv">0</span> <span class="op">-&gt;</span> <span class="st">&quot;Monday&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dv">1</span> <span class="op">-&gt;</span> <span class="st">&quot;Tuesday&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2</span> <span class="op">-&gt;</span> <span class="st">&quot;Wednesday&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">_</span> <span class="op">-&gt;</span> <span class="st">&quot;And so on&quot;</span></span></code></pre></div>
+          <p>So far so simple, but I wasn’t content with this and went
+          on a journey <a
+          href="https://discourse.elm-lang.org/t/a-simple-list-recursion-problem-how-do-i-do-this/9628">to
+          use recursion</a> (which I won’t go into) and a list of
+          tuples, which looks like
+          <code>[(0,“Monday”), (2,“Tuesday”), (3,“Wednesday”)]</code>
+          and so on. Feels somewhat more solid as a data type, but took
+          a considerable amount of time to nail down. I’ve studied
+          plenty of recursion with <em>How To Design Programs</em> by <a
+          href="https://www.youtube.com/watch?v=ayoofXuKqMY">Matthias
+          Felleisen</a> and Co. —  It’s a great book, perfect for 1st
+          years at Uni/College and just about anyone who wants to
+          <em>think</em> like a programmer — there’s not too much maths,
+          and it’s helpful even if you don’t pursue a career in
+          CompSci.</p>
+          <p>And yet. All that recursion gets forgotten when you start
+          using <code>.map</code>, <code>.filter</code>,
+          <code>.reduce</code>, and all the other time-saving functions
+          Elm Lang provides. You find you’re spending less time on
+          recursion problems and more time with <code>List.map</code>
+          where the hard work is done for you. A great thing! The
+          downside of this is ask me to write a function like
+          <code>List.sort</code> from scratch (to alphabetise a list,
+          say) and I’d struggle without tutorials and documentation (to
+          do it <em>properly</em> is no easy task).<a href="#fn3"
+          class="footnote-ref" id="fnref3"
+          role="doc-noteref"><sup>3</sup></a> I learned recursion in
+          Racket Lang (Lisp) and I’d hazard a guess that recursion in a
+          strongly typed and functional language like Haskell or Elm is
+          that little bit harder to do.</p>
+          <p>Recursion and typed functional languages take a certain way
+          of thinking — a bit like mathematics (lamda calculus,
+          actually) — it’s not a natural way for a human to think.
+          Especially THIS human. I’m visually, not logically oriented,
+          and if I compare myself to developer friends, we
+          <em>think</em> differently. Some folks can think in code. Some
+          are almost robots.</p>
+          <p>The gist of these examples is to <em>learn and do only what
+          you need</em> to get a thing done and <em>keep it simple</em>
+          wherever possible. For some, that’s taking it for a weekend
+          drive as a hobby, for others diving deep, deep, into the abyss
+          of Haskell, or throwing it out of a window in a fit of rage.
+          Programming is oft too academic, too dense, too complicated,
+          too frustrating, and I doth my cap at anyone who gets through
+          it. Sometimes you have to go through that pain to learn a
+          simpler way to do it, so use my pain as a learning
+          experience!</p>
+          <h2 id="evaluating-the-data-types-gotchas-io">Evaluating the
+          data types, gotchas, <code>i/o</code> …</h2>
+          <blockquote>
+          <p>The simplest thing possible.</p>
+          </blockquote>
+          <p>Ok, so we’ve realised there’s a problem, figured out a
+          better data type — two <code>Int</code>s for <em>minutes</em>
+          and <em>seconds</em> — and figured out that using a
+          <code>Float</code> is causing us headaches. We know exactly
+          what our functions have to do: check each <code>Int</code> is
+          within range (<code>&lt;= 60</code> minutes for example).
+          We’ve followed the <em>5 steps to reduce your code</em> to
+          chop off all those unnecessary <code>Maybe</code> and
+          <code>String</code> functions. It took some pain to get there,
+          but we shouldn’t forget that pain, and use it as a positive
+          force for future designs.</p>
+          <p>How does the code look now?</p>
+          <div class="sourceCode" id="cb4"><pre
+          class="sourceCode elm"><code class="sourceCode elm"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- You can use this function for both minutes and seconds</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- You might still have to deal with `Maybe`, but I&#39;ve left it out.</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">checkErrors</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Int</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">checkErrors</span> <span class="fu">str</span> <span class="op">=</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">number</span> <span class="op">=</span> <span class="dt">String</span><span class="op">.</span><span class="dt">Int</span> <span class="fu">str</span>  <span class="co">-- You have to handle `Maybe`</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">checkMinutes</span> (<span class="fu">unpack</span> <span class="fu">number</span>) <span class="cf">of</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">True</span>  <span class="op">-&gt;</span> <span class="dt">Ok</span> <span class="fu">number</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">False</span> <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;You need number is not in range&quot;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">-- Unpack the `Maybe`</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">unpack</span> : <span class="dt">Maybe</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">unpack</span> <span class="fu">i</span> <span class="op">=</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">i</span> <span class="cf">of</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Nothing</span> <span class="op">-&gt;</span> <span class="dv">0</span>  <span class="co">-- What exactly do we put here?</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Just</span> <span class="fu">num</span> <span class="op">-&gt;</span> <span class="fu">num</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">-- Now for our `Boolean` statements</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- (0, 10] or [0, 60] (intervals)</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="fu">checkMinutes</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Bool</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">checkMinutes</span> <span class="fu">minutes</span> <span class="op">=</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">minutes</span> <span class="op">&lt;=</span> <span class="dv">10</span> <span class="op">&amp;&amp;</span> <span class="fu">minutes</span> <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">checkSeconds</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Bool</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">checkSeconds</span> <span class="fu">seconds</span> <span class="op">=</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">seconds</span> <span class="op">&lt;=</span> <span class="dv">60</span> <span class="op">&amp;&amp;</span> <span class="fu">minutes</span> <span class="op">&gt;=</span> <span class="dv">0</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co">-- Form, Update, Msg, and View functions go here.</span></span></code></pre></div>
+          <p>It’s missing a check for <code>Nothing</code> (is not a
+          <code>String</code>), but otherwise looking good!</p>
+          <p>One final (minor? major?) note is on the topic of
+          <code>input[type=“number”]</code>. There’s an interesting
+          article on why the number input is the worst type of input.
+          You can read about it <a
+          href="https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/">here</a>.
+          Always sanitise your inputs!</p>
+          <p>And I think that’s all there is to it. Route 1 started out
+          as 400 lines of comments, questions and code and we’re down to
+          20. Twenty! That’s progress.</p>
+          <h2 id="next-time">Next time …</h2>
+          <p>So the next time I’m thinking about adding a feature,
+          dealing with forms, checking some errors, I’m asking myself
+          — from the customer request, to the shaped problem, the
+          user-interface, right down to the <code>json</code> data — how
+          can I reduce as much complexity as possible and make the
+          process a little more joyful? What can I bin? How can I reduce
+          it down?</p>
+          <p>If it’s a new area of work that I’ve had no experience in,
+          there’s bound to be some pain and uncertainty, new things to
+          learn and people to ask for help. But in problem areas I’ve
+          covered before I should be stacking up stories to teach me a
+          lesson. To never do that dumb thing again. To reduce friction.
+          To ask myself …</p>
+          <p>What’s the simplest thing possible?</p>
+          <section id="footnotes"
+          class="footnotes footnotes-end-of-document"
+          role="doc-endnotes">
+          <hr />
+          <ol>
+          <li id="fn1"><p>The design recipe gets more involved the
+          further into the book you get.<a href="#fnref1"
+          class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+          <li id="fn2"><p>I’ve forgotten more than I’ve remembered about
+          <em>How To Design Programs</em> but I do remember that
+          building games (at least games that are fun) takes lots of
+          work and lots of lines of code, scoping out the problem, doing
+          the mental gymnastics (and maybe even physics) necessary for
+          state-change, and the more functional it is seemingly the
+          harder it gets. In my mind anyway. I’m all for type-safety and
+          solidity but it’s all just too much like work to me, I’m not a
+          “have fun building games” type of guy.<a href="#fnref2"
+          class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+          <li id="fn3"><p>(Goes away for 30 minutes and tries to sort
+          <code>List Int</code> and <code>List String</code> and gets
+          stuck!) I know that <code>”sta” &lt; “str”</code> in Elm
+          returns <code>True</code>, I know you’ve gotta check them in
+          pairs and cycle through the list for each pair — probably
+          sticking the <code>False</code> ones on the end of the list
+          until every pair comes up as <code>True</code>, but it’s been
+          that long since I’ve written a proper recursive list I’m
+          coming up short!<a href="#fnref3" class="footnote-back"
+          role="doc-backlink">↩︎</a></p></li>
+          </ol>
+          </section>
+        </div>
+      </main>
+
+      
+      <footer class="gl-footer">
+        <div class="gl-footer-wrapper">
+          <div class="gl-social">
+            <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
+            <ul>
+              <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
+              <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
+              <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="gl-footer-wrapper">
+          <div class="gl-strapline">
+            <p>Making data fit for human consumption <a href="#">since 2001</a></p>
+            <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
+          </div>
+        </div>
+      </footer>
+    </div><!-- .gl-container -->
+      </body>
+</html>

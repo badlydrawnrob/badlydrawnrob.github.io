@@ -874,6 +874,16 @@ i {
   --col-aside: 400px;
   --font-color: var(--color-ddd);
   --fallback-mono: 'Source Code Pro', 'Roboto Mono', monospace, monospace;
+  --border-radius: var(--spacing-quarter);
+}
+@media screen {
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
 }
 a {
   color: var(--color-ppp);
@@ -902,6 +912,9 @@ blockquote cite {
 blockquote a {
   color: var(--color-dd);
 }
+h2 {
+  font-weight: 700;
+}
 @media screen and (min-width: 800px) {
   ol li,
   ul li {
@@ -924,12 +937,18 @@ p {
   hyphens: manual;
 }
 @media screen {
-  .visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
+  .gl-button {
+    background-color: var(--color-pp);
+    border-radius: 4px;
+    color: var(--color-lll);
+    display: inline-block;
+    font-weight: bold;
+    padding: var(--spacing-one) var(--spacing-two);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .gl-button:hover {
+    background: color-mix(in oklab, var(--color-ppp), black 30%);
   }
 }
 .gl-document {
@@ -1189,6 +1208,132 @@ p {
 @media screen and (min-width: 1200px) {
   .gl-main-intro p {
     font-size: var(--font-size-ppp);
+  }
+}
+#ozaria .signup {
+  margin-bottom: var(--spacing);
+}
+@media screen {
+  #ozaria p.signup-heading {
+    background: var(--color-lll);
+    font-weight: 700;
+    margin: 0;
+    padding: var(--spacing-one);
+    border: 1px solid color-mix(in srgb, var(--color-pp), transparent 80%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria p.signup-heading {
+    margin: 0 calc(var(--spacing-two) * -1) 0;
+    padding: var(--spacing-two);
+  }
+}
+@media screen {
+  #ozaria .signup-body {
+    padding: var(--spacing-one);
+    background: var(--color-p);
+  }
+  #ozaria .signup-body ul li {
+    margin-left: var(--spacing-one);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .signup-body {
+    margin: 0 calc(var(--spacing-two) * -1);
+    padding: var(--spacing-two);
+  }
+}
+#ozaria .breakout {
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .breakout {
+    column-gap: var(--spacing-two);
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--spacing-two) calc(calc(var(--spacing-six) * 2) * -1);
+  }
+  #ozaria .breakout ul {
+    font-size: var(--font-size-pp);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .breakout-header {
+    flex: 1 0 100%;
+  }
+  #ozaria .breakout-header h2 {
+    font-size: var(--font-size-pppp);
+  }
+  #ozaria .breakout-header.right h2 {
+    text-align: right;
+  }
+  #ozaria .breakout-header p {
+    font-size: var(--font-size-ppp);
+  }
+}
+@media screen {
+  #ozaria .breakout.blobby .breakout-header h2 {
+    margin-left: var(--spacing-five);
+    padding-top: var(--spacing-one);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .breakout.blobby .breakout-header h2 {
+    margin-left: var(--spacing-six);
+    padding-top: var(--spacing-five);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .breakout figure,
+  #ozaria .breakout ul {
+    flex: 1 0 calc(50% - var(--spacing-two));
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .breakout ul li {
+    margin-left: var(--spacing-one);
+  }
+}
+#ozaria .blob {
+  display: none;
+}
+@media screen {
+  #ozaria .blob {
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: -15px;
+  }
+  #ozaria .blob img {
+    z-index: -1;
+    height: 100px;
+    width: 100px;
+  }
+  #ozaria .blob .blob-number {
+    color: var(--color-lll);
+    font-size: var(--font-size-ppp);
+    font-weight: 700;
+    left: -65px;
+    top: 6px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #ozaria .blob {
+    left: -70px;
+    top: -100px;
+    z-index: -1;
+  }
+  #ozaria .blob img {
+    height: 250px;
+    width: 250px;
+  }
+  #ozaria .blob .blob-number {
+    color: var(--color-lll);
+    font-size: var(--font-size-ppppp);
+    font-weight: 700;
+    left: -130px;
+    position: relative;
   }
 }
 #home .animate-words {
