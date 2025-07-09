@@ -14,6 +14,7 @@ Your specimen file (global `h1, ul, a, ...`) should set up the lion's share of t
 - `#page` and `.repeatable` elements (non-global styles)
 - `#page #section` and `.section-styles` (non-global, limited to that page)
 - **SPLIT OUT THE GRID ELEMENTS?**
+- **FIX UNECESSARY `<p>` TAGS** for Markdown output (currently processes as Markdown inside divs)
 
 I don't like two `#id#ids` together. Feels weird. `#id .id-scoped` better?
 Or even just `#name .regular` might be enough, so long as it's scoped to page
@@ -38,6 +39,7 @@ Fairly soon I'd be better off using Elm-Land or elm-watch and perhaps a static s
 
 - [ ] `npx live-server` to run server and watch for changes on `http://127.0.0.1:8080`
 - [ ] [Ignore files](https://github.com/tapio/live-server/issues/151) with `live-server`
+- [ ] [Pandoc Markdown](https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html) (an overview)
 
 ## To Do
 
@@ -46,6 +48,7 @@ Fairly soon I'd be better off using Elm-Land or elm-watch and perhaps a static s
 3. Thema CSS and GPS style (and simplify code where possible)
 4. Remove EVERYTHING that's ECSS style (model-first, not components first)
 4. Build it with Elm Lang (using `json` data and markdown)
+5. What about accessibility? (stuff like [grid order](https://rachelandrew.co.uk/archives/2019/06/04/grid-content-re-ordering-and-accessibility/))
 
 ## `@media`
 

@@ -29,6 +29,6 @@
   "devDependencies": {
     "less": "^4.3.0",
     "live-server": "^1.2.2",
-    "print-first-css": "github:badlydrawnrob/print-first-css#bab8ee7"
+    "print-first-css": "github:badlydrawnrob/print-first-css#0fe370e"
   }
 }

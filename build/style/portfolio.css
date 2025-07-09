@@ -418,7 +418,7 @@ kbd,
 pre,
 samp {
   font-family: var(--font-family-mono);
-  font-size: var(--font-size);
+  font-size: inherit;
   font-style: normal;
   line-height: var(--line-height);
 }
@@ -446,34 +446,35 @@ samp {
   }
 }
 pre {
-  position: relative;
+  border: var(--spacing-px) solid var(--color-bbb);
+  font-size: inherit;
+  hyphens: none;
+  overflow-wrap: normal;
   overflow: auto;
   padding: var(--spacing);
-  white-space: pre-wrap;
-  overflow-wrap: normal;
-  word-break: normal;
+  position: relative;
   tab-size: 4;
-  hyphens: none;
-  border: var(--spacing-px) solid var(--color-bbb);
+  white-space: pre-wrap;
+  word-break: normal;
 }
 @media screen {
   pre {
-    white-space: pre;
     background: var(--color-code-light-background);
     border-color: transparent;
+    white-space: pre;
   }
 }
 pre code {
+  background: 0 0;
+  border-radius: 0;
+  border: none;
+  color: inherit;
   display: block;
-  overflow: auto;
   height: 100%;
   margin: 0;
+  overflow: auto;
   padding: 0;
   white-space: pre;
-  color: inherit;
-  border: none;
-  border-radius: 0;
-  background: 0 0;
 }
 button,
 input[type=checkbox],
@@ -876,6 +877,11 @@ i {
   --fallback-mono: 'Source Code Pro', 'Roboto Mono', monospace, monospace;
   --border-radius: var(--spacing-quarter);
 }
+@media screen and (min-width: 800px) {
+  body {
+    font-size: var(--font-size-p);
+  }
+}
 @media screen {
   .visually-hidden {
     position: absolute !important;
@@ -897,7 +903,7 @@ a:active {
 }
 blockquote {
   color: var(--color-ddd);
-  border-left: var(--spacing-micro) solid var(--color-dd);
+  border-left: var(--spacing-quarter) solid var(--color-dd);
 }
 @media screen and (min-width: 800px) {
   blockquote {
@@ -912,8 +918,19 @@ blockquote cite {
 blockquote a {
   color: var(--color-dd);
 }
+h1 {
+  font-weight: 600;
+}
 h2 {
   font-weight: 700;
+}
+figure {
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 @media screen and (min-width: 800px) {
   ol li,
@@ -1013,6 +1030,7 @@ p {
 }
 @media screen and (min-width: 800px) {
   .gl-nav {
+    font-size: var(--font-size-pp);
     grid-column: 2 / span 2;
     grid-row: 2;
   }
@@ -1040,11 +1058,6 @@ p {
   height: var(--spacing-increment);
   list-style: none;
   margin: 0;
-}
-@media screen and (min-width: 800px) {
-  .gl-nav ol {
-    font-size: var(--font-size-p);
-  }
 }
 @media screen and (min-width: 1200px) {
   .gl-nav ol {
@@ -1210,14 +1223,19 @@ p {
     font-size: var(--font-size-ppp);
   }
 }
+#ozaria hr {
+  border-color: #F0C135;
+}
 #ozaria .signup {
   margin-bottom: var(--spacing);
+}
+#ozaria .signup p {
+  margin: 0;
 }
 @media screen {
   #ozaria p.signup-heading {
     background: var(--color-lll);
     font-weight: 700;
-    margin: 0;
     padding: var(--spacing-one);
     border: 1px solid color-mix(in srgb, var(--color-pp), transparent 80%);
   }
@@ -1243,8 +1261,17 @@ p {
     padding: var(--spacing-two);
   }
 }
-#ozaria .breakout {
+#ozaria .mugshot {
   position: relative;
+}
+#ozaria .mugshot img {
+  height: 200px;
+  width: 188px;
+  position: absolute;
+}
+#ozaria .mugshot h2,
+#ozaria .mugshot blockquote {
+  margin-left: calc(var(--spacing-six) * 2);
 }
 @media screen and (min-width: 1200px) {
   #ozaria .breakout {
@@ -1260,6 +1287,7 @@ p {
 @media screen and (min-width: 1200px) {
   #ozaria .breakout-header {
     flex: 1 0 100%;
+    order: -1;
   }
   #ozaria .breakout-header h2 {
     font-size: var(--font-size-pppp);
@@ -1271,14 +1299,17 @@ p {
     font-size: var(--font-size-ppp);
   }
 }
+#ozaria .breakout-header.blobby {
+  position: relative;
+}
 @media screen {
-  #ozaria .breakout.blobby .breakout-header h2 {
+  #ozaria .breakout-header.blobby h2 {
     margin-left: var(--spacing-five);
     padding-top: var(--spacing-one);
   }
 }
 @media screen and (min-width: 1200px) {
-  #ozaria .breakout.blobby .breakout-header h2 {
+  #ozaria .breakout-header.blobby h2 {
     margin-left: var(--spacing-six);
     padding-top: var(--spacing-five);
   }
@@ -1313,8 +1344,8 @@ p {
     color: var(--color-lll);
     font-size: var(--font-size-ppp);
     font-weight: 700;
-    left: -65px;
-    top: 6px;
+    top: -77px;
+    left: 40px;
     position: relative;
   }
 }
@@ -1332,8 +1363,8 @@ p {
     color: var(--color-lll);
     font-size: var(--font-size-ppppp);
     font-weight: 700;
-    left: -130px;
-    position: relative;
+    left: 112px;
+    top: -160px;
   }
 }
 #home .animate-words {

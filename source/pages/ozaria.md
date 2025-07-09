@@ -21,7 +21,14 @@ intro: >-
 </div><!-- /.signup-body -->
 </div><!-- /.signup -->
 
+<!-- ORDER MATTERS: Images first work better on the small screen and we'll re-order them on large! -->
+
 <div class="breakout">
+
+<!-- position 2 large -->
+![Don't be bored. Be a coding hero!](./build/static/computer-hero-kid.jpg)
+
+<!-- position 1 large -->
 <div class="breakout-header">
 
 ## 😩 Want to beat the summer boredom?
@@ -30,13 +37,13 @@ If you’re like most parents, summer brings some familiar challenges:
 
 </div>
 
-![Don't be bored. Be a coding hero!](./build/static/computer-hero-kid.jpg)
+<!-- position 3 large -->
 
 - **Your child is glued to YouTube** or games that teach them nothing.
 - **They’re bored. You're busy.** And you’re running out of ideas.
 - **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
 
-</div>
+</div><!-- /.breakout -->
 
 The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
 
@@ -48,9 +55,15 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 ---
 
+<div class="mugshot">
+
+![](./build/static/mugshot.png)
+
 ## 👋 Hey, I’m \[Your Name], and I Help Kids Fall in Love with Coding
 
-Over the past 5 years, I’ve taught coding to over 800 learners—from 8 to 80 years old.
+> Over the past 5 years, I’ve taught coding to over 800 learners — from 8 to 80 years old.
+
+</div>
 
 I believe learning to code should be **fun, creative, and confidence-building.** Not intimidating or boring.
 
@@ -68,18 +81,22 @@ And now, your child can try it for free—this summer.
 
 ---
 
-<div class="breakout blobby">
+<div class="breakout">
+
+<!-- position 2 large -->
+![some cool image](./build/static/computer-summer-kid.jpg)
+
+<!-- position 1 large -->
+<div class="breakout-header blobby">
 <div class="blob"><img src="./build/static/blob.svg" alt="section 1" /><span class="blob-number">01</span></div>
 
-<div class="breakout-header">
+## What Is Ozaria?
 
-## What Is Ozaria?{.blobby}
-
-🧙‍♂️ This summer we'll get together for a **100% free, two-day online coding adventure** where your child will:
+> 🧙‍♂️ This summer we'll get together for a **100% free, two-day online coding adventure** where your child will:
 
 </div>
 
-![some cool image](./build/static/computer-summer-kid.jpg)
+<!-- position 3 large -->
 
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
@@ -97,9 +114,13 @@ And now, your child can try it for free—this summer.
 ---
 
 <div class="breakout right">
-<div class="blob"><img src="./build/static/blob.svg" alt="section 1" /><span class="blob-number">01</span></div>
 
-<div class="breakout-header right">
+<!-- position 2 large -->
+![some cool image](./build/static/computer-summer-kid.jpg)
+
+<!-- position 1 large -->
+<div class="breakout-header blobby">
+<div class="blob"><img src="./build/static/blob.svg" alt="section 2" /><span class="blob-number">02</span></div>
 
 ## 🎯 What They’ll Learn (and Why It Matters)
 
@@ -110,8 +131,6 @@ And now, your child can try it for free—this summer.
 - ✅ Story-Based Challenges
 - ✅ Teamwork & Collaboration
 - ✅ Simple & Accessible
-
-![some cool image](./build/static/computer-summer-kid.jpg)
 
 </div>
 
@@ -162,10 +181,14 @@ It’s an adventure that could shape your child’s future.
 
 ---
 
-<div class="breakout left">
-<div class="blob"><img src="./build/static/blob.svg" alt="section 1" /><span class="blob-number">01</span></div>
+<div class="breakout">
 
-<div class="breakout-header left">
+<!-- position 2 large -->
+![some cool image](./build/static/computer-summer-kid.jpg)
+
+<!-- position 1 large -->
+<div class="breakout-header blobby">
+<div class="blob"><img src="./build/static/blob.svg" alt="section 3" /><span class="blob-number">03</span></div>
 
 ## 🎁 Bonuses That Make This a No-Brainer
 
