@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // Buttons
 // =============================================================================
+// 1. The new `color-mix` function:
+//    - @ https://www.brandonpugh.com/til/css/darken-colors-color-mix/
 
 .gl-button {
   @media screen {
@@ -14,7 +16,8 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background: color-mix(in oklab, var(--color-ppp), black 30%);
+      color: var(--color-lll);
+      background: color-mix(in oklab, var(--color-ppp), black 30%); // (1)
     }
   }
 }

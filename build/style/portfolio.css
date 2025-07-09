@@ -965,6 +965,7 @@ p {
     transition: background-color 0.3s ease;
   }
   .gl-button:hover {
+    color: var(--color-lll);
     background: color-mix(in oklab, var(--color-ppp), black 30%);
   }
 }
