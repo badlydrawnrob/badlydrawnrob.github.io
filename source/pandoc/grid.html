@@ -17,8 +17,6 @@
   </head>
   <body id="$body-id$">
 
-    <!-- <div class="gl-container gl-BaselineGrid"> -->
-
     <aside class="gl-folio">
       <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
     </aside>
@@ -34,32 +32,41 @@
 
     $if(title)$
       <header>
-        <h1>Some big header that is really important</h1>
+        <h1>
+          <div class="animate">
+            $if(title-animate)$<div class="animate-words">$title-animate$</div>$endif$
+            <span class="animate-static">$title$</span>
+          </div>
+        </h1>
       </header>
     $endif$
 
       <main>
         <div class="gl-intro">
-          <h2>Life is a learning process;</h2>
-          <p> it’s full of big hairy problems (and little ones too!) — I can help you discover ideas, communicate clearly and learn what works</p>
+        $if(subtitle)$
+          <h2>$subtitle$</h2>
+        $endif$
+        $if(intro)$
+          <p>$intro$</p>
+        $endif$
         </div>
 
         <div class="gl-body">
           <div class="gl-b-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus nisl, faucibus porttitor commodo sit amet, porta sed magna. Etiam lacinia auctor ultricies. Sed eu mi vel quam iaculis volutpat. Nam nibh sem, porttitor in varius non, porttitor eget justo. Vestibulum condimentum nulla nisi. Sed mollis mollis nibh, eget egestas diam scelerisque at. Nunc a venenatis purus. Nulla quis nisi enim. Etiam neque ante, volutpat eget mauris quis, pulvinar placerat enim. Nullam convallis vestibulum odio, id facilisis erat rutrum volutpat.</p>
+            $body$
           </div>
         </div>
       </main>
-
-
     </div><!-- /.gl-grid-square -->
 
+    $if(call-to-action)$
     <aside class="cta">
       <p>
         <a class="gl-button" href="/contact">Let's <abbr title="love">♥</abbr> learning together</a>
         <span class="cta-reason"> and get things done!</span>
       </p>
     </aside>
+    $endif$
 
     <footer class="gl-footer">
       <div  class="gl-f-social">
