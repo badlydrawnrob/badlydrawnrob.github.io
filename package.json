@@ -6,6 +6,8 @@
   "scripts": {
     "test": "which pandoc",
     "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
+    "test-grid": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid.md -o ./__testing/grid/grid.html",
+
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",

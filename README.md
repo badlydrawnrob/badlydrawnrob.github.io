@@ -21,6 +21,7 @@ My styleguide might not be suitable when working in large teams (where change co
     - `.call-to-action` becomes `.cta` (use comment headings, avoid long class names)
 6. Adding a space in before `style=` allows for quicker column scanning
     - You can render without whitespace with a compiler (like Pandoc)
+7. CUT CODE DOWN! Wherever possible :)
 
 ```css
 /* CONCRETE AND STRICT BEATS WISHY-WASHY CONVENTIONS */
