@@ -10,12 +10,17 @@ My styleguide might not be suitable when working in large teams (where change co
 1. As many specimen styles as possible (60% of styles or more)
     - Raw html, such as `h1`, `pre`, `code`
 2. As few class names as possible (rather than named)
-    - Raw html, such as `button` (over `.gl-button`)
-3. As many design-styleguide assets as possible
+    - Raw html takes preference (`button` over `.gl-button`)
+3. As many design-styleguide assets as possible!
     - Prefer predictability over variety (fewer design assets)
-    - Most of these would be `.gl-`obal elements
-4. Page styles are for page-related content only
+    - Most of these are `.gl-`obal elements (always prefixed)
+4. Page styles for single-page-related content only
     - Always wrapped in a page ID (`#page .section`)
+5. Naming conventions are optional, but preferred where possible
+    - `.first-second` position gets shortened to `.f-second`
+    - `.call-to-action` becomes `.cta` (use comment headings, avoid long class names)
+6. Adding a space in before `style=` allows for quicker column scanning
+    - You can render without whitespace with a compiler (like Pandoc)
 
 ```css
 /* CONCRETE AND STRICT BEATS WISHY-WASHY CONVENTIONS */
@@ -28,47 +33,49 @@ My styleguide might not be suitable when working in large teams (where change co
 .grid .col2
 
 /* You should be using raw html wherever possible (cut code down!) */
-/* Only lean into Thema styles where it's hard to discern what's happening */
+/* Here we're directly styling html elements so no need for `.gl-header` class */
+header
+header h1
+header h1 strong
+header h1 strong a
+
+/* Only lean into Thema styles where it's:
+/*   (a) Obvious that you'll need multiple `header` elements on the same page       */
+/*   (b) Internal class names relate to parent (we may as well add class to parent) */
+/*   (c) It's hard to ascertain what's happening in the code without a class        */
+/* NEVER presuppose you'll need (a), (b), or (c) until it actually happens (YAGNI)  */
 .gl-header
-.gl-header h1
-.gl-header h1 strong
-.gl-header h1 strong a
+.gl-h-wrapper
+.gl-h-wrapper h1
 
-/* Items are grouped together so they're easy to find */
-/* Ideally class names should be singular and short  */
-.gl-style         /* A suitable unique name */
-.gl-s-item        /* You can use named comment headers */
-.gl-si-left       /* Or `.gl-s-item.left` */
-.gl-sil-whysolong /* You should rarely need this many nested class names */
+/* Items are grouped together with comment headers so they're easy to find */
+.gl-style         /* A suitable, singular, unique short name */
+.gl-s-item        /* Abbreviated with inner child name       */
+.gl-si-list       /* Similar naming convention for children  */
+.gl-sil-whysolong /* Rarely nest classes 3+ levels deep      */
 
-/* If it's a variant, prefer the direct parent to be styled (rather than container) */
-.gl-header        /* We don't style the parent in this instance ... */
-.gl-h-title
-.gl-h-title.right /* Because the child is the only thing that moves */
+/* For variants of a class, prefer styling the direct parent (not the container) */
+.gl-header        /* The container never changes in this instance */
+.gl-h-title       /* Only our `-title` changes between pages      */
+.gl-h-title.right /* `.right` or `-right` are equally valid       */
 
-/* Otherwise, variants can be added to the outermost element   */
-/* The old style was `.gl-header-variant` which is a bit safer */
-.gl-header.dark /* Aim to use unique singular classnames (or add a `.dark123` number) */
-.gl-h-title
-.gl-ht-inner
-
-/* In Thema, qualifiers have numbers to start, like `5TD-EE-A` ... */
-/* Could this be utilised for something?! */
-.dark123
+/* Add variants to the outermost element rarely: prefer standardised components */
+/* For safety you could randomise the class name (Thema uses `5TD-EE-A`)     */
+.gl-header.dark /* Like Thema we could randomise this class name `.dark123`  */
+.gl-h-title     /* Is there a VERY good reason to deviate from `.gl-header`? */
 
 /* Page-level sections (even if repeated) should be used */
 /* I don't like the GPS #id#section as it's ugly. This way you could always */
-/* reuse the `.namedsection` in another `#page` (might be a bit confusing) */
+/* reuse the `.namedsection` in another `#page` (might be a bit confusing)  */
 #pagename
-#pagename section       /* PREFER THIS STYLE (raw html) */
-#pagename .namedsection /* If two words ...  */
-#pagename .ns-item      /* Perhaps we use initials like `.ns` for short */
-#pagename .nsi-position /* Again, fewer "codes" are better */
+#pagename section       /* PREFER STYLING RAW HTML over class names  */
+#pagename .namedsection /* If you _must_ use more than one word ...  */
+#pagename .ns-item      /* You could use initials for child elements */
+#pagename .nsi-position /* Again, fewer "codes" are better           */
 
-/* If we find we need a page style on a different page ... */
-/* Move that class name up in the hierarchy (with global styles) */
-/* #pagename .namedsection */
-.gl-namedsection
+/* You can move items up the hierarchy (from page style to global style) */
+/* As we prefer standardised components over variety, move to a `.gl-` style */
+.gl-section /* from `#pagename .section` */
 ```
 
 If there's no need for class names — don't add them! There's two ways we could design this navigation, and the first route is totally valid.
