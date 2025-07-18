@@ -85,7 +85,7 @@ nav ol {
   list-style: none;
   margin: 0;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 960px) {
     display: block;
     height: auto;
   }
@@ -125,6 +125,8 @@ nav ol li {
 
 header {
   h1 {
+    margin-bottom: 0;
+
     @media screen and (min-width: 800px) {
       font-size: var(--font-size-pppppp);
     }
@@ -230,8 +232,11 @@ header {
   border-top: var(--spacing-px) solid var(--color-ll);
 
   @media screen and (min-width: 772px) {
+    padding: var(--spacing-two) 0;
+  }
+
+  p {
     margin: 0 auto;
-    padding: var(--spacing-one) 0;
     width: var(--grid-width-small);
   }
 }
@@ -337,13 +342,19 @@ header {
 //
 // Bugs to understand
 // ------------------
-// - #! When the `main` is subgrid but has no size only 2 rows are shown (not 3)
-//     - This happens when there's an extra html element (row) that isn't accounted for in the CSS?
+// 1. Be careful of sizing columns and rows when html elements don't match
+//    - For example, `nav header main` are stacked and `nav` takes 3 rows ...
+//    - But `main` hasn't been styled so only 2 rows are visible in inspector
+//    - Similar to intrinsic rows I guess (more html elements than are in css grid)
 
 .gl-grid-square {
   display: grid;
   gap: var(--spacing-three-quarters);
   grid-template-columns: 1fr;
+  grid-template-rows:
+    var(--spacing-grid-square-quarter)
+    var(--spacing-grid-square-half)
+    auto;
   grid-template-areas:
     "nav"
     "header"
@@ -351,6 +362,10 @@ header {
   margin: var(--spacing-one);
 
   @media screen and (min-width: 772px) {
+      grid-template-rows:
+        var(--spacing-grid-square-half)
+        var(--spacing-grid-square)
+        auto;
       margin: 0 auto;
       width: var(--grid-width-small);
   }
@@ -358,6 +373,10 @@ header {
   // #! (2)
   @media screen and (min-width: 960px) {
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:
+      var(--spacing-grid-square)
+      auto
+      auto;
     grid-template-areas:
       "header header header header header"
       "nav    col2   col3   col4   col5"
@@ -367,56 +386,43 @@ header {
 }
 
 nav {
+  align-content: center;
   grid-area: nav;
+
+  @media screen and (min-width: 960px) {
+    align-content: start;
+  }
 }
 
 header {
+  align-content: end;
   grid-area: header;
 }
 
-// main {
-//   @media screen and (min-width: 960px) {
-//     display: grid;
-//     grid-column: nav-start / col5-end; // #! (3)
-//     grid-row: nav-start / nav-end;   // #! (3)
-//     grid-template-columns: subgrid;
-//     grid-template-rows: subgrid;
-//     grid-template-areas:
-//       ". intro intro intro intro"
-//       "body body body body body";
-//   }
-// }
+main {
+  grid-area: main;
 
-// .gl-intro {
-//   @media screen and (min-width: 960px) {
-//     // grid-column: col2-start / col5-end;
-//     // grid-row: nav-start / 2;
-//     grid-area: intro;
-//   }
-// }
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-area: unset;
+    grid-column: nav-start / col5-end; // #! (3)
+    grid-row: nav-start / nav-end;   // #! (3)
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-template-areas:
+      ". intro intro intro intro"
+      "body body body body body";
+  }
+}
 
-// .gl-body {
-//   grid-area: body;
-// }
+.gl-intro {
+  @media screen and (min-width: 960px) {
+    // grid-column: col2-start / col5-end;
+    // grid-row: nav-start / 2;
+    grid-area: intro;
+  }
+}
 
-// main {
-//   grid-area: main;
-
-//   @media screen and (min-width: 960px) {
-//     display: grid;
-//     grid-template-columns: subgrid;
-//     grid-template-areas:
-//       "none intro intro intro intro"
-//       "body body body body body";
-//   }
-// }
-
-// // Safari really doesn't like this code:
-// // Is this legal with subgrid?!!
-// .gl-intro {
-//   grid-area: intro;
-// }
-
-// .gl-body {
-//   grid-area: body;
-// }
+.gl-body {
+  grid-area: body;
+}

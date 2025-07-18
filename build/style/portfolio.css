@@ -876,6 +876,9 @@ i {
   --col-nav: 300px;
   --col-main: 730px;
   --col-aside: 400px;
+  --spacing-grid-square: 176px;
+  --spacing-grid-square-half: 88px;
+  --spacing-grid-square-quarter: 44px;
   --font-color: var(--color-ddd);
   --fallback-mono: 'Source Code Pro', 'Roboto Mono', monospace, monospace;
   --border-radius: var(--spacing-quarter);
@@ -1012,7 +1015,7 @@ nav ol {
   list-style: none;
   margin: 0;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 960px) {
   nav ol {
     display: block;
     height: auto;
@@ -1045,6 +1048,9 @@ nav ol li::before {
   nav ol li::after {
     content: none;
   }
+}
+header h1 {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 800px) {
   header h1 {
@@ -1134,10 +1140,12 @@ nav ol li::before {
 }
 @media screen and (min-width: 772px) {
   #home .cta {
-    margin: 0 auto;
-    padding: var(--spacing-one) 0;
-    width: var(--grid-width-small);
+    padding: var(--spacing-two) 0;
   }
+}
+#home .cta p {
+  margin: 0 auto;
+  width: var(--grid-width-small);
 }
 @media screen {
   #home .cta .gl-button {
@@ -1187,11 +1195,13 @@ nav ol li::before {
   display: grid;
   gap: var(--spacing-three-quarters);
   grid-template-columns: 1fr;
+  grid-template-rows: var(--spacing-grid-square-quarter) var(--spacing-grid-square-half) auto;
   grid-template-areas: "nav" "header" "main";
   margin: var(--spacing-one);
 }
 @media screen and (min-width: 772px) {
   .gl-grid-square {
+    grid-template-rows: var(--spacing-grid-square-half) var(--spacing-grid-square) auto;
     margin: 0 auto;
     width: var(--grid-width-small);
   }
@@ -1199,15 +1209,45 @@ nav ol li::before {
 @media screen and (min-width: 960px) {
   .gl-grid-square {
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: var(--spacing-grid-square) auto auto;
     grid-template-areas: "header header header header header" "nav    col2   col3   col4   col5" "nav    col2   col3   col4   col5";
     width: var(--grid-width-medium);
   }
 }
 nav {
+  align-content: center;
   grid-area: nav;
 }
+@media screen and (min-width: 960px) {
+  nav {
+    align-content: start;
+  }
+}
 header {
+  align-content: end;
   grid-area: header;
+}
+main {
+  grid-area: main;
+}
+@media screen and (min-width: 960px) {
+  main {
+    display: grid;
+    grid-area: unset;
+    grid-column: nav-start / col5-end;
+    grid-row: nav-start / nav-end;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-template-areas: ". intro intro intro intro" "body body body body body";
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-intro {
+    grid-area: intro;
+  }
+}
+.gl-body {
+  grid-area: body;
 }
 #ozaria hr {
   border-color: #F0C135;
