@@ -1199,7 +1199,7 @@ nav ol li::before {
 @media screen and (min-width: 960px) {
   .gl-grid-square {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "header header header header header" "nav intro intro intro intro intro" "main main main main main main";
+    grid-template-areas: "header header header header header" "nav    col2   col3   col4   col5" "nav    col2   col3   col4   col5";
     width: var(--grid-width-medium);
   }
 }
@@ -1208,22 +1208,6 @@ nav {
 }
 header {
   grid-area: header;
-}
-main {
-  grid-area: main;
-}
-@media screen and (min-width: 960px) {
-  main {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-areas: "none intro intro intro intro" "body body body body body";
-  }
-}
-.gl-intro {
-  grid-area: intro;
-}
-.gl-body {
-  grid-area: body;
 }
 #ozaria hr {
   border-color: #F0C135;

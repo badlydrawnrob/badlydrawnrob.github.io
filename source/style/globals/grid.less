@@ -297,22 +297,48 @@ header {
 // -----------------------------------------------------------------------------
 // > See the `⭐-CSS-GRID-LAYOUT` keynote for rough diagrams
 //
-// 1. It's not strictly necessary to use `grid` for mobile as I'm doing here.
-// 2. A regular grid would look like this, but we're overlaying on top of `nav`.
-// 3. It's possible to overlap `nav` and `main`, which we may want later ...
-//     - Nav may need to get wider (expand leftwards from `.gl-grid-square` ...
-//     - Nav may need it's own separate grid, overlapping the square one.
-// 4. Subgrid inherits the columns of `.gl-grid-square` (but not rows ... yet!)
-//     - Without changing html structure I don't think there's a better way
+// - It's not necessary to use `grid` for mobile, but we're doing it here.
+//
+// Vertical rythmn
+// ---------------
+// > Outer grid rows are currently automatically sized
+//
+// Unless your design is _very_ specific and rigid, you're going to have issues
+// making the outer grid rows a square size. You've got different screen sizes
+// to consider, and the outer grid is only 2 rows deep.
+//
+// Let the main content worry about sizing to the grid where it's appropriate,
+// and use standard `--spacing` where it isn't. Everything should align to a
+// .gl-BaselineGrid` and be divisible by 4. You can use the square (and other
+// grids) as a baseline when sizing block-level elements vertically.
+//
+// Overlapping grids
+// -----------------
+// > Unless we change our "semantic" html structure, we'll have to overlap
+// > `nav` and `main` to get the desired layout. I'm not sure if there's a
+// > better way.
+//
+// 1. Nav may need to get wider (expand leftwards from `.gl-grid-square`
+// 2. Nav may need it's own separate grid, overlapping the square one
+// 3. Tracks can be named and use their automatic `-start` and `-end` lines
 //
 // Subgrids and named `grid-template-areas`
 // -------------------------------------------
-// > Subgrids only inherit the grid lines/tracks of the parents!
-// > Child elements can only reference their IMMEDIATE parent's named areas.
-// > So named `grid-area`s are scoped locally to each grid container.
+// > - Subgrids only inherit the grid lines/tracks of the parents!
+// > - Child elements can only reference their IMMEDIATE parent's named areas.
+// > - So named `grid-area`s are scoped locally to each grid container.
+//
+// You've also got to watch out how many elements you have within a `subgrid`.
+// For example `.subgrid > .item4` would be FOUR rows. If you're trying to position
+// to a parent grid's TWO rows it's going to be difficult (or impossible)
 //
 // I don't think it's currently possible to target `subgrid` children with
 // named `grid-template-areas` (e.g: `.gl-body -> grid-area: body;`).
+//
+// Bugs to understand
+// ------------------
+// - #! When the `main` is subgrid but has no size only 2 rows are shown (not 3)
+//     - This happens when there's an extra html element (row) that isn't accounted for in the CSS?
 
 .gl-grid-square {
   display: grid;
@@ -334,8 +360,8 @@ header {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
       "header header header header header"
-      "nav intro intro intro intro intro"
-      "main main main main main main"; // #! (3) Overlap `nav`?
+      "nav    col2   col3   col4   col5"
+      "nav    col2   col3   col4   col5"; // #! (3) Overlap `nav`?
     width: var(--grid-width-medium);
   }
 }
@@ -348,24 +374,49 @@ header {
   grid-area: header;
 }
 
-main {
-  grid-area: main;
+// main {
+//   @media screen and (min-width: 960px) {
+//     display: grid;
+//     grid-column: nav-start / col5-end; // #! (3)
+//     grid-row: nav-start / nav-end;   // #! (3)
+//     grid-template-columns: subgrid;
+//     grid-template-rows: subgrid;
+//     grid-template-areas:
+//       ". intro intro intro intro"
+//       "body body body body body";
+//   }
+// }
 
-  @media screen and (min-width: 960px) {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-areas:
-      "none intro intro intro intro"
-      "body body body body body";
-  }
-}
+// .gl-intro {
+//   @media screen and (min-width: 960px) {
+//     // grid-column: col2-start / col5-end;
+//     // grid-row: nav-start / 2;
+//     grid-area: intro;
+//   }
+// }
 
-// Safari really doesn't like this code:
-// Is this legal with subgrid?!!
-.gl-intro {
-  grid-area: intro;
-}
+// .gl-body {
+//   grid-area: body;
+// }
 
-.gl-body {
-  grid-area: body;
-}
+// main {
+//   grid-area: main;
+
+//   @media screen and (min-width: 960px) {
+//     display: grid;
+//     grid-template-columns: subgrid;
+//     grid-template-areas:
+//       "none intro intro intro intro"
+//       "body body body body body";
+//   }
+// }
+
+// // Safari really doesn't like this code:
+// // Is this legal with subgrid?!!
+// .gl-intro {
+//   grid-area: intro;
+// }
+
+// .gl-body {
+//   grid-area: body;
+// }
