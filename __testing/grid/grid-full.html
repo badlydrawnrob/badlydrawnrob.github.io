@@ -2,20 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>$title$ | robmcdonald.me</title>
+    <title>for humans | robmcdonald.me</title>
     <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    $for(author-meta)$
-      <meta name="author" content="$author-meta$" />
-    $endfor$
-    $if(date-meta)$
-      <meta name="dcterms.date" content="$date-meta$" />
-    $endif$
-    $for(css)$
-      <link rel="stylesheet" href="$css$?v=2.4.1" />
-    $endfor$
-  </head>
-  <body id="$body-id$">
+                  <link rel="stylesheet" href="../../build/style/portfolio.css?v=2.4.1" />
+      </head>
+  <body id="home">
 
     <aside class="gl-folio">
       <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
@@ -30,44 +22,59 @@
         </ol>
       </nav>
 
-    $if(title)$
-      <header>
+          <header>
         <h1>
           <div class="animate">
-            $if(title-animate)$<div class="animate-words">$title-animate$</div>$endif$
-            <span class="animate-static">$title$</span>
+            
+            <span class="animate-static">for humans</span>
           </div>
         </h1>
       </header>
-    $endif$
-
+    
       <main>
         <div class="gl-intro">
-        $if(subtitle)$
-          <h2>$subtitle$</h2>
-        $endif$
-        $if(intro)$
-          <p>$intro$</p>
-        $endif$
-        </div>
+                  <h2>Life is a learning process;</h2>
+                          <p>it’s full of big hairy problems (and little
+ones too!) — I can help you discover ideas, communicate clearly and
+learn what works.</p>
+                </div>
 
         <div class="gl-body">
-          <div class="gl-b-content$if(full-width)$ full-width$endif$">
-            $body$
+          <div class="gl-b-content full-width">
+            <ul>
+            <li>I help turn fuzzy ideas into simple solutions</li>
+            <li>Help 1000s of visitors learn what works for them</li>
+            <li>Make information simple, fun and useful</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed metus nisl, faucibus porttitor commodo sit amet, porta
+            sed magna. Etiam lacinia auctor ultricies. Sed eu mi vel
+            quam iaculis volutpat. Nam nibh sem, porttitor in varius
+            non, porttitor eget justo. Vestibulum condimentum nulla
+            nisi. Sed mollis mollis nibh, eget egestas diam scelerisque
+            at. Nunc a venenatis purus. Nulla quis nisi enim. Etiam
+            neque ante, volutpat eget mauris quis, pulvinar placerat
+            enim. Nullam convallis vestibulum odio, id facilisis erat
+            rutrum volutpat.</p>
+            <!--
+            title-animate: >-
+                <span class="animate-w-hidden">Data</span><br/>
+                <span class="animate-w-hidden">Code</span><br/>
+                <span class="animate-w-hidden">Design</span><br/>
+                <span class="animate-w-hidden">Learning</span>
+            -->
           </div>
         </div>
       </main>
     </div><!-- /.gl-grid-square -->
 
-    $if(call-to-action)$
-    <aside class="cta">
+        <aside class="cta">
       <p>
         <a class="gl-button" href="/contact">Let's <abbr title="love">♥</abbr> learning together</a>
         <span class="cta-reason"> and get things done!</span>
       </p>
     </aside>
-    $endif$
-
+    
     <footer class="gl-footer">
       <div  class="gl-f-social">
         <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
@@ -85,8 +92,5 @@
       </div>
     </footer>
 
-    $for(include-after)$
-    $include-after$
-    $endfor$
-  </body>
+      </body>
 </html>

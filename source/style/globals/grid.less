@@ -1,308 +1,12 @@
 // -----------------------------------------------------------------------------
 // Grid
 // =============================================================================
-// > The base grid is 5 squares wide (minus 1 square for small screens)
+// > Print grids do not perform the same as screen grids!
+// > See `⭐-CSS-GRID-LAYOUT` keynote for rough diagrams :)
 //
-// Our `gl-BaselineGrid` is set to `4dp` with `line-height` of `24 / 16`. I don't
-// think it's a great idea to stick to any vertical rhythm religiously, as screens
-// don't react the same way as print. However, aim to use a standardised unit
-// for gutters (columns, rows) and vertical blocks of content.
-//
-// 1. Set horizontal `margin`s or `margin-inline` to `16dp` (1rem) on outside
-// 2. Set inner margins to `12dp` to fit the square grid where appropriate
-//
-// Bugs
-// ----
-// 1. Unfortunately you can't use css variables inside `@media` queries.
-
-:root {
-  // Square grid
-  --grid-width-small: 740px;  // + 16dp margin = 772px
-  --grid-width-medium: 928px; // + 16dp margin = 960px
-  --grid-gap: var(--spacing-three-quarters);
-}
-
-// -----------------------------------------------------------------------------
-// Global styles
-// -----------------------------------------------------------------------------
-// 1. Counters @ https://bit.ly/2tW2QvT and @ https://bit.ly/2KKKSpL
-
-.gl-folio {
-  border-bottom: var(--spacing-px) solid var(--color-ll);
-  border-bottom: var(--spacing-px) solid var(--color-ll);
-  color: var(--color-dd);
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-mm);
-  padding: var(--spacing-three-quarters);
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: var(--color-dd);
-    text-decoration: underline;
-
-    &:visited {
-      color: var(--color-dd);
-    }
-  }
-}
-
-
-nav {
-  border-bottom: var(--spacing-px) solid var(--color-ll);
-  overflow: scroll; // Mobile `li` overflows
-
-  @media print {
-    display: none;
-  }
-
-  @media screen and (min-width: 772px) {
-    font-size: var(--font-size-p);
-  }
-
-  @media screen and (min-width: 960px) {
-    // align-self: start;
-    // justify-self: center;
-    border-bottom: none;
-    font-size: var(--font-size-p);
-    padding: calc(var(--spacing-micro) * 4) 0 0;
-  }
-
-  a {
-    text-decoration: none;
-  }
-}
-
-nav ol {
-  counter-reset: li;  // (1)
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: var(--spacing-increment);
-  list-style: none;
-  margin: 0;
-
-  @media screen and (min-width: 960px) {
-    display: block;
-    height: auto;
-  }
-}
-
-nav ol li {
-  margin: 0;
-  padding-right: var(--spacing-one);
-
-  &::before {
-    color: var(--color-s);
-    counter-increment: li;
-    content: counters(li, ".", decimal-leading-zero); // (1)
-    font-family: var(--font-family-mono);
-    margin-right: var(--spacing-half);
-  }
-
-  @media screen and (min-width: 772px) {
-    &::after {
-      content: '·';
-      padding-left: var(--spacing-one);
-    }
-
-    &:last-child::after {
-      content: '';
-    }
-  }
-
-  @media screen and (min-width: 960px) {
-    padding: 0;
-
-    &::after {
-      content:none;
-    }
-  }
-}
-
-header {
-  h1 {
-    margin-bottom: 0;
-
-    @media screen and (min-width: 800px) {
-      font-size: var(--font-size-pppppp);
-    }
-  }
-}
-
-.gl-intro {
-  h2 {
-    display: inline;
-    font-size: var(--font-size-pp);
-    font-weight: 700;
-    line-height: var(--line-height-one);
-    margin: 0;
-    padding-right: var(--spacing-half);
-
-    @media screen and (min-width: 960px) {
-      font-size: var(--font-size-ppp);
-    }
-  }
-
-  p {
-    display: inline;
-    font-size: var(--font-size-pp);
-    margin: 0;
-
-    @media screen and (min-width: 960px) {
-      font-size: var(--font-size-ppp);
-    }
-  }
-}
-
-
-// Footer ----------------------------------------------------------------------
-// Should I be using `grid-footer` instead of `gl-footer`?
-
-.gl-footer {
-  @media screen {
-    background: var(--color-p);
-    border-top: var(--spacing-px) solid var(--color-ll);
-  }
-
-  a {
-    color: var(--color-dddd);
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      color: var(--color-ppp);
-    }
-  }
-}
-
-.gl-f-social {
-  @media screen {
-    li {
-      list-style: none;
-      margin-left: 0;
-    }
-  }
-}
-
-.gl-f-tagline {
-  background: var(--color-dddd);
-  color: var(--color-lll);
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-mm);
-
-  @media print {
-    display: none;
-  }
-
-  @media screen and (min-width: 772px) {
-    font-size: var(--font-size-m);
-  }
-
-  p {
-    margin-bottom: var(--spacing-half);
-  }
-
-  a {
-    color: var(--color-lll);
-  }
-}
-
-.gl-f-social,
-.gl-ft-content {
-  padding: var(--spacing-one);
-
-  @media screen and (min-width: 772px) {
-    margin: 0 auto;
-    padding: var(--spacing-one) 0;
-    width: var(--grid-width-small);
-  }
-}
-
-
-// -----------------------------------------------------------------------------
-// Home page
-// -----------------------------------------------------------------------------
-
-#home .cta {
-  padding: var(--spacing-one);
-  border-top: var(--spacing-px) solid var(--color-ll);
-
-  @media screen and (min-width: 772px) {
-    padding: var(--spacing-two) 0;
-  }
-
-  p {
-    margin: 0 auto;
-    width: var(--grid-width-small);
-  }
-}
-
-#home .cta .gl-button {
-  @media screen {
-    color: var(--color-ddd);
-    font-family: var(--font-family-mono);
-    text-transform: uppercase;
-    background: var(--color-lll);
-    border: var(--spacing-micro) solid var(--color-ddd);
-
-    &:hover,
-    &:focus {
-      color: var(--color-lll);
-      background: var(--color-ddd);
-
-      abbr {
-        color: var(--color-s);
-      }
-    }
-  }
-
-  @media screen and (min-width: 772px) {
-    display: inline-block;
-    text-align: left;
-  }
-
-  abbr {
-    text-decoration: none;
-  }
-}
-
-
-// -----------------------------------------------------------------------------
-// Buttons
-// -----------------------------------------------------------------------------
-// Works for `a` links and `button` elements. Regular links should show up in
-// `@media print` as regular text.
-
-.gl-button {
-  @media screen {
-    background-color: var(--color-pp);
-    border-radius: var(--border-radius);
-    color: var(--color-lll);
-    display: inline-block;
-    font-weight: bold;
-    padding: var(--spacing-one) var(--spacing-two);
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      color: var(--color-lll);
-      background: color-mix(in oklab, var(--color-ppp), black 30%); // (1)
-    }
-  }
-}
-
-
-// -----------------------------------------------------------------------------
-// Grid styles
-// -----------------------------------------------------------------------------
-// > See the `⭐-CSS-GRID-LAYOUT` keynote for rough diagrams
-//
-// - It's not necessary to use `grid` for mobile, but we're doing it here.
+// 1. Baseline grid is `4dp`/`8dp` (see `print-first-css` for `line-height`)
+// 2. Screen-based vertical rythmn is hard (use similar sizing units)
+// 3. It's not necessary to use `grid` for mobile, but we're doing it here.
 //
 // Vertical rythmn
 // ---------------
@@ -340,12 +44,25 @@ header {
 // I don't think it's currently possible to target `subgrid` children with
 // named `grid-template-areas` (e.g: `.gl-body -> grid-area: body;`).
 //
-// Bugs to understand
-// ------------------
-// 1. Be careful of sizing columns and rows when html elements don't match
+// Bugs
+// ----
+// 1. You can't use css variables inside `@media` queries.
+// 2. Be careful of sizing columns and rows when html elements don't match
 //    - For example, `nav header main` are stacked and `nav` takes 3 rows ...
 //    - But `main` hasn't been styled so only 2 rows are visible in inspector
 //    - Similar to intrinsic rows I guess (more html elements than are in css grid)
+// 3. I managed to crash Safari by messing up the css grid declarations
+//    - @ #306c56c
+
+:root {
+  // Square grid
+  --grid-width-small: 740px;  // + 16dp margin = 772px
+  --grid-width-medium: 928px; // + 16dp margin = 960px
+  --grid-gap: var(--spacing-three-quarters);
+  --spacing-grid-square: 176px;
+  --spacing-grid-square-half: 88px;
+  --spacing-grid-square-quarter: 44px;
+}
 
 .gl-grid-square {
   display: grid;
@@ -424,5 +141,21 @@ main {
 }
 
 .gl-body {
-  grid-area: body;
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: subgrid;
+  }
+}
+
+.gl-b-content {
+  @media screen and (min-width: 960px) {
+    grid-column: col2-start / col5-end;
+  }
+
+  &.full-width {
+    @media screen and (min-width: 960px) {
+      grid-column: nav-start / col5-end;
+    }
+  }
 }

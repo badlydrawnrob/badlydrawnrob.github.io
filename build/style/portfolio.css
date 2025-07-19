@@ -876,9 +876,6 @@ i {
   --col-nav: 300px;
   --col-main: 730px;
   --col-aside: 400px;
-  --spacing-grid-square: 176px;
-  --spacing-grid-square-half: 88px;
-  --spacing-grid-square-quarter: 44px;
   --font-color: var(--color-ddd);
   --fallback-mono: 'Source Code Pro', 'Roboto Mono', monospace, monospace;
   --border-radius: var(--spacing-quarter);
@@ -959,10 +956,102 @@ mark {
 p {
   hyphens: manual;
 }
+@media screen {
+  .gl-button {
+    background-color: var(--color-pp);
+    border-radius: var(--border-radius);
+    color: var(--color-lll);
+    display: inline-block;
+    font-weight: bold;
+    padding: var(--spacing-one) var(--spacing-two);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .gl-button:hover {
+    color: var(--color-lll);
+    background: color-mix(in oklab, var(--color-ppp), black 30%);
+  }
+}
 :root {
   --grid-width-small: 740px;
   --grid-width-medium: 928px;
   --grid-gap: var(--spacing-three-quarters);
+  --spacing-grid-square: 176px;
+  --spacing-grid-square-half: 88px;
+  --spacing-grid-square-quarter: 44px;
+}
+.gl-grid-square {
+  display: grid;
+  gap: var(--spacing-three-quarters);
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--spacing-grid-square-quarter) var(--spacing-grid-square-half) auto;
+  grid-template-areas: "nav" "header" "main";
+  margin: var(--spacing-one);
+}
+@media screen and (min-width: 772px) {
+  .gl-grid-square {
+    grid-template-rows: var(--spacing-grid-square-half) var(--spacing-grid-square) auto;
+    margin: 0 auto;
+    width: var(--grid-width-small);
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-grid-square {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: var(--spacing-grid-square) auto auto;
+    grid-template-areas: "header header header header header" "nav    col2   col3   col4   col5" "nav    col2   col3   col4   col5";
+    width: var(--grid-width-medium);
+  }
+}
+nav {
+  align-content: center;
+  grid-area: nav;
+}
+@media screen and (min-width: 960px) {
+  nav {
+    align-content: start;
+  }
+}
+header {
+  align-content: end;
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+@media screen and (min-width: 960px) {
+  main {
+    display: grid;
+    grid-area: unset;
+    grid-column: nav-start / col5-end;
+    grid-row: nav-start / nav-end;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-template-areas: ". intro intro intro intro" "body body body body body";
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-intro {
+    grid-area: intro;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-body {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: subgrid;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-b-content {
+    grid-column: col2-start / col5-end;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-b-content.full-width {
+    grid-column: nav-start / col5-end;
+  }
 }
 .gl-folio {
   border-bottom: var(--spacing-px) solid var(--color-ll);
@@ -980,6 +1069,10 @@ p {
 }
 .gl-folio a:visited {
   color: var(--color-dd);
+}
+.gl-folio a:hover,
+.gl-folio a:focus {
+  color: var(--color-ppp);
 }
 nav {
   border-bottom: var(--spacing-px) solid var(--color-ll);
@@ -1057,29 +1150,6 @@ header h1 {
     font-size: var(--font-size-pppppp);
   }
 }
-.gl-intro h2 {
-  display: inline;
-  font-size: var(--font-size-pp);
-  font-weight: 700;
-  line-height: var(--line-height-one);
-  margin: 0;
-  padding-right: var(--spacing-half);
-}
-@media screen and (min-width: 960px) {
-  .gl-intro h2 {
-    font-size: var(--font-size-ppp);
-  }
-}
-.gl-intro p {
-  display: inline;
-  font-size: var(--font-size-pp);
-  margin: 0;
-}
-@media screen and (min-width: 960px) {
-  .gl-intro p {
-    font-size: var(--font-size-ppp);
-  }
-}
 @media screen {
   .gl-footer {
     background: var(--color-p);
@@ -1134,120 +1204,28 @@ header h1 {
     width: var(--grid-width-small);
   }
 }
-#home .cta {
-  padding: var(--spacing-one);
-  border-top: var(--spacing-px) solid var(--color-ll);
-}
-@media screen and (min-width: 772px) {
-  #home .cta {
-    padding: var(--spacing-two) 0;
-  }
-}
-#home .cta p {
-  margin: 0 auto;
-  width: var(--grid-width-small);
-}
-@media screen {
-  #home .cta .gl-button {
-    color: var(--color-ddd);
-    font-family: var(--font-family-mono);
-    text-transform: uppercase;
-    background: var(--color-lll);
-    border: var(--spacing-micro) solid var(--color-ddd);
-  }
-  #home .cta .gl-button:hover,
-  #home .cta .gl-button:focus {
-    color: var(--color-lll);
-    background: var(--color-ddd);
-  }
-  #home .cta .gl-button:hover abbr,
-  #home .cta .gl-button:focus abbr {
-    color: var(--color-s);
-  }
-}
-@media screen and (min-width: 772px) {
-  #home .cta .gl-button {
-    display: inline-block;
-    text-align: left;
-  }
-}
-#home .cta .gl-button abbr {
-  text-decoration: none;
-}
-@media screen {
-  .gl-button {
-    background-color: var(--color-pp);
-    border-radius: var(--border-radius);
-    color: var(--color-lll);
-    display: inline-block;
-    font-weight: bold;
-    padding: var(--spacing-one) var(--spacing-two);
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  .gl-button:hover {
-    color: var(--color-lll);
-    background: color-mix(in oklab, var(--color-ppp), black 30%);
-  }
-}
-.gl-grid-square {
-  display: grid;
-  gap: var(--spacing-three-quarters);
-  grid-template-columns: 1fr;
-  grid-template-rows: var(--spacing-grid-square-quarter) var(--spacing-grid-square-half) auto;
-  grid-template-areas: "nav" "header" "main";
-  margin: var(--spacing-one);
-}
-@media screen and (min-width: 772px) {
-  .gl-grid-square {
-    grid-template-rows: var(--spacing-grid-square-half) var(--spacing-grid-square) auto;
-    margin: 0 auto;
-    width: var(--grid-width-small);
-  }
+.gl-intro h2 {
+  display: inline;
+  font-size: var(--font-size-pp);
+  font-weight: 700;
+  line-height: var(--line-height-one);
+  margin: 0;
+  padding-right: var(--spacing-half);
 }
 @media screen and (min-width: 960px) {
-  .gl-grid-square {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: var(--spacing-grid-square) auto auto;
-    grid-template-areas: "header header header header header" "nav    col2   col3   col4   col5" "nav    col2   col3   col4   col5";
-    width: var(--grid-width-medium);
+  .gl-intro h2 {
+    font-size: var(--font-size-ppp);
   }
 }
-nav {
-  align-content: center;
-  grid-area: nav;
+.gl-intro p {
+  display: inline;
+  font-size: var(--font-size-pp);
+  margin: 0;
 }
 @media screen and (min-width: 960px) {
-  nav {
-    align-content: start;
+  .gl-intro p {
+    font-size: var(--font-size-ppp);
   }
-}
-header {
-  align-content: end;
-  grid-area: header;
-}
-main {
-  grid-area: main;
-}
-@media screen and (min-width: 960px) {
-  main {
-    display: grid;
-    grid-area: unset;
-    grid-column: nav-start / col5-end;
-    grid-row: nav-start / nav-end;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-    grid-template-areas: ". intro intro intro intro" "body body body body body";
-  }
-}
-@media screen and (min-width: 960px) {
-  .gl-intro {
-    grid-area: intro;
-  }
-}
-.gl-body {
-  grid-area: body;
 }
 #ozaria hr {
   border-color: #F0C135;
@@ -1393,136 +1371,45 @@ main {
     top: -160px;
   }
 }
-#home .animate-words {
-  vertical-align: top;
-  overflow: hidden;
-  height: 52px;
-  position: relative;
-  display: inline-block;
-  width: 230px;
-}
-@media screen and (min-width: 800px) {
-  #home .animate-words {
-    width: 365px;
-    height: 112px;
-  }
-}
-#home .animate-w-hidden {
-  position: absolute;
-  top: 20px;
-  display: inline-block;
-  width: 365px;
-  opacity: 0;
-  animation: animate-words 16s infinite;
-}
-@media screen and (min-width: 1200px) {
-  #home .animate-w-hidden {
-    text-align: right;
-  }
-}
-#home .animate-w-hidden:nth-child(3) {
-  animation-delay: 4s;
-}
-#home .animate-w-hidden:nth-child(5) {
-  animation-delay: 8s;
-}
-#home .animate-w-hidden:nth-child(7) {
-  animation-delay: 12s;
-}
-@keyframes animate-words {
-  0% {
-    top: 20px;
-    opacity: 0;
-  }
-  5% {
-    top: 0px;
-    opacity: 1;
-  }
-  10% {
-    top: 0;
-    opacity: 1;
-  }
-  20% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.1;
-    top: 0;
-  }
-  30% {
-    opacity: 0;
-    top: 20px;
-  }
-}
-#home .animate-static {
-  display: block;
-}
-@media screen and (min-width: 1200px) {
-  #home .animate-static {
-    display: inline-block;
-  }
-}
-#home .call-to-action {
-  padding: var(--spacing) 0;
+#home .cta {
+  padding: var(--spacing-one);
   border-top: var(--spacing-px) solid var(--color-ll);
 }
-@media print {
-  #home .call-to-action {
-    display: none;
+@media screen and (min-width: 772px) {
+  #home .cta {
+    padding: var(--spacing-two) 0;
   }
 }
-@media screen and (min-width: 800px) {
-  #home .call-to-action {
-    grid-column: 1 / span 5;
-    grid-row: 5;
+#home .cta p {
+  margin: 0 auto;
+  width: var(--grid-width-small);
+}
+@media screen {
+  #home .cta .gl-button {
+    color: var(--color-ddd);
+    font-family: var(--font-family-mono);
+    text-transform: uppercase;
+    background: var(--color-lll);
+    border: var(--spacing-micro) solid var(--color-ddd);
+  }
+  #home .cta .gl-button:hover,
+  #home .cta .gl-button:focus {
+    color: var(--color-lll);
+    background: var(--color-ddd);
+  }
+  #home .cta .gl-button:hover abbr,
+  #home .cta .gl-button:focus abbr {
+    color: var(--color-s);
   }
 }
-#home .call-to-action p {
-  margin: 0;
-  font-family: var(--font-family-mono);
-}
-@media screen and (min-width: 800px) {
-  #home .call-to-action p {
-    max-width: var(--col-main);
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 800px) {
-  #home .call-to-action p .cta-reason {
-    display: block;
-    text-align: center;
-    margin-top: var(--spacing-one);
-  }
-}
-#home .call-to-action a {
-  display: block;
-  padding: var(--spacing-one);
-  color: var(--color-ddd);
-  font-family: var(--font-family-mono);
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: var(--color-lll);
-  border: var(--spacing-micro) solid var(--color-ddd);
-  border-radius: var(--border-radius);
-}
-@media screen and (min-width: 800px) {
-  #home .call-to-action a {
+@media screen and (min-width: 772px) {
+  #home .cta .gl-button {
     display: inline-block;
     text-align: left;
   }
 }
-#home .call-to-action a abbr {
+#home .cta .gl-button abbr {
   text-decoration: none;
-}
-#home .call-to-action a:hover,
-#home .call-to-action a:focus {
-  color: var(--color-lll);
-  background: var(--color-ddd);
-}
-#home .call-to-action a:hover abbr,
-#home .call-to-action a:focus abbr {
-  color: var(--color-s);
 }
 #orbit p + ol li {
   font-weight: 700;
