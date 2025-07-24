@@ -4,12 +4,19 @@
 // Aim to keep both the html markup and css very simple. Don't add unnecessary
 // elements or design. This may need a better compiler at a later date.
 
+#ozaria {
+  --grid-margin: calc(176px + var(--grid-gap));
+}
+
 img.left {
   float: left;
   width: 200px;
   margin-right: var(--spacing);
 }
 
+.bc-four {
+  margin-left: var(--grid-margin);
+}
 
 // -----------------------------------------------------------------------------
 // Signup sections
@@ -17,6 +24,7 @@ img.left {
 
 .signup {
    margin-bottom: var(--spacing);
+   margin-left: var(--grid-margin);
 
   p {
     margin: 0;
@@ -54,6 +62,23 @@ img.left {
 }
 
 
+// -----------------------------------------------------------------------------
+// Breakouts
+// -----------------------------------------------------------------------------
+// 1. There's currently no way to add class to the `figure` element
+//     - @ https://github.com/jgm/pandoc/discussions/9546 (adds to `img` instead)
+
+.breakout {
+  @media screen and (min-width: 960px) {
+    column-gap: var(--spacing-two);
+    display: flex;
+    flex-wrap: wrap;
+
+    & ul {
+      font-size: var(--font-size-pp);
+    }
+  }
+}
 
 
 

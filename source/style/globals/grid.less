@@ -168,13 +168,10 @@ main {
 .gl-b-content {
   @media screen and (min-width: 960px) {
     grid-column: col2-start / col5-end;
-    margin-left: 88px; // #!
   }
 
   &.full-width {
     @media screen and (min-width: 960px) {
-      display: grid;
-      grid-template-columns: subgrid;
       grid-column: nav-start / col5-end;
     }
   }
@@ -182,6 +179,6 @@ main {
 
 
 .gl-bc-four {
-    // #! (2) You need to mess around with subgrids and rows!
-    // #! We need TWO subgrids: one for intro/body, one for body contents
-  }
+  // #! (2) You need to mess around with subgrids and rows!
+  // #! We need TWO subgrids: one for intro/body, one for body contents
+}

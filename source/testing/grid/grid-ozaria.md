@@ -45,7 +45,7 @@ If you’re like most parents, summer brings some familiar challenges:
 </div><!-- /.b-left -->
 </div><!-- /.breakout -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
 
@@ -55,12 +55,12 @@ But nothing sticks.
 
 Here’s the truth: Kids don’t hate learning. They just need the *right* kind of learning—something that feels like a game and keeps their curiosity alive.
 
-</div><!-- /.gl-bc-four -->
+</div><!-- /.bc-four -->
 
 
 <!-- //////////////////// normal w/ float image ///////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 ![](../../build/static/mugshot.png){.left}
 
@@ -82,7 +82,7 @@ With Ozaria, kids don’t just learn to code—they become the heroes of their o
 
 And now, your child can try it for free—this summer.
 
-</div><!-- /.gl-bc-four -->
+</div><!-- /.bc-four -->
 
 
 <!-- ////////////////////////// breakout /////////////////////////////////// -->
@@ -104,7 +104,7 @@ And now, your child can try it for free—this summer.
 
 <!-- ///////////////////// breakout — additional /////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
@@ -143,7 +143,7 @@ And now, your child can try it for free—this summer.
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 ### Real Python Coding
 
@@ -177,7 +177,7 @@ No apps, downloads, or setup headaches. Just log in and go.
 
 🎯 *Suggested Image: Screenshot of a child’s completed game project with a “You Did It!” badge and a beaming smile.*
 
-</div><!-- /.gl-bc-four -->
+</div><!-- /.bc-four -->
 
 
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
@@ -206,7 +206,7 @@ It’s an adventure that could shape your child’s future.
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 ## 🤔 “But What If My Child Has Never Coded Before?”
 
@@ -237,7 +237,7 @@ Simple, visual flashcards to help lock in what they’ve learned—perfect for p
 
 🧾 *Suggested Image: A fun-looking “Coding Hero” certificate next to colorful flashcards on a desk.*
 
-</div><!-- /.gl-bc-four -->
+</div><!-- /.bc-four -->
 
 
 <!-- ///////////////////////// testimonials //////////////////////////////// -->
@@ -288,7 +288,7 @@ Simple, visual flashcards to help lock in what they’ve learned—perfect for p
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 ## ❓ Frequently Asked Questions
 
@@ -307,12 +307,12 @@ Even better. This is the perfect way to start. We take them step-by-step through
 **How long are the sessions?**
 Two hours each day—11:00 AM to 1:00 PM—for two days.
 
-</div><!-- /.gl-bc-four -->
+</div><!-- /.bc-four -->
 
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="gl-bc-four">
+<div class="bc-four">
 
 ## 🧠 Before you go ...
 

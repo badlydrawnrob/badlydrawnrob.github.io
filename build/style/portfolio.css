@@ -1048,19 +1048,11 @@ main {
 @media screen and (min-width: 960px) {
   .gl-b-content {
     grid-column: col2-start / col5-end;
-    margin-left: 88px;
   }
 }
 @media screen and (min-width: 960px) {
   .gl-b-content.full-width {
-    display: grid;
-    grid-template-columns: subgrid;
     grid-column: nav-start / col5-end;
-  }
-}
-@media screen and (min-width: 960px) {
-  .gl-bc-four {
-    grid-column: col2-start / col5-end;
   }
 }
 .gl-folio {
@@ -1236,13 +1228,20 @@ header h1 {
     font-size: var(--font-size-ppp);
   }
 }
+#ozaria {
+  --grid-margin: calc(176px + var(--grid-gap));
+}
 img.left {
   float: left;
   width: 200px;
   margin-right: var(--spacing);
 }
+.bc-four {
+  margin-left: var(--grid-margin);
+}
 .signup {
   margin-bottom: var(--spacing);
+  margin-left: var(--grid-margin);
 }
 .signup p {
   margin: 0;
@@ -1272,6 +1271,16 @@ img.left {
 @media screen and (min-width: 960px) {
   .su-body {
     padding: var(--spacing-two);
+  }
+}
+@media screen and (min-width: 960px) {
+  .breakout {
+    column-gap: var(--spacing-two);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breakout ul {
+    font-size: var(--font-size-pp);
   }
 }
 #home .cta {
