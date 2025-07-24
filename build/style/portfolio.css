@@ -907,6 +907,7 @@ a:active {
 blockquote {
   color: var(--color-ddd);
   border-left: var(--spacing-quarter) solid var(--color-dd);
+  overflow: auto;
 }
 @media screen and (min-width: 800px) {
   blockquote {
@@ -926,6 +927,7 @@ h1 {
 }
 h2 {
   font-weight: 700;
+  line-height: var(--line-height);
 }
 figure {
   text-align: center;
@@ -1046,11 +1048,19 @@ main {
 @media screen and (min-width: 960px) {
   .gl-b-content {
     grid-column: col2-start / col5-end;
+    margin-left: 88px;
   }
 }
 @media screen and (min-width: 960px) {
   .gl-b-content.full-width {
+    display: grid;
+    grid-template-columns: subgrid;
     grid-column: nav-start / col5-end;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gl-bc-four {
+    grid-column: col2-start / col5-end;
   }
 }
 .gl-folio {
@@ -1153,7 +1163,6 @@ header h1 {
 @media screen {
   .gl-footer {
     background: var(--color-p);
-    border-top: var(--spacing-px) solid var(--color-ll);
   }
 }
 .gl-footer a {
@@ -1227,148 +1236,42 @@ header h1 {
     font-size: var(--font-size-ppp);
   }
 }
-#ozaria hr {
-  border-color: #F0C135;
+img.left {
+  float: left;
+  width: 200px;
+  margin-right: var(--spacing);
 }
-#ozaria .signup {
+.signup {
   margin-bottom: var(--spacing);
 }
-#ozaria .signup p {
+.signup p {
   margin: 0;
 }
 @media screen {
-  #ozaria p.signup-heading {
+  .su-heading {
     background: var(--color-lll);
     font-weight: 700;
     padding: var(--spacing-one);
     border: 1px solid color-mix(in srgb, var(--color-pp), transparent 80%);
   }
 }
-@media screen and (min-width: 1200px) {
-  #ozaria p.signup-heading {
-    margin: 0 calc(var(--spacing-two) * -1) 0;
+@media screen and (min-width: 960px) {
+  .su-heading {
     padding: var(--spacing-two);
   }
 }
 @media screen {
-  #ozaria .signup-body {
+  .su-body {
     padding: var(--spacing-one);
     background: var(--color-p);
   }
-  #ozaria .signup-body ul li {
+  .su-body ul li {
     margin-left: var(--spacing-one);
   }
 }
-@media screen and (min-width: 1200px) {
-  #ozaria .signup-body {
-    margin: 0 calc(var(--spacing-two) * -1);
+@media screen and (min-width: 960px) {
+  .su-body {
     padding: var(--spacing-two);
-  }
-}
-#ozaria .mugshot {
-  position: relative;
-}
-#ozaria .mugshot img {
-  height: 200px;
-  width: 188px;
-  position: absolute;
-}
-#ozaria .mugshot h2,
-#ozaria .mugshot blockquote {
-  margin-left: calc(var(--spacing-six) * 2);
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .breakout {
-    column-gap: var(--spacing-two);
-    display: flex;
-    flex-wrap: wrap;
-    margin: var(--spacing-two) calc(calc(var(--spacing-six) * 2) * -1);
-  }
-  #ozaria .breakout ul {
-    font-size: var(--font-size-pp);
-  }
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .breakout-header {
-    flex: 1 0 100%;
-    order: -1;
-  }
-  #ozaria .breakout-header h2 {
-    font-size: var(--font-size-pppp);
-  }
-  #ozaria .breakout-header.right h2 {
-    text-align: right;
-  }
-  #ozaria .breakout-header p {
-    font-size: var(--font-size-ppp);
-  }
-}
-#ozaria .breakout-header.blobby {
-  position: relative;
-}
-@media screen {
-  #ozaria .breakout-header.blobby h2 {
-    margin-left: var(--spacing-five);
-    padding-top: var(--spacing-one);
-  }
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .breakout-header.blobby h2 {
-    margin-left: var(--spacing-six);
-    padding-top: var(--spacing-five);
-  }
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .breakout figure,
-  #ozaria .breakout ul {
-    flex: 1 0 calc(50% - var(--spacing-two));
-  }
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .breakout ul li {
-    margin-left: var(--spacing-one);
-  }
-}
-#ozaria .blob {
-  display: none;
-}
-@media screen {
-  #ozaria .blob {
-    display: block;
-    position: absolute;
-    left: -20px;
-    top: -15px;
-  }
-  #ozaria .blob img {
-    z-index: -1;
-    height: 100px;
-    width: 100px;
-  }
-  #ozaria .blob .blob-number {
-    color: var(--color-lll);
-    font-size: var(--font-size-ppp);
-    font-weight: 700;
-    top: -77px;
-    left: 40px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #ozaria .blob {
-    left: -70px;
-    top: -100px;
-    z-index: -1;
-  }
-  #ozaria .blob img {
-    height: 250px;
-    width: 250px;
-  }
-  #ozaria .blob .blob-number {
-    color: var(--color-lll);
-    font-size: var(--font-size-ppppp);
-    font-weight: 700;
-    left: 112px;
-    top: -160px;
   }
 }
 #home .cta {

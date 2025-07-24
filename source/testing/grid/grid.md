@@ -1,6 +1,5 @@
 ---
 body-id: home
-call-to-action: False
 full-width: False
 intro: >-
     it's full of big hairy problems (and little ones too!) —

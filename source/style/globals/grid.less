@@ -37,8 +37,8 @@
 // > - Child elements can only reference their IMMEDIATE parent's named areas.
 // > - So named `grid-area`s are scoped locally to each grid container.
 //
-// You've also got to watch out how many elements you have within a `subgrid`.
-// For example `.subgrid > .item4` would be FOUR rows. If you're trying to position
+// Be careful how many elements you add within a `subgrid`. If you had 4 elements
+// It'd would now have FOUR (implicit) rows. If you're trying to position
 // to a parent grid's TWO rows it's going to be difficult (or impossible)
 //
 // I don't think it's currently possible to target `subgrid` children with
@@ -48,11 +48,9 @@
 // ----
 // 1. You can't use css variables inside `@media` queries.
 // 2. Be careful of sizing columns and rows when html elements don't match
-//    - For example, `nav header main` are stacked and `nav` takes 3 rows ...
-//    - But `main` hasn't been styled so only 2 rows are visible in inspector
-//    - Similar to intrinsic rows I guess (more html elements than are in css grid)
+//    - You might have to be explicit about children's height/width/rows/columns
 // 3. I managed to crash Safari by messing up the css grid declarations
-//    - @ #306c56c
+//    - @ https://tinyurl.com/306c56c-css-grid-bug
 
 :root {
   // Square grid
@@ -116,6 +114,26 @@ header {
   grid-area: header;
 }
 
+
+// -----------------------------------------------------------------------------
+// Subgrid
+// -----------------------------------------------------------------------------
+// You can either use `row-start` and `row-end` style measurements (from the
+// parent grid), or use `grid-template-areas` to define your subgrid areas.
+//
+// 1. We do NOT want to use `subgrid` for rows (we don't know how many we need)
+// 2. EVERYTHING within this element is a row (so don't use raw `html` elements)
+//
+// Bugs
+// ----
+// 1. Safari (Monterey) doesn't display proper `auto` row height
+//     - `grid-auto-rows`, `grid-template-rows` don't do anything
+//     - Adding a `margin` sort of helps.
+// 2. Setting `parent child.subgrid child-child.subgrid` breaks layout
+//     - You have to set grid lines again and again
+//     - I need to have a play around with nested subgrids
+//     - Better to have only ONE subgrid? Or remove subgrid from `parent > child`?
+
 main {
   grid-area: main;
 
@@ -134,12 +152,11 @@ main {
 
 .gl-intro {
   @media screen and (min-width: 960px) {
-    // grid-column: col2-start / col5-end;
-    // grid-row: nav-start / 2;
     grid-area: intro;
   }
 }
 
+// (1), (2)
 .gl-body {
   @media screen and (min-width: 960px) {
     display: grid;
@@ -151,11 +168,20 @@ main {
 .gl-b-content {
   @media screen and (min-width: 960px) {
     grid-column: col2-start / col5-end;
+    margin-left: 88px; // #!
   }
 
   &.full-width {
     @media screen and (min-width: 960px) {
+      display: grid;
+      grid-template-columns: subgrid;
       grid-column: nav-start / col5-end;
     }
   }
 }
+
+
+.gl-bc-four {
+    // #! (2) You need to mess around with subgrids and rows!
+    // #! We need TWO subgrids: one for intro/body, one for body contents
+  }
