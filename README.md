@@ -24,6 +24,10 @@ My styleguide might not be suitable when working in large teams (where change co
 7. CUT CODE DOWN! Wherever possible :)
 8. When in doubt, prefer EXPLICIT naming of styles
     - See the `img.b-left` example below
+    - Is `img.left` worse than `.img-left`? (floated images)
+9. **Nesting should be no more than 3 levels deep**
+    - 4 absolute maximum.
+    - Prefer a flat style.
 
 ```css
 /* CONCRETE AND STRICT BEATS WISHY-WASHY CONVENTIONS */
@@ -80,11 +84,12 @@ header h1 strong a
 /* As we prefer standardised components over variety, move to a `.gl-` style */
 .gl-section /* from `#pagename .section` */
 
-/* The DOWNSIDE of Thema styles is it restricts nesting css classes ..   */
-/* (well, you could nest 2-3 levels deep but we're preferring flat style) */
+/* ~~The DOWNSIDE of Thema styles is it restricts nesting css classes ..~~   */
+/* (well, you could nest 2-3 levels deep but we're preferring flat style)     */
 #ozaria .breakout
 #ozaria .b-blob    /* We could've nested `.bb-number` here   */
 #ozaria .bb-number /* But the naming convention disallows it */
+/* You'd have to do `.breakout { .b-blob { .bb-number } }`   */
 
 /* Be careful of NAMING CONFLICTS (this image will be sized TWICE)    */
 /* Either make it more specific `>` or name them better `b-image-left` */

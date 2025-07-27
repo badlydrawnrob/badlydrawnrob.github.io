@@ -1235,13 +1235,20 @@ header h1 {
   --grid-margin: calc(176px + var(--grid-gap));
   --color-yellow: #EEC01A;
 }
+#ozaria blockquote {
+  border-color: var(--color-yellow);
+}
+img.left,
+img.right {
+  width: 200px;
+}
 img.left {
   float: left;
-  width: 200px;
   margin-right: var(--spacing);
 }
-.bc-four {
-  margin-left: var(--grid-margin);
+img.right {
+  float: right;
+  margin-left: var(--spacing);
 }
 .signup {
   margin-bottom: var(--spacing);
@@ -1281,9 +1288,15 @@ img.left {
     padding: var(--spacing-two);
   }
 }
+#ozaria hr {
+  border-color: var(--color-yellow);
+}
 #ozaria .breakout {
   margin-bottom: var(--spacing-increment);
   border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+}
+#ozaria .breakout.borderless {
+  border: none;
 }
 @media screen and (min-width: 960px) {
   #ozaria .breakout {
@@ -1291,9 +1304,6 @@ img.left {
     display: flex;
     flex-wrap: wrap;
   }
-}
-#ozaria .breakout hr {
-  border-color: var(--color-yellow);
 }
 @media screen and (min-width: 960px) {
   #ozaria figure:has(img.b-left),
@@ -1330,6 +1340,29 @@ img.left {
 .bc-four {
   margin-bottom: var(--spacing-increment);
   border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+}
+.bc-four.borderless {
+  border: none;
+}
+@media screen and (min-width: 960px) {
+  .bc-four {
+    margin-left: var(--grid-margin);
+  }
+}
+@media screen and (min-width: 768px) {
+  #ozaria .testimonials {
+    font-size: var(--font-size-pp);
+  }
+}
+@media screen and (min-width: 768px) {
+  #ozaria .t-split {
+    column-gap: var(--spacing-two);
+    display: flex;
+    margin-bottom: var(--spacing-increment);
+  }
+  #ozaria .t-split .ts-half {
+    width: calc(50% - var(--spacing-one));
+  }
 }
 #home .cta {
   padding: var(--spacing-one);

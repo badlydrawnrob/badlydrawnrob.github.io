@@ -5,6 +5,7 @@ intro: >-
     a FREE summer 2-Day online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
 body-id: ozaria
 full-width: True
+header-includes: <script async src="https://tally.so/widgets/embed.js"></script>
 ---
 
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
@@ -17,7 +18,7 @@ full-width: True
 - 🖥️ **No previous experience** required (or downloads!)
 - 🧠 **Build real Python coding skills** while having fun!
 
-[👉 BOOK NOW – Spots Are Limited!](http://somewhere.com){.gl-button}
+[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
 
 <!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
 
@@ -93,7 +94,7 @@ And now, your child can try it for free—this summer.
 
 <div class="breakout">
 
-![some cool image](../../build/static/computer-summer-kid.jpg){.b-right}
+![Real gameplay](../../build/static/computer-summer-kid.jpg){.b-right}
 
 <div class="b-left">
 <div class="b-blob">
@@ -112,14 +113,14 @@ And now, your child can try it for free—this summer.
 
 <div class="bc-four">
 
+🗓 **Dates:** August 4th–6th | 🕒 **Time:** 11:00 AM – 12:30 PM | 💻 **Location:** Online
+
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
 - Build their own mini-games and interactive stories
 - Team up with others and think like a tech creator
 
-🗓 **Dates:** August 1–2
-🕒 **Time:** 11:00 AM–1:00 PM
-💻 **Location:** Online (no software needed)
+All you need is a computer or laptop, the meetings app, and yourself!
 
 </div>
 
@@ -130,7 +131,7 @@ And now, your child can try it for free—this summer.
 
 <div class="breakout">
 
-![some cool image](../../build/static/computer-summer-kid.jpg){.b-left}
+![Have fun learning this summer!](../../build/static/computer-summer-kid.jpg){.b-left}
 
 <div class="b-right">
 <div class="b-blob">
@@ -152,39 +153,40 @@ And now, your child can try it for free—this summer.
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="bc-four">
+<div class="bc-four borderless">
 
-### Real Python Coding
+## Real Python Coding
 
-They’ll learn the foundations of one of the most-used coding languages in the world.
+> They’ll learn the foundations of one of the most-used coding languages in the world.
 
 * **Why it matters:** Python is used by developers at Google, Netflix, and NASA. It’s also the most beginner-friendly.
 
-### How to solve problems themselves
+### Help kids to solve problems themselves
+
+> **Why it matters:** Creative coding keeps them engaged and gives them a sense of ownership.
 
 Kids don’t just follow lessons — they learn how to problem solve and look up solutions by themself
 
-* **Why it matters:** Creative coding keeps them engaged and gives them a sense of ownership.
 
 ### Story-Based Challenges
 
+> **Why it matters:** Storytelling sparks imagination and makes abstract concepts easier to grasp.
+
 They'll become the main character in a coding quest that unfolds as they learn.
 
-* **Why it matters:** Storytelling sparks imagination and makes abstract concepts easier to grasp.
 
 ### Teamwork & Collaboration
 
+> **Why it matters:** Builds communication, problem-solving, and peer confidence.
+
 Even online, they’ll solve challenges together.
 
-* **Why it matters:** Builds communication, problem-solving, and peer confidence.
 
 ### Simple & Accessible
 
-No apps, downloads, or setup headaches. Just log in and go.
+> **Why it matters:** Works from any home computer with internet—perfect for busy parents.
 
-* **Why it matters:** Works from any home computer with internet—perfect for busy parents.
-
-🎯 *Suggested Image: Screenshot of a child’s completed game project with a “You Did It!” badge and a beaming smile.*
+Easy to setup, easy to start. Just log in and go.
 
 </div><!-- /.bc-four -->
 
@@ -204,7 +206,7 @@ No apps, downloads, or setup headaches. Just log in and go.
 This isn’t just another Zoom activity.
 It’s an adventure that could shape your child’s future.
 
-[👉 BOOK NOW – Spots Are Limited!](http://somewhere.com){.gl-button}
+[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -231,8 +233,12 @@ By the end of Day 2, they’ll have written real Python code, collaborated with 
 
 **Confidence = unlocked.**
 
+</div>
+<div class="bc-four">
 
 ## 🎁 Bonuses That Make This a No-Brainer
+
+![](../../build/static/certificate.png){.right}
 
 As part of the free Ozaria Summer Coding Adventure, your child also gets:
 
@@ -262,11 +268,20 @@ Simple, visual flashcards to help lock in what they’ve learned—perfect for p
 > — Kaila
 
 <div class="t-split">
+<div class="ts-half">
 
-✅ 90% of students say they feel confident coding after Ozaria
+### ✅ 90%
 
-✅ 99% say they *enjoy* using it to learn
+Of students say they feel confident coding after Ozaria
 
+</div>
+<div class="ts-half">
+
+### ✅ 99%
+
+Say they *enjoy* using it to learn
+
+</div>
 </div><!-- /.t-split -->
 </div><!-- /.testimonials -->
 
@@ -276,20 +291,18 @@ Simple, visual flashcards to help lock in what they’ve learned—perfect for p
 <!-- 📸 *Suggested Image: A countdown timer, bold text: “Only X Days Left to Join!”* -->
 
 <div class="signup">
-<p class="su-heading">🌟 Time to book your spot!</p>
+<p class="su-heading">🌟 Time to book your spot! <br>⏰ Limited spots available — **registration closes August 3rd!**</p>
 <div class="su-body">
 
 > Give your child the tools to create, think logically, and have a blast—all while learning to code.
 
 - 💰 **Price:** Free!
-- 🎁 **Real value:** £79+ (if this were a paid camp)
-- 📅 **Dates:** August 1–2
-- 🕒 **Time:** 11:00 AM–1:00 PM
+- 🎁 **Real value:** £112+ (if this were a paid camp)
+- 📅 **Dates:** August 4th–6th
+- 🕒 **Time:** 11:00 AM – 12:30 PM
 - 💻 **Location:** Online
 
-⚠️ **Limited spots available—registration closes July 31st!**
-
-[👉 BOOK NOW – Spots Are Limited!](http://somewhere.com){.gl-button}
+[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -314,14 +327,14 @@ Yes! 100% free. No hidden costs, no upsells. Just fun, interactive learning.
 Even better. This is the perfect way to start. We take them step-by-step through every challenge.
 
 **How long are the sessions?**
-Two hours each day—11:00 AM to 1:00 PM—for two days.
+1.5 hours each day — 11:00 AM to 12:30 PM—for two days. We'll have a couple of breaks so the students don't get tired.
 
 </div><!-- /.bc-four -->
 
 
 <!-- //////////////////////////// normal /////////////////////////////////// -->
 
-<div class="bc-four">
+<div class="bc-four borderless">
 
 ## 🧠 Before you go ...
 
@@ -335,9 +348,9 @@ Or you can give them something that’s:
 
 They’ll walk away with new skills, more confidence, and a big smile on their face.
 
-[👉 BOOK NOW – Before August 1st!](http://somewhere.com){.gl-button}
+Let the adventure begin!
 
-Let the adventure begin.
+[👉 BOOK NOW – Before August 3rd!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 
