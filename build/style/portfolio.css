@@ -929,6 +929,9 @@ h2 {
   font-weight: 700;
   line-height: var(--line-height);
 }
+h3 {
+  font-weight: 700;
+}
 figure {
   text-align: center;
 }
@@ -1230,6 +1233,7 @@ header h1 {
 }
 #ozaria {
   --grid-margin: calc(176px + var(--grid-gap));
+  --color-yellow: #EEC01A;
 }
 img.left {
   float: left;
@@ -1241,7 +1245,11 @@ img.left {
 }
 .signup {
   margin-bottom: var(--spacing);
-  margin-left: var(--grid-margin);
+}
+@media screen and (min-width: 960px) {
+  .signup {
+    margin-left: var(--grid-margin);
+  }
 }
 .signup p {
   margin: 0;
@@ -1273,15 +1281,55 @@ img.left {
     padding: var(--spacing-two);
   }
 }
+#ozaria .breakout {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+}
 @media screen and (min-width: 960px) {
-  .breakout {
+  #ozaria .breakout {
     column-gap: var(--spacing-two);
     display: flex;
     flex-wrap: wrap;
   }
-  .breakout ul {
-    font-size: var(--font-size-pp);
+}
+#ozaria .breakout hr {
+  border-color: var(--color-yellow);
+}
+@media screen and (min-width: 960px) {
+  #ozaria figure:has(img.b-left),
+  #ozaria figure:has(img.b-right),
+  #ozaria .breakout > .b-left,
+  #ozaria .breakout > .b-right {
+    width: calc(50% - var(--spacing-one));
   }
+}
+#ozaria .breakout > .b-left {
+  order: -1;
+}
+#ozaria .b-blob {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  #ozaria .b-blob {
+    display: block;
+    position: relative;
+  }
+  #ozaria .b-blob img {
+    height: 160px;
+    margin: -15px -30px;
+    width: 160px;
+  }
+}
+#ozaria .bb-number {
+  font-weight: 700;
+  font-size: var(--font-size-ppppp);
+  left: 70px;
+  position: absolute;
+  top: 70px;
+}
+.bc-four {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
 }
 #home .cta {
   padding: var(--spacing-one);

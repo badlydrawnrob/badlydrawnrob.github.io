@@ -22,6 +22,8 @@ My styleguide might not be suitable when working in large teams (where change co
 6. Adding a space in before `style=` allows for quicker column scanning
     - You can render without whitespace with a compiler (like Pandoc)
 7. CUT CODE DOWN! Wherever possible :)
+8. When in doubt, prefer EXPLICIT naming of styles
+    - See the `img.b-left` example below
 
 ```css
 /* CONCRETE AND STRICT BEATS WISHY-WASHY CONVENTIONS */
@@ -77,6 +79,18 @@ header h1 strong a
 /* You can move items up the hierarchy (from page style to global style) */
 /* As we prefer standardised components over variety, move to a `.gl-` style */
 .gl-section /* from `#pagename .section` */
+
+/* The DOWNSIDE of Thema styles is it restricts nesting css classes ..   */
+/* (well, you could nest 2-3 levels deep but we're preferring flat style) */
+#ozaria .breakout
+#ozaria .b-blob    /* We could've nested `.bb-number` here   */
+#ozaria .bb-number /* But the naming convention disallows it */
+
+/* Be careful of NAMING CONFLICTS (this image will be sized TWICE)    */
+/* Either make it more specific `>` or name them better `b-image-left` */
+#ozaria figure:has(img.b-left),
+#ozaria figure:has(img.b-right),
+#ozaria .b-left /* left aligned content */
 ```
 
 If there's no need for class names — don't add them! There's two ways we could design this navigation, and the first route is totally valid.

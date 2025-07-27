@@ -29,23 +29,26 @@ full-width: True
 
 <div class="breakout">
 
-![Don't be bored. Be a coding hero!](../../build/static/computer-hero-kid.jpg){.b-right}
+![Don't be bored. Be a coding hero!](../../build/static/computer-hero-kid.jpg){.b-left}
 
-<div class="b-left">
-<div class="b-blob">1<img src="../../build/static/blob.svg" alt="section 1" /></div>
+<div class="b-right">
+<div class="b-blob">
+  <span class="bb-number">1</span>
+  <img src="../../build/static/blob-01.svg" alt="section 1" />
+</div>
 
 ## 😩 Want to beat the summer boredom?
 
-If you’re like most parents, summer brings some familiar challenges:
-
-- **Your child is glued to YouTube** or games that teach them nothing.
-- **They’re bored. You're busy.** And you’re running out of ideas.
-- **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
+If you’re like most parents, summer brings some familiar challenges ...
 
 </div><!-- /.b-left -->
 </div><!-- /.breakout -->
 
 <div class="bc-four">
+
+- **Your child is glued to YouTube** or games that teach them nothing.
+- **They’re bored. You're busy.** And you’re running out of ideas.
+- **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
 
 The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
 
@@ -64,9 +67,9 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 ![](../../build/static/mugshot.png){.left}
 
-## 👋 Hey, I’m \[Your Name], and I Help Kids Fall in Love with Coding
+## 👋 Hey, I’m Rob, and I Help Kids Fall in Love with Coding
 
-> Over the past 5 years, I’ve taught coding to over 800 learners — from 8 to 80 years old.
+> Over the past 5 years, I’ve taught coding to over 800 learners — from 8 to 60 years old.
 
 I believe learning to code should be **fun, creative, and confidence-building.** Not intimidating or boring.
 
@@ -90,10 +93,13 @@ And now, your child can try it for free—this summer.
 
 <div class="breakout">
 
-![some cool image](../../build/static/computer-summer-kid.jpg){.b-left}
+![some cool image](../../build/static/computer-summer-kid.jpg){.b-right}
 
-<div class="b-right">
-<div class="b-blob">2<img src="../../build/static/blob.svg" alt="section 2" /></div>
+<div class="b-left">
+<div class="b-blob">
+  <span class="bb-number">2</span>
+  <img src="../../build/static/blob-02.svg" alt="section 2" />
+</div>
 
 ## What Is Ozaria?
 
@@ -124,10 +130,13 @@ And now, your child can try it for free—this summer.
 
 <div class="breakout">
 
-![some cool image](../../build/static/computer-summer-kid.jpg){.b-right}
+![some cool image](../../build/static/computer-summer-kid.jpg){.b-left}
 
-<div class="b-left">
-<div class="b-blob">3<img src="../../build/static/blob.svg" alt="section 3" /></div>
+<div class="b-right">
+<div class="b-blob">
+  <span class="bb-number">3</span>
+  <img src="../../build/static/blob-03.svg" alt="section 3" />
+</div>
 
 ## 🎯 What They’ll Learn (and Why It Matters)
 
@@ -186,11 +195,11 @@ No apps, downloads, or setup headaches. Just log in and go.
 <p class="su-heading">🌟 Here’s What You’re Really Signing Up For</p>
 <div class="su-body">
 
-✅ A boredom-busting summer experience
-✅ Real skills that can last a lifetime
-✅ A confidence boost in logic, problem-solving, and creativity
-✅ A safe and supportive online space
-✅ And… an exciting introduction to the tech world of tomorrow
+- ✅ A boredom-busting summer experience
+- ✅ Real skills that can last a lifetime
+- ✅ A confidence boost in logic, problem-solving, and creativity
+- ✅ A safe and supportive online space
+- ✅ And… an exciting introduction to the tech world of tomorrow
 
 This isn’t just another Zoom activity.
 It’s an adventure that could shape your child’s future.
@@ -319,14 +328,14 @@ Two hours each day—11:00 AM to 1:00 PM—for two days.
 You can keep looking for summer activities that might engage your child…
 Or you can give them something that’s:
 
-* Fun ✅
-* Educational ✅
-* Creative ✅
-* Completely free ✅
+* ✅ Fun
+* ✅ Educational
+* ✅ Creative
+* ✅ Completely free
 
 They’ll walk away with new skills, more confidence, and a big smile on their face.
 
-👉 **\[BOOK NOW – Before July 31st]**
+[👉 BOOK NOW – Before August 1st!](http://somewhere.com){.gl-button}
 
 Let the adventure begin.
 

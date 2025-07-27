@@ -6,6 +6,7 @@
 
 #ozaria {
   --grid-margin: calc(176px + var(--grid-gap));
+  --color-yellow: #EEC01A;
 }
 
 img.left {
@@ -23,8 +24,11 @@ img.left {
 // -----------------------------------------------------------------------------
 
 .signup {
-   margin-bottom: var(--spacing);
-   margin-left: var(--grid-margin);
+  margin-bottom: var(--spacing);
+
+  @media screen and (min-width: 960px) {
+    margin-left: var(--grid-margin);
+  }
 
   p {
     margin: 0;
@@ -40,7 +44,7 @@ img.left {
   }
 
   @media screen and (min-width: 960px) {
-    // margin: 0 calc(var(--spacing-two) * -1) 0;
+    // margin-left: var(--grid-margin);
     padding: var(--spacing-two);
   }
 }
@@ -56,7 +60,6 @@ img.left {
   }
 
   @media screen and (min-width: 960px) {
-    // margin: 0 calc(var(--spacing-two) * -1);
     padding: var(--spacing-two);
   }
 }
@@ -65,24 +68,75 @@ img.left {
 // -----------------------------------------------------------------------------
 // Breakouts
 // -----------------------------------------------------------------------------
+// > #! I need to understand flexbox a little better
+//
 // 1. There's currently no way to add class to the `figure` element
 //     - @ https://github.com/jgm/pandoc/discussions/9546 (adds to `img` instead)
+// 2. This is risky business as `img` gets targeted TWICE
+//     - first time within figure (`img.b-left`)
+//     - second time within breakout (`.b-left`)
 
-.breakout {
+#ozaria .breakout {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+
   @media screen and (min-width: 960px) {
     column-gap: var(--spacing-two);
     display: flex;
     flex-wrap: wrap;
+  }
 
-    & ul {
-      font-size: var(--font-size-pp);
+  hr {
+    border-color: var(--color-yellow);
+  }
+}
+
+// #! (2)
+#ozaria figure:has(img.b-left),
+#ozaria figure:has(img.b-right),
+#ozaria .breakout > .b-left,
+#ozaria .breakout > .b-right {
+  @media screen and (min-width: 960px) {
+    width: calc(50% - var(--spacing-one));
+  }
+}
+
+#ozaria .breakout > .b-left {
+  order: -1;
+}
+
+#ozaria .b-blob {
+  display: none;
+
+  @media screen and (min-width: 960px) {
+    display: block;
+    position: relative;
+
+    img {
+      height: 160px;
+      margin: -15px -30px;
+      width: 160px;
     }
   }
 }
 
+#ozaria .bb-number {
+    font-weight: 700;
+    font-size: var(--font-size-ppppp);
+    left: 70px;
+    position: absolute;
+    top: 70px;
+}
 
 
+// -----------------------------------------------------------------------------
+// Normal sections
+// -----------------------------------------------------------------------------
 
+.bc-four {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+}
 
 
 
