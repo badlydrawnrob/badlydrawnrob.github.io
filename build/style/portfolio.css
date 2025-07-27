@@ -1009,24 +1009,24 @@ p {
     width: var(--grid-width-medium);
   }
 }
-nav {
+.gl-grid-square nav {
   align-content: center;
   grid-area: nav;
 }
 @media screen and (min-width: 960px) {
-  nav {
+  .gl-grid-square nav {
     align-content: start;
   }
 }
-header {
+.gl-grid-square header {
   align-content: end;
   grid-area: header;
 }
-main {
+.gl-grid-square main {
   grid-area: main;
 }
 @media screen and (min-width: 960px) {
-  main {
+  .gl-grid-square main {
     display: grid;
     grid-area: unset;
     grid-column: nav-start / col5-end;
