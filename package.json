@@ -6,7 +6,7 @@
   "scripts": {
     "test": "which pandoc",
     "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
-    "test-grid": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid.md -o ./__testing/grid/grid.html",
+    "test-grid": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid.md -o ./__testing/grid/grid.html --variable=call-to-action",
     "test-grid-full": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid-full.md -o ./__testing/grid/grid-full.html",
     "test-grid-ozaria": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid-ozaria.md -o ./__testing/grid/grid-ozaria.html",
 
