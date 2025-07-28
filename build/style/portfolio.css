@@ -1251,7 +1251,7 @@ img.right {
   margin-left: var(--spacing);
 }
 .signup {
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-increment);
 }
 @media screen and (min-width: 960px) {
   .signup {

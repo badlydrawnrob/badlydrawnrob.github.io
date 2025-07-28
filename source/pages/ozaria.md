@@ -12,14 +12,14 @@ intro: >-
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
 <div class="signup">
-<p class="su-heading">🌟 August 1–2 • 11am–1pm Daily • Ages 8–12 • 100% FREE</p>
+<p class="su-heading">🌟 August 4th–6th • 11:00AM—12:30PM Daily • Ages 8–12 • 100% FREE</p>
 <div class="su-body">
 
 - 🎮 **Learn to code** through games, stories, and creativity
 - 🖥️ **No previous experience** required (or downloads!)
 - 🧠 **Build real Python coding skills** while having fun!
 
-[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
+[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
 
 <!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
 
@@ -69,17 +69,17 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 ![](../../build/static/mugshot.png){.left}
 
-## 👋 Hey, I’m Rob, and I Help Kids Fall in Love with Coding
+## 👋 Hey, I’m Rob, and I help kids fall in love with Coding
 
 > Over the past 5 years, I’ve taught coding to over 800 learners — from 8 to 60 years old.
 
 I believe learning to code should be **fun, creative, and confidence-building.** Not intimidating or boring.
 
-That’s why I created **Code for Kids - Ozaria Summer Coding Adventure**. It’s built around **Ozaria**, a story-rich coding platform used in classrooms worldwide.
+That’s why I'm running **Code for Kids - Ozaria Summer Coding Adventure**. It’s built around **Ozaria**, a story-rich coding platform used in classrooms worldwide.
 
 With Ozaria, kids don’t just learn to code—they become the heroes of their own game.
 
-**As seen in:**
+**Why kids love Ozaria**
 
 - Trusted by educators worldwide
 - 90% of students feel confident coding after Ozaria
@@ -105,7 +105,7 @@ And now, your child can try it for free—this summer.
 
 ## What Is Ozaria?
 
-> 🧙‍♂️ This summer we'll get together for a **100% free, two-day online coding adventure** where your child will:
+> 🧙‍♂️ This summer we'll get together for a **100% free, three-day online coding adventure** where your child will:
 
 </div><!-- /.b-right -->
 </div><!-- /.breakout -->
@@ -114,14 +114,14 @@ And now, your child can try it for free—this summer.
 
 <div class="bc-four">
 
-🗓 **Dates:** August 4th–6th | 🕒 **Time:** 11:00 AM – 12:30 PM | 💻 **Location:** Online
+🗓 **Dates:** August 4th–6th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
 
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
 - Build their own mini-games and interactive stories
 - Team up with others and think like a tech creator
 
-All you need is a computer or laptop, the meetings app, and yourself!
+All you need is a computer or laptop and yourself!
 
 </div>
 
@@ -140,7 +140,7 @@ All you need is a computer or laptop, the meetings app, and yourself!
   <img src="../../build/static/blob-03.svg" alt="section 3" />
 </div>
 
-## 🎯 What They’ll Learn (and Why It Matters)
+## 🎯 What they’ll learn (and why it matters)
 
 - ✅ Real Python Coding
 - ✅ How to solve problems themselves
@@ -156,7 +156,7 @@ All you need is a computer or laptop, the meetings app, and yourself!
 
 <div class="bc-four borderless">
 
-## Real Python Coding
+## 🐍 Real Python coding
 
 > They’ll learn the foundations of one of the most-used coding languages in the world.
 
@@ -169,21 +169,21 @@ All you need is a computer or laptop, the meetings app, and yourself!
 Kids don’t just follow lessons — they learn how to problem solve and look up solutions by themself
 
 
-### Story-Based Challenges
+### Story-based challenges
 
 > **Why it matters:** Storytelling sparks imagination and makes abstract concepts easier to grasp.
 
 They'll become the main character in a coding quest that unfolds as they learn.
 
 
-### Teamwork & Collaboration
+### Teamwork & collaboration
 
 > **Why it matters:** Builds communication, problem-solving, and peer confidence.
 
 Even online, they’ll solve challenges together.
 
 
-### Simple & Accessible
+### Simple & accessible
 
 > **Why it matters:** Works from any home computer with internet—perfect for busy parents.
 
@@ -195,7 +195,7 @@ Easy to setup, easy to start. Just log in and go.
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
 <div class="signup">
-<p class="su-heading">🌟 Here’s What You’re Really Signing Up For</p>
+<p class="su-heading">🌟 Here’s what you’re signing up for</p>
 <div class="su-body">
 
 - ✅ A boredom-busting summer experience
@@ -207,7 +207,9 @@ Easy to setup, easy to start. Just log in and go.
 This isn’t just another Zoom activity.
 It’s an adventure that could shape your child’s future.
 
-[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+<br>
+
+[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -220,7 +222,7 @@ It’s an adventure that could shape your child’s future.
 
 <div class="bc-four">
 
-## 🤔 “But What If My Child Has Never Coded Before?”
+## 🤔 “But what if my child has never coded before?”
 
 > Perfect. This adventure is made **specifically for beginners.**
 
@@ -230,28 +232,28 @@ It’s an adventure that could shape your child’s future.
 
 They just need curiosity and a computer.
 
-By the end of Day 2, they’ll have written real Python code, collaborated with others, and ready to take on harder challenges.
+By the end of Day 3, they’ll have written real Python code, collaborated with others, and ready to take on harder challenges.
 
 **Confidence = unlocked.**
 
 </div>
 <div class="bc-four">
 
-## 🎁 Bonuses That Make This a No-Brainer
+## 🎁 Bonuses that make this a no-brainer
 
 ![](../../build/static/certificate.png){.right}
 
 As part of the free Ozaria Summer Coding Adventure, your child also gets:
 
-### 🎓 Coding Hero Certificate
+### 🎓 Coding Hero certificate
 
 A printable award to celebrate their progress. Proud-parent moment, guaranteed!
 
-### 🧠 Coding Flashcards
+### 🧠 Coding flashcards
 
 Simple, visual flashcards to help lock in what they’ve learned—perfect for practice after the event.
 
-🧾 *Suggested Image: A fun-looking “Coding Hero” certificate next to colorful flashcards on a desk.*
+<!-- 🧾 *Suggested Image: A fun-looking “Coding Hero” certificate next to colorful flashcards on a desk.* -->
 
 </div><!-- /.bc-four -->
 
@@ -260,7 +262,7 @@ Simple, visual flashcards to help lock in what they’ve learned—perfect for p
 
 <div class="testimonials">
 
-## 💬 Here’s What Others Are Saying
+## 💬 Here’s what others are saying
 
 > "Introduces students to computer science concepts without the heavy theory. Keeps them engaged with fun graphics and game concepts without overwhelming them."
 > — Adam K.
@@ -300,10 +302,10 @@ Say they *enjoy* using it to learn
 - 💰 **Price:** Free!
 - 🎁 **Real value:** £112+ (if this were a paid camp)
 - 📅 **Dates:** August 4th–6th
-- 🕒 **Time:** 11:00 AM – 12:30 PM
+- 🕒 **Time:** 11:00AM—12:30PM
 - 💻 **Location:** Online
 
-[👉 BOOK NOW – Spots Are Limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -313,7 +315,7 @@ Say they *enjoy* using it to learn
 
 <div class="bc-four">
 
-## ❓ Frequently Asked Questions
+## ❓ Frequently asked questions
 
 **What age group is this course suitable for?**
 Kids aged 8–12. It’s beginner-friendly and designed to be fun!
@@ -328,7 +330,7 @@ Yes! 100% free. No hidden costs, no upsells. Just fun, interactive learning.
 Even better. This is the perfect way to start. We take them step-by-step through every challenge.
 
 **How long are the sessions?**
-1.5 hours each day — 11:00 AM to 12:30 PM—for two days. We'll have a couple of breaks so the students don't get tired.
+1.5 hours each day — 11:00 AM to 12:30 PM—for three days. We'll have a couple of breaks so the students don't get tired.
 
 </div><!-- /.bc-four -->
 
