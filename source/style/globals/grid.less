@@ -51,6 +51,9 @@
 //    - You might have to be explicit about children's height/width/rows/columns
 // 3. I managed to crash Safari by messing up the css grid declarations
 //    - @ https://tinyurl.com/306c56c-css-grid-bug
+// 4. NAVIGATION WON'T CLICK!!!
+//     - I think this is a subgrid bug (without `display: grid` the intro overlays
+//       the navigation)
 
 :root {
   // Square grid
@@ -103,6 +106,7 @@
 .gl-grid-square nav {
   align-content: center;
   grid-area: nav;
+  z-index: 1; // #! (4) Subgrid fucks up clickability
 
   @media screen and (min-width: 960px) {
     align-content: start;

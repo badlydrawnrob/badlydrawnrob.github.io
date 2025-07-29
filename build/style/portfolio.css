@@ -1012,6 +1012,7 @@ p {
 .gl-grid-square nav {
   align-content: center;
   grid-area: nav;
+  z-index: 1;
 }
 @media screen and (min-width: 960px) {
   .gl-grid-square nav {

@@ -74,7 +74,7 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 ## 👋 Hey, I’m Rob, and I help kids fall in love with Coding
 
-> Over the past 5 years, I’ve taught coding to over 800 learners — from 8 to 60 years old.
+> Over the past 5 years, **I’ve taught coding to over 800 learners** — from 8 to 60 years old. I'm well qualified to teach and am recently DBS (check) certified.
 
 I believe learning to code should be **fun, creative, and confidence-building.** Not intimidating or boring.
 
