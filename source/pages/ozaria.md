@@ -12,7 +12,10 @@ intro: >-
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
 <div class="signup">
-<p class="su-heading">🌟 August 4th–6th • 11:00AM—12:30PM Daily • Ages 8–12 • 100% FREE</p>
+<p class="su-heading">
+  🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12
+  <br>👋 100% FREE • ⏰ **Registration closes August 5th!**</p>
+</p>
 <div class="su-body">
 
 - 🎮 **Learn to code** through games, stories, and creativity
@@ -31,12 +34,12 @@ intro: >-
 
 <div class="breakout">
 
-![Don't be bored. Be a coding hero!](../../build/static/computer-hero-kid.jpg){.b-left}
+![Don't be bored. Be a coding hero!](./build/static/computer-hero-kid.jpg){.b-left}
 
 <div class="b-right">
 <div class="b-blob">
   <span class="bb-number">1</span>
-  <img src="../../build/static/blob-01.svg" alt="section 1" />
+  <img src="./build/static/blob-01.svg" alt="section 1" />
 </div>
 
 ## 😩 Want to beat the summer boredom?
@@ -67,7 +70,7 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 <div class="bc-four">
 
-![](../../build/static/mugshot.png){.left}
+![](./build/static/mugshot.png){.left}
 
 ## 👋 Hey, I’m Rob, and I help kids fall in love with Coding
 
@@ -95,12 +98,17 @@ And now, your child can try it for free—this summer.
 
 <div class="breakout">
 
-![Real gameplay](../../build/static/computer-summer-kid.jpg){.b-right}
+<!-- ![Real gameplay](./build/static/computer-summer-kid.jpg){.b-right} -->
+<video class="b-right"
+       src="./build/static/gameplay-01.mp4" 
+       muted="false" loop="true"
+       autoplay controls>
+</video>
 
 <div class="b-left">
 <div class="b-blob">
   <span class="bb-number">2</span>
-  <img src="../../build/static/blob-02.svg" alt="section 2" />
+  <img src="./build/static/blob-02.svg" alt="section 2" />
 </div>
 
 ## What Is Ozaria?
@@ -114,14 +122,14 @@ And now, your child can try it for free—this summer.
 
 <div class="bc-four">
 
-🗓 **Dates:** August 4th–6th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
-
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
 - Build their own mini-games and interactive stories
 - Team up with others and think like a tech creator
 
 All you need is a computer or laptop and yourself!
+
+🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
 
 </div>
 
@@ -132,12 +140,18 @@ All you need is a computer or laptop and yourself!
 
 <div class="breakout">
 
-![Have fun learning this summer!](../../build/static/computer-summer-kid.jpg){.b-left}
+<!-- ![Have fun learning this summer!](./build/static/computer-summer-kid.jpg){.b-left} -->
+<video class="b-left"
+       preload="none" src="./build/static/gameplay-02.mp4" 
+       poster="./build/static/gameplay-02.jpg"
+       muted="false" loop="false"
+       controls>
+</video>
 
 <div class="b-right">
 <div class="b-blob">
   <span class="bb-number">3</span>
-  <img src="../../build/static/blob-03.svg" alt="section 3" />
+  <img src="./build/static/blob-03.svg" alt="section 3" />
 </div>
 
 ## 🎯 What they’ll learn (and why it matters)
@@ -241,7 +255,7 @@ By the end of Day 3, they’ll have written real Python code, collaborated with 
 
 ## 🎁 Bonuses that make this a no-brainer
 
-![](../../build/static/certificate.png){.right}
+![](./build/static/certificate.png){.right}
 
 As part of the free Ozaria Summer Coding Adventure, your child also gets:
 
@@ -294,14 +308,14 @@ Say they *enjoy* using it to learn
 <!-- 📸 *Suggested Image: A countdown timer, bold text: “Only X Days Left to Join!”* -->
 
 <div class="signup">
-<p class="su-heading">🌟 Time to book your spot! <br>⏰ Limited spots available — **registration closes August 3rd!**</p>
+<p class="su-heading">🌟 Time to book your spot! <br>⏰ Limited spots available — **registration closes August 5th!**</p>
 <div class="su-body">
 
 > Give your child the tools to create, think logically, and have a blast—all while learning to code.
 
 - 💰 **Price:** Free!
 - 🎁 **Real value:** £112+ (if this were a paid camp)
-- 📅 **Dates:** August 4th–6th
+- 📅 **Dates:** August 6th–8th
 - 🕒 **Time:** 11:00AM—12:30PM
 - 💻 **Location:** Online
 
@@ -353,7 +367,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-[👉 BOOK NOW – Before August 3rd!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 BOOK NOW – Before August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 

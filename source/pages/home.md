@@ -1,7 +1,7 @@
 ---
 body-id: home
 
-title: for humans
+title: Coding for humans
 subtitle: Life is a learning process;
 intro: >-
     it's full of big hairy problems (and little ones too!) —

@@ -1235,6 +1235,9 @@ header h1 {
   --grid-margin: calc(176px + var(--grid-gap));
   --color-yellow: #EEC01A;
 }
+#ozaria hr {
+  border-color: var(--color-yellow);
+}
 #ozaria blockquote {
   border-color: var(--color-yellow);
 }
@@ -1288,9 +1291,6 @@ img.right {
     padding: var(--spacing-two);
   }
 }
-#ozaria hr {
-  border-color: var(--color-yellow);
-}
 #ozaria .breakout {
   margin-bottom: var(--spacing-increment);
   border-bottom: var(--spacing-quarter) solid var(--color-yellow);
@@ -1315,6 +1315,13 @@ img.right {
 }
 #ozaria .breakout > .b-left {
   order: -1;
+}
+@media screen and (min-width: 960px) {
+  #ozaria .breakout video.b-left,
+  #ozaria .breakout video.b-right {
+    align-self: center;
+    height: 280px;
+  }
 }
 #ozaria .b-blob {
   display: none;

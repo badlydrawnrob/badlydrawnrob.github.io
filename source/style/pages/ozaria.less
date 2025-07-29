@@ -7,6 +7,10 @@
 #ozaria {
   --grid-margin: calc(176px + var(--grid-gap));
   --color-yellow: #EEC01A;
+
+  hr {
+    border-color: var(--color-yellow);
+  }
 }
 
 #ozaria blockquote {
@@ -32,6 +36,8 @@ img.right {
 // -----------------------------------------------------------------------------
 // Signup sections
 // -----------------------------------------------------------------------------
+// 1. Optional hand wave emoji
+//     - @ https://codepen.io/jakejarvis/pen/pBZWZw
 
 .signup {
   margin-bottom: var(--spacing-increment);
@@ -85,12 +91,7 @@ img.right {
 // 2. This is risky business as `img` gets targeted TWICE
 //     - first time within figure (`img.b-left`)
 //     - second time within breakout (`.b-left`)
-
-#ozaria {
-  hr {
-    border-color: var(--color-yellow);
-  }
-}
+// 3. Video elements must have a height, or the controls look FUGLY
 
 #ozaria .breakout {
   margin-bottom: var(--spacing-increment);
@@ -119,6 +120,14 @@ img.right {
 
 #ozaria .breakout > .b-left {
   order: -1;
+}
+
+#ozaria .breakout video.b-left,
+#ozaria .breakout video.b-right {
+  @media screen and (min-width: 960px) {
+    align-self: center;
+    height: 280px;
+  }
 }
 
 #ozaria .b-blob {
