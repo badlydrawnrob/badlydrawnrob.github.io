@@ -1,24 +1,17 @@
 // -----------------------------------------------------------------------------
 // Header
 // =============================================================================
-// 1. Did have a `-alert` for unsupported css grid: seems pointless now!
-// 2. #! Change `.gl-document` name
 
-.gl-document {
-  padding: var(--spacing-half) 0;
+.gl-folio {
+  border-bottom: var(--spacing-px) solid var(--color-ll);
+  border-bottom: var(--spacing-px) solid var(--color-ll);
   color: var(--color-dd);
   font-family: var(--font-family-mono);
   font-size: var(--font-size-mm);
-  border-bottom: var(--spacing-px) solid var(--color-l);
-
-  @media screen and (min-width: 800px) {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-    padding: var(--spacing-half);
-  }
+  padding: var(--spacing-three-quarters);
 
   p {
-    margin: 0; // (1)
+    margin: 0;
   }
 
   a {
@@ -28,78 +21,46 @@
     &:visited {
       color: var(--color-dd);
     }
+
+    &:hover,
+    &:focus {
+      color: var(--color-ppp);
+    }
   }
 }
-
-
-// -----------------------------------------------------------------------------
-// Heading (main)
-// -----------------------------------------------------------------------------
-
-.gl-header {
-  margin: var(--spacing-one) 0 var(--spacing-two);
-
-  @media screen and (min-width: 800px) {
-    grid-column: 2;
-    grid-row: 3;
-    margin: var(--spacing-one) 0 var(--spacing-two);
-  }
-
-  @media screen and (min-width: 1200px) {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    padding-left: var(--spacing-five);
-    margin: var(--spacing-two) 0 var(--spacing-increment);
-  }
-}
-
-.gl-header-title {
-  margin: 0;
-
-  @media screen and (min-width: 800px) {
-    font-size: var(--font-size-pppppp);
-  }
-}
-
 
 
 // -----------------------------------------------------------------------------
 // Navigation
 // -----------------------------------------------------------------------------
-// > #! CUT CODE DOWN — there's no need for classes here, use HTML!
-//
 // 1. Counters @ https://bit.ly/2tW2QvT and @ https://bit.ly/2KKKSpL
 
-.gl-nav {
-  padding: var(--spacing) 0;
-  border-bottom: var(--spacing-px) solid var(--color-l);
+nav {
+  border-bottom: var(--spacing-px) solid var(--color-ll);
   overflow: scroll; // Mobile `li` overflows
 
   @media print {
     display: none;
   }
 
-  @media screen and (min-width: 800px) {
-    grid-column: 2 / span 2;
-    grid-row: 2;
+  @media screen and (min-width: 772px) {
+    font-size: var(--font-size-p);
   }
 
-  @media screen and (min-width: 1200px) {
-    grid-column: 1;
-    grid-row: 3;
-    align-self: start;
-    justify-self: center;
-    padding: calc(var(--spacing-micro) * 4) 0 0;
+  @media screen and (min-width: 960px) {
+    // align-self: start;
+    // justify-self: center;
     border-bottom: none;
+    font-size: var(--font-size-p);
+    padding: calc(var(--spacing-micro) * 4) 0 0;
   }
 
   a {
-    color: var(--color-ppp);
     text-decoration: none;
   }
 }
 
-.gl-nav ol {
+nav ol {
   counter-reset: li;  // (1)
   display: flex;
   align-content: flex-start;
@@ -109,20 +70,15 @@
   list-style: none;
   margin: 0;
 
-  @media screen and (min-width: 800px) {
-    font-size: var(--font-size-p);
-  }
-
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 960px) {
     display: block;
     height: auto;
   }
 }
 
-.gl-nav ol li {
+nav ol li {
   margin: 0;
   padding-right: var(--spacing-one);
-
 
   &::before {
     color: var(--color-s);
@@ -132,7 +88,7 @@
     margin-right: var(--spacing-half);
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 772px) {
     &::after {
       content: '·';
       padding-left: var(--spacing-one);
@@ -143,11 +99,26 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 960px) {
     padding: 0;
 
     &::after {
       content:none;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Main heading
+// -----------------------------------------------------------------------------
+
+header {
+  h1 {
+    margin-bottom: 0;
+
+    @media screen and (min-width: 800px) {
+      font-size: var(--font-size-pppppp);
     }
   }
 }

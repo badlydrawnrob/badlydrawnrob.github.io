@@ -4,89 +4,61 @@
 // 1. Hide when printing
 
 .gl-footer {
-  @media screen and (min-width: 800px) {
-    grid-column: 1 / span 5;
-    grid-row: 6;
-  }
-}
-
-.gl-footer-wrapper {
-  padding: var(--spacing) var(--spacing-one);
-  margin-left: calc(var(--spacing-one) * -1);
-  margin-right: calc(var(--spacing-one) * -1);
-
-
   @media screen {
     background: var(--color-p);
-    border-top: var(--spacing-px) solid var(--color-l);
+    // border-top: var(--spacing-px) solid var(--color-ll);
+  }
 
-    & + & {
-      background: var(--color-ddd);
+  a {
+    color: var(--color-dddd);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: var(--color-ppp);
     }
   }
-
-  @media screen and (min-width: 800px) {
-    margin: 0;
-    padding: var(--spacing) 0;
-  }
 }
 
-
-.gl-social {
-  @media screen and (min-width: 800px) {
-    max-width: var(--col-main);
-    margin: 0 auto;
-  }
-}
-
-.gl-social ul {
+.gl-f-social {
   @media screen {
-    margin: 0;
-  }
-
-  li {
-    @media screen {
+    li {
       list-style: none;
       margin-left: 0;
     }
   }
-
-  a {
-    color: var(--color-ddd);
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      color: var(--color-s);
-    }
-  }
 }
 
+.gl-f-tagline {
+  background: var(--color-dddd);
+  color: var(--color-lll);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-mm);
 
-.gl-strapline {
   @media print {
-    display: none;  // (1)
+    display: none; // (1)
   }
 
-  @media screen and (min-width: 800px) {
-    max-width: var(--col-main);
-    margin: 0 auto;
+  @media screen and (min-width: 772px) {
+    font-size: var(--font-size-m);
+  }
+
+  p {
+    margin-bottom: var(--spacing-half);
   }
 
   a {
     color: var(--color-lll);
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      color: var(--color-s);
-    }
   }
 }
 
-.gl-strapline p {
-  margin-bottom: 0;
-  color: var(--color-lll);
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-mm);
+.gl-f-social,
+.gl-ft-content {
+  padding: var(--spacing-one);
+
+  @media screen and (min-width: 772px) {
+    margin: 0 auto;
+    padding: var(--spacing-one) 0;
+    width: var(--grid-width-small);
+  }
 }

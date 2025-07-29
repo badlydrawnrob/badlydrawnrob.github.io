@@ -12,17 +12,20 @@
       <meta name="dcterms.date" content="$date-meta$" />
     $endif$
     $for(css)$
-      <link rel="stylesheet" href="$css$?v=2.4.1" />
+      <link rel="stylesheet" href="$css$?v=$css-version$" />
+    $endfor$
+    $for(header-includes)$
+    $header-includes$
     $endfor$
   </head>
   <body id="$body-id$">
 
-    <div class="gl-container">
-      <aside class="gl-document">
-        <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
-      </aside>
+    <aside class="gl-folio">
+      <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
+    </aside>
 
-      <nav class="gl-nav">
+    <div class="gl-grid-square"><!-- I'M BREAKING MY RULES! -->
+      <nav>
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/ozaria">Code for kids</a></li>
@@ -31,18 +34,13 @@
       </nav>
 
     $if(title)$
-      <header class="gl-header">
-        <h1 class="gl-header-title">
-          <div class="animate">
-            $if(title-animate)$<div class="animate-words">$title-animate$</div>$endif$
-            <span class="animate-static">$title$</span>
-          </div>
-        </h1>
+      <header>
+        <h1>$title$</h1>
       </header>
     $endif$
 
-      <main class="gl-main">
-        <div class="gl-main-intro">
+      <main>
+        <div class="gl-intro">
         $if(subtitle)$
           <h2>$subtitle$</h2>
         $endif$
@@ -51,34 +49,40 @@
         $endif$
         </div>
 
-        $body$
+        <div class="gl-body">
+          <div class="gl-b-content$if(full-width)$ full-width$endif$">
+            $body$
+          </div>
+        </div>
       </main>
+    </div><!-- /.gl-grid-square -->
 
-      $if(call-to-action)$
-      <aside class="call-to-action">
-        <p><a href="/contact">Let's <abbr title="love">♥</abbr> learning together</a><span class="cta-reason"> and get things done!</span></p>
-      </aside>
-      $endif$
+    $if(call-to-action)$<!-- package.json `--variable=call-to-action` -->
+    <aside class="cta">
+      <p>
+        <a class="gl-button" href="/contact">Let's <abbr title="love">♥</abbr> learning together</a>
+        <span class="cta-reason"> and get things done!</span>
+      </p>
+    </aside>
+    $endif$
 
-      <footer class="gl-footer">
-        <div class="gl-footer-wrapper">
-          <div class="gl-social">
-            <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
-            <ul>
-              <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
-              <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
-              <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
-            </ul>
-          </div>
+    <footer class="gl-footer">
+      <div  class="gl-f-social">
+        <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
+        <ul>
+          <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
+          <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
+          <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
+        </ul>
+      </div>
+      <div  class="gl-f-tagline">
+        <div class="gl-ft-content">
+          <p>Making data fit for human consumption <a href="#">since 2001</a></p>
+          <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
         </div>
-        <div class="gl-footer-wrapper">
-          <div class="gl-strapline">
-            <p>Making data fit for human consumption <a href="#">since 2001</a></p>
-            <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
-          </div>
-        </div>
-      </footer>
-    </div><!-- .gl-container -->
+      </div>
+    </footer>
+
     $for(include-after)$
     $include-after$
     $endfor$

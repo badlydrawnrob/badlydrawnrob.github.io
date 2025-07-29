@@ -1,0 +1,195 @@
+// -----------------------------------------------------------------------------
+// Ozaria
+// =============================================================================
+// Aim to keep both the html markup and css very simple. Don't add unnecessary
+// elements or design. This may need a better compiler at a later date.
+
+#ozaria {
+  --grid-margin: calc(176px + var(--grid-gap));
+  --color-yellow: #EEC01A;
+
+  hr {
+    border-color: var(--color-yellow);
+  }
+}
+
+#ozaria blockquote {
+  border-color: var(--color-yellow);
+}
+
+img.left,
+img.right {
+  width: 200px;
+}
+
+img.left {
+  float: left;
+  margin-right: var(--spacing);
+}
+
+img.right {
+  float: right;
+  margin-left: var(--spacing);
+}
+
+
+// -----------------------------------------------------------------------------
+// Signup sections
+// -----------------------------------------------------------------------------
+// 1. Optional hand wave emoji
+//     - @ https://codepen.io/jakejarvis/pen/pBZWZw
+
+.signup {
+  margin-bottom: var(--spacing-increment);
+
+  @media screen and (min-width: 960px) {
+    margin-left: var(--grid-margin);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.su-heading {
+  @media screen {
+    background: var(--color-lll);
+    font-weight: 700;
+    padding: var(--spacing-one);
+    border: 1px solid color-mix(in srgb, var(--color-pp), transparent 80%);
+  }
+
+  @media screen and (min-width: 960px) {
+    // margin-left: var(--grid-margin);
+    padding: var(--spacing-two);
+  }
+}
+
+.su-body {
+  @media screen {
+    padding: var(--spacing-one);
+    background: var(--color-p);
+
+    ul li {
+      margin-left: var(--spacing-one);
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: var(--spacing-two);
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Breakouts
+// -----------------------------------------------------------------------------
+// > #! I need to understand flexbox a little better
+//
+// 1. There's currently no way to add class to the `figure` element
+//     - @ https://github.com/jgm/pandoc/discussions/9546 (adds to `img` instead)
+// 2. This is risky business as `img` gets targeted TWICE
+//     - first time within figure (`img.b-left`)
+//     - second time within breakout (`.b-left`)
+// 3. Video elements must have a height, or the controls look FUGLY
+
+#ozaria .breakout {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+
+  &.borderless {
+    border: none;
+  }
+
+  @media screen and (min-width: 960px) {
+    column-gap: var(--spacing-two);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// #! (2)
+#ozaria figure:has(img.b-left),
+#ozaria figure:has(img.b-right),
+#ozaria .breakout > .b-left,
+#ozaria .breakout > .b-right {
+  @media screen and (min-width: 960px) {
+    width: calc(50% - var(--spacing-one));
+  }
+}
+
+#ozaria .breakout > .b-left {
+  order: -1;
+}
+
+#ozaria .breakout video.b-left,
+#ozaria .breakout video.b-right {
+  @media screen and (min-width: 960px) {
+    align-self: center;
+    height: 280px;
+  }
+}
+
+#ozaria .b-blob {
+  display: none;
+
+  @media screen and (min-width: 960px) {
+    display: block;
+    position: relative;
+
+    img {
+      height: 160px;
+      margin: -15px -30px;
+      width: 160px;
+    }
+  }
+}
+
+#ozaria .bb-number {
+  font-weight: 700;
+  font-size: var(--font-size-ppppp);
+  left: 70px;
+  position: absolute;
+  top: 70px;
+}
+
+
+// -----------------------------------------------------------------------------
+// Normal sections
+// -----------------------------------------------------------------------------
+
+.bc-four {
+  margin-bottom: var(--spacing-increment);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+
+  &.borderless {
+    border: none;
+  }
+
+   @media screen and (min-width: 960px) {
+    margin-left: var(--grid-margin);
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Testimonials
+// -----------------------------------------------------------------------------
+
+#ozaria .testimonials {
+  @media screen and (min-width: 768px) {
+    font-size: var(--font-size-pp);
+  }
+}
+
+#ozaria .t-split {
+  @media screen and (min-width: 768px) {
+    column-gap: var(--spacing-two);
+    display: flex;
+    margin-bottom: var(--spacing-increment);
+
+    & .ts-half {
+      width: calc(50% - var(--spacing-one));
+    }
+  }
+}

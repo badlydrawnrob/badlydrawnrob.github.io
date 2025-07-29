@@ -2,12 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Coding for humans | robmcdonald.me</title>
+    <title>$title$ | robmcdonald.me</title>
     <meta name="generator" content="pandoc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-                  <link rel="stylesheet" href="./build/style/portfolio.css?v=2.6.1" />
-          </head>
-  <body id="home">
+    $for(author-meta)$
+      <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+      <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $for(css)$
+      <link rel="stylesheet" href="$css$?v=$css-version$" />
+    $endfor$
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+  </head>
+  <body id="$body-id$">
 
     <aside class="gl-folio">
       <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
@@ -22,38 +33,43 @@
         </ol>
       </nav>
 
-          <header>
-        <h1>Coding for humans</h1>
+    $if(title)$
+      <header>
+        <h1>
+          <div class="animate">
+            $if(title-animate)$<div class="animate-words">$title-animate$</div>$endif$
+            <span class="animate-static">$title$</span>
+          </div>
+        </h1>
       </header>
-    
+    $endif$
+
       <main>
         <div class="gl-intro">
-                  <h2>Life is a learning process;</h2>
-                          <p>it’s full of big hairy problems (and little
-ones too!) — I can help you discover ideas, communicate clearly and
-learn what works.</p>
-                </div>
+        $if(subtitle)$
+          <h2>$subtitle$</h2>
+        $endif$
+        $if(intro)$
+          <p>$intro$</p>
+        $endif$
+        </div>
 
         <div class="gl-body">
-          <div class="gl-b-content">
-            <ul>
-            <li>I help turn fuzzy ideas into simple solutions</li>
-            <li>Help 1000s of visitors learn what works for them</li>
-            <li>Make information simple, fun and useful</li>
-            </ul>
+          <div class="gl-b-content$if(full-width)$ full-width$endif$">
+            $body$
           </div>
         </div>
       </main>
     </div><!-- /.gl-grid-square -->
 
-    <!-- package.json `--variable=call-to-action` -->
+    $if(call-to-action)$<!-- package.json `--variable=call-to-action` -->
     <aside class="cta">
       <p>
         <a class="gl-button" href="/contact">Let's <abbr title="love">♥</abbr> learning together</a>
         <span class="cta-reason"> and get things done!</span>
       </p>
     </aside>
-    
+    $endif$
 
     <footer class="gl-footer">
       <div  class="gl-f-social">
@@ -72,5 +88,8 @@ learn what works.</p>
       </div>
     </footer>
 
-      </body>
+    $for(include-after)$
+    $include-after$
+    $endfor$
+  </body>
 </html>

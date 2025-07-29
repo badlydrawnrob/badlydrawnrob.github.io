@@ -1,50 +1,19 @@
 // -----------------------------------------------------------------------------
 // Main body
 // =============================================================================
-// > #! CUT CODE DOWN — use basic elements wherever possible
-//
 // 1. Does `gap` change track lines? (increases them)
 //     - seems to break layout when added
 
-.gl-container {
-  padding: 0 var(--spacing-one);
-
-  @media screen and (min-width: 800px) {
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, var(--col-main)) 1fr;
-    grid-template-rows: auto auto auto auto auto 1fr;
-    padding: 0;
-  }
-}
-
-.gl-main {
-  @media screen and (min-width: 800px) {
-    grid-column: 2;
-    grid-row: 4;
-  }
-
-  @media screen and (min-width: 1200px) {
-    grid-column: 2;
-    grid-row: 3 / span 2;
-    font-size: var(--font-size-p);
-  }
-}
-
-.gl-main-intro {
-  margin-bottom: var(--spacing);
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: var(--spacing-increment);
-  }
-
+.gl-intro {
   h2 {
     display: inline;
     font-size: var(--font-size-pp);
     font-weight: 700;
+    line-height: var(--line-height-one);
     margin: 0;
     padding-right: var(--spacing-half);
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 960px) {
       font-size: var(--font-size-ppp);
     }
   }
@@ -54,7 +23,7 @@
     font-size: var(--font-size-pp);
     margin: 0;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 960px) {
       font-size: var(--font-size-ppp);
     }
   }

@@ -39,11 +39,14 @@
 // -----------------------------------------------------------------------------
 // Ideally we'd style as much as possible here.
 
-@import "base/html/anchors";
-@import "base/html/blockquotes";
-@import "base/html/lists";
+@import "base/html/accessibility.less";
+@import "base/html/anchor";
+@import "base/html/blockquote";
+@import "base/html/heading";
+@import "base/html/image";
+@import "base/html/list";
 @import "base/html/text-elements";
-@import "base/html/utilities";
+@import "base/html/video";
 
 
 // -----------------------------------------------------------------------------
@@ -52,6 +55,8 @@
 // Anything with a `.gl-` prefix, or highlighting styles goes here. Currently
 // using the ECSS naming convention which needs replaced.
 
+@import "globals/button";
+@import "globals/grid";
 @import "globals/header";
 @import "globals/footer";
 @import "globals/main";
@@ -61,6 +66,7 @@
 // Pages (using GPS and Thema styles)
 // -----------------------------------------------------------------------------
 
+@import "pages/ozaria";
 @import "pages/home";
 @import "pages/orbit";
 

@@ -1,15 +1,18 @@
 {
   "name": "robmcdonald",
-  "version": "2.5.0",
+  "version": "2.6.2",
   "description": "Personal portfolio",
   "main": "index.html",
   "scripts": {
     "test": "which pandoc",
-    "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
+    "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
+    "test-grid": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid.md -o ./__testing/grid/grid.html --variable=call-to-action",
+    "test-grid-full": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid-full.md -o ./__testing/grid/grid-full.html",
+
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
-    "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html",
-    "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html",
-    "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html",
+    "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html --variable=call-to-action --variable-json css-version=\"$(npm pkg get version)\"",
+    "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html --variable-json css-version=\"$(npm pkg get version)\"",
+    "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html --variable-json css-version=\"$(npm pkg get version)\"",
     "words": "for file in ./source/words/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s \"$file\" -o \"./words/$(basename \"$file\" .md).html\"; done",
     "prebuild": "mkdir -p build/ build/style",
     "build": "npm run css && npm run home && npm run contact && npm run ozaria && npm run words",
@@ -29,6 +32,6 @@
   "devDependencies": {
     "less": "^4.3.0",
     "live-server": "^1.2.2",
-    "print-first-css": "github:badlydrawnrob/print-first-css#bab8ee7"
+    "print-first-css": "github:badlydrawnrob/print-first-css#90bd720"
   }
 }

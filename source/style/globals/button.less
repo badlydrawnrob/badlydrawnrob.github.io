@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Buttons
+// =============================================================================
+// > Works for `a` links and `button` elements. Regular links should show up in
+// > `@media print` as regular text.
+//
+// 1. The new `color-mix` function:
+//    - @ https://www.brandonpugh.com/til/css/darken-colors-color-mix/
+
+.gl-button {
+  @media screen {
+    background-color: var(--color-pp);
+    border-radius: var(--border-radius);
+    color: var(--color-lll);
+    display: inline-block;
+    font-weight: bold;
+    padding: var(--spacing-one) var(--spacing-two);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: var(--color-lll);
+      background: color-mix(in oklab, var(--color-ppp), black 30%); // (1)
+    }
+  }
+}

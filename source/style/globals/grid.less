@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+// Grid
+// =============================================================================
+// > Print grids do not perform the same as screen grids!
+// > See `⭐-CSS-GRID-LAYOUT` keynote for rough diagrams :)
+//
+// 1. Baseline grid is `4dp`/`8dp` (see `print-first-css` for `line-height`)
+// 2. Screen-based vertical rythmn is hard (use similar sizing units)
+// 3. It's not necessary to use `grid` for mobile, but we're doing it here.
+//
+// Vertical rythmn
+// ---------------
+// > Outer grid rows are currently automatically sized
+//
+// Unless your design is _very_ specific and rigid, you're going to have issues
+// making the outer grid rows a square size. You've got different screen sizes
+// to consider, and the outer grid is only 2 rows deep.
+//
+// Let the main content worry about sizing to the grid where it's appropriate,
+// and use standard `--spacing` where it isn't. Everything should align to a
+// .gl-BaselineGrid` and be divisible by 4. You can use the square (and other
+// grids) as a baseline when sizing block-level elements vertically.
+//
+// Overlapping grids
+// -----------------
+// > Unless we change our "semantic" html structure, we'll have to overlap
+// > `nav` and `main` to get the desired layout. I'm not sure if there's a
+// > better way.
+//
+// 1. Nav may need to get wider (expand leftwards from `.gl-grid-square`
+// 2. Nav may need it's own separate grid, overlapping the square one
+// 3. Tracks can be named and use their automatic `-start` and `-end` lines
+//
+// Subgrids and named `grid-template-areas`
+// -------------------------------------------
+// > - Subgrids only inherit the grid lines/tracks of the parents!
+// > - Child elements can only reference their IMMEDIATE parent's named areas.
+// > - So named `grid-area`s are scoped locally to each grid container.
+//
+// Be careful how many elements you add within a `subgrid`. If you had 4 elements
+// It'd would now have FOUR (implicit) rows. If you're trying to position
+// to a parent grid's TWO rows it's going to be difficult (or impossible)
+//
+// I don't think it's currently possible to target `subgrid` children with
+// named `grid-template-areas` (e.g: `.gl-body -> grid-area: body;`).
+//
+// Bugs
+// ----
+// 1. You can't use css variables inside `@media` queries.
+// 2. Be careful of sizing columns and rows when html elements don't match
+//    - You might have to be explicit about children's height/width/rows/columns
+// 3. I managed to crash Safari by messing up the css grid declarations
+//    - @ https://tinyurl.com/306c56c-css-grid-bug
+// 4. NAVIGATION WON'T CLICK!!!
+//     - I think this is a subgrid bug (without `display: grid` the intro overlays
+//       the navigation)
+
+:root {
+  // Square grid
+  --grid-width-small: 740px;  // + 16dp margin = 772px
+  --grid-width-medium: 928px; // + 16dp margin = 960px
+  --grid-gap: var(--spacing-three-quarters);
+  --spacing-grid-square: 176px;
+  --spacing-grid-square-half: 88px;
+  --spacing-grid-square-quarter: 44px;
+}
+
+.gl-grid-square {
+  display: grid;
+  gap: var(--spacing-three-quarters);
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    var(--spacing-grid-square-quarter)
+    var(--spacing-grid-square-half)
+    auto;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main";
+  margin: var(--spacing-one);
+
+  @media screen and (min-width: 772px) {
+      grid-template-rows:
+        var(--spacing-grid-square-half)
+        var(--spacing-grid-square)
+        auto;
+      margin: 0 auto;
+      width: var(--grid-width-small);
+  }
+
+  // #! (2)
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:
+      var(--spacing-grid-square)
+      auto
+      auto;
+    grid-template-areas:
+      "header header header header header"
+      "nav    col2   col3   col4   col5"
+      "nav    col2   col3   col4   col5"; // #! (3) Overlap `nav`?
+    width: var(--grid-width-medium);
+  }
+}
+
+.gl-grid-square nav {
+  align-content: center;
+  grid-area: nav;
+  z-index: 1; // #! (4) Subgrid fucks up clickability
+
+  @media screen and (min-width: 960px) {
+    align-content: start;
+  }
+}
+
+.gl-grid-square header {
+  align-content: end;
+  grid-area: header;
+}
+
+
+// -----------------------------------------------------------------------------
+// Subgrid
+// -----------------------------------------------------------------------------
+// You can either use `row-start` and `row-end` style measurements (from the
+// parent grid), or use `grid-template-areas` to define your subgrid areas.
+//
+// 1. We do NOT want to use `subgrid` for rows (we don't know how many we need)
+// 2. EVERYTHING within this element is a row (so don't use raw `html` elements)
+//
+// Bugs
+// ----
+// 1. Safari (Monterey) doesn't display proper `auto` row height
+//     - `grid-auto-rows`, `grid-template-rows` don't do anything
+//     - Adding a `margin` sort of helps.
+// 2. Setting `parent child.subgrid child-child.subgrid` breaks layout
+//     - You have to set grid lines again and again
+//     - I need to have a play around with nested subgrids
+//     - Better to have only ONE subgrid? Or remove subgrid from `parent > child`?
+
+.gl-grid-square main {
+  grid-area: main;
+
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-area: unset;
+    grid-column: nav-start / col5-end; // #! (3)
+    grid-row: nav-start / nav-end;   // #! (3)
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-template-areas:
+      ". intro intro intro intro"
+      "body body body body body";
+  }
+}
+
+.gl-intro {
+  @media screen and (min-width: 960px) {
+    grid-area: intro;
+  }
+}
+
+// (1), (2)
+.gl-body {
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: subgrid;
+  }
+}
+
+.gl-b-content {
+  @media screen and (min-width: 960px) {
+    grid-column: col2-start / col5-end;
+  }
+
+  &.full-width {
+    @media screen and (min-width: 960px) {
+      grid-column: nav-start / col5-end;
+    }
+  }
+}
+
+
+.gl-bc-four {
+  // #! (2) You need to mess around with subgrids and rows!
+  // #! We need TWO subgrids: one for intro/body, one for body contents
+}

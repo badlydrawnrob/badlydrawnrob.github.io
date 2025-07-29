@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Golden rules for css stylesheets | robmcdonald.me</title>
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet" href="../build/style/portfolio.css?v=" />
+          </head>
+  <body id="words">
+
+    <aside class="gl-folio">
+      <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>
+    </aside>
+
+    <div class="gl-grid-square"><!-- I'M BREAKING MY RULES! -->
+      <nav>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/ozaria">Code for kids</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ol>
+      </nav>
+
+          <header>
+        <h1>Golden rules for css stylesheets</h1>
+      </header>
+    
+      <main>
+        <div class="gl-intro">
+                          <p><strong>The following article is mainly
+geared around CSS and HTML,</strong> but a lot of these “rules” could be
+written about a lot of things, be it design, programming, or writing a
+lesson plan.</p>
+                </div>
+
+        <div class="gl-body">
+          <div class="gl-b-content">
+            <!-- #! Fix footnotes -->
+            <!-- # Golden rules for CSS stylesheets -->
+            <!-- Writing Styleguide: book titles, italics, bold, when to and not to 
+            I REALLY need to write another thing about really thinking up-front about
+            your choices of data, process, user interface, etc .. for example, trying
+            to split a float string and run checks on it takes A LOT MORE EFFORT than
+            simply using two ints for `minutes` and `seconds` fields. You might even
+            have to deal with `time` in that instance. Proper programming is HARD. -->
+            <p>The general gist is: keep it as simple as possible, while
+            doing just enough to solve the problem. Sometimes that might
+            mean making it <em>more</em> complex, before simplifying it
+            again. It’s a delicate balance to design and code a
+            user-interface, to arrive at a solution that’s pleasant to
+            walk around, maintainable, and good code.</p>
+            <p>For my own needs, I rarely want to build anything with
+            more complexity than you might find in a Kindle or Kobo
+            user-interface; for many things, basic text-elements are
+            just fine. To write with brevity and concision is in general
+            my preference, for writing and CSS. I’m not sure if this
+            article will come across that way, but I hope so!</p>
+            <h2 id="css-sucks-and-i-dont-want-to-write-it">CSS sucks and
+            I don’t want to write it</h2>
+            <blockquote>
+            <p>Start from a position of a lazy coder, and limit the
+            amount of code you have to write. This works hand-in-hand
+            with a lazy designer!</p>
+            </blockquote>
+            <p>Basic CSS is pretty easy, but it can get complex quickly,
+            and there’s quite a bit of it that’s not particularly
+            obvious. It’s not like regular programming where there’s
+            often one way to do it (the Python way); layouts are
+            infinitely flexible and subjective. The language that
+            combines visual with logic can be far more difficult than
+            the same design using software. Take
+            <code>line-height</code> for example, and a
+            <code>.baseline-grid</code>. It’s trivial in InDesign to
+            align all text to a baseline grid, making slight alterations
+            for smaller font sizes. As the user-interface becomes more
+            visually complex, this becomes harder to achieve, and it’s
+            <em>far</em> easier to stick to a simple line-height with
+            CSS.</p>
+            <p>Add in the different states of your UI, the variety of
+            HTML elements you, or the user might provide, and the
+            <code>x-height</code> of fonts (which isn’t the same), and
+            CSS frameworks are going to fall down eventually. Browsers
+            are far more reliable these days, and one will generally
+            render the same as another, but slight visual differences
+            can become large changes in code.</p>
+            <p>On top of that, there’s specificity, inheritance,
+            server-side template languages, browser adoption, and so
+            much more that your design software just doesn’t need to
+            consider. A beautiful and fancy design can <em>feel</em>
+            nice, but coding that up might be a real chore. Take a quick
+            look at the <a
+            href="https://tailwindflex.com/@lukas-muller/book-appointment-form-2">mountain
+            of classes</a> Tailwind uses to get an idea of how much CSS
+            <em>you could use</em> if you so desired.</p>
+            <p>So TL;DR, write for your lazy future self, creating a
+            visual experience that’s pleasing to the eye, but easily
+            maintainable.</p>
+            <h3 id="explain-it-like-im-five">Explain it like I’m
+            five</h3>
+            <blockquote>
+            <p>After a break of 5 years, can you still understand
+            it?</p>
+            </blockquote>
+            <p>There’s <a
+            href="https://www.reddit.com/r/explainlikeimfive/">a great
+            forum on Reddit</a> where people try to explain things in
+            the most simplistic style possible, hence the name ELi5
+            (explain it like I’m five). This was also 📖 <a
+            href="https://archive.org/details/Surely-youre-joking-mr.-feynman/mode/2up">Richard
+            Feyneman’s</a> creed and he once said “if you can’t explain
+            something in simple terms, you don’t understand it”, or
+            something along those lines.</p>
+            <p>Not only should you start with the simplest thing
+            possible (a <a href="https://typespecimens.xyz/">specimen
+            file</a>), the code’s purpose should be crystal clear. What
+            was that <code>.cryptic-Class</code> named for? Why isn’t
+            the <code>.box</code> class in your design-system file? Why
+            use a javascript plugin when <code>&lt;details&gt;</code>
+            does everything you need, and is more descriptive?</p>
+            <p>CSS and HTML will evolve, as well as the programming
+            languages that compliment them, so changes are inevitable.
+            But as much as possible, your code, templates,
+            design-system, etc, shouldn’t break in 5 years time, and
+            should be well organised and
+            <code>&lt;!— commented --&gt;</code> so it’s meaning is
+            clear.</p>
+            <h2 id="steps-to-reduce-your-code">5 steps to reduce your
+            code</h2>
+            <blockquote>
+            <p>Code like you’d write. Have a good editor!</p>
+            </blockquote>
+            <p>A good writer is in need of a good editor. I’m a fan of
+            Terry Pratchett, but boy, some of his later works could’ve
+            done with a harsher critic, creating better cohesion and
+            stronger cuts. Some of that is personal opinion, but other
+            works, such as some programming books I’ve read could be cut
+            down and simplified (with academic words culled). There was
+            a (now defunct?) website called “<a
+            href="https://web.archive.org/web/20240303075120/https://cutcodedown.com/article/minimalist_semantic_markup">Cut
+            Code Down</a>” which is <em>very</em> opinionated, but the
+            sentiment I’d agree with. That, alongside <a
+            href="https://brutalist-web.design/">Brutalist</a> design
+            (as in, architecture), point towards a style whereby a great
+            number of sites need only the absolute basics of HTML: text,
+            links, images, lists, blockquotes — and that’s about it!</p>
+            <p>Elon Musk has a 5 step plan for engineering (or editing),
+            which we can steal from!</p>
+            <ol type="1">
+            <li><strong>Make the requirements less dumb.</strong>
+            <ul>
+            <li>Who gave them? Are they clear enough? Concrete
+            enough?</li>
+            <li>Should these requirements even exist? Bin first.</li>
+            <li>What exactly, are the essentials? Are they <a
+            href="https://basecamp.com/shapeup">well shaped</a>?</li>
+            </ul></li>
+            <li><strong>Delete the part or process step.</strong>
+            <ul>
+            <li>What item, feature, or step can be removed?</li>
+            <li>Can we reduce the amount of time spent on a
+            process?</li>
+            </ul></li>
+            <li><strong>Simplify or optimize.</strong>
+            <ul>
+            <li>Should a thing even exist?</li>
+            <li>If it should exist, can it be optimized?</li>
+            </ul></li>
+            <li><strong>Accelerate cycle time.</strong>
+            <ul>
+            <li>Make sure you’ve done (1), (2), and (3) first.</li>
+            <li>Only if it’s shaped, necessary, and efficient …</li>
+            <li>Be lean. Be agile. Speed it up.</li>
+            </ul></li>
+            <li><strong>Automate it.</strong>
+            <ul>
+            <li>Use tooling to compile (like a <a
+            href="https://www.npmjs.com/package/less"><code>.less</code></a>
+            compiler).</li>
+            <li>Use AI where it makes sense.</li>
+            </ul></li>
+            </ol>
+            <h2 id="a-distaste-of-state.-seriously.-cut-it-out.">A
+            distaste of state. Seriously. Cut it out.</h2>
+            <blockquote>
+            <p>State is anything that deals with movement, elements
+            changing, memory, data updating, and so on. It’s one of
+            areas that adds great complexity if you aren’t careful.</p>
+            </blockquote>
+            <p>I personally have an aversion to state. I wouldn’t
+            seriously call myself a programmer, but I’ve done it enough
+            to know that, for instance, gaming is a seriously
+            time-consuming thing to code. There’s so much state, and
+            especially if it’s functional, a lot of code to write. CSS
+            animations, user-interface changes,
+            <code>-variations</code>, menu hover states, or any
+            “nice-to-have” functionality, are all extra things to
+            consider when building and maintaining your app or
+            website.</p>
+            <p>Unless you like this sort of thing (which I really
+            don’t), keep your state simple. Forms are a great example.
+            Relying on one field’s answer to inform the next field
+            requires memory and logic. The more “state” (logic or
+            memory) the form needs to remember and keep updated, the
+            harder that becomes to reason about. Relying on 2-3 field’s
+            inputs and having them determine what a user sees next can
+            become confusing to manage, quickly.</p>
+            <p>So aim for simplicity. Wherever there’s an animation, a
+            reliance on memory, or template logic, try <a
+            href="#5-steps-to-reduce-your-code">5 steps to reduce your
+            code</a> and see if you can’t make life easier for
+            yourself.</p>
+            <h2 id="dont-get-complected.">Don’t get complected.</h2>
+            <blockquote>
+            <p>Complected is a beautiful word with a deadly sting. To
+            join by weaving: for code to become “complected”.</p>
+            </blockquote>
+            <p>Just like functional programming aims to split out
+            functions and abstract similar ones, you should avoid
+            weaving and interlacing your CSS code too much. Isolate your
+            styles with reasonable names, so your
+            <code>.gl-PullQuote</code> relies on nothing but itself. A
+            <code>.child-of-parent</code> class should only depend on
+            it’s parent and your base styles (your specimen file).
+            Nothing more.</p>
+            <p>Adding needless complexity and dependence, such as using
+            Less CSS <a
+            href="https://lesscss.org/functions/">functions</a> or <a
+            href="https://lesscss.org/#mixins">mixins</a>, however
+            useful they might be, creates a coupling (to that framework)
+            that you don’t really need. Adding a dependancy on a class
+            that’s unrelated to the job at hand, or inheriting one class
+            from another, also creates complected code. If you only rely
+            on browser-supported CSS, and if every class isolates the
+            problem <em>within</em> itself, you can be assured it’s not
+            going to break. The only time I’d lean on Less is where
+            functionality <a
+            href="https://css-tricks.com/nested-media-queries/">isn’t
+            allowed</a> in regular CSS, but is handy, such as:</p>
+            <div class="sourceCode" id="cb1"><pre
+            class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="im">@media</span> <span class="an">screen</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">orientation</span><span class="ch">:</span> <span class="dv">portrait</span><span class="fu">)</span> {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        margin<span class="in">:</span> 0 auto; <span class="co">/* CSS won&#39;t allow nested `@media` queries yet */</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+            <p>So this is a very <em>light</em> dependency, but it’s
+            still a minor <em>complected</em> one. I could just as well
+            stick to using regular <code>@media</code> queries and
+            nesting the <code>.class</code> inside them. So, however you
+            structure your code, if you can’t be confident your HTML and
+            CSS will work in 5—10 years, reduce the amount of complexity
+            — and rarely complect!</p>
+            <h1 id="heres-some-more-golden-rules-to-follow">Here’s some
+            more golden rules to follow</h1>
+            <blockquote>
+            <p>In an ideal world, there should be one way (and only one
+            way) to write your CSS. Whichever style you adopt, it’s best
+            to stay consistent and keep it as simple as possible! we
+            don’t have oodles of <code>.class</code> names where an
+            <code>ul</code> will do, and we won’t add cognitive load
+            when we come back to our stylesheets 5 years later.</p>
+            </blockquote>
+            <ol type="1">
+            <li>Don’t repeat yourself.</li>
+            <li>Avoid complexity and state.</li>
+            <li>Add in sensible defaults with a design-system</li>
+            <li>Similar does not mean the same.</li>
+            <li>Be concise and explicit.</li>
+            <li>Be careful of inheritance. Isolate.</li>
+            <li>Keep it simple stupid!</li>
+            <li>Don’t make me think!</li>
+            </ol>
+            <h3 id="dont-repeat-yourself">1. Don’t repeat yourself</h3>
+            <p>ECSS was a big proponent of extreme isolation. If a style
+            was the same in two different places, styles were duplicated
+            and unique class-names given to each component. Scoping your
+            css as <a
+            href="https://github.com/badlydrawnrob/anki/blob/3b8a3bc3b1e11f4719adfacb9fc006cd99819fe0/source/themes/cards/simple/simple-front.mustache"><code>.simple-Card_KeyPoint</code></a>
+            and <a
+            href="https://github.com/badlydrawnrob/anki/blob/3b8a3bc3b1e11f4719adfacb9fc006cd99819fe0/source/themes/cards/missing/missing-front.mustache"><code>.missing-Card_KeyPoint</code></a>
+            creates absolute certainty that one can never influence the
+            other, but at the cost of lots of repetition of code. <a
+            href="https://medium.com/@jescalan/bem-is-terrible-f421495d093a">GPS</a>,
+            on the other hand, aims to reduce code duplication to a bare
+            minimum, while generating reusable styles for components,
+            and scoping unique <code>#page</code> level css with
+            <code>#sections</code> of content and non-reusable
+            classes.</p>
+            <p>DRY code isn’t always possible (or even desirable in some
+            instances), but it’s a good place to start. If you find
+            yourself needing to reuse a <code>#section</code> on a
+            different page, it should be moved up a notch to a
+            <code>.gl</code>obal element. Conversely, if a global
+            element needs adapting for a particular page, you might
+            consider converting it into a <code>-variable</code> or
+            <code>#section</code>.</p>
+            <p>TL;DR: You want as much of your styles as possible to be
+            together in a single location, as simple as possible, in as
+            few lines of code as possible.</p>
+            <h3 id="avoid-complexity-and-state">2. Avoid complexity and
+            state</h3>
+            <blockquote>
+            <p>It’s so important I’ve listed it twice! Where things can
+            be removed or simplified, do so.</p>
+            </blockquote>
+            <p>Simplify, simplify, simplify. There’s the tendency to
+            <em>over</em> design when you’re starting out, spending long
+            periods and many revisions getting things “perfect”. Great
+            art and technique is something to admire, and some like to
+            layer it on thick. I’ve never been that way inclined, most
+            of my work leaning towards the minimal. <a
+            href="https://en.wikipedia.org/wiki/Bauhaus">Bauhaus</a>, <a
+            href="https://barnbrook.net/work/david-bowie-heathen/">Barnbrook</a>,
+            <a href="https://www.brian-eno.net/">Brian Eno</a>, <a
+            href="https://www.hockney.com/home">Hockney</a>, <a
+            href="https://en.wikipedia.org/wiki/Swiss_Style_(design)">Swiss-style
+            design</a>, <a
+            href="https://en.wikipedia.org/wiki/Andy_Warhol">Warhol</a>,
+            <a
+            href="https://www.bbc.com/culture/article/20221206-japans-most-zen-like-minimalist-interiors">Zen
+            Architecture</a>, and the <a
+            href="https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf">artist’s
+            grid</a> (which <a
+            href="https://en.wikipedia.org/wiki/Piet_Mondrian">Piet
+            Mondrian</a> made great use of) are all great examples of
+            design that’s also simple.</p>
+            <p>As with music, good design is as much about what you
+            <em>take out</em> as what you <em>add</em>. Take, for
+            example, <a
+            href="https://www.youtube.com/watch?v=Zt336MYMY2c">advertising</a>.
+            At the time of writing, advertising has become massively
+            simplified, often using a short phrase, sentence or word,
+            with well-placed imagery to evoke a mood, a memorable idea,
+            or appeal to a demographic or archetype. The world is noisy.
+            Cut through it.</p>
+            <p>Your CSS should be no different to those ads. The more
+            state, animations or layers you add, the more code needs to
+            be generated and tested to see that idea to life. I’ve been
+            from top to bottom, learning design for print, digital, and
+            eventually frontend (and backend) code. I’m definitely no
+            Picasso when it comes to coding, but I understand what
+            happens when you add complexity. It’s harder to manage,
+            harder to test, harder to maintain. Unless you’ve got a
+            large team and money/time to burn, keep it simple,
+            stupid!</p>
+            <p>You can start with the <em><a
+            href="#5-steps-to-reduce-your-code">5 steps to reduce your
+            code</a></em> and follow it up with the themes of simplicity
+            our art and music references provide. As you go, add simple
+            layers to your design, abstracting where possible, cutting
+            as much out as possible.</p>
+            <h3 id="add-in-sensible-defaults-with-a-design-system">3.
+            Add in sensible defaults with a design-system</h3>
+            <p>This can be as simple as a <code>.gl-Box</code>,
+            <code>.gl-Image-large</code>, and a
+            <code>.gl-PullQuote</code> or as complex as Apple’s latest
+            Macbook release page. I’d heavily advise against anything as
+            complicated as Material Design — it’s a very commendable
+            effort to bring together apps with a unified layout — but
+            it’s HUGE. Too big. The first time I saw it back in 2016 it
+            made me want to weep. Granted, things have moved on a lot
+            since I started Graphic Design, and static print-based
+            layouts might seem a bit old-hat these days, but I dare you
+            to finish <a href="..">Grid Raster Systems</a> and not
+            marvel at the beauty of simple (but varied) Swiss
+            design.</p>
+            <p>A good place to start for understanding design is <em><a
+            href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things&amp;ved=2ahUKEwjgoduzjZiIAxXr1wIHHSqQDwQQFnoECAYQAQ&amp;usg=AOvVaw2vukYZ7Ah08_2XWoqyCfv1">The
+            Design of Everyday Things</a> (Donald Norman)</em>. Take a
+            look at the _<a href="https://abookapart.com/">A Book
+            Apart</a>_range of books while you still can — there’s some
+            great wisdom in those. Go find some simple design-systems,
+            such as <a href="https://picocss.com/">Pico CSS</a>, but
+            beware of big company designs as they tend to be quite
+            bloated.</p>
+            <h3 id="similar-does-not-mean-the-same">4. Similar does not
+            mean the same</h3>
+            <blockquote>
+            <p>You have a few options here: <em><a
+            href="/words/css-the-tao-of-stylesheets">The Tao of
+            stylesheets</a></em> explains them better. - Create a
+            <code>-variant</code> and add in changes,<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> - Self-isolating
+            children with a <code>.gl-Parent</code> or
+            <code>-Standalone</code> style,<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> - <del>Adapting styles
+            within the <code>#page</code> or <code>#section</code> it’s
+            in</del>,<a href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> - Create a brand new
+            (similar but different) <code>.gl-</code> class - Create a
+            <code>#page &gt; #section</code> that’s unique.<a
+            href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a></p>
+            </blockquote>
+            <p>There’ll come a time, possibly often, where you’ve got a
+            layout that is <em>exactly</em> the same, but for a few
+            minor differences. There’s a <a
+            href="https://www.youtube.com/watch?v=XpDsk374LDE">great
+            talk</a> by Evan Czaplicki (the creator of Elm Lang) on
+            programming two widgets which <em>seem</em> the same, but
+            are actually very different. In the video, he explains
+            assuming the same approach for both may not work. Now, while
+            css is a lot simpler than functional programming, that video
+            outlines a sensible approach. If you try and shoehorn in
+            changes, you can add complexity to the component, which is
+            less preferable sometimes than creating a new one.</p>
+            <p>The best advice is to try and keep the code <a
+            href="#1-don&#39;t-repeat-yourself">DRY</a> until it starts
+            getting complected or hard to understand at-a-glance. You
+            can then try one of the above options to simplify the code
+            base.</p>
+            <h3 id="be-concise-and-explicit">5. Be concise and
+            explicit</h3>
+            <blockquote>
+            <p>Can you easily reason about your <code>.class</code>
+            names? Aim to use raw HTML base-level elements wherever
+            possible, but … <em>Explicit is better than implicit</em>.
+            Don’t make me think!</p>
+            </blockquote>
+            <p>Always have a parent <code>.gl-ClassName</code> or
+            <code>.pg-ItemClassName</code>. Use HTML child elements
+            where you can, but if their meaning isn’t clear, be explicit
+            in your <code>/* comments */</code> — what, exactly, does
+            this element do? What’s it’s reason for being there?</p>
+            <p>Where HTML elements are weak,<a href="#fn5"
+            class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> such as a
+            <code>div</code>, <code>p</code>, or <code>span</code>,
+            consider adding a meaningful name (a good example is syntax
+            highlighting, i.e: <code>span.op</code> for operator). GPS
+            doesn’t advocate using a <code>.scope</code> class name
+            (such as <code>.gl-</code> or <code>.pg-</code>) outside of
+            globals, but sometimes they help too. If it’s scoped clearly
+            to the <code>#view</code> or <code>#page</code> than a forms
+            meaning should be clear. In general though, forms should be
+            a set-once-and-forget-about-it job. Don’t over-engineer, but
+            as <em><a href="https://peps.python.org/pep-0020/">The Zen
+            of Python</a></em> explains: <em>explicit is better than
+            implicit</em>.</p>
+            <ul>
+            <li><code>#faq details summary</code> is self-explanatory,
+            but <code>#faq ul li h3</code> isn’t.</li>
+            <li><code>#blog .advert .buy-link</code> is much better than
+            <code>aside p &gt; a</code>.</li>
+            </ul>
+            <p>Write the simplest, most descriptive, most appropriate
+            name you can. You’ll thank me later when you’re knee deep in
+            a refactor.</p>
+            <h3 id="be-careful-of-inheritance.-isolate.">6. Be careful
+            of inheritance. Isolate.</h3>
+            <p>Inheritance can be a chore, which is why many of these
+            CSS frameworks aim to isolate or reuse styles wherever
+            possible. Just try styling a <code>&lt;button&gt;</code>
+            element with plain CSS to see how quickly you reach for a
+            framework that does it all for you! These days, I like to
+            keep my websites simple, available to print with
+            <code>@media print</code> styles, then reduced and distilled
+            into a tight package which loads quickly in the browser.
+            That might not suit all projects, especially if you’re
+            visualising a lot of data, but for reading and simple
+            customer journeys, it serves.</p>
+            <p>The more CSS you write, the more chance that somehow,
+            somewhere, you’ve overridden a style that shouldn’t have
+            been, or adding complexity that needn’t be there. If you’re
+            writing styles like
+            <code>h2 &gt; p + p &gt; span a:hover</code> you’re asking
+            for trouble; what if I have more than one paragraph? How do
+            I remember <em>exactly</em> what goes where in my HTML?
+            What’s the <code>&lt;span&gt;</code> tag for? Why is
+            <em>this</em> <code>:hover</code> state different from the
+            <code>/base/html</code> hover state? Is that necessary? Is
+            that easy to understand? Will it break something?</p>
+            <p>If you have a big team, multiply that risk by 10, and
+            you’ll soon land yourself in trouble. Limit how many colours
+            you’ve got, limit the amount of <code>+</code> and
+            <code>&gt;</code> you’re using, make your CSS concise,
+            descriptive, and explicit. Prefer a global design-system
+            over random <code>:hover</code> states. Make use of unique
+            <code>#page</code> and <code>#section</code> IDs. Isolate
+            styles for each component.</p>
+            <p>Before you reach for your toolbox of CSS selectors or add
+            another design element — stop and think. As a rule I start
+            with NO. That’s NO to that new design element. NO to
+            complexity. NO to fancy CSS that I’ll forget how to write in
+            2 years. NO to a complicated stylesheet that I’ll have to
+            maintain. Aim for simplicity, actively reduce the amount of
+            code, sensibly add in constraints, which can often make
+            design <em>more</em> attractive.</p>
+            <p>That’s an ideal world and sometimes you have to please
+            clients, but do <em>try</em>.</p>
+            <h3 id="keep-it-simple-stupid">7. Keep it simple,
+            stupid!</h3>
+            <blockquote>
+            <p>A quote from some wise person. Write for your stupid
+            future self.</p>
+            </blockquote>
+            <p>I forget code <em>all the time</em>. I don’t pretend to
+            be an expert, and I most definitely don’t know it all. CSS
+            is an endless void that can suck you up without great care.
+            The quicksand of complexity is really something that can’t
+            be stated enough.</p>
+            <p>If you’re like me and you want to write as little CSS as
+            possible, then write for your stupid future self. I’m not a
+            Google employee writing thousands of lines of code everyday,
+            which means if I leave a project alone for a few months,
+            there’ll be a few things I either don’t understand or have
+            forgotten the purpose of — even if I’ve followed all my own
+            rules! Keep your <code>.class</code> names explicit, simple;
+            add some carefully placed and well-worded comments.</p>
+            <p>Add links to documentation or articles. You’ll need them
+            in future, believe me. I once wrote a <a
+            href="https://github.com/badlydrawnrob/print-first-css/blob/fea925978558329112859e94f9525dd96c552882/source/style/globals/baseline-grid.less"><code>.gl-BaselineGrid</code></a>
+            class and I can count on one hand how many times I’ve used
+            the <code>linear-gradient</code> feature of CSS. Which order
+            do I write the <code>deg</code>ree direction, the colours,
+            the <code>start</code> and <code>stop</code> of each colour?
+            How in the hell did I do that <code>background-size</code>
+            thing? I can’t remember, I’d have to look it up. I have 41
+            lines of comments in my <code>baseline-grid.less</code>
+            file. How to use it, how I learned it, how to
+            <code>toggle()</code> it on and off, so on. Ideally, I want
+            to write it once and forget about it — forever.</p>
+            <p>And on the topic of using a preprocessor — be it SASS or
+            Less — I’d advise “DON’T DO IT!”, don’t treat CSS like a
+            programming language; it isn’t one! Well, not really. The
+            only reason I use <code>.less</code> files now is to
+            simplify my codebase, so each file is focused on one thing:
+            <code>text-elements.less</code> for example, or
+            <code>horizontal-rules.less</code> to get more granular.
+            It’s also pretty handy for <code>npm watch</code>ing changes
+            in my stylesheets, so I can render that in the browser in
+            real-time. Then I can minify and uglify or whatever.</p>
+            <p>For anything else (and I mean ANYTHING) just use plain
+            old CSS. Heck, even <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting">nesting
+            and <code>&amp;</code></a> is in the latest version of CSS.
+            That’s great! And if you’re just starting out, please,
+            <em>please</em> at least learn the basics first before using
+            Tailwind. If something breaks, you’ll be lost.</p>
+            <h3 id="dont-make-me-think">8. Don’t make me think!</h3>
+            <blockquote>
+            <p><em>Don’t Make Me Think!</em> is a book by <a
+            href="https://sensible.com/dont-make-me-think/">Steve
+            Krug</a>. Read it. Read it again. Engrave it on your brain
+            box. It’s worth the money and it’s worth reading.</p>
+            </blockquote>
+            <p>Usability, the customer journey, onboarding, articles,
+            design systems, forms, <code>:visited</code> states, light
+            and dark themes, whatever it may be, for the love of the
+            seven <em>Don’t Make Me Think!</em> I’ve covered already why
+            your own codebase should follow that rule, so why on earth
+            would you make life difficult for your end-user; your
+            customer. Y’know, the one who’s paying you hard
+            currency.</p>
+            <p>I once had the worst experience with a mobile provider in
+            the UK (EE) and their onboarding was <em>terrible</em>.
+            Seriously the worst experience I’ve had with onboarding.
+            They supposedly have the best connectivity in the UK, but
+            it’s likely I’ll never use them again. Here’s how the story
+            goes:</p>
+            <ol type="1">
+            <li><strong>I bought a sim at a local store.</strong>
+            <ul>
+            <li>Their UX and UI is <em>awful</em>. Impossible to figure
+            out how to link that sim.</li>
+            <li>When I finally managed to, the deal on the sim wasn’t
+            the deal I could get.</li>
+            <li>So I chose a sim on their online store with a cool
+            package. Something went wrong and I needed to contact
+            customer service to cancel that package …</li>
+            </ul></li>
+            <li><strong>During the sign-up process, they asked for
+            sensitive details:</strong> my date of birth.
+            <ul>
+            <li>I purposefully submitted the <em>wrong</em> date of
+            birth so it’s not stored in the ether.</li>
+            <li>It’s <em>nowhere</em> to be seen in my online profile.
+            Gone. Nada. Nixt.</li>
+            </ul></li>
+            <li><strong>Customer service continuously ask for said
+            details</strong> which <em>I can’t view or edit</em> online.
+            <ul>
+            <li>Their automated telephone service <em>says</em> you can
+            edit it by phone …</li>
+            <li>But it gave no options I could find, so I gave up on
+            that route …</li>
+            <li>Three times I attempted to cancel my ordered sim …</li>
+            <li>It simply can’t be done without your date of birth
+            …</li>
+            <li>And there’s no way around this. <em>Even though</em>
+            they can send a passcode to my mobile to verify it’s really
+            me.</li>
+            </ul></li>
+            <li><strong>I gave up.</strong> It pissed me off so much,
+            it’s unlikely I’ll use their service again.</li>
+            </ol>
+            <p>Ever had an experience like that? At a restaurant or a
+            store? There is a big long list of <em>what not to do</em>.
+            You’d think a company so large would’ve got their user
+            experience sorted out, but anyway. The moral of that tail is
+            somone had a great idea that date of birth is the go-to
+            security method, but they neglected to tell their dev-team.
+            Don’t put your readers or your customers through that.</p>
+            <p>Needless complexity and obfuscation is a frustrating
+            chore and if you allow that on your watch you
+            <em>deserve</em> to lose customers.</p>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p>This is the simplest option. If your design
+            has slight differences, such as the colour of a heading, you
+            can add a <code>.gl-Parent-red header</code> variant. This
+            assumes that the code order is the same; if the order of the
+            code is in question, such as a <code>margin-bottom</code>
+            change because the <code>header</code> is in a different
+            position, better change it into a <code>gl-Standalone</code>
+            element, or at least set the header’s margin dependant on
+            it’s <code>-variant</code> and not it’s position.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p>Self isolating means to split out the code
+            as you might do a function. It’s <em>within</em> a
+            <code>.gl-Component</code> but it looks <em>exactly</em> the
+            same on it’s own <em>outside</em> the component. If the
+            self-isolated element itself contains children, it’s
+            converted to a <code>.gl-Parent</code> element. If it lives
+            on it’s own, its <code>.gl-Standalone</code> element (no
+            children). For example, <code>.gl-Image</code> contains a
+            <code>.figcaption</code>, but <code>gl-PullQuote</code>
+            lives on it’s own.<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn3"><p>I don’t advocate for this option, as it
+            relies on <em>inheritance</em>, rather than a
+            <code>.gl-Component-variant</code>. You <em>could</em> use
+            this method to nest the page ID inside our element, like
+            <code>.gl-Component { #page &amp; { ... } }</code>. This
+            will render our styles when <code>.gl-Component</code> is a
+            child of <code>#page</code>. The downside of this approach
+            is we have to remember, and search for, our
+            <code>#page</code> element’s styles outside it’s main chunk
+            of code, or file. Better to keep all styles together where
+            possible.<a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn4"><p>If there’s an element that’s shared between
+            the <code>.gl-</code> style and the <code>#section</code>
+            style, you could always split out it’s children to be shared
+            between both. For example, a <code>.gl-Card</code> and a
+            <code>#section .card</code> that both have a child
+            <code>.full-width-image</code> within.<a href="#fnref4"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn5"><p>By weak I mean an element that isn’t
+            descriptive enough in its meaning, or use. A good example
+            would be a <code>&lt;span&gt;</code>. Is it purely used for
+            visual styling, or does it have meaning? If there’s no
+            better alternative (such as <code>abbr</code> or some other
+            accessible element), consider adding a more meaningful
+            class.<a href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div><!-- /.gl-grid-square -->
+
+    
+
+    <footer class="gl-footer">
+      <div  class="gl-f-social">
+        <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
+        <ul>
+          <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
+          <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
+          <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
+        </ul>
+      </div>
+      <div  class="gl-f-tagline">
+        <div class="gl-ft-content">
+          <p>Making data fit for human consumption <a href="#">since 2001</a></p>
+          <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
+        </div>
+      </div>
+    </footer>
+
+      </body>
+</html>

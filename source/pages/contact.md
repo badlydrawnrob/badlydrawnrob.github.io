@@ -1,7 +1,8 @@
 ---
+body-id: contact
+
 title: Contact me
 subtitle: Need help on a project? Want to join a code club?
-body-id: contact
 intro: >-
     Leave a note about your query, then let's chat!
 ---
