@@ -99,11 +99,12 @@ And now, your child can try it for free—this summer.
 <div class="breakout">
 
 <!-- ![Real gameplay](./build/static/computer-summer-kid.jpg){.b-right} -->
-<video class="b-right"
+<!-- <video class="b-right"
        src="./build/static/gameplay-01.mp4" 
        muted="false" loop="true"
        autoplay controls>
-</video>
+</video> -->
+<div class="b-right" style="position:relative; height:0px; padding-bottom:30.234%"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/pwquc0?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 <div class="b-left">
 <div class="b-blob">
@@ -141,12 +142,13 @@ All you need is a computer or laptop and yourself!
 <div class="breakout">
 
 <!-- ![Have fun learning this summer!](./build/static/computer-summer-kid.jpg){.b-left} -->
-<video class="b-left"
+<!-- <video class="b-left"
        preload="none" src="./build/static/gameplay-02.mp4" 
        poster="./build/static/gameplay-02.jpg"
        muted="false" loop="false"
        controls>
-</video>
+</video> -->
+<div class="b-left" style="position:relative; height:0px; padding-bottom:30.234%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 <div class="b-right">
 <div class="b-blob">

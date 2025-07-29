@@ -179,7 +179,9 @@ Using `@media` properly ...
 
 ### Videos
 
-There's an issue loading videos [when using Git LFS](https://stackoverflow.com/a/68627864) so use that fix or just use YouTube/Vimeo to host. 
+> Github has a [file size limit](https://github.com/orgs/community/discussions/49949) for files
+
+You can use Git LFS for larger files, but there's an [issue loading videos](https://stackoverflow.com/a/68627864) so use the link's fix or just use YouTube/Vimeo to host.
 
 ### Stop using Marked2 app
 
