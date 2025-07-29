@@ -8,7 +8,6 @@
     "test-specimen": "pandoc --template=./source/pandoc/specimen.html -c ../../build/style/portfolio.css -s ./source/testing/specimen/specimen.md -o ./__testing/specimen/specimen.html",
     "test-grid": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid.md -o ./__testing/grid/grid.html --variable=call-to-action",
     "test-grid-full": "pandoc --template=./source/pandoc/grid.html -c ../../build/style/portfolio.css -s ./source/testing/grid/grid-full.md -o ./__testing/grid/grid-full.html",
-
     "css": "npx lessc ./source/style/main.less ./build/style/portfolio.css",
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html --variable=call-to-action --variable-json css-version=\"$(npm pkg get version)\"",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html --variable-json css-version=\"$(npm pkg get version)\"",
@@ -30,8 +29,8 @@
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
   "false": {},
   "devDependencies": {
-    "less": "^4.3.0",
+    "less": "^4.4.0",
     "live-server": "^1.2.2",
-    "print-first-css": "github:badlydrawnrob/print-first-css#90bd720"
+    "print-first-css": "github:badlydrawnrob/print-first-css"
   }
 }
