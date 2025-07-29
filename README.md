@@ -177,6 +177,10 @@ Using `@media` properly ...
 4. What about accessibility and ease-of-reading?
     - Stuff like [grid order](https://rachelandrew.co.uk/archives/2019/06/04/grid-content-re-ordering-and-accessibility/)
 
+### Videos
+
+There's an issue loading videos [when using Git LFS](https://stackoverflow.com/a/68627864) so use that fix or just use YouTube/Vimeo to host. 
+
 ### Stop using Marked2 app
 
 - Currently processing some `.md` files with Marked2 App (just use Pandoc)
