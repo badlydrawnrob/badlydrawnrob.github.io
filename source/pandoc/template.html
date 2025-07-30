@@ -19,6 +19,18 @@
     $endfor$
   </head>
   <body id="$body-id$">
+    <div id="cookies-eu-banner" style="display: none;">🍪 This website uses cookies to help me find out what visitors need! <button id="cookies-eu-accept">Accept</button> <button id="cookies-eu-reject">Reject</button></div>
+    <script src="./build/static/js/cookies-eu-banner.js"></script>
+      <script>
+        new CookiesEuBanner(function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-11446914157');
+          console.log('Google Tag Manager loaded');
+        });
+      </script>
 
     <aside class="gl-folio">
       <p>The portfolio of Rob McDonald (a work in <a href="https://github.com/badlydrawnrob/badlydrawnrob.github.io">progress</a>) • carefully crafted for <a href="https://github.com/badlydrawnrob/print-first-css">print first</a></p>

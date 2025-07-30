@@ -197,7 +197,9 @@ A lot of programming tools and frameworks are _way_ more complex than they need 
 - [ ] `npx live-server --no-browser` live reloads on `http://127.0.0.1:8080`
     - You can [ignore files](https://github.com/tapio/live-server/issues/151) if you like
     - Alternatively you could use [VS Code live-server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to reduce dependencies
-- [ ] [Pandoc Markdown](https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html) for the win!
+- [x] [Pandoc Markdown](https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html) for the win!
+- [x] [Google Analytics](https://conversiontracking.io/blog/tally-forms-conversion-tracking) and [Tally Forms](https://tally.so/) for lead gen
+    - You'll want to move towards 1st party data and cookie-less design
 
 
 ## Money
