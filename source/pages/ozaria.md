@@ -1,7 +1,7 @@
 ---
 body-id: ozaria
 full-width: True
-header-includes:
+header-includes: |
   <script async src="https://tally.so/widgets/embed.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11446914157"></script>
 
