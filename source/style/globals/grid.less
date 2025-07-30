@@ -7,6 +7,7 @@
 // 1. Baseline grid is `4dp`/`8dp` (see `print-first-css` for `line-height`)
 // 2. Screen-based vertical rythmn is hard (use similar sizing units)
 // 3. It's not necessary to use `grid` for mobile, but we're doing it here.
+// 4. Set defaults for breakpoints and all the things.
 //
 // Vertical rythmn
 // ---------------
@@ -47,11 +48,12 @@
 // Bugs
 // ----
 // 1. You can't use css variables inside `@media` queries.
-// 2. Be careful of sizing columns and rows when html elements don't match
+// 2. `grid-gap` a shorthand property for `grid-row-gap` and `grid-column-gap`
+// 3. Be careful of sizing columns and rows when html elements don't match
 //    - You might have to be explicit about children's height/width/rows/columns
-// 3. I managed to crash Safari by messing up the css grid declarations
+// 4. I managed to crash Safari by messing up the css grid declarations
 //    - @ https://tinyurl.com/306c56c-css-grid-bug
-// 4. NAVIGATION WON'T CLICK!!!
+// 5. NAVIGATION WON'T CLICK!!!
 //     - I think this is a subgrid bug (without `display: grid` the intro overlays
 //       the navigation)
 
@@ -59,7 +61,7 @@
   // Square grid
   --grid-width-small: 740px;  // + 16dp margin = 772px
   --grid-width-medium: 928px; // + 16dp margin = 960px
-  --grid-gap: var(--spacing-three-quarters);
+  --grid-gap: var(--spacing-three-quarters); // (2)
   --spacing-grid-square: 176px;
   --spacing-grid-square-half: 88px;
   --spacing-grid-square-quarter: 44px;
@@ -67,11 +69,11 @@
 
 .gl-grid-square {
   display: grid;
-  gap: var(--spacing-three-quarters);
+  gap: var(--spacing-three-quarters); // (2)
   grid-template-columns: 1fr;
   grid-template-rows:
-    var(--spacing-grid-square-quarter)
-    var(--spacing-grid-square-half)
+    auto    // var(--spacing-grid-square-quarter) fine
+    auto    // var(--spacing-grid-square-half) too small
     auto;
   grid-template-areas:
     "nav"
@@ -88,7 +90,7 @@
       width: var(--grid-width-small);
   }
 
-  // #! (2)
+  // #! (3)
   @media screen and (min-width: 960px) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows:
@@ -98,7 +100,7 @@
     grid-template-areas:
       "header header header header header"
       "nav    col2   col3   col4   col5"
-      "nav    col2   col3   col4   col5"; // #! (3) Overlap `nav`?
+      "nav    col2   col3   col4   col5"; // #! (4) Overlap `nav`?
     width: var(--grid-width-medium);
   }
 }
@@ -106,7 +108,7 @@
 .gl-grid-square nav {
   align-content: center;
   grid-area: nav;
-  z-index: 1; // #! (4) Subgrid fucks up clickability
+  z-index: 1; // #! (5) Subgrid fucks up clickability
 
   @media screen and (min-width: 960px) {
     align-content: start;
@@ -116,6 +118,11 @@
 .gl-grid-square header {
   align-content: end;
   grid-area: header;
+  margin: var(--spacing-increment) 0;
+
+  @media screen and (min-width: 772px) {
+    margin: 0;
+  }
 }
 
 
@@ -155,8 +162,11 @@
 }
 
 .gl-intro {
+  margin-bottom: var(--spacing-increment);
+
   @media screen and (min-width: 960px) {
     grid-area: intro;
+    margin-bottom: 0;;
   }
 }
 

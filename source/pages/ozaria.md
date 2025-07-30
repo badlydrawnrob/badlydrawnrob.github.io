@@ -6,15 +6,16 @@ header-includes: <script async src="https://tally.so/widgets/embed.js"></script>
 title: Code for kids!
 subtitle: 🚀 Join us on a coding adventure;
 intro: >-
-    a FREE summer 2-Day online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
+    a FREE summer 3-Day online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
 ---
 
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
 <div class="signup">
 <p class="su-heading">
-  🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12
-  <br>👋 100% FREE • ⏰ **Registration closes August 5th!**</p>
+  <span class="suh-border">🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12</span>
+  <span>👋 100% FREE • ⏰ **Registration closes August 5th!**</span>
+  </p>
 </p>
 <div class="su-body">
 
@@ -84,11 +85,11 @@ With Ozaria, kids don’t just learn to code—they become the heroes of their o
 
 **Why kids love Ozaria**
 
-- Trusted by educators worldwide
-- 90% of students feel confident coding after Ozaria
-- 99% say they *enjoy* learning with it
+- **Trusted** by educators worldwide
+- **90%** of students feel confident coding after Ozaria
+- **99%** say they *enjoy* learning with it
 
-And now, your child can try it for free—this summer.
+And now, your child can **try it for free** — this summer.
 
 </div><!-- /.bc-four -->
 
@@ -104,7 +105,7 @@ And now, your child can try it for free—this summer.
        muted="false" loop="true"
        autoplay controls>
 </video> -->
-<div class="b-right" style="position:relative; height:0px; padding-bottom:30.234%"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/pwquc0?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+<div class="b-right video" style="position:relative; height:0px;"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/pwquc0?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 <div class="b-left">
 <div class="b-blob">
@@ -148,7 +149,7 @@ All you need is a computer or laptop and yourself!
        muted="false" loop="false"
        controls>
 </video> -->
-<div class="b-left" style="position:relative; height:0px; padding-bottom:30.234%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+<div class="b-left" style="position:relative; height:0px;"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 <div class="b-right">
 <div class="b-blob">
@@ -174,9 +175,9 @@ All you need is a computer or laptop and yourself!
 
 ## 🐍 Real Python coding
 
-> They’ll learn the foundations of one of the most-used coding languages in the world.
+> **Why it matters:** Python is used by developers at Google, Netflix, and NASA. It’s also the most beginner-friendly.
 
-* **Why it matters:** Python is used by developers at Google, Netflix, and NASA. It’s also the most beginner-friendly.
+They’ll learn the foundations of one of the most-used coding languages in the world.
 
 ### Help kids to solve problems themselves
 
@@ -214,11 +215,11 @@ Easy to setup, easy to start. Just log in and go.
 <p class="su-heading">🌟 Here’s what you’re signing up for</p>
 <div class="su-body">
 
-- ✅ A boredom-busting summer experience
-- ✅ Real skills that can last a lifetime
-- ✅ A confidence boost in logic, problem-solving, and creativity
-- ✅ A safe and supportive online space
-- ✅ And… an exciting introduction to the tech world of tomorrow
+- ✅ A **boredom-busting** summer experience
+- ✅ **Real skills** that can last a lifetime
+- ✅ A **confidence boost** in logic, problem-solving, and creativity
+- ✅ A **safe and supportive** online space
+- ✅ And… an **exciting introduction** to the tech world of tomorrow
 
 This isn’t just another Zoom activity.
 It’s an adventure that could shape your child’s future.
@@ -310,7 +311,10 @@ Say they *enjoy* using it to learn
 <!-- 📸 *Suggested Image: A countdown timer, bold text: “Only X Days Left to Join!”* -->
 
 <div class="signup">
-<p class="su-heading">🌟 Time to book your spot! <br>⏰ Limited spots available — **registration closes August 5th!**</p>
+<p class="su-heading">
+  <span class="suh-border">🌟 Time to book your spot!</span>
+  <span>⏰ Limited spots available — **registration closes August 5th!**</span>
+</p>
 <div class="su-body">
 
 > Give your child the tools to create, think logically, and have a blast—all while learning to code.
@@ -369,7 +373,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-[👉 BOOK NOW – Before August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 BOOK NOW – By August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 

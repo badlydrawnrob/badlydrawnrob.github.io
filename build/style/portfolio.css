@@ -1029,7 +1029,7 @@ p {
   display: grid;
   gap: var(--spacing-three-quarters);
   grid-template-columns: 1fr;
-  grid-template-rows: var(--spacing-grid-square-quarter) var(--spacing-grid-square-half) auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: "nav" "header" "main";
   margin: var(--spacing-one);
 }
@@ -1061,6 +1061,12 @@ p {
 .gl-grid-square header {
   align-content: end;
   grid-area: header;
+  margin: var(--spacing-increment) 0;
+}
+@media screen and (min-width: 772px) {
+  .gl-grid-square header {
+    margin: 0;
+  }
 }
 .gl-grid-square main {
   grid-area: main;
@@ -1076,9 +1082,13 @@ p {
     grid-template-areas: ". intro intro intro intro" "body body body body body";
   }
 }
+.gl-intro {
+  margin-bottom: var(--spacing-increment);
+}
 @media screen and (min-width: 960px) {
   .gl-intro {
     grid-area: intro;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 960px) {
@@ -1283,7 +1293,13 @@ header h1 {
 }
 img.left,
 img.right {
-  width: 200px;
+  width: 140px;
+}
+@media screen and (min-width: 768px) {
+  img.left,
+  img.right {
+    width: 200px;
+  }
 }
 img.left {
   float: left;
@@ -1292,6 +1308,16 @@ img.left {
 img.right {
   float: right;
   margin-left: var(--spacing);
+}
+.video {
+  padding-bottom: 57%;
+  margin-bottom: var(--spacing-increment);
+}
+@media screen and (min-width: 960px) {
+  .video {
+    padding-bottom: 30.234%;
+    margin-bottom: 0;
+  }
 }
 .signup {
   margin-bottom: var(--spacing-increment);
@@ -1316,6 +1342,13 @@ img.right {
   .su-heading {
     padding: var(--spacing-two);
   }
+}
+.su-heading span {
+  display: block;
+}
+.su-heading .suh-border {
+  padding-bottom: var(--spacing-quarter);
+  margin-bottom: var(--spacing-quarter);
 }
 @media screen {
   .su-body {

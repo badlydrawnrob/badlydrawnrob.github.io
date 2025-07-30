@@ -3,6 +3,10 @@
 // =============================================================================
 // Aim to keep both the html markup and css very simple. Don't add unnecessary
 // elements or design. This may need a better compiler at a later date.
+//
+// Bugs
+// ----
+// 1. A hack until I find a better video solution
 
 #ozaria {
   --grid-margin: calc(176px + var(--grid-gap));
@@ -19,7 +23,11 @@
 
 img.left,
 img.right {
-  width: 200px;
+  width: 140px;
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
 }
 
 img.left {
@@ -30,6 +38,16 @@ img.left {
 img.right {
   float: right;
   margin-left: var(--spacing);
+}
+
+.video {
+  padding-bottom: 57%;
+  margin-bottom: var(--spacing-increment);
+
+  @media screen and (min-width: 960px) {
+    padding-bottom: 30.234%;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -62,6 +80,15 @@ img.right {
   @media screen and (min-width: 960px) {
     // margin-left: var(--grid-margin);
     padding: var(--spacing-two);
+  }
+
+  span {
+    display: block;
+  }
+
+  .suh-border {
+    padding-bottom: var(--spacing-quarter);
+    margin-bottom: var(--spacing-quarter);
   }
 }
 
@@ -128,6 +155,11 @@ img.right {
     align-self: center;
     height: 280px;
   }
+}
+
+#ozaria .breakout iframe.b-left,
+#ozaria .breakout iframe.b-right {
+  width: 100%; // #! Should be added to the `html/` css file?
 }
 
 #ozaria .b-blob {
