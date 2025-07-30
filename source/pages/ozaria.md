@@ -1,7 +1,9 @@
 ---
 body-id: ozaria
 full-width: True
-header-includes: <script async src="https://tally.so/widgets/embed.js"></script>
+header-includes:
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11446914157"></script>
 
 title: Code for kids!
 subtitle: 🚀 Join us on a coding adventure;
@@ -149,7 +151,7 @@ All you need is a computer or laptop and yourself!
        muted="false" loop="false"
        controls>
 </video> -->
-<div class="b-left" style="position:relative; height:0px;"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+<div class="b-left" style="position:relative; height:0px;"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 <div class="b-right">
 <div class="b-blob">
