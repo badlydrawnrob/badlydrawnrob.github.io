@@ -3,6 +3,17 @@ body-id: ozaria
 full-width: True
 header-includes: |
   <script async src="https://tally.so/widgets/embed.js"></script>
+  <!-- Hotjar Tracking Code for https://robmcdonald.me -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6480862,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
 
 title: Code for kids!
 subtitle: 🚀 Join us on a coding adventure;
@@ -15,7 +26,7 @@ intro: >-
 <div class="signup">
 <p class="su-heading">
   <span class="suh-border">🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12</span>
-  <span>👋 100% FREE • ⏰ **Registration closes August 5th!**</span>
+  <span>👋 100% FREE • ⏰ **Registration closes August 5th!<sup>**</sup>**</span>
   </p>
 </p>
 <div class="su-body">
@@ -30,6 +41,15 @@ intro: >-
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
+
+<!-- //////////////////////////// Normal /////////////////////////////////// -->
+<!-- //////////////////// can't make it this time ////////////////////////// -->
+
+<div class="bc-four">
+
+<sup>**</sub> If you can't make the dates, [join the waitlist](https://tally.so/r/31ooVp) for next time!
+
+</div>
 
 <!-- ////////////////////////// breakout /////////////////////////////////// -->
 <!-- ///////////// images first, second large screen //////////////////////// -->
@@ -337,6 +357,9 @@ Say they *enjoy* using it to learn
 <div class="bc-four">
 
 ## ❓ Frequently asked questions
+
+**What if I'm busy on those dates?**
+If you'd like to join us can't make the dates, [join the waitlist](https://tally.so/r/31ooVp) for next time!
 
 **What age group is this course suitable for?**
 Kids aged 8–12. It’s beginner-friendly and designed to be fun!
