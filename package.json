@@ -12,6 +12,7 @@
     "home": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/home.md -o ./index.html --variable=call-to-action --variable-json css-version=\"$(npm pkg get version)\"",
     "contact": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/contact.md -o ./contact.html --variable-json css-version=\"$(npm pkg get version)\"",
     "ozaria": "pandoc --template=./source/pandoc/template.html -c ./build/style/portfolio.css -s ./source/pages/ozaria.md -o ./ozaria.html --variable-json css-version=\"$(npm pkg get version)\"",
+    "ozaria-complete": "pandoc --template=./source/pandoc/template.html -c /build/style/portfolio.css -s ./source/pages/ozaria/complete.md -o ./ozaria/complete.html --variable-json css-version=\"$(npm pkg get version)\"",
     "words": "for file in ./source/words/*.md; do pandoc --template=./source/pandoc/template.html -c ../build/style/portfolio.css -s \"$file\" -o \"./words/$(basename \"$file\" .md).html\"; done",
     "prebuild": "mkdir -p build/ build/style",
     "build": "npm run css && npm run home && npm run contact && npm run ozaria && npm run words",
