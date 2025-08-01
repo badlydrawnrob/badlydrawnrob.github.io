@@ -9,17 +9,20 @@
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11446914157"></script>
       </head>
   <body id="home">
-    <div id="cookies-eu-banner" style="display: none;">🍪 This website uses cookies to help me find out what visitors need! <button id="cookies-eu-accept">Accept</button> <button id="cookies-eu-reject">Reject</button></div>
+    <div id="cookies-eu-banner" style="display: none;">🍪 This website uses cookies to help me find out what visitors need! <button id="cookies-eu-accept">Accept</button> or leave this site<!-- <button id="cookies-eu-reject">Reject</button> --></div>
     <script src="./build/static/js/cookies-eu-banner.js"></script>
       <script>
         new CookiesEuBanner(function () {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'AW-11446914157');
-          console.log('Google Tag Manager loaded');
         });
+      </script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-11446914157');
+        console.log('Google Tag Manager loaded');
       </script>
 
     <aside class="gl-folio">
