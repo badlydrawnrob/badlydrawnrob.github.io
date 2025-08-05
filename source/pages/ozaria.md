@@ -26,7 +26,8 @@ intro: >-
 <div class="signup">
 <p class="su-heading">
   <span class="suh-border">🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12</span>
-  <span>👋 100% FREE • ⏰ **Registration closes August 5th!<sup>**</sup>**</span>
+  <!-- <span>👋 100% FREE • ⏰ **Registration closes August 5th!<sup>**</sup>**</span> -->
+  <span>👋 100% FREE • ⏰ **Class live now!**</span>
   </p>
 </p>
 <div class="su-body">
@@ -35,7 +36,13 @@ intro: >-
 - 🖥️ **No previous experience** required (or downloads!)
 - 🧠 **Build real Python coding skills** while having fun!
 
-[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
+**Meeting ID:** 840 0279 0654 • **Passcode:** 0e4Yf1
+
+<br>
+
+[👉 ENTER THE LESSON — LIVE NOW!](https://us05web.zoom.us/j/84002790654?pwd=D5IDKFEOUoc3kdiOwD4Q59xtlm23AU.1){.gl-button}
+
+<!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"} -->
 
 <!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
 
@@ -247,7 +254,7 @@ It’s an adventure that could shape your child’s future.
 
 <br>
 
-[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+<!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -346,7 +353,7 @@ Say they *enjoy* using it to learn
 - 🕒 **Time:** 11:00AM—12:30PM
 - 💻 **Location:** Online
 
-[👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+<!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -397,7 +404,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-[👉 BOOK NOW – By August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+<!-- [👉 BOOK NOW – By August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
 
 </div><!-- /.gl-bc-four -->
 
