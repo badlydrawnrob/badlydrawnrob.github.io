@@ -254,7 +254,7 @@ It’s an adventure that could shape your child’s future.
 
 <br>
 
-<!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
+[👉 <s>BOOK NOW – Spots Are limited!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -353,7 +353,7 @@ Say they *enjoy* using it to learn
 - 🕒 **Time:** 11:00AM—12:30PM
 - 💻 **Location:** Online
 
-<!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
+[👉 <s>BOOK NOW – Spots Are limited!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -404,7 +404,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-<!-- [👉 BOOK NOW – By August 5th!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button} -->
+[👉 <s>BOOK NOW – By August 5th!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 
