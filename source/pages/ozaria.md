@@ -27,7 +27,7 @@ intro: >-
 <p class="su-heading">
   <span class="suh-border">🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12</span>
   <!-- <span>👋 100% FREE • ⏰ **Registration closes August 5th!<sup>**</sup>**</span> -->
-  <span>👋 100% FREE • ⏰ **Class live now!**</span>
+  <span>👋 100% FREE • ⏰ **Class live at 11:00AM!**</span>
   </p>
 </p>
 <div class="su-body">
@@ -36,11 +36,11 @@ intro: >-
 - 🖥️ **No previous experience** required (or downloads!)
 - 🧠 **Build real Python coding skills** while having fun!
 
-**Meeting ID:** 840 0279 0654 • **Passcode:** 0e4Yf1
+<!-- **Meeting ID:** 840 0279 0654 • **Passcode:** 0e4Yf1 -->
 
 <br>
 
-[👉 ENTER THE LESSON — LIVE NOW!](https://us05web.zoom.us/j/84002790654?pwd=D5IDKFEOUoc3kdiOwD4Q59xtlm23AU.1){.gl-button}
+[👉 ENTER THE LESSON — LIVE AT 11:00AM!](https://us05web.zoom.us/j/84002790654?pwd=D5IDKFEOUoc3kdiOwD4Q59xtlm23AU.1){.gl-button}
 
 <!-- [👉 BOOK NOW – Spots Are limited!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"} -->
 
