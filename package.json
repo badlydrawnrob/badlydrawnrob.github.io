@@ -30,6 +30,7 @@
   "homepage": "https://github.com/badlydrawnrob/badlydrawnrob.github.io#readme",
   "false": {},
   "devDependencies": {
+    "elm-watch": "^1.2.3",
     "less": "^4.4.0",
     "live-server": "^1.2.2",
     "print-first-css": "github:badlydrawnrob/print-first-css"
