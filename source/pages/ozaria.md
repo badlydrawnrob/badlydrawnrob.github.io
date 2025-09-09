@@ -92,7 +92,7 @@ intro: >-
 
 All you need is a computer or laptop and yourself!
 
-🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
+<!-- 🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online -->
 
 </div>
 
@@ -379,8 +379,9 @@ Yes! 100% free. No hidden costs, no upsells. Just fun, interactive learning.
 **What if my child has never coded before?**
 Even better. This is the perfect way to start. We take them step-by-step through every challenge.
 
-**How long are the sessions?**
-1.5 hours each day — 11:00 AM to 12:30 PM—for three days. We'll have a couple of breaks so the students don't get tired.
+**How long are the lessons?**
+Each lesson is around 45 minutes long, plus the flashcards as homework. The students will enjoy the magic of Ozaria, and the lessons are short enough so they'll stay alert and not get tired.
+
 
 </div><!-- /.bc-four -->
 
