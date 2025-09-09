@@ -21,13 +21,13 @@ intro: >-
     your first 3 lessons FREE — an online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
 ---
 
-<!-- ////////////////////////// calendar /////////////////////////////////// -->
+<!--  See 2.6.4 for original summer "Zoom call" which failed quite badly   -->
+<!-- ////////////////////////// Signup /////////////////////////////////// -->
 
 <div class="signup">
 <p class="su-heading">
   <span class="suh-border">🌟 3 free lessons • Learn in your own time • Ages 8–12</span>
-  <span>👋 Click for your first Ozaria lesson<sup>**</sup>**</span>
-  <!-- <span>👋 100% FREE • ⏰ **Class live now!**</span> -->
+  <!-- <span>👋 Click for your first Ozaria lesson<sup>**</sup>**</span> -->
   </p>
 </p>
 <div class="su-body">
