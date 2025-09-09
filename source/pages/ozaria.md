@@ -364,8 +364,8 @@ Say they *enjoy* using it to learn
 
 ## ❓ Frequently asked questions
 
-**What if I'm busy on those dates?**
-If you'd like to join us can't make the dates, [join the waitlist](https://tally.so/r/31ooVp) for next time!
+**What if I'm busy at the moment?**
+If you'd like to join us but can't make it right now, don't worry! Come back to this page when you're ready to play, and you'll have a week to complete the first chapter once you've [filled in the form](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){data-tally-open="me2D5o"}.
 
 **What age group is this course suitable for?**
 Kids aged 8–12. It’s beginner-friendly and designed to be fun!
