@@ -1012,8 +1012,11 @@ p {
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  .gl-button:hover {
+  .gl-button:hover,
+  .gl-button:visited {
     color: var(--color-lll);
+  }
+  .gl-button:hover {
     background: color-mix(in oklab, var(--color-ppp), black 30%);
   }
 }

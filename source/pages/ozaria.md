@@ -16,33 +16,30 @@ header-includes: |
   </script>
 
 title: Code for kids!
-subtitle: 🚀 Join us on a coding adventure;
+subtitle: 🚀 Join me on a coding adventure;
 intro: >-
-    a FREE summer 3-Day online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
+    your first 3 lessons FREE — an online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
 ---
 
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
 <div class="signup">
 <p class="su-heading">
-  <span class="suh-border">🌟 August 6th–8th • 11:00AM—12:30PM Daily • Ages 8–12</span>
-  <span>👋 100% FREE • ⏰ **Registration closes August 5th!<sup>**</sup>**</span>
+  <span class="suh-border">🌟 3 free lessons • Learn in your own time • Ages 8–12</span>
+  <span>👋 Click for your first Ozaria lesson<sup>**</sup>**</span>
   <!-- <span>👋 100% FREE • ⏰ **Class live now!**</span> -->
   </p>
 </p>
 <div class="su-body">
 
 - 🎮 **Learn to code** through games, stories, and creativity
-- 🖥️ **No previous experience** required (or downloads!)
+- 🎥 **1st Chapter level walkthroughs** watch the videos and play along!
+- 🖥️ **No previous experience** required (play online)
 - 🧠 **Build real Python coding skills** while having fun!
-
-<!-- **Meeting ID:** 840 0279 0654 • **Passcode:** 0e4Yf1 -->
 
 <br>
 
-<!-- [👉 ENTER THE LESSON — LIVE NOW!](https://us05web.zoom.us/j/84002790654?pwd=D5IDKFEOUoc3kdiOwD4Q59xtlm23AU.1){.gl-button} -->
-
-[👉 <s>BOOK NOW – Spots Are limited!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
+[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
 
 <!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
 
@@ -54,7 +51,7 @@ intro: >-
 
 <div class="bc-four">
 
-<sup>**</sub> If you can't make the dates, [join the waitlist](https://tally.so/r/31ooVp) for next time!
+<sup>**</sub> Once you've signed up, you'll get an email with a "how to get started" tutorial! 🥳
 
 </div>
 
@@ -239,11 +236,12 @@ Easy to setup, easy to start. Just log in and go.
 
 <!-- ////////////////////////// calendar /////////////////////////////////// -->
 
+
 <div class="signup">
 <p class="su-heading">🌟 Here’s what you’re signing up for</p>
 <div class="su-body">
 
-- ✅ A **boredom-busting** summer experience
+<!-- - ✅ A **boredom-busting** summer experience -->
 - ✅ **Real skills** that can last a lifetime
 - ✅ A **confidence boost** in logic, problem-solving, and creativity
 - ✅ A **safe and supportive** online space
@@ -254,7 +252,7 @@ It’s an adventure that could shape your child’s future.
 
 <br>
 
-[👉 <s>BOOK NOW – Spots Are limited!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -340,20 +338,20 @@ Say they *enjoy* using it to learn
 
 <div class="signup">
 <p class="su-heading">
-  <span class="suh-border">🌟 Time to book your spot!</span>
-  <span>⏰ Limited spots available — **registration closes August 5th!**</span>
+  <span class="suh-border">🌟 Time to try Ozaria for free!</span>
+  <span>🌟 3 free lessons • Learn in your own time • Ages 8–12</span>
 </p>
 <div class="su-body">
 
 > Give your child the tools to create, think logically, and have a blast—all while learning to code.
 
 - 💰 **Price:** Free!
-- 🎁 **Real value:** £112+ (if this were a paid camp)
-- 📅 **Dates:** August 6th–8th
-- 🕒 **Time:** 11:00AM—12:30PM
+- 🎁 **Real value:** £112+ (if this were paid classes)
+- 📅 **Dates:** Learn in your own time (1 week)
+<!-- - 🕒 **Time:** 11:00AM—12:30PM -->
 - 💻 **Location:** Online
 
-[👉 <s>BOOK NOW – Spots Are limited!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -404,7 +402,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-[👉 <s>BOOK NOW – By August 5th!</s>](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 

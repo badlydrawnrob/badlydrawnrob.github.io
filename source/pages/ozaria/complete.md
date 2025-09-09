@@ -20,6 +20,6 @@ intro: >-
     Save the dates on the 6th, 7th, and 8th of August at 11am—12:30pm and please add `hello@robmcdonald.me` to your email safe list (contact list).
 ---
 
-We'll send instructions before the event so you're ready to start, all you'll need to join me is a laptop (or computer) and **download the [Zoho Meetings](https://www.zoho.com/meeting/) app** to be ready.
+We'll send your "how to get started" instructions by email: you just need a laptop. You'll be playing and learning Python in no time! Please check your spam folder and add my email to your safe list (not spam).
 
 If you have any questions at all, [get in touch](/contact). Looking forward to meeting you!
