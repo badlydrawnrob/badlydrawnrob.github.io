@@ -18,7 +18,7 @@ header-includes: |
 title: Code for kids!
 subtitle: 🚀 Join me on a coding adventure;
 intro: >-
-    your first 3 lessons FREE — an online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
+    your first 3 lessons of Ozaria for FREE — an online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
 ---
 
 <!--  See 2.6.4 for original summer "Zoom call" which failed quite badly   -->
@@ -60,36 +60,42 @@ intro: >-
 
 <div class="breakout">
 
-![Don't be bored. Be a coding hero!](./build/static/computer-hero-kid.jpg){.b-left}
+<!-- ![Real gameplay](./build/static/computer-summer-kid.jpg){.b-right} -->
+<!-- <video class="b-right"
+       src="./build/static/gameplay-01.mp4" 
+       muted="false" loop="true"
+       autoplay controls>
+</video> -->
+<div class="b-right video" style="position:relative; height:0px;"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/pwquc0?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
-<div class="b-right">
+<div class="b-left">
 <div class="b-blob">
   <span class="bb-number">1</span>
-  <img src="./build/static/blob-01.svg" alt="section 1" />
+  <img src="./build/static/blob-02.svg" alt="section 2" />
 </div>
 
-## 😩 Want to beat the summer boredom?
+## What Is Ozaria?
 
-If you’re like most parents, summer brings some familiar challenges ...
+> 🧙‍♂️ Kids love the story. You’ll love the learning. **Try a free 3 lesson quest for 8—12 year olds:** each lesson is around 45 minutes long, so your child won't get bored or restless. Are you ready for a coding adventure?
 
-</div><!-- /.b-left -->
+</div><!-- /.b-right -->
 </div><!-- /.breakout -->
+
+<!-- ///////////////////// breakout — additional /////////////////////////// -->
 
 <div class="bc-four">
 
-- **Your child is glued to YouTube** or games that teach them nothing.
-- **They’re bored. You're busy.** And you’re running out of ideas.
-- **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
+- Dive into an epic fantasy world
+- Solve puzzles and write real Python code
+- Build their own mini-games and interactive stories
+- Team up with others and think like a tech creator
 
-The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
+All you need is a computer or laptop and yourself!
 
-You’ve tried activity books… coding apps that felt too much like homework… even begging them to do something "productive."
+🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
 
-But nothing sticks.
+</div>
 
-Here’s the truth: Kids don’t hate learning. They just need the *right* kind of learning—something that feels like a game and keeps their curiosity alive.
-
-</div><!-- /.bc-four -->
 
 
 <!-- //////////////////// normal w/ float image ///////////////////////////// -->
@@ -124,41 +130,36 @@ And now, your child can **try it for free** — this summer.
 
 <div class="breakout">
 
-<!-- ![Real gameplay](./build/static/computer-summer-kid.jpg){.b-right} -->
-<!-- <video class="b-right"
-       src="./build/static/gameplay-01.mp4" 
-       muted="false" loop="true"
-       autoplay controls>
-</video> -->
-<div class="b-right video" style="position:relative; height:0px;"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/pwquc0?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+![Don't be bored. Be a coding hero!](./build/static/computer-hero-kid.jpg){.b-left}
 
-<div class="b-left">
+<div class="b-right">
 <div class="b-blob">
   <span class="bb-number">2</span>
-  <img src="./build/static/blob-02.svg" alt="section 2" />
+  <img src="./build/static/blob-01.svg" alt="section 1" />
 </div>
 
-## What Is Ozaria?
+## 😩 Want to beat the summer boredom?
 
-> 🧙‍♂️ This summer we'll get together for a **100% free, three-day online coding adventure** where your child will:
+If you’re like most parents, summer brings some familiar challenges ...
 
-</div><!-- /.b-right -->
+</div><!-- /.b-left -->
 </div><!-- /.breakout -->
-
-<!-- ///////////////////// breakout — additional /////////////////////////// -->
 
 <div class="bc-four">
 
-- Dive into an epic fantasy world
-- Solve puzzles and write real Python code
-- Build their own mini-games and interactive stories
-- Team up with others and think like a tech creator
+- **Your child is glued to YouTube** or games that teach them nothing.
+- **They’re bored. You're busy.** And you’re running out of ideas.
+- **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
 
-All you need is a computer or laptop and yourself!
+The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
 
-🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online
+You’ve tried activity books… coding apps that felt too much like homework… even begging them to do something "productive."
 
-</div>
+But nothing sticks.
+
+Here’s the truth: Kids don’t hate learning. They just need the *right* kind of learning—something that feels like a game and keeps their curiosity alive.
+
+</div><!-- /.bc-four -->
 
 
 <!-- ////////////////////////// breakout /////////////////////////////////// -->
