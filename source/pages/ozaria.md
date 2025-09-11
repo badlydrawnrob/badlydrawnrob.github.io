@@ -110,7 +110,7 @@ All you need is a computer or laptop and yourself!
 
 I believe learning to code should be **fun, creative, and confidence-building.** Not intimidating or boring.
 
-That’s why I'm running **Code for Kids - Ozaria Summer Coding Adventure**. It’s built around **Ozaria**, a story-rich coding platform used in classrooms worldwide.
+That’s why I'm running **Code for Kids - Ozaria Coding Adventure**. It’s built around **Ozaria**, a story-rich coding platform used in classrooms worldwide.
 
 With Ozaria, kids don’t just learn to code—they become the heroes of their own game.
 
@@ -120,7 +120,7 @@ With Ozaria, kids don’t just learn to code—they become the heroes of their o
 - **90%** of students feel confident coding after Ozaria
 - **99%** say they *enjoy* learning with it
 
-And now, your child can **try it for free** — this summer.
+And now, your child can **try it for free**!
 
 </div><!-- /.bc-four -->
 
@@ -138,9 +138,9 @@ And now, your child can **try it for free** — this summer.
   <img src="./build/static/blob-01.svg" alt="section 1" />
 </div>
 
-## 😩 Want to beat the summer boredom?
+## 😩 Want to beat the back-to-school boredom?
 
-If you’re like most parents, summer brings some familiar challenges ...
+If you’re like most parents, modern life brings some familiar challenges ...
 
 </div><!-- /.b-left -->
 </div><!-- /.breakout -->
@@ -149,7 +149,7 @@ If you’re like most parents, summer brings some familiar challenges ...
 
 - **Your child is glued to YouTube** or games that teach them nothing.
 - **They’re bored. You're busy.** And you’re running out of ideas.
-- **You're worried they’ll lose academic skills** (“summer slide”) before school even starts.
+- **You’re anxious they’ll struggle to stay engaged and stimulated** as the school year kicks off.
 
 The worst part? That wasted screen time could have been spent doing something that’s actually *fun* and *valuable* for their future.
 
@@ -287,7 +287,7 @@ By the end of Day 3, they’ll have written real Python code, collaborated with 
 
 ![](./build/static/certificate.png){.right}
 
-As part of the free Ozaria Summer Coding Adventure, your child also gets:
+As part of the free Ozaria Coding Adventure, your child also gets:
 
 ### 🎓 Coding Hero certificate
 
@@ -392,7 +392,7 @@ Each lesson is around 45 minutes long, plus the flashcards as homework. The stud
 
 ## 🧠 Before you go ...
 
-You can keep looking for summer activities that might engage your child…
+You can keep looking for activities that might engage your child…
 Or you can give them something that’s:
 
 * ✅ Fun
