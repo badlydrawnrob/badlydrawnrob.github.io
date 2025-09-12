@@ -15,7 +15,7 @@ header-includes: |
   </script>
 
 title: A coding adventure!
-subtitle: 🚀 Join me and boost your python skills with 3 free lessons for 8—12 year olds.
+subtitle: 🚀 Boost your python skills with 3 free lessons for 8—12 year olds.
 intro: >-
     Learn at your own pace with a qualified teacher to walk you through the quest. No experience needed!
 intro-extra: >-
