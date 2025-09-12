@@ -14,10 +14,12 @@ header-includes: |
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
-title: Code for kids!
-subtitle: 🚀 Join me on a coding adventure;
+title: A coding adventure!
+subtitle: 🚀 Join me and boost your python skills with 3 free lessons for 8—12 year olds.
 intro: >-
-    Boost your python skills with 3 free lessons for 8—12 year olds. Your child gets online learning at their own pace, with a qualified teacher walking them through a coding quest. No experience needed!
+    Learn at your own pace with a qualified teacher to walk you through the quest. No experience needed!
+intro-extra: >-
+    Nothing
 ---
 
 
