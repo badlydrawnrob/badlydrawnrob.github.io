@@ -1,6 +1,5 @@
 ---
 body-id: ozaria
-full-width: True
 header-includes: |
   <script async src="https://tally.so/widgets/embed.js"></script>
   <!-- Hotjar Tracking Code for https://robmcdonald.me -->
@@ -18,42 +17,26 @@ header-includes: |
 title: Code for kids!
 subtitle: 🚀 Join me on a coding adventure;
 intro: >-
-    your first 3 lessons of Ozaria for FREE — an online coding quest for kids aged 8–12. Start your child’s coding journey with a fun, story-based online adventure. No experience needed!
+    Boost your python skills with 3 free lessons for 8—12 year olds. Your child gets online learning at their own pace, with a qualified teacher walking them through a coding quest. No experience needed!
 ---
 
-<!--  See 2.6.4 for original summer "Zoom call" which failed quite badly   -->
-<!-- ////////////////////////// Signup /////////////////////////////////// -->
 
-<div class="signup">
-<p class="su-heading">
-  <span class="suh-border">🌟 3 free lessons • Learn in your own time • Ages 8–12</span>
-  <!-- <span>👋 Click for your first Ozaria lesson<sup>**</sup>**</span> -->
-  </p>
-</p>
-<div class="su-body">
+<iframe data-tally-src="https://tally.so/embed/mBv294?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="253" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria advert form: simple"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
-- 🎮 **Learn to code** through games, stories, and creativity
-- 🎥 **1st Chapter level walkthroughs** watch the videos and play along!
-- 🖥️ **No previous experience** required (play online)
-- 🧠 **Build real Python coding skills** while having fun!
+<div class="simple-bullets">
 
-<br>
+- 🎮 Learn to code with game-based learning
+- 🐍 Build real Python coding skills while having fun
+- 🎥 Watch the walkthrough videos and play along
 
-[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="me2D5o"}
+</div>
 
-<!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
-
-</div><!-- /.su-body -->
-</div><!-- /.signup -->
 
 <!-- //////////////////////////// Normal /////////////////////////////////// -->
 <!-- //////////////////// can't make it this time ////////////////////////// -->
 
-<div class="bc-four">
 
-<sup>**</sub> Once you've signed up, you'll get an email with a "how to get started" tutorial! 🥳
-
-</div>
 
 <!-- ////////////////////////// breakout /////////////////////////////////// -->
 <!-- ///////////// images first, second large screen //////////////////////// -->
@@ -76,14 +59,7 @@ intro: >-
 
 ## What Is Ozaria?
 
-> 🧙‍♂️ Kids love the story. You’ll love the learning. **Try a free 3 lesson quest for 8—12 year olds:** each lesson is around 45 minutes long, so your child won't get bored or restless. Are you ready for a coding adventure?
-
-</div><!-- /.b-right -->
-</div><!-- /.breakout -->
-
-<!-- ///////////////////// breakout — additional /////////////////////////// -->
-
-<div class="bc-four">
+> 🧙‍♂️ **Kids love the story. You’ll love the learning.** Each lesson is around 45 minutes long, so your child won't get bored or restless. Are you ready for a coding adventure?
 
 - Dive into an epic fantasy world
 - Solve puzzles and write real Python code
@@ -92,9 +68,11 @@ intro: >-
 
 All you need is a computer or laptop and yourself!
 
-<!-- 🗓 **Dates:** August 6th–8th | 🕒 **Time:** 11:00AM—12:30PM | 💻 **Location:** Online -->
+</div><!-- /.b-right -->
+</div><!-- /.breakout -->
 
-</div>
+<!-- ///////////////////// breakout — additional /////////////////////////// -->
+
 
 
 
@@ -124,6 +102,31 @@ And now, your child can **try it for free**!
 
 </div><!-- /.bc-four -->
 
+
+<!--  See 2.6.4 for original summer "Zoom call" which failed quite badly   -->
+<!-- ////////////////////////// Signup /////////////////////////////////// -->
+
+<div class="signup">
+<p class="su-heading">
+  <span class="suh-border">🌟 3 free lessons • Learn in your own time • Ages 8–12</span>
+  <!-- <span>👋 Click for your first Ozaria lesson<sup>**</sup>**</span> -->
+  </p>
+</p>
+<div class="su-body">
+
+- 🎮 **Learn to code** through games, stories, and creativity
+- 🎥 **1st Chapter level walkthroughs** watch the videos and play along!
+- 🖥️ **No previous experience** required (play online)
+- 🧠 **Build real Python coding skills** while having fun!
+
+<br>
+
+[👉 Play the first chapter of Ozaria now!](#tally-open=mBv294&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button data-tally-open="mBv294"}
+
+<!-- SUGGESTIONS: 📸 *Suggested Image: A vibrant hero character in the Ozaria game world, laptop open, kids looking amazed and engaged in the background. -->
+
+</div><!-- /.su-body -->
+</div><!-- /.signup -->
 
 <!-- ////////////////////////// breakout /////////////////////////////////// -->
 <!-- ///////////// images first, second large screen //////////////////////// -->
@@ -168,16 +171,9 @@ Here’s the truth: Kids don’t hate learning. They just need the *right* kind 
 
 <div class="breakout">
 
-<!-- ![Have fun learning this summer!](./build/static/computer-summer-kid.jpg){.b-left} -->
-<!-- <video class="b-left"
-       preload="none" src="./build/static/gameplay-02.mp4" 
-       poster="./build/static/gameplay-02.jpg"
-       muted="false" loop="false"
-       controls>
-</video> -->
-<div class="b-left video" style="position:relative; height:0px;"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/94roj4" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+![Build real skills and problem solve with python](./build/static/gameplay.jpg){.b-right}
 
-<div class="b-right">
+<div class="b-left">
 <div class="b-blob">
   <span class="bb-number">3</span>
   <img src="./build/static/blob-03.svg" alt="section 3" />
@@ -253,7 +249,7 @@ It’s an adventure that could shape your child’s future.
 
 <br>
 
-[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=mBv294&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -352,7 +348,7 @@ Say they *enjoy* using it to learn
 <!-- - 🕒 **Time:** 11:00AM—12:30PM -->
 - 💻 **Location:** Online
 
-[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=mBv294&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.su-body -->
 </div><!-- /.signup -->
@@ -365,7 +361,7 @@ Say they *enjoy* using it to learn
 ## ❓ Frequently asked questions
 
 **What if I'm busy at the moment?**
-If you'd like to join us but can't make it right now, don't worry! Come back to this page when you're ready to play, and you'll have a week to complete the first chapter once you've [filled in the form](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){data-tally-open="me2D5o"}.
+If you'd like to join us but can't make it right now, don't worry! Come back to this page when you're ready to play, and you'll have a week to complete the first chapter once you've [filled in the form](#tally-open=mBv294&tally-emoji-text=👋&tally-emoji-animation=wave){data-tally-open="mBv294"}.
 
 **What age group is this course suitable for?**
 Kids aged 8–12. It’s beginner-friendly and designed to be fun!
@@ -404,7 +400,7 @@ They’ll walk away with new skills, more confidence, and a big smile on their f
 
 Let the adventure begin!
 
-[👉 Play the first chapter of Ozaria now!](#tally-open=me2D5o&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
+[👉 Play the first chapter of Ozaria now!](#tally-open=mBv294&tally-emoji-text=👋&tally-emoji-animation=wave){.gl-button}
 
 </div><!-- /.gl-bc-four -->
 

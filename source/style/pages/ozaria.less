@@ -8,14 +8,107 @@
 // ----
 // 1. A hack until I find a better video solution
 
+
+// -----------------------------------------------------------------------------
+// Above the fold
+// -----------------------------------------------------------------------------
+
 #ozaria {
   --grid-margin: calc(176px + var(--grid-gap));
   --color-yellow: #EEC01A;
+
+  header,
+  .intro,
+  .body {
+    margin: 0 var(--spacing-one);
+  }
+
+  header,
+  .intro {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+
+    @media screen and (min-width: 960px) {
+      margin-top: var(--spacing-increment);
+      margin-bottom: var(--spacing-increment);
+    }
+  }
+
+  .intro {
+    h2 {
+      display: inline;
+      font-size: var(--font-size-pp);
+      font-weight: 700;
+      line-height: var(--line-height-one);
+      margin: 0;
+      padding-right: var(--spacing-half);
+
+      @media screen and (min-width: 960px) {
+        font-size: var(--font-size-ppp);
+      }
+    }
+
+    p {
+      display: inline;
+      font-size: var(--font-size-pp);
+      margin: 0;
+
+      @media screen and (min-width: 960px) {
+        font-size: var(--font-size-ppp);
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    header {
+      width: var(--grid-width-medium);
+      margin:  var(--spacing) auto;
+    }
+
+    main {
+      width: var(--grid-width-medium);
+      margin: 0 auto;
+    }
+  }
 
   hr {
     border-color: var(--color-yellow);
   }
 }
+
+iframe {
+  padding-bottom: var(--spacing) 0;
+}
+// iframe .tally-powered { display: none;}
+
+
+.simple-bullets {
+  margin: var(--spacing) 0;
+  padding-bottom: var(--spacing);
+  border-bottom: var(--spacing-quarter) solid var(--color-yellow);
+
+  ul {
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 960px) {
+    font-size: var(--font-size-pp);
+    margin: var(--spacing-increment) 0;
+    padding-bottom: var(--spacing-increment);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+ol li,
+ul li {
+  margin-left: var(--spacing);
+}
+
+// -----------------------------------------------------------------------------
+// Below the fold
+// -----------------------------------------------------------------------------
 
 #ozaria blockquote {
   border-color: var(--color-yellow);
@@ -61,7 +154,7 @@ img.right {
   margin-bottom: var(--spacing-increment);
 
   @media screen and (min-width: 960px) {
-    margin-left: var(--grid-margin);
+    margin: 0 calc(var(--grid-margin) / 2) var(--spacing-increment);
   }
 
   p {
@@ -199,7 +292,7 @@ img.right {
   }
 
    @media screen and (min-width: 960px) {
-    margin-left: var(--grid-margin);
+    margin: 0 calc(var(--grid-margin) / 2) var(--spacing-increment);
   }
 }
 

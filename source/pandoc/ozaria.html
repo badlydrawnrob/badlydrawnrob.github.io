@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>$title$ | robmcdonald.me</title>
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    $for(author-meta)$
+      <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+      <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $for(css)$
+      <link rel="stylesheet" href="$css$?v=$css-version$" />
+    $endfor$
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544983632"></script>
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+  </head>
+  <body id="$body-id$">
+    <div id="cookies-eu-banner" style="display: none;">🍪 This website uses cookies to help me find out what visitors need! <button id="cookies-eu-accept">Accept</button> or leave this site<!-- <button id="cookies-eu-reject">Reject</button> --></div>
+    <script src="./build/static/js/cookies-eu-banner.js"></script>
+      <script>
+        new CookiesEuBanner(function () {
+
+        });
+      </script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17544983632');
+        console.log('Google Tag Manager loaded');
+      </script>
+
+    $if(title)$
+      <header>
+        <h1>$title$</h1>
+      </header>
+    $endif$
+
+      <main>
+        <div class="intro">
+        $if(subtitle)$
+          <h2>$subtitle$</h2>
+        $endif$
+        $if(intro)$
+          <p>$intro$</p>
+        $endif$
+        </div>
+
+        <div class="body">
+          <div class="content">
+            $body$
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="gl-footer">
+      <div  class="gl-f-social">
+        <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
+        <ul>
+          <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
+          <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
+          <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
+        </ul>
+      </div>
+      <div  class="gl-f-tagline">
+        <div class="gl-ft-content">
+          <p>Making data fit for human consumption <a href="#">since 2001</a></p>
+          <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
+        </div>
+      </div>
+    </footer>
+
+    $for(include-after)$
+    $include-after$
+    $endfor$
+  </body>
+</html>
