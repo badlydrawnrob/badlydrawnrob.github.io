@@ -1,5 +1,23 @@
 # badlydrawnrob.github.io
 
+## TL;DR
+
+> Focus on the 20% that get's you 80% of the way there.
+> It's REALLY hard to market a new idea, and it's a dark art.
+
+It's a "nice to have" to design with a fancy grid, and use Elm (eventually) for Quotes etc. Unfortunately, designing and building takes quite a lot of time (especially if you don't do it often) and other concerns: idea validation, marketing, PPC, user testing, and so on, really have to take priority.
+
+A small example would be a PPC landing page with A/B testing. You must have:
+
+- A title
+- A description
+- A short form
+- A key point list
+
+And that might be as far as 40% of your visitors get. Be brutalist, work on the essentials first (copy, customer jobs, pain points, so on) and build out "just enough" of what you need to trial out the idea. Does it convert? Does it get people excited? Do they stick around? Be mindful of your learning frame, your priority list, and what drives the project forward (money is necessary), unless you're doing it for fun.
+
+Everything else is extra.
+
 ## Thema styles
 
 > **Make concrete hard decisions and rules**
@@ -195,7 +213,7 @@ You can use Git LFS for larger files, but there's an [issue loading videos](http
 A lot of programming tools and frameworks are _way_ more complex than they need to be. However, fairly soon I'll be better off using Elm and `elm-watch` with a simple static builder tool if the content becomes dynamic, or layout needs more complex. Avoid using anything more complicated than you _really_ need (YAGNI)!
 
 - [ ] `npx live-server --no-browser` live reloads on `http://127.0.0.1:8080`
-    - You can [ignore files](https://github.com/tapio/live-server/issues/151) if you like
+    - You can [`--ignore=PATH` files](https://github.com/tapio/live-server/issues/151) if you like
     - Alternatively you could use [VS Code live-server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to reduce dependencies
     - Cookies don't seem to store with `live-server`
 - [x] [Pandoc Markdown](https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html) for the win!
