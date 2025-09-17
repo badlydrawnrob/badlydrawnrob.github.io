@@ -20,8 +20,6 @@ intro: >-
     Please check your inbox and spam folder, and mark "not spam" or add `hello@robmcdonald.me` to your contacts list.
 ---
 
-Your child might need a little help getting setup to begin with, but they should be able to do things by themselves after that. If you get stuck, or have any questions at all, simply [get in touch](/contact)! Hope you enjoy the first chapter of Ozaria, and look forward to getting to know you a little better!
-
 <details>
   <summary>
     Lesson 1: Welcome to Ozaria!
@@ -46,6 +44,7 @@ Your child might need a little help getting setup to begin with, but they should
 
 </details>
 
+Your child might need a little help getting setup to begin with, but they should be able to do things by themselves after that. If you get stuck, or have any questions at all, simply [get in touch](/contact)! Hope you enjoy the first chapter of Ozaria, and look forward to getting to know you a little better!
 
 <details>
   <summary>
