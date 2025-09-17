@@ -14,8 +14,8 @@ header-includes: |
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
-title: Great, you're all signed up!
-subtitle: You can find your lessons and how to start below
+title: Great, here's your lessons!
+subtitle: You can find out how to get started below.
 intro: >-
     Please check your inbox and spam folder, and mark "not spam" or add `hello@robmcdonald.me` to your contacts list.
 ---
@@ -44,8 +44,6 @@ intro: >-
 
 </details>
 
-Your child might need a little help getting setup to begin with, but they should be able to do things by themselves after that. If you get stuck, or have any questions at all, simply [get in touch](/contact)! Hope you enjoy the first chapter of Ozaria, and look forward to getting to know you a little better!
-
 <details>
   <summary>
     Lesson 2: Methods and loops
@@ -55,3 +53,6 @@ Your child might need a little help getting setup to begin with, but they should
   Coming soon! Check back tomorrow.
 
 </details>
+
+
+Your child might need a little help getting setup to begin with, but they should be able to do things by themselves after that. If you get stuck, or have any questions at all, simply [get in touch](/contact)! Hope you enjoy the first chapter of Ozaria, and look forward to getting to know you a little better!
