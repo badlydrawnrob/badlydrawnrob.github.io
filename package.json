@@ -32,7 +32,7 @@
   "false": {},
   "devDependencies": {
     "elm-watch": "^1.2.3",
-    "less": "^4.4.0",
+    "less": "^4.4.1",
     "live-server": "^1.2.2",
     "print-first-css": "github:badlydrawnrob/print-first-css"
   }

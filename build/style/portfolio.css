@@ -713,7 +713,7 @@ del {
   font-style: normal;
   text-decoration: line-through;
 }
-details {
+details > summary {
   cursor: pointer;
 }
 cite,
