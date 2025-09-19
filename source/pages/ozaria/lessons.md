@@ -27,6 +27,8 @@ intro: >-
     Lesson 1: Welcome to Ozaria!
     <span class="icon">👇</span>
   </summary>
+
+  > **Create a new student account** on [Ozaria](https://www.ozaria.com) with the class code `BirdPullSharp` (see instructions in the first video below)
   
   ### Introduction
 
