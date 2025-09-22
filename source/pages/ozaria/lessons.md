@@ -28,7 +28,7 @@ intro: >-
     <span class="icon">👇</span>
   </summary>
 
-  > **Create a new student account** on [Ozaria](https://www.ozaria.com) with the class code `BirdPullSharp` (see instructions in the first video below)
+  > **Create a new student account** on [Ozaria](https://www.ozaria.com) by clicking the "I'm a student" button, then entering the class code `BirdPullSharp` (then follow the instructions in the first video below)
   
   ### Introduction
 
