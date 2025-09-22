@@ -68,6 +68,11 @@ intro: >-
 
   <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1119924366?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (c)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+  ### Your answers for coding in the real world
+
+  <iframe data-tally-src="https://tally.so/embed/3lQARv?alignLeft=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 02: coding in real life"></iframe>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
   ### Download link for lesson 2 flashcards
 
   <a href="/build/static/ozaria/flashcards/ozaria-lesson-02-flashcards.apkg" download>Download</a> the second lesson flashcards
