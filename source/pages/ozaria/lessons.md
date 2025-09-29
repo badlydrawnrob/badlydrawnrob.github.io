@@ -13,6 +13,8 @@ header-includes: |
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+  <!-- Tally forms -->
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
 title: Great, here's your lessons!
 subtitle: You can find out how to get started below.
@@ -71,7 +73,7 @@ intro: >-
   ### Your answers for coding in the real world
 
   <iframe data-tally-src="https://tally.so/embed/3lQARv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 02: coding in real life"></iframe>
-  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
 
   ### Download link for lesson 2 flashcards
 
@@ -87,7 +89,19 @@ intro: >-
     <span class="icon">👇</span>
   </summary>
 
-  Lesson 3 coming soon!
+  ### Introduction
+
+  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1122632083?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (a)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+  ### Making a more difficult game
+
+  > 🎮 Here's [my version of the Gauntlet game](https://www.ozaria.com/play/game-dev-level/1fhcapstoneb/68d68b58364fe3a2120581e8?course=5d41d731a8d1836b5aa3cba1&course-instance=6890eb815b8c566d781a6e8d) you can play, if you dare!
+
+  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1122853070?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (b)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+  ### Share your version of the game
+
+  <iframe data-tally-src="https://tally.so/embed/wkqPY1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="174" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 03: sharing your game"></iframe>
 
 </details>
 
