@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+  <!-- https://www.omnicalculator.com/conversion/minutes-to-seconds-converter -->
+  <!-- https://pandoc.org/MANUAL.html#extension-link_attributes -->
+  <h2>Introduction</h2>
+  <ul>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="0">Creating an account</a></li>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="75">Dashboard and map</a></li>
+  </ul>
+
+  <h3>Levels</h3>
+  <ul>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="132">Up the mountain (and customise your hero)</a></li>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="246">Following the signs</a></li>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="330">Around the pond</a></li>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="518">The lonely tower</a></li>
+    <li><a href="#" class="open-modal" data-id="1117122366" data-time="824">Tower climb (now it's your turn)</a></li>
+  </ul>
+
+
+  <dialog class="video-modal">
+    <form method="dialog">
+      <button class="video-modal-close">Close</button>
+    </form>
+    <div id="vimeo-player"></div>
+    <!-- <div style="width: 750px; padding:62.5% 0 0 0;position:relative; margin-bottom: 2rem;">
+      <iframe id="vimeo" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria lesson"></iframe>
+    </div> -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+  </dialog>
+
+  <!-- https://stefenphelps.com/blog/simple-video-modal-with-no-dependencies/ -->
+  <!-- Vimeo caches the iframe's internal video, even if src is correct: disable that somehow!!! -->
+  <!-- If using `.setCurrentTime` do NOT use `#t=1m2s` in the url as well -->
+  <!-- https://github.com/vimeo/player.js (loadVideo?) -->
+  <script>
+    const elements = document.getElementsByClassName("open-modal");
+    const modal = document.querySelector(".video-modal");
+    const video = document.querySelector(".video-modal video");
+
+    function onOpen(element) {
+      // Video id (working)
+      const video_id = element.getAttribute('data-id')
+      console.log("ID:", video_id)
+      // Video time (working)
+      const video_time = element.getAttribute('data-time')
+      console.log("Time:", video_time)
+
+      // Set Vimeo's player options
+      const options = {
+        id: video_id,
+        width: 640
+        // loop: true
+      };
+      const player = new Vimeo.Player('vimeo-player', options);
+      player.setCurrentTime(video_time) // # seconds offset
+
+      // Assign the src to iframe ... (not working)
+      // document.getElementById("vimeo").src = source;
+      // .showModal() is part of the HTMLDialogElement API
+      modal.showModal();
+    }
+
+    // Cycle all `open-modal`s and add event, passing in "this"
+    Array.from(elements).forEach(function(element) {
+      // Add the on click event handler
+      element.addEventListener('click', () => onOpen(element));
+    });
+
+    modal.addEventListener("close", function onClose() {
+      // "Close" button inside the form triggers "close" on dialog because of [method="dialog"]
+      // .pause() is part of the HTMLMediaElement API
+      video.pause();
+    });
+  </script>
+</html>
