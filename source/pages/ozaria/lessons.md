@@ -134,6 +134,13 @@ Your child might need a little help getting setup to begin with, but they should
             JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
 ********************************************************************************
 
+> TL;DR: Either use Elm Lang for this, or just send visitors to Vimeo and use the
+> `#t=1m20s` url extension. Whatever is fastest for now.[^1]
+
+It's just a fucking nightmare. Either the Vimeo API doesn't work as expected, or
+the javascript doesn't ... various combinations of setup play the wrong video,
+either because it's cached, or `Array.from` is bugging out. I don't know why.
+
 Vimeo caches the iframe's internal video (even if `data-src` is correct) and you
 cannot use `#t=0m0s` in the `src` at the same time as `.setCurrentTime`. See docs
 for @ https://github.com/vimeo/player.js (and maybe `loadVideo`?)
@@ -141,6 +148,10 @@ for @ https://github.com/vimeo/player.js (and maybe `loadVideo`?)
 Using the API rather than an iframe ... to add time in seconds use this helpful
 tool @ https://www.omnicalculator.com/conversion/minutes-to-seconds-converter
 
+[^1]: Another option would be to have `<div>`s with `data-` attributes that Vimeo
+      understands and then launch them with a modal window, but IT SHOULDN'T BE
+      THAT HARD and I'm dog-tired of it already, it's taking WAY too long and is
+      proving too unpredictable.
 -->
 
 <dialog class="video-modal">
@@ -156,39 +167,49 @@ tool @ https://www.omnicalculator.com/conversion/minutes-to-seconds-converter
   const modal = document.querySelector(".video-modal");
   const video = document.querySelector(".video-modal video");
 
-  // Initial video with the Vimeo API
-  // --------------------------------
-  // 1. A video ID must be passed, so set any one
-  // 2. You can change ID with `.loadVideo()` within the modal function
-  // 3. We need to have `player` in global scope so `onClose()` can pause it!
-  //
-  // Issues
-  // ------
-  // > Using `loadVideo` and `setCurrentTime` together is NOT reliable and can
-  // > either gray out (with spinning wheel) or restart from the beginning. Some
-  // > combinations also result in the modal window not opening.
-  //
-  // - #! Reset back to a simpler setup and pass `player` to `onClose()`?
-  //
-  // - https://github.com/vimeo/player.js/issues/1024
-  // - https://github.com/vimeo/player.js/issues/645 (set current time after play)
-  // - https://github.com/vimeo/player.js/issues/131
+  // Cycle through all `open-modal` links, pass "this" element to function,
+  // and add an on click event handler.
+  Array.from(elements).forEach(function(element) {
+    element.addEventListener('click', () => onOpen(element));
+  });
 
-  const options = {
-    id: 1117122366,
-    width: 640
-  };
-  const player = new Vimeo.Player('vimeo-player', options);
-
+  // Vimeo API for rendering multiple videos
+  // ---------------------------------------
+  // > We only render one video at a time ...
+  //
+  // 1. Swap out the previous video with `data-id`
+  // 2. Set the player time to `data-time`
+  // 3. `player` must be in scope for `player.pause()` to work
+  //     - Moved `onClose()` function inside `onOpen()`.
+  //
+  // Bugs
+  // ----
+  // ## Vimeo caches the video
+  //
+  // > Vimeo caches the video so even if you change `vimeo_id` correctly the
+  // > video will not update (you could use `.loadVideo` but see below).
+  //
+  // The only way I can see this working is to replace the whole of `#vimeo-player`
+  // so it gets properly refreshed on every `onOpen()`.
+  //
+  // ## `var` `new Vimeo.Player` plays wrong video
+  //
+  // If you try to use `var` instead of const, the wrong video plays in the second
+  // group of links. Perhaps something to do w/ similar link names in
+  // `Array.from` elements.
+  //
+  //
+  // Previously
+  // ----------
+  // > `.loadVideo` and `.setCurrentTime` together is unreliable ...
+  // 
+  // Sometimes time reverted to `0` and these functions just don't play nice
+  // with each other (or the modal, which in certain combinations won't open).
+  //
+  // - Commit #4316c24
+  // - @ https://github.com/vimeo/player.js/issues/1132
 
   function onOpen(element) {
-    // Using `.loadVideo` and `.setCurrentTime` together ...
-    // -----------------------------------------------------
-    // When using these methods together, it is essential to wait for each promise
-    // to resolve before proceeding to the next step to ensure proper sequencing.
-    // Using either nested `.then()` calls or the `async/await` syntax for cleaner,
-    // more readable code ...
-
     // Grab the video id and load player
     const video_id = element.getAttribute('data-id');
     console.log("ID:", video_id);
@@ -197,41 +218,45 @@ tool @ https://www.omnicalculator.com/conversion/minutes-to-seconds-converter
     const video_time = element.getAttribute('data-time');
     console.log("Time:", video_time);
 
+    // Initialise the player
+    const options = {
+      id: video_id,
+      width: 640
+    };
+
+    // Check we've got the correct options
+    console.log("Options changed to:", options);
+
+    const player = new Vimeo.Player('vimeo-player', options);
+    player.setCurrentTime(video_time);
+
     // .showModal() is part of the HTMLDialogElement API
     modal.showModal();
 
-    // We can't use the HTMLMediaElement API here as `<video>` is within iframe
-    // But we can use the Vimeo API with `.play()`.
-    // player.loadVideo(video_id).then(
-    //   player.play().then(
-    //     player.setCurrentTime(video_time)
-    //   )
-    // );
-    player.loadVideo(video_id).then(function() {
-      return player.setCurrentTime(video_time).then(function() {
-		    return player.play();
-      })
+    // Autoplay the player
+    player.play();
+
+    // Closing the modal and stopping the player
+    // -----------------------------------------
+    // 1. `player.pause()` works when in scope
+    //     - HTMLMediaElement API `video.pause()` won't work
+    // 2. The "Close" button triggers the `onClose()` function
+    //     - It works because of `[method="dialog"]`
+    modal.addEventListener("close", function onClose() {
+      player.pause();
+      // This log seems buggy as renders multiple objects?
+      player.on('pause', function(data) {
+        console.log("Paused", data);
+      });
+
+      // player = "Forced Closed";
+      // console.log("Status:", player);
+
+      // var currentDiv = document.querySelector('#vimeo-player');
+      // var newDiv = document.createElement('div');
+      // newDiv.id = 'vimeo-player';
+
+      // currentDiv.parentDiv.replaceChild(newDiv, currentDiv);
     });
   }
-
-  // Cycle through all `open-modal` links, pass "this" element to function,
-  // and add an on click event handler.
-  Array.from(elements).forEach(function(element) {
-    element.addEventListener('click', () => onOpen(element));
-  });
-
-  modal.addEventListener("close", function onClose() {
-    // Inside the form triggers "close" on dialog because of [method="dialog"]
-    // 
-    // We can't use `video.pause() with HTMLMediaElement API directly, as it's
-    // wrapped within an iframe (and I can't be bothered to figure out how to use
-    // `<video>` directly with the Vimeo API. 
-    // 
-    // We need access to the player object and use `player.close()`.
-    player.pause();
-    player.on('pause', function(data) {
-        console.log("Paused", data);
-    });
-    
-  });
 </script>
