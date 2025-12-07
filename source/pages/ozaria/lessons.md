@@ -27,6 +27,20 @@ variant: markdown+link_attributes
 
 @ https://pandoc.org/MANUAL.html#extension-link_attributes
 
+********************************************************************************
+            JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
+********************************************************************************
+
+> Just using a plain old link to the `#t=1m20s` timestamped video for now ...
+> Previous version(s) #4316c24 and 
+
+Previously tried to launch a modal window but the Vimeo player API is buggy as
+fuck and won't reliably launch at the correct time, amongst other things ...
+potentially use Elm to replace videos in the future (but no guarantee it'd work)
+
+To be fair I might've got muddled up with the videos as "Tower Climb" has two
+different videos (preview and answers).
+
 -->
 
 <hr>
@@ -41,30 +55,30 @@ variant: markdown+link_attributes
 
 ### Introduction
 
-- [Create an account](#){.open-modal data-id=1117122366 data-time=0}
-- [Dashboard and map](#){.open-modal data-id=1117122366 data-time=75}
+- [Create an account](https://player.vimeo.com/video/1117122366#t=0m0s){.example data-id=1}
+- [Dashboard and map](https://player.vimeo.com/video/1117122366#t=1m15s)
 
 ### Levels
 
-- [🎬 Up the mountain (and customise your hero)](#){.open-modal data-id=1117122366 data-time=132}
-- [Following the signs](#){.open-modal data-id=1117122366 data-time=246}
-- [Around the pond](#){.open-modal data-id=1117122366 data-time=330}
-- [The lonely tower](#){.open-modal data-id=1117122366 data-time=518}
-- [Tower climb (now it's your turn)](#){.open-modal data-id=1117122366 data-time=824}
+- [🎬 Up the mountain (and customise your hero)](https://player.vimeo.com/video/1117122366#t=2m12s)
+- [Following the signs](https://player.vimeo.com/video/1117122366#t=4m06s)
+- [Around the pond](https://player.vimeo.com/video/1117122366#t=5m30s)
+- [The lonely tower](https://player.vimeo.com/video/1117122366#t=8m38s)
+- [Tower climb (now it's your turn)](https://player.vimeo.com/video/1117122366#t=13m44s)
 
 ### Now it's your turn ...
 
-- [Tower climb](#){.open-modal data-id=1117122538 data-time=0}
-- [Escalation](#){.open-modal data-id=1117122538 data-time=355}          
-- [Stairway to mastery](#){.open-modal data-id=1117122538 data-time=778}
-- [The Acodus](#){.open-modal data-id=1117122538 data-time=1080}
-- [🎬 The spirit lands](#){.open-modal data-id=1117122538 data-time=1240}
+- [Tower climb](https://player.vimeo.com/video/1117122538#t=0m0s)
+- [Escalation](https://player.vimeo.com/video/1117122538#t=5m55s)
+- [Stairway to mastery](https://player.vimeo.com/video/1117122538#t=12m58s)
+- [The Acodus](https://player.vimeo.com/video/1117122538#t=18m0s)
+- [🎬 The spirit lands](https://player.vimeo.com/video/1117122538#t=20m40s)
 
 ### Flashcards homework
 
 > 💾 <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a> flashcards for the lesson 1
 
-- [How to use the flashcards](#){.open-modal data-id=1117122766 data-time=0}
+- [How to use the flashcards](https://player.vimeo.com/video/)
 
 </details>
 
@@ -126,137 +140,3 @@ variant: markdown+link_attributes
 <hr> 
 
 Your child might need a little help getting setup to begin with, but they should be able to do things by themselves after that. If you get stuck, or have any questions at all, simply [get in touch](/contact)! Hope you enjoy the first chapter of Ozaria, and look forward to getting to know you a little better!
-
-
-<!-- Adapted from: https://stefenphelps.com/blog/simple-video-modal-with-no-dependencies/
-
-********************************************************************************
-            JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
-********************************************************************************
-
-> TL;DR: Either use Elm Lang for this, or just send visitors to Vimeo and use the
-> `#t=1m20s` url extension. Whatever is fastest for now.[^1]
-
-It's just a fucking nightmare. Either the Vimeo API doesn't work as expected, or
-the javascript doesn't ... various combinations of setup play the wrong video,
-either because it's cached, or `Array.from` is bugging out. I don't know why.
-
-Vimeo caches the iframe's internal video (even if `data-src` is correct) and you
-cannot use `#t=0m0s` in the `src` at the same time as `.setCurrentTime`. See docs
-for @ https://github.com/vimeo/player.js (and maybe `loadVideo`?)
-
-Using the API rather than an iframe ... to add time in seconds use this helpful
-tool @ https://www.omnicalculator.com/conversion/minutes-to-seconds-converter
-
-[^1]: Another option would be to have `<div>`s with `data-` attributes that Vimeo
-      understands and then launch them with a modal window, but IT SHOULDN'T BE
-      THAT HARD and I'm dog-tired of it already, it's taking WAY too long and is
-      proving too unpredictable.
--->
-
-<dialog class="video-modal">
-  <form method="dialog">
-    <button class="video-modal-close">Close</button>
-  </form>
-  <div id="vimeo-player"></div>
-  <script src="https://player.vimeo.com/api/player.js"></script>
-</dialog>
-
-<script>
-  const elements = document.getElementsByClassName("open-modal");
-  const modal = document.querySelector(".video-modal");
-  const video = document.querySelector(".video-modal video");
-
-  // Cycle through all `open-modal` links, pass "this" element to function,
-  // and add an on click event handler.
-  Array.from(elements).forEach(function(element) {
-    element.addEventListener('click', () => onOpen(element));
-  });
-
-  // Vimeo API for rendering multiple videos
-  // ---------------------------------------
-  // > We only render one video at a time ...
-  //
-  // 1. Swap out the previous video with `data-id`
-  // 2. Set the player time to `data-time`
-  // 3. `player` must be in scope for `player.pause()` to work
-  //     - Moved `onClose()` function inside `onOpen()`.
-  //
-  // Bugs
-  // ----
-  // ## Vimeo caches the video
-  //
-  // > Vimeo caches the video so even if you change `vimeo_id` correctly the
-  // > video will not update (you could use `.loadVideo` but see below).
-  //
-  // The only way I can see this working is to replace the whole of `#vimeo-player`
-  // so it gets properly refreshed on every `onOpen()`.
-  //
-  // ## `var` `new Vimeo.Player` plays wrong video
-  //
-  // If you try to use `var` instead of const, the wrong video plays in the second
-  // group of links. Perhaps something to do w/ similar link names in
-  // `Array.from` elements.
-  //
-  //
-  // Previously
-  // ----------
-  // > `.loadVideo` and `.setCurrentTime` together is unreliable ...
-  // 
-  // Sometimes time reverted to `0` and these functions just don't play nice
-  // with each other (or the modal, which in certain combinations won't open).
-  //
-  // - Commit #4316c24
-  // - @ https://github.com/vimeo/player.js/issues/1132
-
-  function onOpen(element) {
-    // Grab the video id and load player
-    const video_id = element.getAttribute('data-id');
-    console.log("ID:", video_id);
-
-    // Set the video time (in seconds)
-    const video_time = element.getAttribute('data-time');
-    console.log("Time:", video_time);
-
-    // Initialise the player
-    const options = {
-      id: video_id,
-      width: 640
-    };
-
-    // Check we've got the correct options
-    console.log("Options changed to:", options);
-
-    const player = new Vimeo.Player('vimeo-player', options);
-    player.setCurrentTime(video_time);
-
-    // .showModal() is part of the HTMLDialogElement API
-    modal.showModal();
-
-    // Autoplay the player
-    player.play();
-
-    // Closing the modal and stopping the player
-    // -----------------------------------------
-    // 1. `player.pause()` works when in scope
-    //     - HTMLMediaElement API `video.pause()` won't work
-    // 2. The "Close" button triggers the `onClose()` function
-    //     - It works because of `[method="dialog"]`
-    modal.addEventListener("close", function onClose() {
-      player.pause();
-      // This log seems buggy as renders multiple objects?
-      player.on('pause', function(data) {
-        console.log("Paused", data);
-      });
-
-      // player = "Forced Closed";
-      // console.log("Status:", player);
-
-      // var currentDiv = document.querySelector('#vimeo-player');
-      // var newDiv = document.createElement('div');
-      // newDiv.id = 'vimeo-player';
-
-      // currentDiv.parentDiv.replaceChild(newDiv, currentDiv);
-    });
-  }
-</script>

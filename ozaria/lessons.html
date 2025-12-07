@@ -58,6 +58,17 @@ contacts list.</p>
 
             @ https://pandoc.org/MANUAL.html#extension-link_attributes
 
+            ********************************************************************************
+                        JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
+            ********************************************************************************
+
+            > Just using a plain old link to the `#t=1m20s` timestamped video now ...
+            > Previous version(s) #4316c24 and 
+
+            Previously tried to launch a modal window but the Vimeo player API is buggy as
+            fuck and won't reliably launch at the correct time, amongst other things ...
+            potentially use Elm to replace videos in the future (but no guarantee it'd work)
+
             -->
             <hr>
             <details>
@@ -73,38 +84,47 @@ contacts list.</p>
             </blockquote>
             <h3 id="introduction">Introduction</h3>
             <ul>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="0">Create an account</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="75">Dashboard and map</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=0m0s"
+            class="example" data-id="1">Create an account</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=1m15s">Dashboard
+            and map</a></li>
             </ul>
             <h3 id="levels">Levels</h3>
             <ul>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="132">🎬 Up the mountain (and customise your
-            hero)</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="246">Following the signs</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="330">Around the pond</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="518">The lonely tower</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122366"
-            data-time="824">Tower climb (now it’s your turn)</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=2m12s">🎬
+            Up the mountain (and customise your hero)</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=4m06s">Following
+            the signs</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=5m30s">Around
+            the pond</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=8m38s">The
+            lonely tower</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122366#t=13m44s">Tower
+            climb (now it’s your turn)</a></li>
             </ul>
             <h3 id="now-its-your-turn">Now it’s your turn …</h3>
             <ul>
-            <li><a href="#" class="open-modal" data-id="1117122538"
-            data-time="0">Tower climb</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122538"
-            data-time="355">Escalation</a><br />
-            </li>
-            <li><a href="#" class="open-modal" data-id="1117122538"
-            data-time="778">Stairway to mastery</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122538"
-            data-time="1080">The Acodus</a></li>
-            <li><a href="#" class="open-modal" data-id="1117122538"
-            data-time="1240">🎬 The spirit lands</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122538#t=0m0s">Tower
+            climb</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122538#t=5m55s">Escalation</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122538#t=12m58s">Stairway
+            to mastery</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122538#t=18m0s">The
+            Acodus</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117122538#t=20m40s">🎬
+            The spirit lands</a></li>
             </ul>
             <h3 id="flashcards-homework">Flashcards homework</h3>
             <blockquote>
@@ -113,8 +133,8 @@ contacts list.</p>
             flashcards for the lesson 1</p>
             </blockquote>
             <ul>
-            <li><a href="#" class="open-modal" data-id="1117122766"
-            data-time="0">How to use the flashcards</a></li>
+            <li><a href="https://player.vimeo.com/video/">How to use the
+            flashcards</a></li>
             </ul>
             </details>
             <hr>
@@ -192,121 +212,6 @@ contacts list.</p>
             questions at all, simply <a href="/contact">get in
             touch</a>! Hope you enjoy the first chapter of Ozaria, and
             look forward to getting to know you a little better!</p>
-            <!-- Adapted from: https://stefenphelps.com/blog/simple-video-modal-with-no-dependencies/
-
-            ********************************************************************************
-                        JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
-            ********************************************************************************
-
-            Vimeo caches the iframe's internal video (even if `data-src` is correct) and you
-            cannot use `#t=0m0s` in the `src` at the same time as `.setCurrentTime`. See docs
-            for @ https://github.com/vimeo/player.js (and maybe `loadVideo`?)
-
-            Using the API rather than an iframe ... to add time in seconds use this helpful
-            tool @ https://www.omnicalculator.com/conversion/minutes-to-seconds-converter
-
-            -->
-            <dialog class="video-modal">
-            <form method="dialog">
-            <button class="video-modal-close">
-            Close
-            </button>
-            </form>
-            <div id="vimeo-player">
-
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <p></dialog></p>
-            <script>
-              const elements = document.getElementsByClassName("open-modal");
-              const modal = document.querySelector(".video-modal");
-              const video = document.querySelector(".video-modal video");
-
-              // Cycle through all `open-modal` links, pass "this" element to function,
-              // and add an on click event handler.
-              Array.from(elements).forEach(function(element) {
-                element.addEventListener('click', () => onOpen(element));
-              });
-
-              // Vimeo API for rendering multiple videos
-              // ---------------------------------------
-              // > We only render one video at a time ...
-              //
-              // 1. Swap out the previous video with `data-id`
-              // 2. Set the player time to `data-time`
-              // 3. `player` must be in scope for `player.pause()` to work
-              //     - Moved `onClose()` function inside `onOpen()`.
-              //
-              // Bugs
-              // ----
-              // > Vimeo caches the video so even if you change `vimeo_id` correctly the
-              // > video will not update (you could use `.loadVideo` but see below).
-              //
-              // The only way I can see this working is to replace the whole of `#vimeo-player`
-              // so it gets properly refreshed on every `onOpen()`.
-              //
-              //
-              // Previously
-              // ----------
-              // > `.loadVideo` and `.setCurrentTime` together is unreliable ...
-              // 
-              // Sometimes time reverted to `0` and these functions just don't play nice
-              // with each other (or the modal, which in certain combinations won't open).
-              //
-              // - Commit #4316c24
-              // - @ https://github.com/vimeo/player.js/issues/1132
-
-              function onOpen(element) {
-                // Grab the video id and load player
-                const video_id = element.getAttribute('data-id');
-                console.log("ID:", video_id);
-
-                // Set the video time (in seconds)
-                const video_time = element.getAttribute('data-time');
-                console.log("Time:", video_time);
-
-                // Initialise the player
-                const options = {
-                  id: video_id,
-                  width: 640
-                };
-
-                // Check we've got the correct options
-                console.log("Options changed to:", options);
-
-                var player = new Vimeo.Player('vimeo-player', options);
-                player.setCurrentTime(video_time);
-
-                // .showModal() is part of the HTMLDialogElement API
-                modal.showModal();
-
-                // Autoplay the player
-                player.play();
-
-                // Closing the modal and stopping the player
-                // -----------------------------------------
-                // 1. `player.pause()` works when in scope
-                //     - HTMLMediaElement API `video.pause()` won't work
-                // 2. The "Close" button triggers the `onClose()` function
-                //     - It works because of `[method="dialog"]`
-                modal.addEventListener("close", function onClose() {
-                  player.pause();
-                  // This log seems buggy as renders multiple objects?
-                  player.on('pause', function(data) {
-                    console.log("Paused", data);
-                  });
-
-                  player = "Forced Closed";
-                  console.log("Status:", player);
-
-                  // var currentDiv = document.querySelector('#vimeo-player');
-                  // var newDiv = document.createElement('div');
-                  // newDiv.id = 'vimeo-player';
-
-                  // currentDiv.parentDiv.replaceChild(newDiv, currentDiv);
-                });
-              }
-            </script>
           </div>
         </div>
       </main>
