@@ -1,5 +1,0 @@
-/node_modules
-build/test
-build/static/video
-!build/
-elm-stuff/

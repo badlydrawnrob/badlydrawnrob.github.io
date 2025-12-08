@@ -20,7 +20,28 @@ title: Great, here's your lessons!
 subtitle: You can find out how to get started below.
 intro: >-
     Please check your inbox and spam folder, and mark "not spam" or add `hello@robmcdonald.me` to your contacts list.
+variant: markdown+link_attributes
 ---
+
+<!-- This document uses Pandoc's link attributes extension:
+
+@ https://pandoc.org/MANUAL.html#extension-link_attributes
+
+********************************************************************************
+            JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
+********************************************************************************
+
+> Just using a plain old link to the `#t=1m20s` timestamped video for now ...
+> Previous version(s) #4316c24 and 
+
+Previously tried to launch a modal window but the Vimeo player API is buggy as
+fuck and won't reliably launch at the correct time, amongst other things ...
+potentially use Elm to replace videos in the future (but no guarantee it'd work)
+
+To be fair I might've got muddled up with the videos as "Tower Climb" has two
+different videos (preview and answers).
+
+-->
 
 <hr>
 
@@ -30,23 +51,34 @@ intro: >-
     <span class="icon">👇</span>
   </summary>
 
-  > **Create a new student account** on [Ozaria](https://www.ozaria.com) by clicking the "I'm a student" button, then entering the class code `BirdPullSharp` (then follow the instructions in the first video below)
-  
-  ### Introduction
+> **Create a new student account** on [Ozaria](https://www.ozaria.com) by clicking the "I'm a student" button, then entering the class code `BirdPullSharp` (then follow the instructions in the first video below)
 
-  <div style="padding:62.5% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1117122366?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 01 (a)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+### Introduction
 
-  ### Independant learning (answers)
+- [Create an account](https://player.vimeo.com/video/1117122366#t=0m0s){.example data-id=1}
+- [Dashboard and map](https://player.vimeo.com/video/1117122366#t=1m15s)
 
-  <div style="padding:62.5% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1117122538?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 01 (b)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+### Levels
 
-  ### Flashcards homework
+- [🎬 Up the mountain (and customise your hero)](https://player.vimeo.com/video/1117122366#t=2m12s)
+- [Following the signs](https://player.vimeo.com/video/1117122366#t=4m06s)
+- [Around the pond](https://player.vimeo.com/video/1117122366#t=5m30s)
+- [The lonely tower](https://player.vimeo.com/video/1117122366#t=8m38s)
+- [Tower climb (now it's your turn)](https://player.vimeo.com/video/1117122366#t=13m44s)
 
-  <div style="padding:62.5% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1117122766?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 01 (c)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+### Now it's your turn ...
 
-  ### Download link for lesson 1 flashcards
+- [Tower climb](https://player.vimeo.com/video/1117122538#t=0m0s)
+- [Escalation](https://player.vimeo.com/video/1117122538#t=5m55s)
+- [Stairway to mastery](https://player.vimeo.com/video/1117122538#t=12m58s)
+- [The Acodus](https://player.vimeo.com/video/1117122538#t=18m0s)
+- [🎬 The spirit lands](https://player.vimeo.com/video/1117122538#t=20m40s)
 
-  <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a> the first lesson flashcards
+### Flashcards homework
+
+> 💾 <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a> flashcards for the lesson 1
+
+- [How to use the flashcards](https://player.vimeo.com/video/)
 
 </details>
 
