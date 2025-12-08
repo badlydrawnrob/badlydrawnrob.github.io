@@ -23,7 +23,7 @@ intro: >-
 variant: markdown+link_attributes
 ---
 
-<!-- This document uses Pandoc's link attributes extension:
+<!-- This document uses Pandoc's link attributes extension with `variant`:
 
 @ https://pandoc.org/MANUAL.html#extension-link_attributes
 
@@ -40,6 +40,9 @@ potentially use Elm to replace videos in the future (but no guarantee it'd work)
 
 To be fair I might've got muddled up with the videos as "Tower Climb" has two
 different videos (preview and answers).
+
+If you'd like to AUTOPLAY the video, add the `?autoplay=1` parameter before `#t`.
+Which is a bit weird as I always thought fragments after queries?
 
 -->
 
@@ -76,7 +79,7 @@ different videos (preview and answers).
 
 ### Flashcards homework
 
-> 💾 <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a> flashcards for the lesson 1
+> 💾 <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a> flashcards for lesson 1
 
 - [How to use the flashcards](https://player.vimeo.com/video/)
 
@@ -90,26 +93,34 @@ different videos (preview and answers).
     <span class="icon">👇</span>
   </summary>
 
-  ### Introduction
-  
-  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1117571178?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (a)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-  
-  ### Answers and for loops
-  
-  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1119922681?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (b)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+### Introduction
 
-  ### Answers and trapping the darkness
+- [Remembering last lesson](https://player.vimeo.com/video/1117571178#t=0m0s)
+- [🎬 Fixing the lights](https://player.vimeo.com/video/1117571178#t=5m34s)
+- [Building a path](https://player.vimeo.com/video/1117571178#t=12m30s)
+- [🎬 Building stuff](https://player.vimeo.com/video/1117571178#t=15m32s)
+- [Helping Hands (now it's your turn)](https://player.vimeo.com/video/1117571178#t=18m20s)
 
-  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1119924366?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (c)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+### Now it's your turn (for loops) ...
 
-  ### Your answers for coding in the real world
+- [Helping Hands](https://player.vimeo.com/video/1119922681#t=0m0s)
+- [Luminous](https://player.vimeo.com/video/1119922681#t=2m12s)
+- [Spirited away (now it's your turn)](https://player.vimeo.com/video/1119922681#t=4m4s)
 
-  <iframe data-tally-src="https://tally.so/embed/3lQARv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 02: coding in real life"></iframe>
+### Now it's your turn (trapping the darkness) ...
 
+- [Spirited away](https://player.vimeo.com/video/1119924366#t=0m0s)
+- [Crystal clear](https://player.vimeo.com/video/1119924366#t=1m7s)
+- [🎬 A better world](https://player.vimeo.com/video/1119924366#t=2m24s)
+- [🎬 Darkness is coming (and Trapping Darkness)](https://player.vimeo.com/video/1119924366#t=6m51s)
 
-  ### Download link for lesson 2 flashcards
+### Your answers for coding in the real world
 
-  <a href="/build/static/ozaria/flashcards/ozaria-lesson-02-flashcards.apkg" download>Download</a> the second lesson flashcards
+<iframe data-tally-src="https://tally.so/embed/3lQARv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 02: coding in real life"></iframe>
+
+### Download link for lesson 2 flashcards
+
+> 💾 <a href="/build/static/ozaria/flashcards/ozaria-lesson-02-flashcards.apkg" download>Download</a> flashcards for lesson 2
 
 </details>
 
@@ -121,19 +132,25 @@ different videos (preview and answers).
     <span class="icon">👇</span>
   </summary>
 
-  ### Introduction
+### Introduction
 
-  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1122632083?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (a)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+- [🎬 Refresh: Darkness is coming](https://player.vimeo.com/video/1122632083#t=0m0s)
+- [Gauntlet](https://player.vimeo.com/video/1122632083#t=2m9s)
+- [🎬 Builder things](https://player.vimeo.com/video/1122632083#t=6m48s)
+- [Improving our game](https://player.vimeo.com/video/1122632083#t=8m34s)
+- [🎬 Finishing touches (now it's your turn)](https://player.vimeo.com/video/1122632083#t=15m0s)
 
-  ### Making a more difficult game
+### Now it's your turn ...
 
-  > 🎮 Here's [my version of the Gauntlet game](https://www.ozaria.com/play/game-dev-level/1fhcapstoneb/68d68b58364fe3a2120581e8?course=5d41d731a8d1836b5aa3cba1&course-instance=6890eb815b8c566d781a6e8d) you can play, if you dare!
+> 🎮 Here's [my version of the Gauntlet game](https://www.ozaria.com/play/game-dev-level/1fhcapstoneb/68d68b58364fe3a2120581e8?course=5d41d731a8d1836b5aa3cba1&course-instance=6890eb815b8c566d781a6e8d) you can play, if you dare!
 
-  <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/1122853070?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (b)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+- [Gauntlet (making our game harder)](https://player.vimeo.com/video/1122853070#t=0m0s)
+- [🎬 Trapping the dark](https://player.vimeo.com/video/1122853070#t=7m2s)
+- [🎬 The beginning ... (and sharing your game)](https://player.vimeo.com/video/1122853070#t=7m48s)
 
-  ### Share your version of the game
+### Share your version of the game
 
-  <iframe data-tally-src="https://tally.so/embed/wkqPY1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="174" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 03: sharing your game"></iframe>
+<iframe data-tally-src="https://tally.so/embed/wkqPY1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="174" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 03: sharing your game"></iframe>
 
 </details>
 

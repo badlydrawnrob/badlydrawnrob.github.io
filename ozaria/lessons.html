@@ -54,7 +54,7 @@ contacts list.</p>
 
         <div class="body">
           <div class="content">
-            <!-- This document uses Pandoc's link attributes extension:
+            <!-- This document uses Pandoc's link attributes extension with `variant`:
 
             @ https://pandoc.org/MANUAL.html#extension-link_attributes
 
@@ -62,12 +62,18 @@ contacts list.</p>
                         JAVASCRIPT FUCKING SUCKS THIS API IS TOTALLY BUGGY
             ********************************************************************************
 
-            > Just using a plain old link to the `#t=1m20s` timestamped video now ...
+            > Just using a plain old link to the `#t=1m20s` timestamped video for now ...
             > Previous version(s) #4316c24 and 
 
             Previously tried to launch a modal window but the Vimeo player API is buggy as
             fuck and won't reliably launch at the correct time, amongst other things ...
             potentially use Elm to replace videos in the future (but no guarantee it'd work)
+
+            To be fair I might've got muddled up with the videos as "Tower Climb" has two
+            different videos (preview and answers).
+
+            If you'd like to AUTOPLAY the video, add the `?autoplay=1` parameter before `#t`.
+            Which is a bit weird as I always thought fragments after queries?
 
             -->
             <hr>
@@ -130,7 +136,7 @@ contacts list.</p>
             <blockquote>
             <p>💾
             <a href="/build/static/ozaria/flashcards/ozaria-lesson-01-flashcards.apkg" download>Download</a>
-            flashcards for the lesson 1</p>
+            flashcards for lesson 1</p>
             </blockquote>
             <ul>
             <li><a href="https://player.vimeo.com/video/">How to use the
@@ -143,35 +149,62 @@ contacts list.</p>
             Lesson 2: Methods and loops <span class="icon">👇</span>
             </summary>
             <h3 id="introduction-1">Introduction</h3>
-            <div
-            style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;">
-            <iframe src="https://player.vimeo.com/video/1117571178?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (a)">
-            </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <h3 id="answers-and-for-loops">Answers and for loops</h3>
-            <div
-            style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;">
-            <iframe src="https://player.vimeo.com/video/1119922681?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (b)">
-            </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <h3 id="answers-and-trapping-the-darkness">Answers and
-            trapping the darkness</h3>
-            <div
-            style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;">
-            <iframe src="https://player.vimeo.com/video/1119924366?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 02 (c)">
-            </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+            <ul>
+            <li><a
+            href="https://player.vimeo.com/video/1117571178#t=0m0s">Remembering
+            last lesson</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117571178#t=5m34s">🎬
+            Fixing the lights</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117571178#t=12m30s">Building
+            a path</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117571178#t=15m32s">🎬
+            Building stuff</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1117571178#t=18m20s">Helping
+            Hands (now it’s your turn)</a></li>
+            </ul>
+            <h3 id="now-its-your-turn-for-loops">Now it’s your turn (for
+            loops) …</h3>
+            <ul>
+            <li><a
+            href="https://player.vimeo.com/video/1119922681#t=0m0s">Helping
+            Hands</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1119922681#t=2m12s">Luminous</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1119922681#t=4m4s">Spirited
+            away (now it’s your turn)</a></li>
+            </ul>
+            <h3 id="now-its-your-turn-trapping-the-darkness">Now it’s
+            your turn (trapping the darkness) …</h3>
+            <ul>
+            <li><a
+            href="https://player.vimeo.com/video/1119924366#t=0m0s">Spirited
+            away</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1119924366#t=1m7s">Crystal
+            clear</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1119924366#t=2m24s">🎬
+            A better world</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1119924366#t=6m51s">🎬
+            Darkness is coming (and Trapping Darkness)</a></li>
+            </ul>
             <h3 id="your-answers-for-coding-in-the-real-world">Your
             answers for coding in the real world</h3>
             <iframe data-tally-src="https://tally.so/embed/3lQARv?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 02: coding in real life">
             </iframe>
             <h3 id="download-link-for-lesson-2-flashcards">Download link
             for lesson 2 flashcards</h3>
-            <p><a href="/build/static/ozaria/flashcards/ozaria-lesson-02-flashcards.apkg" download>Download</a>
-            the second lesson flashcards</p>
+            <blockquote>
+            <p>💾
+            <a href="/build/static/ozaria/flashcards/ozaria-lesson-02-flashcards.apkg" download>Download</a>
+            flashcards for lesson 2</p>
+            </blockquote>
             </details>
             <hr>
             <details>
@@ -180,26 +213,40 @@ contacts list.</p>
             class="icon">👇</span>
             </summary>
             <h3 id="introduction-2">Introduction</h3>
-            <div
-            style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;">
-            <iframe src="https://player.vimeo.com/video/1122632083?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (a)">
-            </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <h3 id="making-a-more-difficult-game">Making a more
-            difficult game</h3>
+            <ul>
+            <li><a
+            href="https://player.vimeo.com/video/1122632083#t=0m0s">🎬
+            Refresh: Darkness is coming</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122632083#t=2m9s">Gauntlet</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122632083#t=6m48s">🎬
+            Builder things</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122632083#t=8m34s">Improving
+            our game</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122632083#t=15m0s">🎬
+            Finishing touches (now it’s your turn)</a></li>
+            </ul>
+            <h3 id="now-its-your-turn-1">Now it’s your turn …</h3>
             <blockquote>
             <p>🎮 Here’s <a
             href="https://www.ozaria.com/play/game-dev-level/1fhcapstoneb/68d68b58364fe3a2120581e8?course=5d41d731a8d1836b5aa3cba1&amp;course-instance=6890eb815b8c566d781a6e8d">my
             version of the Gauntlet game</a> you can play, if you
             dare!</p>
             </blockquote>
-            <div
-            style="padding:56.25% 0 0 0;position:relative; margin-bottom: 2rem;">
-            <iframe src="https://player.vimeo.com/video/1122853070?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ozaria: Chapter 01 lesson 03 (b)">
-            </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+            <ul>
+            <li><a
+            href="https://player.vimeo.com/video/1122853070#t=0m0s">Gauntlet
+            (making our game harder)</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122853070#t=7m2s">🎬
+            Trapping the dark</a></li>
+            <li><a
+            href="https://player.vimeo.com/video/1122853070#t=7m48s">🎬
+            The beginning … (and sharing your game)</a></li>
+            </ul>
             <h3 id="share-your-version-of-the-game">Share your version
             of the game</h3>
             <iframe data-tally-src="https://tally.so/embed/wkqPY1?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="174" frameborder="0" marginheight="0" marginwidth="0" title="Ozaria lesson 03: sharing your game">
@@ -219,17 +266,16 @@ contacts list.</p>
 
     <footer class="gl-footer">
       <div  class="gl-f-social">
-        <p>The <a href="https://pewrsr.ch/3xCjYaT">cool kids</a> like to dig around social media; I prefer escaping into natures <em>own</em> rabbit holes, or relax with a good book! That said, you can always ...</p>
+        <p>Ready for your next lesson? Book a call and we'll have you learning Python in record time! I run in-school sessions, weekend classes, and after school classes.</p>
         <ul>
-          <li>Say 👋 <span class="visually-hidden">hello</span> on <a href="https://www.linkedin.com/in/badlydrawnrob/">LinkedIn</a></li>
-          <li>View my 🕹 <span class="visually-hidden">code</span> on <a href="https://github.com/badlydrawnrob/">Github</a></li>
+          <li>👋 Book a call <a href="https://calendly.com/badlydrawnrob/30min">on Calendly</a></li>
           <li>Shoot me a good ol' fashioned <a href="/contact">✉️ email</a></li>
         </ul>
       </div>
       <div  class="gl-f-tagline">
         <div class="gl-ft-content">
-          <p>Making data fit for human consumption <a href="#">since 2001</a></p>
-          <p>Taking security <a href="/manifesto/#kiskis">seriously</a> 🔒</p>
+          <p>Code for kids <a href="#">since 2019</a></p>
+          <p>I've helped over <a href="https://github.com/badlydrawnrob/anki">800 people</a> learn how to code 🚀</p>
         </div>
       </div>
     </footer>
