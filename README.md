@@ -1,176 +1,259 @@
 # badlydrawnrob.github.io
 
-## TL;DR
+## ☝️ TL;DR
 
-> Focus on the 20% that get's you 80% of the way there.
-> It's REALLY hard to market a new idea, and it's a dark art.
+> 🎯 20% big levers only! (80/20 principle).
+> ⛔️ RRR risk and aim for higher ticket offers.
 
-It's a "nice to have" to design with a fancy grid, and use Elm (eventually) for Quotes etc. Unfortunately, designing and building takes quite a lot of time (especially if you don't do it often) and other concerns: idea validation, marketing, PPC, user testing, and so on, really have to take priority.
+Don't worry about "nice to have" features and prototype rapidly with Ai where possible. Ideas are cheap: ship and validate quickly. CSS is a ballache so remove from your life.
 
-A small example would be a PPC landing page with A/B testing. You must have:
+1. 👁 on sales funnels (ppc, email, etc)
+2. 👩‍🏫 user-test and validate the prototype
+3. 📖 thema styles with Ai-assists
+
+Depending on the project a ready-made framework may be easier. Your (`print-first-css`) repo should focus on the absolute essentials of typography and design. A/B testing and marketing is more important than style. For example, an offer page should be simple:
 
 - A title
 - A description
-- A short form
+- A simple form
 - A key point list
+- Testimonials
 
-And that might be as far as 40% of your visitors get. Be brutalist, work on the essentials first (copy, customer jobs, pain points, so on) and build out "just enough" of what you need to trial out the idea. Does it convert? Does it get people excited? Do they stick around? Be mindful of your learning frame, your priority list, and what drives the project forward (money is necessary), unless you're doing it for fun.
+You can then rapidly test the advert, offer, etc, making minor changes. You've got 5 seconds to grab attention and most people won't read properly. Be brutalist! Customer job, pain points, sales calls, user testing, all doing the "just-enough" thing. Your learning frame should be tiny.
 
-Everything else is extra.
+Art is extra; a luxury.
 
-## Thema styles
 
-> **Make concrete hard decisions and rules**
-> Inheriting a mish-mash from ECSS, [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), and [Thema](https://ns.editeur.org/thema/en) Styles
 
-My styleguide might not be suitable when working in large teams (where change conflicts could be a serious issue), but it'll work in many cases. Thema book categories `CODE` is detatched from the category name, but here we make them similar. We're also using Pandoc as our static `/words` blog [compiler](https://app.studyraid.com/en/read/15019/519413/processing-multiple-files-with-wildcards).
+## My story
 
-1. As many specimen styles as possible (60% of styles or more)
-    - Raw html, such as `h1`, `pre`, `code`
-2. As few class names as possible (rather than named)
-    - Raw html takes preference (`button` over `.gl-button`)
-3. As many design-styleguide assets as possible!
-    - Prefer predictability over variety (fewer design assets)
-    - Most of these are `.gl-`obal elements (always prefixed)
-4. Page styles for single-page-related content only
-    - Always wrapped in a page ID (`#page .section`)
-5. Naming conventions are optional, but preferred where possible
-    - `.first-second` position gets shortened to `.f-second`
-    - `.call-to-action` becomes `.cta` (use comment headings, avoid long class names)
-6. Adding a space in before `style=` allows for quicker column scanning
-    - You can render without whitespace with a compiler (like Pandoc)
-7. CUT CODE DOWN! Wherever possible :)
-8. When in doubt, prefer EXPLICIT naming of styles
-    - See the `img.b-left` example below
-    - Is `img.left` worse than `.img-left`? (floated images)
-9. **Nesting should be no more than 3 levels deep**
-    - 4 absolute maximum.
-    - Prefer a flat style.
+> What do I want to say about me?
 
-```css
-/* CONCRETE AND STRICT BEATS WISHY-WASHY CONVENTIONS */
-/* I prefer the flat styles of ECSS (limited nesting of classes) */
-/* We've changed to a lowercase naming convention */
+1. Simple learning frame (Elm, Python, SQLite)
+2. Prototype, owner, education (my own tools)
+3. Simple educational courses (for kids? Adults?)
+4. Lead magnets (for flashcard app)
+5. Writing (evergreen articles and newsletter)
 
-/* Grid styles should probably be separate so they're easily changed */
-.grid
-.grid .col1
-.grid .col2
 
-/* You should be using raw html wherever possible (cut code down!) */
-/* Here we're directly styling html elements so no need for `.gl-header` class */
+
+## 💾 Compiler
+
+Pandoc as our static `/words` blog [compiler](https://app.studyraid.com/en/read/15019/519413/processing-multiple-files-with-wildcards)
+
+
+
+## 👨‍🎨 Thema styles
+
+> Shore up and make hard decisions.
+> Best bits from ECSS, [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), and [Thema](https://ns.editeur.org/thema/en).
+
+My personal style:
+
+1. Brutalist, zen, minimal
+2. Small teams only (strict by design)
+3. Typographic designs only (single-purpose)
+4. Specimen styles should cover 80% of design
+5. Writing styleguide should be opinionated
+6. CSS should be as class-less as possible
+7. Predictability trumps variety (concrete)
+8. Explicit is better than implicit
+9. Tesla — cut code down!
+
+Simple Thema rules:
+
+1. Flat preferable to nested (`.css` file and class names)
+2. HTML design without classes 80% of time (your specimen styles)
+3. Global elements around 10% of time (`.gl` design system)
+4. Unique pages and views the remainder 10% (`#page #section`)
+5. Never use a class when you can avoid it
+6. Explicit is better than implicit (`.button` not `.btn`)
+7. Prefer `.gl-menu li` to `ul .gl-item` (singular parent class)
+
+As design and writing becomes clearer, graduation can occur up (and down) the design system.
+
+- `#section`s that need to be reusable on a page to `.section`
+- `#section`s that are needed site-wide can become a `.gl-`obal element
+- `.gl-`obal elements now concrete can become raw html elements
+
+Quick column scanning could be achieved by:
+
+- (a) Capitalising the parent (`.gl-Header`)
+- (b) Indenting the ` class=` tag in the html
+
+
+```less
+/* -----------------------------------------------------------------------------
+ * Brutal, predictable, class-less, explicit, and flat!
+ * -----------------------------------------------------------------------------
+ * > ECSS was nice but lowercase is more conventional for CSS
+ *
+ * 🤓 Raw html strongly preferred for elements (or at least child elements).
+ * 👨‍🎨 Design, writing, markup ELi5 simple (otherwise just use a framework).
+ *
+ * 1. Grid separate and class-less (but call a spade a spade)
+ * 2. Raw html for 80% of the styling (wherever possible)
+ * 3. Never assume styling is needed until it actually happens (YAGNI)
+ * 4. Use Thema styles wherever the following is true:
+ *     (a) It's hard to grasp what's going on in code without classes
+ *     (b) It has parent-child relationships better described with class
+ *     (b) It has multiple elements required across the site (`.gl-`)
+ *     (c) It has page-specific elements where raw html won't do (`#page #section`)
+ *     
+ */
+
+.grid         // ⚠️ Ideally site-wide
+.grid .left   // More specific than `.col1`
+.grid .right  // More specific than `.col2`
+
 header
 header h1
 header h1 strong
 header h1 strong a
 
-/* Only lean into Thema styles where it's:
-/*   (a) Obvious that you'll need multiple `header` elements on the same page       */
-/*   (b) Internal class names relate to parent (we may as well add class to parent) */
-/*   (c) It's hard to ascertain what's happening in the code without a class        */
-/* NEVER presuppose you'll need (a), (b), or (c) until it actually happens (YAGNI)  */
-.gl-header
-.gl-h-wrapper
-.gl-h-wrapper h1
 
-/* Items are grouped together with comment headers so they're easy to find */
-.gl-style         /* A suitable, singular, unique short name */
-.gl-s-item        /* Abbreviated with inner child name       */
-.gl-si-list       /* Similar naming convention for children  */
-.gl-sil-whysolong /* Rarely nest classes 3+ levels deep      */
+// -----------------------------------------------------------------------------
+// PRINT first remember!
+// -----------------------------------------------------------------------------
+// > This won't work for some apps: use Pico etc.
+//
+// 1. ⚠️ Less styling -> easier printable page
+//     - You don't have to ignore or override stuff!
 
-/* For variants of a class, prefer styling the direct parent (not the container) */
-.gl-header        /* The container never changes in this instance */
-.gl-h-title       /* Only our `-title` changes between pages      */
-.gl-h-title.right /* `.right` or `-right` are equally valid       */
+@media print {
 
-/* Add variants to the outermost element rarely: prefer standardised components */
-/* For safety you could randomise the class name (Thema uses `5TD-EE-A`)     */
-.gl-header.dark /* Like Thema we could randomise this class name `.dark123`  */
-.gl-h-title     /* Is there a VERY good reason to deviate from `.gl-header`? */
+}
 
-/* Page-level sections (even if repeated) should be used */
-/* I don't like the GPS #id#section as it's ugly. This way you could always */
-/* reuse the `.namedsection` in another `#page` (might be a bit confusing)  */
-#pagename
-#pagename section       /* PREFER STYLING RAW HTML over class names  */
-#pagename .namedsection /* If you _must_ use more than one word ...  */
-#pagename .ns-item      /* You could use initials for child elements */
-#pagename .nsi-position /* Again, fewer "codes" are better           */
 
-/* You can move items up the hierarchy (from page style to global style) */
-/* As we prefer standardised components over variety, move to a `.gl-` style */
-.gl-section /* from `#pagename .section` */
+// -----------------------------------------------------------------------------
+// Group classes with comment headings so easy to find
+// -----------------------------------------------------------------------------
+// 1. ⚠️ Prefer raw html elements wherever possible!
+// 2. ⚠️ Prefer adding class to parent-element (rather than children)
+// 3. ⚠️ 2 levels deep should be maximum
 
-/* ~~The DOWNSIDE of Thema styles is it restricts nesting css classes ..~~   */
-/* (well, you could nest 2-3 levels deep but we're preferring flat style)     */
-#ozaria .breakout
-#ozaria .b-blob    /* We could've nested `.bb-number` here   */
-#ozaria .bb-number /* But the naming convention disallows it */
-/* You'd have to do `.breakout { .b-blob { .bb-number } }`   */
+.gl-nav            // 3-letter names are fine!
+.gl-nav header h1  // See (1)
+.gl-nav li         // See (2)
 
-/* Be careful of NAMING CONFLICTS (this image will be sized TWICE)    */
-/* Either make it more specific `>` or name them better `b-image-left` */
-#ozaria figure:has(img.b-left),
-#ozaria figure:has(img.b-right),
-#ozaria .b-left /* left aligned content */
+.gl-element        // Unique singular short parent name
+.gl-el-item        // Child element with Thema naming convention
+.gl-element li     // RAW HTML is better if possible            
+
+.gl-element-never-thisdeep // See (3)
+
+
+// -----------------------------------------------------------------------------
+// Page-level elements
+// -----------------------------------------------------------------------------
+// > #! This needs work as GPS encourages heavy nesting
+//
+// 1. ⚠️ Both names as short as possible.
+// 2. ⚠️ Global design system should never be styled this way
+//     - Unless (potentially) a minor edit (`#page .gl-header`)
+//     - In which case styles live with `.gl-header` (not the page)
+
+#page section ul li
+#page #section .item
+#page #animate.  // Class may be preferrable?
+#page .sec-item  // May also work
+
+#pageisunlegible #asisthesection  // (1)
+#page #shouldnot .gl-override     // (2)
+
+
+// -----------------------------------------------------------------------------
+// Light and dark themes
+// -----------------------------------------------------------------------------
+// > Use best-practice CSS (not custom class names)
+
+:root { color-scheme: light dark; } // Follows user settings
+
+.light { color-scheme: light; } // User-agent forces light theme
+
+.gl-header { color: light-dark(#000, #FFF); }
+
+
+// -----------------------------------------------------------------------------
+// Variants append (they do not extend) class names
+// -----------------------------------------------------------------------------
+// > ⚠️ Prefer standardised components to variants (predictability)
+//
+// 1. Page styles could also hold variants if changes are very minor
+
+.gl-el-item.variant
+#page .item-variant  // See (1)
+
+
+// -----------------------------------------------------------------------------
+// Try to avoid complicated layouts
+// -----------------------------------------------------------------------------
+// > Aim for predictable, brutal, zen, minimal layouts
+//
+// 1. ⚠️ Can you read and understand the code quickly?
+//    - No? It's probably too complicated!
+
+#ozaria figure:has(img.b-left) // (1)
 ```
 
-If there's no need for class names — don't add them! There's two ways we could design this navigation, and the first route is totally valid.
+An ideal world would just be text and html. If in doubt, leave it out!
 
 ```html
-<!-- If there's no need for class names, don't add them! -->
-<!-- This is perfectly valid                         -->
-<header>
-  <nav>
-    <ul><li>No classes needed</li></ul>
-  <nav>
-</header>
+<html>
+  <body id="home" class="gl-grid">
+    <div class="gl-grid-left">
+      <nav class="gl-nav">
+        <ul>
+          <li class="gl-nav-item">
+            Class names here aren't ideal (remove)
+          </li>
+        </ul>
+      <nav>
+    </div><!-- `.gl-grid-left` -->
 
-<header class=".gl-col1">
-  <nav class="gl-nav">
-    <!-- The below two class names are redundant! -->
-    <ul class="gl-n-ul">
-      <li class="gl-nl-li">No classes needed</li>
-    </ul>
-  <nav>
-</header>
+    <main class="gl-grid-right">
+      <header class="gl-header">
+        <h1>
+          <span id="animate">
+            80% rule: raw html if only one <code>header</code> in website.
+          </span>
+          <small>Avoid unnecessary markup: small is fine to style here.</small>
+        </h1>
+      <header>
+
+      <section id="#about">
+        <h2>Section is <em>only</em> ever on <code>#home</code> page.</h2>
+        <div class=".specific">
+          <h3>Content only available on the home page.</h3>
+        </div>
+      </section>
+    </main><!-- `.gl-grid-right` -->
+  </body><!-- `.gl-grid` -->
 ```
 
-Using `@media` properly ...
-
-- How am I handling light/dark theme, mobile-first, print-first, and so on?
-- Are lots of `@media` queries preferable?
-- A nice grid layout, with 2-column articles and interesting layout
-- Buttons should make more sense (no need for Tally form button AND other button)
 
 
-## Some issues with Pandoc
+## 🐞 Bugs
 
-> It may be wiser to lean on Elm or 11ty for more complex layout needs
-> Pandoc is perfect for general writing though (use Elm `Http.get` with `json` or file?)
+1. Macbook Air will render typography smaller!
+2. Pandoc adds `<p>` tags inside a `<div>` wrapper
+3. Improve [analytics](https://conversiontracking.io/blog/tally-forms-conversion-tracking) and user-interaction[^1]
+4. Github [file size limit](https://github.com/orgs/community/discussions/49949) for files
 
-1. `<p>` tags are added inside `<div>` wrappers (no way around this?)
-    - It means you've got to remove paragraphy styling (`margin` etc)
 
 
-## To do tasks
+## 👨‍🎨 Specimen
 
-### Make naming conventions concrete
+> Add some nice typographic touches (ligatures, pull-quotes, pull-images, etc)
 
-```css
-/* Change this from ... */
+1. Easeful `font-size`
+2. Evergreen writing
+2. ELi5 writing and markup
+3. One idea per slide
+4. Legible and non-academic
+5. Fun and colourful!
 
-.animate .animate-words .animate-w-hidden
-.animate .animate-static
-
-/* To our new convention ... */
-#home .animate
-#home .a-words
-#home .aw-static
-```
-
-### Writing styleguide
+### ✍️ Writing styleguide
 
 > **Is all my content "evergreen"?**
 > Start simple for now (build later/never)
@@ -178,54 +261,16 @@ Using `@media` properly ...
 
 1. **Simplify articles (ONE idea per slide)**[^1]
 
-**Writing should be front-and-center** as well as being **more legible at all screen sizes (current font/size sucks for articles).** Make some concrete rules for yourself on writing. Add more colour to your writing, with fun examples. Perhaps add nice typographic touches like ligatures (or pull-quotes, pull-images, so on).
-
-### The image
-
-> **What image of myself do I want to project?**
-
-1. **I'm a fast prototyper and light coder** with _methods_
-2. **I teach to a beginner level** design, python, and (maybe) Elm 
-    - With flashcard tools and Ai (light data, light state, light ...)
-    - With pre-prepared curriculums (and study aids)
-    - An introduction to ... (books etc)
-3. **Lead magnets (marketing course)**
-    - Use `{{ mustache }}` or dynamic pages for flashcards?
-    - Integrate Ai for auto-generated flashcards?
-4. What about accessibility and ease-of-reading?
-    - Stuff like [grid order](https://rachelandrew.co.uk/archives/2019/06/04/grid-content-re-ordering-and-accessibility/)
-
-### Videos
-
-> Github has a [file size limit](https://github.com/orgs/community/discussions/49949) for files
-
-You can use Git LFS for larger files, but there's an [issue loading videos](https://stackoverflow.com/a/68627864) so use the link's fix or just use YouTube/Vimeo to host.
-
-### Stop using Marked2 app
-
-- Currently processing some `.md` files with Marked2 App (just use Pandoc)
 
 
-## Tools
+## 🤖 Tooling
 
-> **This is my rule** If I can't get it working in a few minutes, or understand the documentation quickly; if it's not simple, ideally single-purpose, quick to get started; maybe just DON'T use it!!!
+> ⚠️ If it's not up and running in 10 minutes, I don't use it.
 
-A lot of programming tools and frameworks are _way_ more complex than they need to be. However, fairly soon I'll be better off using Elm and `elm-watch` with a simple static builder tool if the content becomes dynamic, or layout needs more complex. Avoid using anything more complicated than you _really_ need (YAGNI)!
-
-- [ ] `npx live-server --no-browser` live reloads on `http://127.0.0.1:8080`
-    - You can [`--ignore=PATH` files](https://github.com/tapio/live-server/issues/151) if you like
-    - Alternatively you could use [VS Code live-server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to reduce dependencies
-    - Cookies don't seem to store with `live-server`
-- [x] [Pandoc Markdown](https://garrettgman.github.io/rmarkdown/authoring_pandoc_markdown.html) for the win!
-- [x] [Google Analytics](https://conversiontracking.io/blog/tally-forms-conversion-tracking) and [Tally Forms](https://tally.so/) for lead gen
-    - You'll want to move towards 1st party data and cookie-less design
+Documentation is a real skill. Language design is difficult. But the opportunity cost of spending forever learning some new widget is real. Simple, boring, effective. YAGNI!
 
 
-## Money
-
-1. Store up a full years wages
-2. Then start to invest small amounts
-3. Build up income drips and get f* moving
 
 
-[^1]: **Don't be an annoyingly verbose Ai article!** Literally craft your articles as if they were a slide. Reduce the amount of information they have, use imagery to get your point across succinct, and aim for one idea (or sub-idea) per article.
+
+[^1]: 1st party data and cookie-less design!
